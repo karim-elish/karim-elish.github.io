@@ -1,0 +1,101 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context
+now,cz,no,Now load firmware,cz load firmware
+call,cpu,no,Call exec hook,cpu exec ecoff hook
+account,mem,no,account read bytes,mem read bytes
+global,acpitz,no,Global notify handler installed,acpitz notify handler
+dma,bus,related,DMA space handle,bus space compose handle
+receive,scatter,near antonym,receive buf size,scatter buf set size
+register,make,related,pci register tag,pci make tag
+check,sbmac,no,Check promiscuous mode,sbmac promiscuous mode
+needs,hypersparc,no,needs cache flush,hypersparc cache flush all
+do,topcat,no,Do common attach stuff,topcat common attach
+gigabit,ep,no,Gigabit media status only,ep media status
+saved,print,no,saved stack pointer,print stack pointer
+priority,sysmon,no,priority task queue,sysmon task queue preinit,priority task queue,sysmon task queue thread,priority task queue,sysmon task queue init,priority task queue,sysmon task queue fini
+cpu-independent,ms1,no,CPU-independent cache flush,ms1 cache flush all
+ams,wpi,no,AMS media change,wpi media change
+signalling,plumpcmcia,no,signalling event thread,plumpcmcia event thread
+enable,lance,no,Enable internal loopback,lance internal loopback test,Enable internal loopback,lance internal loopback setup,Enable internal loopback,lance internal loopback testdata
+notify,iop,no,notify message sent,iop message sent
+account,io,no,account read bytes,io read bytes
+dhcp,event,no,send DHCP request,mpt send event request
+configure,ohare,no,configure enable irq,ohare enable irq
+exclusive,log,no,open exclusive file lock,open log file
+gigabit,atu,no,Gigabit media status only,atu media status
+clear,mga,no,Clear dma buffers,mga dma get buffers,Clear dma buffers,mga dma buffers
+mask,tl,no,Mask multicast hash value,tl multicast hash
+ams,ural,no,AMS media change,ural media change
+known,ring,no,dump known info,mach64 dump ring info
+modify,cy,no,modify modem control state,cy modem control
+process,address,no,Process exception handler lock,address exception handler
+transfer,videochip,no,update transfer status,hd64461video update videochip status
+chipset,make,no,pci chipset tag,pci make tag
+io,hscx,no,IO write timeout reg,hscx write reg
+otherwise,nfsmb,no,otherwise release bus,nfsmb release bus
+reserved,map,no,reserved pal code,map pal code
+ams,ieee80211,no,AMS media change,ieee80211 media change
+audio,radeonfb,no,audio engine reset,radeonfb engine reset
+ignore,wi,no,ignore media change,wi media change
+call,nhpib,no,Call common attach routines,nhpib common attach,call common attach code,nhpib common attach
+on,match,no, zs on mainbus,zs match mainbus
+reset,ausmbus,no,waiting bus reset release,ausmbus release bus
+protection,map,no,protection gateway page,map gateway page
+ams,iwn,no,AMS media change,iwn media change
+handle,lii,no,Handle media change request,lii media change
+data,arm67,no,data cache flush line,arm67 cache flush,data cache flush page,arm67 cache flush,Data cache flush assist,arm67 cache flush
+mask,mii,no,Mask shift flag bits,mii shift bits
+xxx,n8,no,XXX bounds check values,n8 bounds check
+check,wi,no,check media change,wi media change
+acknowledge,rt2560,no,acknowledge media change,rt2560 media change
+enable,mpcsabus,no,enable peripheral clock,mpcsabus peripheral clock
+destination,image,related,load destination data,load image data
+message,arc,no,Message queue bus space handle,arc sparse bus space dispose handle
+security,init,no,ipsec security policy entry,ipsec init policy
+enable,tctrl,no,Enable power button,tctrl power button pressed
+l,arm3,no,l cache flush,arm3 cache flush
+both,ael1006,no,both power down,ael1006 power down
+initialize,pmap,no,Initialize pmap pool,pmap pmap pool dtor,Initialize pmap pool,pmap pmap pool ctor
+check,ipw,no,check media change,ipw media change
+allocate,xengnt,no,Allocate free LT entry,xengnt free entry
+ring,emerg,no,Free Ring Buffers,rf Free Emerg Buffers
+d,ka43,no,D cache invalidate ,ka43 cache invalidate
+do,rtw,no,do disable interrupts debugging,rtw disable interrupts
+indent,os,no,indent new line,os new line
+idle,fd,no,idle motor on,fd motor on
+look,emac3,no,look soft reset AEN,emac3 soft reset
+xxx,frame,no,XXX sanity check address,frame sanity check,XXX sanity check data,frame sanity check
+do,iwn,no,do post alive initialization,iwn post alive
+install,etherip,no,Install sysctl handler,etherip sysctl handler
+drive,acpilid,no,Drive status changed,acpilid status changed
+signal,print,no,signal stack pointer,print stack pointer
+ams,rt2661,no,AMS media change,rt2661 media change
+ams,wi,no,AMS media change,wi media change
+enable,at91pmc,no,enable peripheral clock,at91pmc peripheral clock
+defines,wsemul,no,defines sun control space,wsemul sun control
+map,kloader,no,map from file default,kloader from file
+chip,dock,related,update chip status,pnpbios update dock status
+l,srmmu,no,l cache flush,srmmu cache flush all
+gigabit,ieee80211,no,Gigabit media status only,ieee80211 media status
+clear,rtw,no,Clear enable interrupts,rtw enable interrupts, clear enable interrupts,rtw enable interrupts
+copyzero,free,no,pmap copyzero page,pmap free page
+fill,ipsec6,no,Fill common input args,ipsec6 common input
+ignore,lii,no,ignore media change,lii media change
+install,ulprx,no,install intr handler,ulprx intr handler
+mb,clear,no,MB video memory,clear video memory
+override,arm3,no,Override cache flush functions,arm3 cache flush
+now,ipw,no,Now load firmware,ipw load firmware
+ignore,ieee80211,no,ignore media change,ieee80211 media change
+now,zyd,no,now open pipes,zyd open pipes
+perform,acu,no,perform codec cold reset,acu codec reset
+drive,fd,no,Drive motor on,fd motor on
+device,mv88e1xxx,no,device power down,mv88e1xxx power down
+enable,expire,related,enable bw upcalls,expire bw upcalls send
+buffer,queue,related,tx buffer empty,rbch tx queue empty,tx buffer empty,i4bisppp tx queue empty,tx buffer empty,ipr tx queue empty,tx buffer empty,tel tx queue empty
+ams,atu,no,AMS media change,atu media change
+cpu,init,no,CPU interrupt masks,init interrupt masks
+only,timer,no,only one shot at ,timer one shot
+freelist,uvm,no,Freelist map entry,uvm map entry unwire
+cold,cs4281,no,cold reset AC' codec,cs4281 reset codec
+want,sbmac,no, want promiscuous mode,sbmac promiscuous mode
+want,atw,no,want filter setup,atw filter setup, want filter setup,atw filter setup
+wake,sppp,no,wake up event,sppp up event,wake up power event,sppp up event

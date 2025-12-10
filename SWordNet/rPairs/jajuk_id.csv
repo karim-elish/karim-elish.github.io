@@ -1,0 +1,100 @@
+rebuild,contains,related,rebuild property,contains property
+wizard,quality,no,wizard action,quality action
+local,style,no,register local,register style
+proportion,transition,related,proportion digital dj,transition digital dj,digital djfactory proportion impl,digital djfactory transition impl
+ambience,playlist,no,ambience manager,playlist manager,remove playlist,remove ambience,register playlist,register ambience
+file,track,related,file node,track node,files table model,tracks table model,file manager,track manager,register file,register track
+search,jcheck,no,search box,jcheck box
+press,listen,related,key pressed,key listener
+file,property,related,remove file,remove property,register file,register property
+remove,insert,near antonym,tree nodes removed,tree nodes inserted
+logical,configuration,no,logical perspective,configuration perspective
+files,directory,related,add files,add directory
+image,playlist,related,image filter,playlist filter
+action,playlist,no,action manager,playlist manager
+row,column,antonym,get row count,get column count
+stat,configuration,no,stat perspective,configuration perspective
+timer,button,no,jajuk timer,jajuk button
+add,change,related,add playlist file,change playlist file
+menu,column,no,menu selection changed,column selection changed
+press,enter,related,mouse pressed,mouse entered
+clean,remove,related,clean device,remove device
+change,insert,related,tree nodes changed,tree nodes inserted
+move,show,related,component moved,component shown
+activated,deiconified,antonym,window activated,window deiconified
+remove,catalog,related,remove view,catalog view
+file,style,related,file node,style node,get file by path,get style by name,get next file,get next style,file manager,style manager,remove file,remove style,add file,add style,register file,register style
+track,configuration,no,track manager,configuration manager
+nodes,structure,related,tree nodes changed,tree structure changed
+files,style,no,add files,add style
+status,volume,no,get current status,get current volume
+view,node,no,device view,device node
+click,press,related,mouse clicked,mouse pressed
+djs,ambiences,no,populate djs,populate ambiences
+djby,human,no,get djby name,get human name
+track,playlist,related,track manager,playlist manager,register track,register playlist
+util,manager,no,action util,action manager
+type,local,no,register type,register local
+boolean,formated,no,get boolean value,get formated value
+cdscan,animation,no,cdscan view,animation view
+total,preferred,related,get total size,get preferred size
+date,default,no,get date value,get default value
+total,current,related,get total status,get current status,set total status message,set current status message,get total status message,get current status message
+status,track,related,get current status message,get current track position
+tree,transferable,no,create tree,create transferable
+tree,scroller,no,create tree,create scroller
+device,playlist,no,device manager,playlist manager,remove device,remove playlist,register device,register playlist
+file,previous,no,add file,add previous
+style,action,no,style manager,action manager
+node,comparator,no,track node,track comparator
+push,synchronize,related,push command,synchronize command
+file,playlist,related,file manager,playlist manager,remove file,remove playlist,register file,register playlist,file filter,playlist filter
+replace,register,related,replace file,register file
+jtext,jpassword,no,jtext field,jpassword field
+file,image,related,file filter,image filter
+name,year,related,change track name,change track year
+map,remove,no,map playlist file,remove playlist file
+button,listener,no,jajuk button,jajuk listener
+tree,tabs,no,create tree,create tabs
+url,selection,related,set url,set selection,get url,get selection,get url,get selection
+icon,length,no,set icon,set length,get icon,get length
+rate,value,related,get rate,get value
+url,queue,no,get url,get queue,get url,get queue
+builder,search,no,string builder,to string search
+get,okcancel,no,get panel,okcancel panel
+year,layout,no,set year,set layout
+album,transitions,related,get album,get transitions
+nb,layout,no,set nb,set layout
+image,ambience,no,get image,get ambience
+table,systray,related,jajuk table,jajuk systray
+date,background,no,get date,get background
+state,comment,no,get state,get comment
+remove,create,near antonym,remove device,create device repartition,remove style,create style repartition
+map,expand,no,tree map,tree expanded
+proportion,directory,related,get proportion,get directories,get directory,get proportion
+item,star,no,get items,get stars,get item,get stars
+absolute,relative,antonym,get absolute path,get relative path
+length,device,no,set length,set device,get length,get device
+icon,comment,no,set icon,set comment,get icon,get comment
+icon,playlist,related,get icon,get playlist
+style,format,related,set style,set format,get style,get format
+button,window,related,jajuk button,jajuk window
+scroller,activated,no,set scroller,set activated
+next,startup,related,get next style,get startup style
+status,volume,related,get current status,get current volume
+moved,hidden,related,component moved,component hidden
+set,init,related,set ui,init ui
+date,author,related,get date,get author
+volume,selection,set volume,set selection
+tooltip,foreground,no,get tooltip,get foreground
+repeat,continue,related,repeat mode action,continue mode action
+icon,property,related,set icon,set property,set icon,set properties,get icon,get properties,get icon,get property
+from,foreground,no,get from,get foreground
+text,transition,no,get text,get transitions,get text,get transition
+table,property,related,populate table,populate properties
+reader,item,no,file reader,playlist file item
+text,wait,no,set text,set waiting,get text,get waiting
+queue,track,related,get queue,get track
+year,transition,no,get year,get transitions,get year,get transition
+editable,proportion,no,set editable,set proportion
+hit,press,related,set hits,set pressed

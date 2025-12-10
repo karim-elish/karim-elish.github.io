@@ -1,0 +1,7 @@
+@inproceedings{r2fix,
+        author={Chen Liu and  Jinqiu Yang and Lin Tan and Munawar Hafiz},
+        title ={{R2Fix}: {A}utomatically Generating Bug Fixes from Bug Reports},
+        booktitle = {Proceedings of the International Conference on Software Testing, Verification and Validation (ICST)},
+        year   = {2013},
+}
+

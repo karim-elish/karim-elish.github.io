@@ -1,0 +1,101 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Create,Initialise,synonym,create the termios objects for this tty,initialise the termios structures for this tty,create an idle task for this cpu,initialise the idle task for this cpu,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+core,callchain,related,performance events core code,performance events callchain code,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+requested,set,related,if feature was requested,if the nowayout feature was set,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+cxxx-reg,cxxx-dif,related,cxxx-reg h - driver for conexant cx usb video capture devices,cxxx-dif h - driver for conexant cx usb video capture devices,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+avermedia_dvbt,pinnacle_pctv_hd,no,avermedia-dvbt h - keytable for avermedia_dvbt remote controller,pinnacle-pctv-hd h - keytable for pinnacle_pctv_hd remote controller,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+packets,buffers,related,unread packets in slots,unread buffers in slots,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+existing,standard,related,variants of existing cards but with the same pci ids,variations of standard cards but with the same pci ids,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Mux,map,related,no,dma peripheral mux register,dma peripheral map register,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+customer,Address,related,customer range x - xffff,address range x - xffff,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MCF_LCDC_LPOR,MCF_GPIO_PCLRR_BUSCTL,identifier,bit definitions and macros for mcf_lcdc_lpor,bit definitions and macros for mcf_gpio_pclrr_busctl,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+USB_FRAME,USB_DMAxCOUNTHIGH,identifier,bit masks for usb_frame,bit masks for usb_dmaxcounthigh,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+IM,FRR,related,cop - im filter coefficients,cop - frr filter coefficients,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+s,e,no,mhz - model s,mhz - model e,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MOVT,STMIA,no,movt x xxxx xxx xxxx xxxx xxxx,stmia x xxxx xxxx xxxx xxxx xxxx,stmia x xxxx xxxx xxxx xxxx xxxx,movt cccc xxxx xxxx xxxx xxxx xxxx,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Getprobe,calculate,no,getprobe ncr scsi clock frequency,calculate ncr scsi clock frequency in khz,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Side,Limiter,no,r - dac side,r - dac limiter,r - dac side,r x - dac limiter,r xc - dac side,r - dac limiter,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Class,waker,no,class goes to sleep,waker goes to sleep after wakup,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+QADD,SMMLS,no,qadd cccc xxxx xxxx xxxx xxxx,smmls cccc xxxx xxxx xxxx x xxxx,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+kas,hohndel,no,v kas exp $,v hohndel exp $,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+-bit,also,no,should be -bit aligned,so count should be also aligned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+machine,multiple,no,round up to the next machine word,round an int up to the next multiple of,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+STREXH,CDP,no,strexh xxxx xxxx xxxx xxxx,cdp xxxx xxxx xxxx xxxx xxx xxxx,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+bt,tw,no,module bt just ident,module tw just ident,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+time,field,no,the rest of the time,read the rest of the field,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+abort,Rx,no,jumbo frame tx abort,jumbo frame support for tx rx,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+bw_blank,xxxfb_resume,no,bw_blank - optional function,xxxfb_resume - optional but recommended function,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+QADD,SASX,no,qadd xxxx xxxx xxxx,sasx xxxx xxxx xxxx,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+super,information,no,the super is written,the information is written later,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+F,B,no,- f user-defined permission,- b user-defined permission,b t aprm one second content octet,f t aprm one second content msb octect,b - messages that have been sent,f - messages that have been acknowledged,video b general purpose control,video f general purpose control,video b general purpose counter,video f general purpose counter,video b cdt size,video f cdt size,check whether one of f,check whether one of b,sleep out fr count b,sleep out fr count f,video b vip control,video f vip control,video f vip control,video b vip format control,video b pixel format,video f pixel format,video b pixel format,video f pixel format,port f pull-up enable reg,port b pull-up enable reg,effects send bus number for channels effects send f,effects send bus number for channels effects send b,udc controlstatus register - endpoint b,udc controlstatus register - endpoint f,video decoder f registers,video decoder b registers,port b direction reg,port f direction reg,io prb entry f,io prb entry b,video b interrupt masked status,video f interrupt masked status
+BitBLT,preliminary,no,bitblt width and height,preliminary width and height settings,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SCBs,packets,no,total number of scbs,total number of packets,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+IP,IA-,no,checksumming functions for ip,optimized raid- checksumming functions for ia-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BFI,MRRC,no,bfi cccc x xxxx xxxx xxxx x xxxx,mrrc cccc xxxx xxxx xxxx xxxx xxxx,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+new,using,no,new position in fifo,using position in fifo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+suspend,update,near antonym,if a noflush suspend is in progress,returns true if a clock update is in progress,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MCF_CCM_CCR,MCF_GPIO_PODR_LCDCTLL,identifier,bit definitions and macros for mcf_ccm_ccr,bit definitions and macros for mcf_gpio_podr_lcdctll,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MCF_GPIO_PDDR_BUSCTL,MCF_GPIO_PCLRR_FECIC,identifier,bit definitions and macros for mcf_gpio_pddr_busctl,bit definitions and macros for mcf_gpio_pclrr_fecic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MCF_INTC_IPRL,MCF_GPIO_DSCR_DEBUG,identifier,bit definitions and macros for mcf_intc_iprl,bit definitions and macros for mcf_gpio_dscr_debug,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+KPAD_STAT,ATAPI_TERMINATE,identifier,bit masks for kpad_stat,bit masks for atapi_terminate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ACTION,OPTIONAL_ACTIONS,identifier,values for the action argument to `tcflow,values for the optional_actions argument to `tcsetattr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+EBIU_AMBCTL,PIXC_INTRSTAT,identifier,bit masks for ebiu_ambctl,bit masks for pixc_intrstat,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+gio,iop_sap_out,no,c-code for register scope gio,c-code for register scope iop_sap_out,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MCF_CCM_CCR,MCF_GPIO_PPDSDR_LCDCTLH,identifier,bit definitions and macros for mcf_ccm_ccr,bit definitions and macros for mcf_gpio_ppdsdr_lcdctlh,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MCF_GPIO_PCLRR_CS,MCF_GPIO_PPDSDR_FECL,identifier,bit definitions and macros for mcf_gpio_pclrr_cs,bit definitions and macros for mcf_gpio_ppdsdr_fecl,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+LLC_CONN_EV_RX_I_CMD_Pbit_SET_,LLC_CONN_EV_RX_RR_RSP_Fbit_SET_,identifier,state transitions for llc_conn_ev_rx_i_cmd_pbit_set_ event,state transitions for llc_conn_ev_rx_rr_rsp_fbit_set_ event,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+core-lock,wl-scan_lock,identifier,caller must hold core-lock,the caller must hold wl-scan_lock,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+osc_clk-specific,sys_clk-specific,identifier,omapxxx osc_clk-specific clock code,omapxxx sys_clk-specific clock code,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+slots_lock,i_ceph_lock,identifier,caller must hold slots_lock,caller must hold i_ceph_lock,caller must hold slots_lock,caller must hold i_ceph_lock,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pinnacle-color,genius-tvgo-amce,identifier,pinnacle-color h - keytable for pinnacle_color remote controller,genius-tvgo-amce h - keytable for genius_tvgo_amce remote controller,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+drop,preserve,antonym,drop dtr and rts,preserve dtr and rts,drop dtr and rts,preserve dtr and rts,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+and,indicate,no,and the command completed successfully,indicate the host adapter probe completed successfully,and the command completed successfully,indicate the block device registration completed successfully,and the command completed successfully,indicate the command completed successfully,and the command completed successfully,indicate the host adapter initialization completed successfully,and the command completed successfully,indicate the system resource acquisition completed successfully,and the command completed successfully,indicate the target device inquiry completed successfully
+intel,altera,related,ic-xiic h copyright c intel corporation,copyright c altera corporation - copyright c,copyright c altera corporation - copyright c,copyright c intel corporation copyright - c montavista,copyright c intel corporation - c montavista software,copyright c altera corporation - copyright c netup inc,copyright c intel corporation copyright - c montavista,copyright c altera corporation - copyright c netup inc
+modemsurfr,voicesurfr,no,motorola modemsurfr k external pnp,motorola voicesurfr k external pnp,motorola voicesurfr k internal pnp,motorola modemsurfr k internal pnp
+reserve,corrupt,related,seems to be reserved,plcp seems to be corrupted
+bit,path,related,turn off the transmission bit,turn on or off the transmission path
+since,fixme,no,since we dont know,fixme we dont know why
+setgetrate,readwriteregister,no,ioctl request handler to setget rate,ioctl request handler to readwrite register
+startat,snapshotcurrent,no,start at head of list,snapshot current head of -blkd_tasks list
+llc_conn_ev_rx_rej_rsp_fbit_set_,llc_conn_ev_rx_rej_rsp_fbit_set_x,identifier,state transitions for llc_conn_ev_rx_rej_rsp_fbit_set_ event,state transitions for llc_conn_ev_rx_rej_rsp_fbit_set_x event
+rw,wo,no,interrupt cause set - rw,interrupt cause set - wo
+c-lock,data-lock,related,assumes c-lock is held,note assumes data-lock is held
+bitmap,synchronize_sched,no,we dont fall back to bitmap,we fall back to synchronize_sched
+signature,master,related,signature must exist,master must already exist
+faxint,voiceext,u s robotics k fax int pnp,u s robotics k voice ext pnp,u s robotics k voice ext pnp,u s robotics sporster k fax int pnp
+crash,problem,related,if theres a crash,if theres a problem
+immediately,error,no,the ioctl returns immediately,the ioctl fails and returns error,the ioctl returns immediately,the ioctl fails and returns error
+mcf_gpio_ppdsdr_cs,mcf_gpio_pddr_lcdctll,identifier,bit definitions and macros for mcf_gpio_ppdsdr_cs,bit definitions and macros for mcf_gpio_pddr_lcdctll
+rxtcp,ordisable,no,enable rx tcp checksum offload,enable or disable checksum offload engines
+usb_ep_dequeue,usb_ep_disable,identifier,check usb_ep_dequeue at usb_gadget h for details,check usb_ep_disable at usb_gadget h for details
+setup,reconnect,related,waiting for setup,commands waiting for reconnect
+mcf_gpio_par_fecic,mcf_gpio_dscr_qspi,identifier,bit definitions and macros for mcf_gpio_par_fecic,bit definitions and macros for mcf_gpio_dscr_qspi
+ccccxxx,orrx,no,cccc xxx xxxx xxxx xxxx xxxx,orr x xxxx xxxx xxxx xxxx xxxx
+qsax,uqadd,no,qsax xxxx xxxx xxxx,uqadd xxxx xxxx xxxx
+manli,iodata_bctve,no,manli h - keytable for manli remote controller,iodata-bctve h - keytable for iodata_bctve remote controller
+memory,frame,related,memory types,frame types and templates,memory types,frame types and templates,read the entire frame,set the entire memory
+mlscccc,movtx,no,mls cccc xxxx xxxx xxxx xxxx,movt x xxxx xxx xxxx xxxx xxxx
+spaceorb_process_packet,spaceball_process_packet,identifier,spaceorb_process_packet decodes packets the driver receives from the spaceorb,spaceball_process_packet decodes packets the driver receives from the spaceball
+mcf_lcdc_lgwcr,mcf_gpio_ppdsdr_fech,identifier,bit definitions and macros for mcf_lcdc_lgwcr,bit definitions and macros for mcf_gpio_ppdsdr_fech
+pop,teq,no,pop x xxxx xxxx,teq x xxxx xxx xxxx xxxx
+mcf_gpio_pddr_fecl,mcf_gpio_pclrr_uart,identifier,bit definitions and macros for mcf_gpio_pddr_fecl,bit definitions and macros for mcf_gpio_pclrr_uart
+mhz,fastest,no,pixel clock mhz,pixel clock fastest,pixel clock mhz,pixel clock fastest
+oa,andother,no,o a negative error code in case of failure,and other negative error codes in case of failure
+allow,want,no,only allow one writer at a time,we only want one writer at a time
+icv,chain,no,pull the icv,just pull the chain
+output,issue,no,outputs ata taskfile to standard ata host controller,issues ata taskfile register set to ata host controller
+data,self,no,if data || data,if self || self-magic lap_magic return
+init,cleanup,near antonym,init atm device can sleep,cleanup atm device can sleep
+bits,major,no,bits chip revision,major chip revision
+smlaxy,ldrbt,no,smlaxy cccc xxxx xxxx xxxx xx xxxx,ldrbt cccc x x xxxx xxxx xxxx xxxx xxxx,ldrbt xxxx xxxx xxxx xxxx,smlaxy xxxx xxxx xxxx xx xxxx
+overflow,alignment,related,to enable overflow error ints,to enable alignment error ints
+mcf_lcdc_lpccr,mcf_gpio_par_irq,identifier,bit definitions and macros for mcf_lcdc_lpccr,bit definitions and macros for mcf_gpio_par_irq
+interval,wrap-around,related,look for the interval,look for the wrap-around
+regulator,driver,related,add attributes supported by this regulator,table of devices attributes supported by this driver
+smccccc,ldrimmediate,no,smc cccc xxxx xxxx xxxx xxxx,ldr immediate xxxx xxxx xxxx xxxx xxxx
+smlal,mcr,no,smlal cccc xxxx xxxx xxxx xxxx,mcr cccc xxx xxxx xxxx xxxx xxx xxxx
+hold,take,related,notes io_request_lock is held,notes io_request_lock is taken,port-lock held by caller,port-lock taken by caller,no locks are held,no locks are taken,no locks are held,usually no locks are taken,without taking any locks,without holding any mm locks,without holding any locks,without taking any locks,this is called with mon_lock taken,this function must be called with mon_lock held
+msg,buffer,no,total size of msg,total allocated size of buffer
+includeasm-itimex,includeasm-ibitops,no,derived from includeasm-itimex h copyright c,derived from includeasm-ibitops h copyright c
+adstech-dvb-t-pci,avermedia-ma-rm-k,no,adstech-dvb-t-pci h - keytable for adstech_dvb_t_pci remote controller,avermedia-ma-rm-k h - keytable for avermedia_ma_rm_k remote controller
+flashmode,omapclockdomains,no,applies to flash mode only,this applies to omap clockdomains only

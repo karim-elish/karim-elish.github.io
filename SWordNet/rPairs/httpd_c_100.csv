@@ -1,0 +1,101 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context
+header,trailer,antonym,skip over any header data which was written,skip over any trailer data which was written,,,,
+End,Start,antonym,,end of line - varies with multiline switch,start of line - varies with multiline switch,end of subject assertion z,start of subject assertion,end of the subject string,start of the subject string
+global,thread-local,antonym,,opaque global mutex structure,opaque thread-local mutex structure,,,,
+done,present,antonym,,the header is done,the if header is present,,,,
+pvbquery,apr_dbd_pvbquery,identiifer,,pvbquery query using a prepared statement + binary args,apr_dbd_pvbquery query using a prepared statement + binary args,,,,
+apr_dbd_pselect,pvbselect,identiifer,,apr_dbd_pselect select using a prepared statement + args,pvbselect select using a prepared statement + binary args,,,,
+apr_dbd_pvquery,apr_dbd_pbquery,identiifer,,apr_dbd_pvquery query using a prepared statement + args,apr_dbd_pbquery query using a prepared statement + binary args,,,,
+pvselect,apr_dbd_pvbselect,identiifer,,pvselect select using a prepared statement + args,apr_dbd_pvbselect select using a prepared statement + binary args,,,,
+PCRE_NOTEMPTY,PCRE_NO_AUTO_CAPTURE,identiifer,,if pcre_notempty is set,if pcre_no_auto_capture is set,,,,
+AP_INIT_ITERATEdirective,AP_INIT_RAW_ARGSdirective,identiifer,,declared in the command_rec list with ap_init_iteratedirective,declared in the command_rec list with ap_init_raw_argsdirective,,,,
+pcre_get_substring,pcre_get_substring_list,identiifer,,argument the result of a previous pcre_get_substring returns nothing,argument the result of a previous pcre_get_substring_list returns nothing,,,,
+SIGILL,SIGABRT,identiifer,,is used for sigill on netware,is used for sigabrt on netware,is used for sigill on windows,is used for sigabrt on windows,,
+SIGFPE,SIGTERM,identiifer,,is used for sigfpe on netware,is used for sigterm on netware,is used for sigfpe on windows,is used for sigterm on windows,,
+apr_pool_destroy,apr_pool_create_ex,identiifer,,if you do not have apr_pool_destroy in a wrapper,if you do not have apr_pool_create_ex in a wrapper,,,,
+SIGSEGV,SIGBREAK,identiifer,,is used for sigsegv on windows,is used for sigbreak on windows,,,,
+propid,what,no,,the property to insert is identified by the propid value,the information to insert is identified by the what argument,,,,
+versioned,bogus,no,,or may not be versioned,this may or may not be bogus,,,,
+directory,request,no,,if in directory context,if were not in request context,,,,
+repetition,HTTP,no,,set up for repetition,set up the environment for http,,,,
+live,userdir,no,,check to see if this is a live property,check to see if this is a userdir request,,,,
+POSIX,native,no,,handle compiling via the posix interface,handle compiling via the native interface,,,,
+NULL,possible,no,,should not be null,should not be possible,,,,
+sigabrt,sigpoll,identifier,is used for sigabrt on netware,is used for sigpoll on netware
+OK,APR_UNKFILE,no,,the return value is ok,the value is apr_unkfile,the return value is ok,the value is apr_unkfile,,
+status,APR_ENOENT,no,,do something with status,we can do something with apr_enoent,,,,
+args,headers-only,no,,now if we have args,now we have headers-only,,,,
+code,cases,no,,also separate the ucp code,and also separate the ucp cases,,,,
+id,error,no,,just return the id,just return the error,,,,
+string,compilation,no,,the regexp pattern string,the regexp pattern compilation,,,,
+Size,Retrieve,no,,size an http header field list item,retrieve an http header field list item,,,,
+listeners,scoreboard,no,,set up the listeners,set up the scoreboard,set up the listeners,set up events and the scoreboard,,
+NULL,equivalent,no,,if both are null,if both ports are equivalent,,,,
+written,nicely,no,,the number of bytes written,format the number of bytes nicely,,,,
+dummy_stderr,resolve_locks,no,,if dummy_stderr is non-zero,if resolve_locks is true non-zero,,,,
+serve,cache,no,,add cache_out filter to serve this request,add cache_save filter to cache this request,,,,
+pvselect,pvbquery,identifier,pvselect select using a prepared statement + args,pvbquery query using a prepared statement + binary args
+inherited,defaults,no,,local directives override and anything else is inherited,local directives override and anything else gets defaults,,,,
+UTF-,unknown,no,,the filepath character encoding is utf-,the filepath character encoding is unknown,,,,
+xc,xff,no,,bits for xc - xc,bits for xc - xff,,,,
+Add,Get,related,new,add a byte array to ajp message,get a byte array from ajp message,,,,
+x,variant,related,new,fall through to the normal x handling,and fall through to the normal variant handling,,,,
+must,may,no,,parse the request body must be a mkworkspace element,parse the request body may be a version-control element,,,,
+Reuse,Send,related,new,reuse an ajp message,send an ajp message to backend,,,,
+COPY,MOVE,related,new,in a copy operation,in a move operation,,,,
+server,client,related,new,is the status code a server error,is the status code a client error,,,,
+search,deliver,related,new,okay time to search the content,okay time to deliver the content,,,,
+FTP,AJP,identifier,ftp routines for apache proxy,ajp routines for apache proxy,,,,
+Per-server,Per-directory,related,new,per-server context configuration directives,per-directory context configuration directives,,,,
+host,domain,related,new,return true if host represents a host name,return true if addr represents a domain name,ignore trailing dots in host comparison,ignore trailing dots in domain comparison,,
+Hook,Implement,related,new,hook an optional hook,implement an optional hook,,,,
+string,map,no,If the string is,If the map is required
+died,exited,antonym,the child died due to a resource shortage,The child exited due to a resource shortage
+frees,eliminate,related,frees the console window,eliminate the console window
+too,bucket,no,so tack on an EOS too,and tack on an EOS bucket
+cert,key,no,NetscapeMozilla cert db CA certificate database,NetscapeMozilla key db client certificate database
+filter,filter_rec,identifier,The next filter in the chain,The next filter_rec in the list
+remote_name,remote_host,identifier,remote_name returns the hostname,remote_host returns the hostname
+rewritecond,rewriterule,identifier,apply a single rewritecond,apply a single rewriterule
+SetLastError,WSASetLastError,no,or calls a SetLastError style function,or calls a WSASetLastError style function
+transaction_mode_set,apr_dbd_transaction_mode_get,identifier,transaction_mode_set get the mode of transaction,apr_dbd_transaction_mode_get get the mode of transaction
+PIPE,TRANSIENT,related,The PIPE bucket type,The TRANSIENT bucket type
+section,htaccess,no,If we merged this same section last time,If we merged this same htaccess last time
+limit,status,no,We have a limit in effect,We have a status in r-status
+SIGINT,SIGPOLL,identifier,is used for SIGINT on netware,is used for SIGPOLL on netware,is used for SIGINT on windows,is used for SIGPOLL on netware
+creation,destruction,antonym,Dynamic lock creation callback,Dynamic lock destruction callback
+member,locknull,no,called for a member resource,called for a locknull resource
+lock,directory,no,APR was not given a lock structure,APR was not given a directory structure
+SIGFPE,SIGTERM,identifier,is used for SIGFPE on netware,is used for SIGTERM on netware,is used for SIGFPE on windows,is used for SIGTERM on windows,is used for SIGFPE on netware,is used for SIGTERM on windows,is used for SIGFPE on windows,is used for SIGTERM on netware
+value,argument,related,The property to insert is identified by the propid value,The information to insert is identified by the what argument
+transaction_mode_get,transaction_mode_set,identifier,transaction_mode_get get the mode of transaction,transaction_mode_set get the mode of transaction
+server,filter_rec,no,The next server in the list,The next filter_rec in the list
+Declaration,Implementation,related,Declaration helper macro to construct apr_foo_pool_gets,Implementation helper macro to provide apr_foo_pool_gets
+body,headers,related,body file modification time,headers file modification time
+SEARCH,CHECKIN,no,handle the SEARCH method,handle the CHECKIN method
+ASCII,EBCDIC,related,This is the normal table for ASCII systems,This is the abnormal table for EBCDIC systems,Delimiter table for the ASCII character set,Delimiter table for the EBCDIC character set,for ASCII systems,for EBCDIC systems,For an ASCII machine,For an EBCDIC machine,This is the normal table for ASCII systems,This is the abnormal table for EBCDIC systems
+it,req_byte,no,If it is not set,If req_byte is set
+data,hdrs,no,name of file where the data will go,name of file where the hdrs will go
+values,codes,no,APR_OS_START_ERROR is where the APR specific error values start,APR_OS_START_STATUS is where the APR specific status codes start
+merging,workspaces,no,if the provider does not support merging,or the provider does not support workspaces
+page,Directory,related,SDBM page file extension,SDBM Directory file extension
+props,properties,synonym,if not just reporting on supported live props,if not just getting supported live properties
+remove,copymove,related,recursively remove it and its children,recursively copymove it and its children
+variant,subpattern,no,If the variant has no language,If the subpattern has no firstbyte
+apr_dbd_pquery,pvbquery,identifier,apr_dbd_pquery query using a prepared statement + args,pvbquery query using a prepared statement + binary args
+MMAP,SOCKET,related,The MMAP bucket type,The SOCKET bucket type
+SOCKET,TRANSIENT,related,The SOCKET bucket type,The TRANSIENT bucket type
+redirect,version,no,If the request returned a redirect,If the request specified a version
+restart,shutdown,near antonym,Restart is signaled by apache -k restart,Shutdown is signaled by apache -k shutdown,An apache -k restart command on the command line,An apache -k shutdown command on the command line
+process,directory,related,APR was not given a process structure,APR was not given a directory structure
+depth,which,no,depth is ignored,which is ignored
+pvbselect,apr_dbd_pbselect,identifier,pvbselect select using a prepared statement + binary args,apr_dbd_pbselect select using a prepared statement + binary args
+use,apply,related,so use it,so apply it
+OPTIONS,PROPFIND,no,handle the OPTIONS method,handle the PROPFIND method
+workspaces,activities,related,if the provider does not support workspaces,or the provider does not support activities,if the provider does not support activities,or the provider does not support workspaces,The provider may restrict activities to certain locations,The provider may restrict workspaces to certain locations
+apr_dbd_pselect,apr_dbd_pvselect,identifier,apr_dbd_pselect select using a prepared statement + args,apr_dbd_pvselect select using a prepared statement + args
+context,connection,related,Grab a context off the queue,Grab a connection off the network
+cas,flipp,no,This table is a lower casing table,This table is a case flipping table
+pbquery,pvbquery,identifier,pbquery query using a prepared statement + binary args,pvbquery query using a prepared statement + binary args
+mkworkspace,version-control,related,parse the request body must be a mkworkspace element,parse the request body may be a version-control element,parse the request body must be a mkworkspace element,parse the request body may be a version-control element
+path_info,query_args,identifier,the path_info extracted from this request,the query_args extracted from this request

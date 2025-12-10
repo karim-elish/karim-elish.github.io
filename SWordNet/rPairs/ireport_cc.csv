@@ -1,0 +1,5 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context
+tab,round,related,Tab Rectangle Element,Round Rectangle Report Element
+reset,process,related,reset series,process the series
+tab,draw,related,Tab Graphics Element,draw Graphics Element,Tab Graphics Element,draw Graphics Element
+tab,read,related,Tab Font Element,read Font Element

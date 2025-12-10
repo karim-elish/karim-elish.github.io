@@ -1,0 +1,101 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context
+data,hypersparc,no,data cache enable bit,hypersparc cache enable,data cache enable,hypersparc cache enable,Data cache enable,hypersparc cache enable,Data cache enable bit,hypersparc cache enable
+out,back,near antonym,write out byte,write back byte
+playback,eb64plus,no,playback intr enable,eb64plus intr enable
+acknowledge,ieee80211,no,acknowledge media change,ieee80211 media change
+notify,store,related,notify data low byte,store data byte,notify data high byte,store data byte
+update,nxe,no,Update media status,nxe media status
+last,ieee80211,no,last reset scan,ieee80211 reset scan
+retrieves,*fdt,no,Retrieves node name,*fdt node name,Retrieves next node,*fdt next node
+remov,atw,no,remov media status notif,atw media status
+capture,wi,no,capture intr enable,wi intr enable
+acknowledge,urtwn,no,acknowledge media change,urtwn media change
+handle,rtw,no,Handle media change request,rtw media change
+write,ka49,no,Write cache align enable,ka49 cache enable
+gigabit,trunk,no,Gigabit media status only,trunk media status
+handle,lii,no,Handle media change request,lii media change
+io,sun4,no,IO cache enable,sun4 cache enable
+id,activate,no,device scsi id lun,scsi activate lun
+acknowledge,nxe,no,acknowledge media change,nxe media change
+do,pxe,no,do netif close,pxe netif close,do netif open,pxe netif open
+warm,maestro,no,warm reset AC codec,maestro reset codec
+check,ipw,no,check media change,ipw media change
+tod,generic2e,no,tod intr map,generic2e intr map
+pci,ppc,no,PCI intr enable,ppc intr enable
+update,ixgb,no,Update media status,ixgb media status
+acknowledge,run,related,acknowledge media change,run media change
+generate,iq80321,no,generate pci intr,iq80321 pci intr disestablish
+uvm_,pgt,no,uvm_pagefree free page,pgt page free
+reassembly,free,no,create reassembly queue,create free queue
+but,xscale,no,but cache flush,xscale cache flush ID,but cache flush,xscale cache flush I,but cache flush,xscale cache flush D
+update,myx,no,Update media status,myx media status
+io,ka53,no,IO cache enable,ka53 cache enable
+data,pmap,no,data cache enable bit,pmap cache enable,data cache enable,pmap cache enable,Data cache enable,pmap cache enable,Data cache enable bit,pmap cache enable
+acknowledge,cmalo,no,acknowledge media change,cmalo media change
+check,nxe,no,check media change,nxe media change
+one,pgt,no,One per device,pgt per device kthread
+remov,tsec,no,remov media status notif,tsec media status
+write,turbosparc,no,Write cache align enable,turbosparc cache enable
+maximum,cn30xxpow,no,maximum ring size tx,cn30xxpow ring size,maximum ring size,cn30xxpow ring size,maximum ring size rx,cn30xxpow ring size
+update,vic,no,Update media status,vic media status
+check,pgt,no,check media change,pgt media change
+cpu-independent,arm8,no,CPU-independent cache flush,arm8 cache flush ID
+size,x86,no,size bus space,x86 bus space init,size bus space,x86 bus space mallocok
+handle,urtw,no,Handle media change request,urtw media change
+acknowledge,atu,no,acknowledge media change,atu media change
+free,buf,no,uvm_pglistfree free list pages,buf free pages
+write,ka41,no,Write cache align enable,ka41 cache enable
+position,mouse,related,position copy end mark,mouse copy end,position copy start mark,mouse copy start
+just,wdc,no,Just read block requested,wdc read block
+pci,eb164,no,PCI intr enable,eb164 intr enable
+connection,msg,no,clear connection state,ahc clear msg state
+clear,do,related, clear pending int,do pending int
+write,store,related,Write data byte,store data byte
+setup,wi,no,setup write io,wi write record io,setup read io,wi read record io
+b_bad,scsi,no,B_BAD io done,scsi io get done
+list,create,no,list free queue elements,create free queue
+interrupt,coproc,no,To remove interrupt handler,remove coproc handler
+gigabit,lii,no,Gigabit media status only,lii media status
+handle,wi,no,Handle media change request,wi media change
+handle,athn,no,Handle media change request,athn media change
+unlink,pf,no,unlink free expired state,pf free state
+capture,intc,no,capture intr enable,intc intr enable
+playback,eb164,no,playback intr enable,eb164 intr enable
+playback,ampintc,no,playback intr enable,ampintc intr enable
+syscallargstruct,pipex,no,syscallargstruct sockaddr addr,pipex sockaddr compar addr
+there,mac,no,there int pending,macintr do pending int
+force,otus,no,force write barrier,otus write barrier
+scsi,pci,no,SCSI bus frequency MHz,pci bus frequency
+needs,ms1,no,needs cache flush,ms1 cache flush all
+disconnect,loop,no,disable disconnect interrupt,autri disable loop interrupt
+handle,urtwn,no,Handle media change request,urtwn media change
+warm,fms,no,warm reset AC codec,fms reset codec
+cpu-independent,srmmu,no,CPU-independent cache flush,srmmu cache flush all
+pkh,ampintc,no,pkh intr enable,ampintc intr enable
+uvm_,pool,no,uvm_pagefree free page,pool page free
+gigabit,pgt,no,Gigabit media status only,pgt media status
+shpcic,x86,no,shpcic bus space,x86 bus space init,shpcic bus space,x86 bus space mallocok
+handle,iwn,no,Handle media change request,iwn media change
+but,m88110,no,but cache flush,m88110 cache flush handler
+external,ka49,no,external cache enable,ka49 cache enable
+wake,sppp,no,wake up power event,sppp up event
+cpu-independent,hypersparc,no,CPU-independent cache flush,hypersparc cache flush all
+configuration,statfs,no,copy configuration info,copy statfs info
+actually,ueagle,no,Actually open pipes,ueagle open pipes
+general,intpri,no,general intr enable,intpri intr enable
+check,tht,no,check media change,tht media change
+save,aac,no,save wait command,aac wait command
+remov,vic,no,remov media status notif,vic media status
+update,ieee80211,no,Update media status,ieee80211 media status
+tag,purge,related,cache tag ID,xscale cache purge ID,cache tag ID,arm8 cache purge ID,cache tag ID,sa1 cache purge ID
+data,ka49,no,data cache enable bit,ka49 cache enable,data cache enable,ka49 cache enable,Data cache enable,ka49 cache enable,Data cache enable bit,ka49 cache enable
+communication,install,no,nnpfs communication device,nnpfs install device
+now,cd1400,no,Now enable transmitter,cd1400 enable transmitter
+external,turbosparc,no,external cache enable,turbosparc cache enable
+read,ms1,no,Read cache align enable,ms1 cache enable
+system,lemote,no,system intr map,lemote intr map
+gigabit,atw,no,Gigabit media status only,atw media status
+but,cypress,no,but cache flush,cypress cache flush all
+full-dupled,omgpio,no,full-dupled intr mask,omgpio intr mask
+envelope,bw,no,head free envelope list,free bw list
+pci,ampintc,no,PCI intr enable,ampintc intr enable

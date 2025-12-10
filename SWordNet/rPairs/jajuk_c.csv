@@ -1,0 +1,100 @@
+mount,unmount,antonym,used when a device mount is requested,used when a device unmount is requested,try to mount it,try to unmount it,,,,,,,,,,
+create,remove,antonym,used when a new property is created,used when a custom property is removed
+increase,decrease,antonym,used to increase the volume,used to decrease the volume,,,,,,,,,,,,
+removed,added,antonym,used when a custom property is removed,used when a new custom property is added,,,,,,,,,,,,
+play,resume,near antonym,no,the play button has been pressed,used when the resume button has been pressed,the play button has been pressed,the resume button has been pressed,used when the play button has been pressed,used when the resume button has been pressed,the resume button has been pressed,used when the play button has been pressed,,,,,,
+create,request,no,used when a new property is created,used when a new device is requested
+Play,Delete,near antonym,play a playlist file,delete a playlist file,,,,,,,,,,,,
+command,information,no,create the command bar,create the information bar panel,,,,,,,,,,,,
+sync,synchronize,synonym,sync table and tree views,synchronize table and tree views
+check,means,no,check this device is synchronized,means this device is not synchronized $non-nls-$,,,,,,,,,,,,
+rate,name,no,used when file rate changes,used when a file name changes,,,,,,,,,,,,
+end,panel,no,add to the end,add the components to the panel,,,,,,,,,,,,
+track,style,no,upgrade for track ids,upgrade for style ids,,,,,,,,,,,,
+help,cover,no,used when the help should be displayed,used when the cover should be refreshed,,,,,,,,,,,,
+DJ,resume,no,used when the dj button is pressed,used when the resume button has been pressed,,,,,,,,,,,,
+cover,property,no,test the cover is not already used,check the property is not already used internaly,,,,,,,,,,,,
+manages,current,no,manages look and feel,current look and feel
+device,refresh,no,used when a new device is requested,used when a view refresh is requested,used when a new device is requested,used when a playlist refresh is requested,,,,,,,,,,
+visible,planned,no,number of visible tracks,number of planned tracks between and,,,,,,,,,,,,
+item,transition,no,add a void item,add a void transition,,,,,,,,,,,,
+style,album,no,sort by style $non-nls-$,sort by album $non-nls-$,check the style doesnt,check if the album doesnt,upgrade for album ids,upgrade for style ids,,,,,,,,
+ms,secs,related,cross fade duration in ms,cross fade duration in secs,,,,,,,,,,,,
+Font,Colour,related,font to use when drawing the text,colour to use when drawing the text,,,,,,,,,,,,
+default,waiting,no,set current cursor as default cursor,set current cursor as waiting cursor
+rate,score,related,no,file comparator based on rate,file comparator based on score,,,,,,,,,,,,
+Parse,Delete,near antonym,parse a playlist file,delete a playlist file,,,,,,,,,,,,
+device,directory,no,return associated device node,return associated directory node,gather information about the device,gather information about the directory,upgrade for device ids,upgrade for directory ids,,,,,,,,
+file,style,no,upgrade for file ids,upgrade for style ids,,,,,,,,,,,,
+selection,transitions,related,create list of styles used in current selection,create list of styles used in existing transitions,,,,,,,,,,,,
+transitions,proportions,no,now add all known transitions,now add all known proportions
+album,author,related,check if current album is same as previous album,check if current author is same as the previous author,check if current album is same as previous album,check if current author is same as the previous author,check if current album is same as previous,check if current author is same as the previous author,check if the album doesnt,check if the author doesnt,gather information on current album,gather information on current author,upgrade for album ids,upgrade for author ids,add all tracks from the same album,add all tracks from the same author
+selection,file,no,notify the selection change,notify everybody for the file change,,,,,,,,,,,,
+Album,PlaylistFile,related,register an album with a known id,register an playlistfile with a known id,,,,,,,,,,,,
+data,Audio,related,data buffer size in bytes,audio buffer size in bytes,,,,,,,,,,,,
+DJ,stop,related,used when the dj button is pressed,used when the stop button has been pressed,,,,,,,,,,,,
+intro,repeat,related,used when the intro mode was changed,used when the repeat status was changed,,,,,,,,,,,,
+name,property,related,check this name is not already token,check if this property is not already used,,,,,,,,,,,,
+file,author,related,upgrade for file ids,upgrade for author ids,,,,,,,,,,,,
+Album,medium,related,album accuracy $non-nls-$ $non-nls-$,medium accuracy $non-nls-$ $non-nls-$,,,,,,,,,,,,
+continue,repeat,related,used when the continue mode was changed,used when the repeat status was changed,,,,,,,,,,,,
+current,previous,related,action class for rewinding the current track,action class for jumping to the previous track,,,,,,,,,,,,
+file,track,related,upgrade for file ids,upgrade for track ids,it is a planned file,means it is a planned track,,,,,,,,,,
+File,directory,related,register an file with a known id,register a directory with a known id,,,,,,,,,,,,
+mount,change,related,used when a device mount is requested,used when a playlist change is requested,,,,,,,,,,,,
+Track,author,related,register an track with a known id,register an author with a known id,,,,,,,,,,,,
+plan,fifo,related,remove this file from plan,remove this file from fifo,,,,,,,,,,,,
+change,decrease,related,used to change the volume,used to decrease the volume,,,,,,,,,,,,
+Manages,Register,related,manages look and feel,register look and feel,,,,,,,,,,,,
+refresh,change,related,request for cover refresh,request for a cover change,used when a playlist change is requested,used when a playlist refresh is requested,used when a device refresh is requested,used when a playlist change is requested,used when a view refresh is requested,used when a playlist change is requested,,,,,,
+refreshing,sychronizing,related,make sure to unlock refreshing even if an error occured,make sure to unlock sychronizing even if an error occured,,,,,,,,,,,,
+path,directories,no,check if path exists,check if directories exists,,,,,,,,,,,,
+mode,status,synonym,used when the continue mode was changed,used when the repeat status was changed,used when the intro mode was changed,used when the repeat status was changed,used when the shuffle mode was changed,used when the repeat status was changed,,,,,,,,
+ambiance,ambience,synonym,select first ambiance found,select first ambience found,,,,,,,,,,,,play,resume,the play button has been pressed,used when the resume button has been pressed,the play button has been pressed,the resume button has been pressed,used when the play button has been pressed,used when the resume button has been pressed,the resume button has been pressed,used when the play button has been pressed
+property,device,related,used when a new property is created,used when a new device is requested
+pdf,html,related,filter new exportfilefilter pdf,filter new exportfilefilter html
+track,playlistfile,related,register an track with a known id,register an playlistfile with a known id,related
+cach,pixels,no,play icon in cach,play icon columns size in pixels
+row,column,antonym,selected row in view,selected column in view
+device,playlist,related,used when a device unmount is requested,used when a playlist refresh is requested
+unmount,refresh,related,used when a device unmount is requested,used when a playlist refresh is requested
+dj,pause,related,used when the dj button is pressed,used when the pause button has been pressed
+refresh,compare,related,perform a fast refresh,perform a fast compare
+author,directory,related,register an author with a known id,register a directory with a known id
+nothing,perspective,no,when nothing is selected,activate calls when perspective is selected
+program,library,no,this program is free software,this library is free software
+up,down,antonym,put up an item from given index to index-,put down an item from given index to index+
+views,perspectives,synonym,default implementation for views,provide default implementation for perspectives
+dj,novelties,related,used when the dj button is pressed,used when the novelties button is pressed
+new,custom,near antonym,used when a new property is created,used when a custom property is removed
+change,decrease,related,used to change the volume,used to decrease the volume
+of,album,no,used when the best of button is pressed,used when the finish album button is pressed
+dj,resume,related,used when the dj button is pressed,used when the resume button has been pressed
+current,manage,no,current look and feel,manages look and feel
+mount,synchronize,related,check device is mounted,check this device is synchronized
+stop,resume,near antonym,used when the stop button has been pressed,used when the resume button has been pressed,the resume button has been pressed,used when the stop button has been pressed,the stop button has been pressed,used when the resume button has been pressed,the stop button has been pressed,the resume button has been pressed
+track,style,no,upgrade for track ids,upgrade for style ids
+novelties,resume,related,used when the novelties button is pressed,used when the resume button has been pressed
+refresh,synchronize,related,tells if a device is refreshing,tells if a device is synchronizing
+author,playlistfile,no,register an author with a known id,register an playlistfile with a known id
+intro,shuffle,related,used when the intro mode was changed,used when the shuffle mode was changed
+create,add,related,used when a new property is created,used when a new custom property is added
+display,refresh,related,used when the help should be displayed,used when the cover should be refreshed
+track,playlist,related,this way we clean up all orphan tracks,this way we clean up all orphan playlists
+info-level,debug-level,identifier,log a info-level message,log a debug-level message
+file,directory,related,register an file with a known id,register a directory with a known id
+style,device,no,upgrade for style ids,upgrade for device ids
+garbager,autocommit,no,garbager delay in ms,autocommit delay in ms
+add,register,related,add the new item,register the new item
+class,variable,related,dj type class name,dj type variable name
+check,mean,no,check this device is synchronized,means this device is not synchronized $non-nls-$
+unmount,synchronization,no,used when a device unmount is requested,used when a device synchronization is requested
+album,track,related,action class for jumping to the next album,action class for jumping to the previous track,used to jump to the next album,used to jump to the previous track
+device,refresh,no,used when a new device is requested,used when a playlist refresh is requested
+model,property,no,create a new model,create a new property
+refresh,mount,related,used when a view refresh is requested,used when a device mount is requested
+take,select,related,take it as default,select it as default
+image,thumbnails,related,check for image cache presence,check for thumbnails cache presence
+file,track,related,register an file with a known id,register an track with a known id,upgrade for file ids,upgrade for track ids,it is a planned file,means it is a planned track
+font,colour,related,font to use when drawing the text,colour to use when drawing the text
+name,type,no,dj name variable name,dj type variable name

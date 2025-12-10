@@ -1,0 +1,8 @@
+@inproceedings{rpairs,
+    author = {Jinqiu Yang and Lin Tan}, 
+    title = {Inferring Semantically Related Words from Software Context}, 
+    booktitle = {Proceedings of the Working Conference on Mining Software Repositories (MSR'12)},
+    month  = {June},
+    year   = {2012},
+}
+

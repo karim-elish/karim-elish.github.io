@@ -1,0 +1,101 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context
+adl,acpiasus,related,adl attach,acpiasus attach,adl match,acpiasus match
+qli,bktr,related,qli intr,bktr intr
+acpi,lmenv,related,acpi attach,lmenv attach,acpi match,lmenv match
+se,gpiosim,related,se attach,gpiosim attach,se match,gpiosim match
+kate,awacs,related,kate attach,awacs attach,kate match,awacs match
+kue,ural,related,kue attach,ural attach,kue match,ural match,kue start,ural start,kue activate,ural activate,kue detach,ural detach,kue init,ural init,kue watchdog,ural watchdog
+vte,bufq,no,vte init,bufq init
+ip,ipv,related,ip input,ipv input
+load,store,related,f load,f store,cnxxfau op load,cnxxfau op store
+tc,zssp,no,tc init,zssp init
+se,omapuart,no,se attach,omapuart attach,se activate,omapuart activate
+ka,acx,no,ka init,acx init
+fins,pciide,no,fins attach,pciide attach,fins match,pciide match
+ipgphy,schizo,no,ipgphy attach,schizo attach
+owid,device,no,owid match,device match
+gus,gusmax,related,gus halt in dma,gusmax halt out dma,gus halt in dma,gusmax halt in dma,gus halt out dma,gusmax halt out dma,gus halt out dma,gusmax halt in dma,gus round blocksize,gusmax round blocksize,gus speaker ctl,gusmax speaker ctl,gus get props,gusmax get props,gus commit settings,gusmax commit settings
+knote,uvscom,no,knote attach,uvscom attach
+ykbec,pxammc,no,ykbec match,pxammc match
+cmp,ibus,no,cmp attach,ibus attach,cmp match,ibus match,cmp print,ibus print
+saost,mtxclock,no,saost attach,mtxclock attach,saost match,mtxclock match
+copyback,readback,related,bt copyback,bt readback
+zssp,irongate,no,zssp attach,irongate attach,zssp match,irongate match
+vxtbus,central,no,vxtbus attach,central attach,vxtbus match,central match,vxtbus print,central print
+kue,auich,related,kue attach,auich attach,kue match,auich match,kue activate,auich activate
+lcd,instance,no,lcd match,instance match
+intc,mainbus,no,intc attach,mainbus attach
+uhts,pxaudc,related,uhts match,pxaudc match,uhts activate,pxaudc activate,uhts detach,pxaudc detach
+zs,gcu,no,zs attach,gcu attach
+rf,fms,no,rf attach,fms attach
+wdt,ueagle,no,wdt attach,ueagle attach
+wbsio,extent,no,wbsio print,extent print
+che,openpic,no,che attach,openpic attach,che match,openpic match
+uath,lofn,no,uath attach,lofn attach
+gscpcib,radeonfb,no,gscpcib attach,radeonfb attach,gscpcib match,radeonfb match
+apm,udfu,no,apm attach,udfu attach,apm match,udfu match
+rdac,auich,related,rdac attach,auich attach,rdac match,auich match,rdac activate,auich activate
+uvisor,toshiba,no,uvisor attach,toshiba attach,uvisor match,toshiba match
+elansc,omohci,no,elansc attach,omohci attach,omohci match,elansc match
+ti,noct,no,ti intr,noct intr
+andl,vert,no,andl refresh,vert refresh
+omap,netif,no,omap attach,netif attach,omap init,netif init
+ahc,udp,no,ahc detach,udp detach
+intc,ehci,no,intc intr,ehci intr
+esa,xmphy,no,esa attach,xmphy attach
+umct,owtemp,related,umct attach,owtemp attach,umct match,owtemp match,umct activate,owtemp activate,umct detach,owtemp detach
+iintc,zstty,no,iintc attach,zstty attach,iintc match,zstty match
+vte,ite,no,vte init,ite init
+dfs,glenv,no,dfs attach,glenv attach,dfs match,glenv match
+smg,ubsa,no,smg attach,ubsa attach,smg match,ubsa match
+wb,pxadmac,no,wb attach,pxadmac attach,wb intr,pxadmac intr
+sdhc,xlights,no,sdhc intr,xlights intr
+iic,macobio,related,iic attach,macobio attach,iic match,macobio match,iic print,macobio print
+unit,openpic,no,unit init,openpic init
+cl,msk,no,cl intr,msk intr
+ses,knote,no,ses attach,knote attach
+siotty,elansc,no,siotty attach,elansc attach,elansc match,siotty match
+aic,lemac,related,aic isa attach,lemac isa attach,aic isa probe,lemac isa probe
+wskbd,uvisor,related,wskbd attach,uvisor attach,wskbd match,uvisor match,wskbd activate,uvisor activate,wskbd detach,uvisor detach
+eso,amdmsr,no,eso attach,amdmsr attach,eso match,amdmsr match
+bge,saost,no,bge attach,saost attach
+le,acpitz,no,le attach,acpitz attach,le match,acpitz match
+tcx,bnx,no,tcx intr,bnx intr
+kue,raptor,no,kue attach,raptor attach,kue match,raptor match
+prcm,longest,no,prcm match,longest match
+le,longrun,no,le init,longrun init
+pcn,bwtwo,no,pcn intr,bwtwo intr
+cnw,owmac,no,cnw attach,owmac attach,cnw match,owmac match
+bios,uhidev,related,bios attach,uhidev attach,bios match,uhidev match,bios open,uhidev open,bios close,uhidev close
+nfe,mpath,no,nfe attach,mpath attach,nfe match,mpath match
+dc,jme,related,dc attach,jme attach,dc intr,jme intr,dc miibus writereg,jme miibus writereg,dc miibus statchg,jme miibus statchg,dc miibus readreg,jme miibus readreg,dc start,jme start,dc detach,jme detach,dc tick,jme tick,dc init,jme init,dc watchdog,jme watchdog
+vsbic,vesabios,no,vsbic attach,vesabios attach,vsbic match,vesabios match
+adl,gscpcib,no,adl attach,gscpcib attach,adl match,gscpcib match
+jme,ykbec,no,jme attach,ykbec attach,jme match,ykbec match
+cd,tdb,no,cd init,tdb init
+mp,agpdev,no,mp print,agpdev print
+iha,auvia,no,iha intr,auvia intr
+re,cnxxfpa,no,re init,cnxxfpa init
+cmp,ichiic,no,cmp attach,ichiic attach,cmp match,ichiic match
+sbt,config,no,sbt detach,config detach
+moscom,openpic,no,moscom attach,openpic attach,moscom match,openpic match
+dc,cmalo,related,dc attach,cmalo attach,dc intr,cmalo intr,dc start,cmalo start,dc detach,cmalo detach,dc init,cmalo init,dc watchdog,cmalo watchdog
+mp,auixp,no,mp match,auixp match
+mskc,vpci,no,mskc attach,vpci attach
+tl,wsmouse,no,tl attach,wsmouse attach
+agp,umct,no,agp attach,umct attach
+si,dcphy,no,si attach,dcphy attach,si match,dcphy match
+epic,siop,related,epic pci match,siop pci match,siop pci attach,epic pci attach,epic intr,siop intr
+tc,bmac,no,tc init,bmac init
+rl,mtd,no,rl pci attach,mtd pci attach,rl pci match,mtd pci match,rl setmulti,mtd setmulti,rl intr,mtd intr,rl miibus readreg,mtd miibus readreg,rl miibus statchg,mtd miibus statchg,rl miibus writereg,mtd miibus writereg,rl start,mtd start,rl ifmedia upd,mtd ifmedia upd,rl ifmedia sts,mtd ifmedia sts,rl init,mtd init,rl watchdog,mtd watchdog
+dmastart,dmacascade,related,isa dmastart,isa dmacascade
+nxe,ixgbe,related,nxe attach,ixgbe attach,nxe start,ixgbe start,nxe media change,ixgbe media change,nxe media status,ixgbe media status,nxe watchdog,ixgbe watchdog
+uftdi,tumbler,no,uftdi attach,tumbler attach,uftdi match,tumbler match
+qli,bwtwo,no,qli intr,bwtwo intr
+aac,apic,no,aac intr,apic intr
+ebus,uvscom,no,ebus attach,uvscom attach,ebus match,uvscom match
+skc,mpath,no,skc attach,mpath attach
+che,uark,no,che attach,uark attach,che match,uark match
+owid,wskbd,related,owid attach,wskbd attach,owid match,wskbd match,owid activate,wskbd activate,owid detach,wskbd detach
+schizo,macintr,no,schizo attach,macintr attach,schizo match,macintr match
+uvideo,harmony,related,uvideo attach,harmony attach,uvideo match,harmony match,uvideo close,harmony close

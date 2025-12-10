@@ -1,0 +1,7 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context
+Check,set,related,Check Album Name,set Album Name
+Check,change,related,Check Album Name,change Album Name
+Check,get,related,Check Album Name,get Album Name
+Proposed,get,related,Proposed Track Name,get Track Name
+Proposed,change,no,Proposed Track Name,change Track Name
+Proposed,set,no,Proposed Track Name,set Track Name

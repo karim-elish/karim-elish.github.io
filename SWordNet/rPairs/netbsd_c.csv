@@ -1,0 +1,102 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context
+mbuf,pm_segs,no,physical address of mbuf,physical address of pm_segs
+uobj,l,no,if uobj is null,note if l is null
+status,warning,no,internal status changed x,internal warning changed x
+joy,attimer,no,acpi joy attachment based in lpt_acpi c by jared d mcneill,acpi attimer attachment based on lpt_acpi c by jared d mcneill
+lpt,cpu_dcache_wb_range,no,cant use lpt here,we cant use cpu_dcache_wb_range here
+timer,profile,related,token bucket regulator timer,get token bucket regulator profile
+start,reset,related,start hold time us,reset hold time us,reset the command processor,start the command processor,reset the concurrent command engine,start the concurrent command engine,start the dma engine,reset the receiver dma engine
+file,file_priv,identifier,free all blocks associated with the releasing file,free all blocks associated with the releasing file_priv
+bus_space_set_multi_n,bus_space_write_stream_n,no,void bus_space_set_multi_n bus_space_tag_t tag,void bus_space_write_stream_n bus_space_tag_t tag
+card,generic,no,do the card initialization,do the generic initialization
+api,architecture,no,not part of the api,not part of the architecture
+synclevel,ethertype,no,restore the original synclevel,restore the original ethertype
+dist,dedicated,no,redirect to dist spare space,redirect to dedicated spare space
+register,control,no,number of register sets,set the number of control sets,acpi power management control,acpi power management register,test mode control unused,pc test mode register unused
+sstatus,scontrol,no,dpa sata sstatus register,dpa sata scontrol register
+compiler,c,related,to make compiler happy,forward reference to make c happy
+ab_quiet,ab_verbose,identifier,aprint_naive send to console only if ab_quiet,aprint_verbose send to console only if ab_verbose
+leds,eeprom,no,minor device is leds,minor device is eeprom
+qword,region,no,field is one qword,the field is missing from one region
+main,sh_cache_config,no,before main is called,__cache_flush is used before sh_cache_config is called
+speaker,chip,no,turn off the speaker,now turn off interrupts for the chip,turn off the speaker,turn off bclk internal to the chip
+hpibrecving,gpibrecving,no,timed out hpibrecving dsj - continue it,timed out gpibrecving dsj - continue it
+but,clone,no,but with a few differences,clone with a few differences
+data,directories,no,max time to delay syncing data,time to delay syncing directories
+tail,defaultindex,no,check if tail is zero,if defaultindex is zero
+fpu,exception,no,rest of fpu frame,rest of exception frame
+return,compute,no,return the physical address,compute the physical address of the chip
+hc_reg,tpat_reg,identifier,hc_reg definition offset x,tpat_reg definition offset x
+dma,suported,no,max dma burst size,max suported burst size
+ter,block,no,connect the termnode to the commit node,connect the block node to the sync node,connect the termnode to the commit node,connect the block node to the rod nodes,connect the block node to the xor node,connect the termnode to the commit node,connect the termnode to the commit node,connect the block node to the read nodes
+fix,verify,related,fix the ip header,verify the ip header checksum
+counters,diagnostic,no,hardware phy error counters,hardware phy error diagnostic
+bit,authenticator,no,length of bit string,length of authenticator string
+addrs,gnodes,no,total number of addrs,total number of gnodes
+contents,configuration,related,read the eeprom contents,read the boards eeprom configuration
+leftover,sadb_msg_seq,no,if leftover is specified,todo if sadb_msg_seq is specified
+default,match,no,null if no default,or null if no match
+masked,normal,antonym,masked interrupt status r,normal interrupt vector status r
+tx_resp_prod,rx_resp_prod,identifier,frontend receives event when tx_resp_prod passes tx_event,frontend receives event when rx_resp_prod passes rx_event
+enter,definitely,no,enter a new mapping,definitely a new mapping
+maybe,network,no,maybe out of order,network out of order
+stat,close,no,file table vnode stat routine,file table vnode close routine,fileops stat method for a kqueue descriptor,fileops close method for a kqueue descriptor
+tx,connection,no,tbd wait for tx to complete,wait for connection to complete
+last_ack,persist,no,go to last_ack state,then go to persist state
+memory,streams,related,out of memory resources,out of streams resources
+stone,damore,no,this product includes software developed by jonathan stone,this product includes software developed by garrett damore,copyright c garrett damore all rights reserved,copyright c jonathan stone all rights reserved
+go,dump,related,print out how many mbs we have to go,print out how many mbs we still have to dump,print out how many mbs we have left to go,print out how many mbs we still have to dump,print out how many mbs we are to go,print out how many mbs we still have to dump,print out how many mbs we to go,print out how many mbs we still have to dump
+dri,ip,no,the dri version number,get the ip version number
+trust,replace,no,we cant trust it,if we cant replace it
+pcn_init,tlp_stop,no,pcn_init ifnet interface function,tlp_stop ifnet interface function
+process,use,related,so we try to process it,so by default we dont try to use it,try to use it,so we try to process it
+start,call,related,start the clock interrupt,call the common mips clock interrupt handler
+hostid,cpu_kcore_hdr_t,no,fill in hostid part,fill in cpu_kcore_hdr_t part
+these,tbr_timer,no,we dont need these anymore,dont need tbr_timer anymore
+p,cgtwo,no,when the rom has mapped in a p display,when the rom has mapped in a cgtwo display,color display p driver,color display cgtwo driver
+io,access,related,note the caller must provide an io handle for elink_id_port,note the caller must provide an access handle for elink_id_port,a read io has completed,a forced-reconstruction read access has completed,enable io to card,enable access to card
+allmulti,narrowasync,no,fall back to allmulti,so that devices fall back to narrowasync
+tsp,turbochannel,no,load a tsp sgmap-mapped dma map with an mbuf chain,load a turbochannel sgmap-mapped dma map with an mbuf chain,load a tsp sgmap-mapped dma map with a linear buffer,load a turbochannel sgmap-mapped dma map with a linear buffer,load a tsp sgmap-mapped dma map with raw memory,load a turbochannel sgmap-mapped dma map with raw memory,load a tsp sgmap-mapped dma map with a uio,load a turbochannel sgmap-mapped dma map with a linear buffer,load a tsp sgmap-mapped dma map with a uio,load a turbochannel sgmap-mapped dma map with a uio,load a turbochannel sgmap-mapped dma map with a uio,load a tsp sgmap-mapped dma map with a linear buffer
+drm_ioctl_version,drm_ioctl_info_bufs,no,drm_ioctl_version ioctl argument type,drm_ioctl_info_bufs ioctl argument type
+fpu,locking,no,fpu is handled internally,locking is handled internally in mount_domount
+board,device,related,base address of board,hpa base address of device,get information about the board,get information about the device,attach a supported board,attach a supported device,match a supported board,match a supported device
+bar,port,no,the bar is enabled,make sure the port is enabled
+xxx,perp,no,xxx reset not implemented,perp reset not implemented -
+sense-command,where,no,this is the default sense-command we send,this is the function where we send packets
+map,touched,no,pte for the page map,restore old pte for the last page touched
+cause,allow,related,cause adapter to interrupt the pc,allow adapter to interrupt the pc
+point,watermark,no,description of tx start points for various revisions,description of tx fifo watermarks for various revisions
+computer,thomas,no,this software is provided by network computer,this software is derived from information provided by matt thomas
+wm_init,aumac_init,identifier,wm_init ifnet interface function,aumac_init ifnet interface function
+line,file,no,if we reach the end of the line,if we write beyond the end of the file
+retry,dmadone,no,we will retry below,xxx we will dmadone below
+k,page,no,aligned on a k boundary,and must be aligned on a page boundary,must be k aligned,xxx - `bst-bs_pbase must be page aligned
+delete,initialize,antonym,delete policy in pcb,initialize policy in pcb,delete the process init semaphore,initialize the process init semaphore,delete the data node,initialize the data node
+ia,sh,no,machine-dependent part of the lwp structure for ia,machine-dependent part of the proc structure for sh
+fragment,available,no,number of fragment entries,count the number of available entries
+dead,partitioned,related,if disk is dead,if disk is partitioned
+a-law,mu-law,identifier,convert -bit a-law tofrom bit unsignedsigned linear,convert -bit mu-law tofrom bit unsignedsigned linear
+pages,beginning,no,pointers to the pages,reset its pointers to the beginning
+align,perchar,no,if `align is non-zero,if perchar is non-zero
+smp,continuous,no,when running in smp mode,running in continuous mode
+_rtt,_mtu,no,init or lock _rtt,init or lock _mtu
+bam,gbgr,no,bam lpc interface bridge,gbgr lpc interface bridge
+cache,pools,no,initialize the pmap cache,initialize the pmap pools,initialize the pmap cache,initialize the pmap pools
+establishment,multiprocessor,no,in the establishment case,in the multiprocessor case
+exec_coff_prep_zmagic,exec_ecoff_prep_zmagic,identifier,exec_coff_prep_zmagic prepare a coff zmagic binarys exec package,exec_ecoff_prep_zmagic prepare a ecoff zmagic binarys exec package
+item,one,no,find the last item,and find the last one
+requester,interrupter,related,vmebus requester control register,vmebus interrupter control register
+ldd,udd,identifier,raid device definition ldd,raid device use definition udd
+dge_ioctl,tlp_init,identifier,dge_ioctl ifnet interface function,tlp_init ifnet interface function
+hh,xxesb,no,hh lpc interface bridge,xxesb lpc interface bridge
+erase,load,related,erase the whole tape,load the whole tape segment
+reassemble,locate,no,then try to reassemble it,then try to locate it via search path
+ti,fra,no,parameters ti - pointer to ipftoken structure,parameters fra - pointer to frag structure to free
+pages,xfer,no,put the pages back,put the xfer back on the list
+lct,rbuf,no,number of lct entries,number of rbuf entries
+return,extract,related,return the physical address,extract the physical address of the page
+remove,transmit,related,about to be removed,if it is about to be transmitted
+full,predicate,no,if full is true,if predicate is true
+caller,waiter,related,wake up the caller,so wake up the waiter
+mask,scaling,related,mask for valid bits,scaling for valid bits
+algorithmics,tungsten,no,memory map and register definitions for the algorithmics p-,memory map and register definitions for the tungsten motherboard

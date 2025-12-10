@@ -1,0 +1,6 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context,,
+per,tied,no,per Map Entry getValue,Tied Map Entry,per Map Entry getKey,Tied Map Entry,per Map Entry setValue,Tied Map Entry
+per,default,no,per Map Entry getValue,Default Map Entry,per Map Entry getValue,Default Map Entry,per Map Entry getValue,Default Map Entry,per Map Entry getKey,Default Map Entry,per Map Entry getKey,Default Map Entry,per Map Entry getKey,Default Map Entry,per Map Entry setValue,Default Map Entry,per Map Entry setValue,Default Map Entry,per Map Entry setValue,Default Map Entry
+gets,put,no,Gets key value,put key value
+validates,put,no,Validates key value pair,put key value
+per,unmodifiable,no,per Map Entry getValue,Unmodifiable Map Entry,per Map Entry getValue,Unmodifiable Map Entry,per Map Entry getKey,Unmodifiable Map Entry,per Map Entry getKey,Unmodifiable Map Entry,per Map Entry setValue,Unmodifiable Map Entry,per Map Entry setValue,Unmodifiable Map Entry

@@ -1,0 +1,101 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context
+epgpio,auaudio,no,epgpio match,auaudio match
+ural,fdstart,no,ural write,fdstart write
+eso,auacer,related,eso query encoding,auacer query encoding,eso query devinfo,auacer query devinfo,eso halt input,auacer halt input,eso freemem,auacer freemem,eso halt output,auacer halt output,eso getdev,auacer getdev,eso set port,auacer set port,eso get port,auacer get port,eso intr,auacer intr,eso freem,auacer freem,eso get props,auacer get props,eso reset,auacer reset
+jpwr,aceride,no,jpwr match,aceride match
+kbc,hpcioman,no,kbc match,hpcioman match,kbc print,hpcioman print
+piixpm,sunkvme,no,piixpm match,sunkvme match
+hpckbd,optpoint,no,hpckbd match,optpoint match,hpckbd enable,optpoint enable
+vlan,netcf,related,vlan config,netcf config
+atbus,pfckbd,no,atbus match,pfckbd match
+resume,rescan,related,vga pci resume,vga pci rescan
+raid,idma,no,raid match,idma match
+ptyfs,isapnp,no,ptyfs print,isapnp print
+tl,tb,no,tl intr,tb intr
+ucb,dsclock,no,ucb match,dsclock match
+checknatin,queueappend,no,fr checknatin,fr queueappend
+ahci,gtmpsc,related,ahci intr,gtmpsc intr,ahci poll,gtmpsc poll,ahci softintr,gtmpsc softintr
+wpi,iwn,related,wpi load microcode,iwn load microcode,wpi load firmware,iwn load firmware,iwn alloc rpool,wpi alloc rpool,wpi free rpool,iwn free rpool,wpi fix channel,iwn fix channel,wpi newstate,iwn newstate,iwn dma contig free,wpi dma contig free,wpi ioctl,iwn ioctl,iwn iter func,wpi iter func,iwn mem write,wpi mem write,iwn setup beacon,wpi setup beacon,wpi calib timeout,iwn calib timeout,iwn power calibration,wpi power calibration,iwn config,wpi config,iwn hw config,wpi hw config,iwn alloc fwmem,wpi alloc fwmem,wpi free fwmem,iwn free fwmem,iwn read prom data,wpi read prom data,iwn auth,wpi auth,iwn read eeprom channels,wpi read eeprom channels,iwn free rbuf,wpi free rbuf,wpi set led,iwn set led,wpi alloc rx ring,iwn alloc rx ring,iwn alloc shared,wpi alloc shared,wpi resume,iwn resume,iwn match,wpi match,iwn cmd intr,wpi cmd intr,wpi cmd,iwn cmd,wpi notif intr,iwn notif intr,iwn tx intr,wpi tx intr,iwn intr,wpi intr,wpi enable tsf,iwn enable tsf,wpi start,iwn start,wpi stop,iwn stop,iwn stop master,wpi stop master,wpi detach,iwn detach,iwn wme update,wpi wme update,wpi read eeprom group,iwn read eeprom channels,iwn read eeprom,wpi read eeprom,iwn newassoc,wpi newassoc,iwn free rx ring,wpi free rx ring,iwn reset rx ring,wpi reset rx ring,iwn free shared,wpi free shared,wpi media change,iwn media change,iwn mem unlock,wpi mem unlock,iwn mem lock,wpi mem lock,wpi watchdog,iwn watchdog,wpi free tx ring,iwn free tx ring,wpi free rx ring,iwn free tx ring,iwn reset rx ring,wpi reset tx ring,iwn reset tx ring,wpi reset tx ring,iwn free rx ring,wpi free tx ring,wpi reset rx ring,iwn reset tx ring,wpi reset,iwn reset,iwn scan,wpi scan,wpi free rx ring,iwn alloc rx ring,wpi reset rx ring,iwn alloc rx ring,wpi free rx ring,iwn reset rx ring,iwn free rx ring,wpi reset rx ring,iwn reset rx ring,wpi alloc rx ring,iwn free rx ring,wpi alloc rx ring,iwn free tx ring,wpi reset tx ring,wpi free tx ring,iwn reset tx ring
+natgetsz,fragexpire,no,fr natgetsz,fr fragexpire
+ofbus,ofdisk,related,ofbus match,ofdisk match
+poll,pathconf,related,union poll,union pathconf,fdesc poll,fdesc pathconf,puffs vnop poll,puffs vnop pathconf,spec poll,spec pathconf,ptyfs poll,ptyfs pathconf,fifo poll,fifo pathconf
+tcx,vge,no,tcx reset,vge reset
+adb,zrc,no,adb intr,zrc intr
+deq,ssn,no,deq match,ssn match
+gtsc,symtable,no,gtsc dump,symtable dump
+iwn,rtas,no,iwn match,rtas match,iwn detach,rtas detach
+iha,empsc,no,iha intr,empsc intr
+blist,procfs,no,blist print,procfs print
+tctrl,pcdisplay,no,tctrl match,pcdisplay match
+ioapic,hdvideo,no,ioapic match,hdvideo match,ioapic dump,hdvideo dump
+gpmc,imxaips,no,gpmc match,imxaips match,gpmc print,imxaips print
+irq,pshtp,related,irq disable,pshtp disable,irq enable,pshtp enable
+stp,xirc,no,stp intr,xirc intr
+ahb,clkctrl,no,ahb match,clkctrl match
+ofnet,nfsmbc,no,ofnet match,nfsmbc match
+purgevfs,revlookup,no,cache purgevfs,cache revlookup
+intreg,pxagpio,no,intreg match,pxagpio match
+prod,shutdown,related,hydra prod,hydra shutdown
+sca,tpcalib,no,sca ioctl,tpcalib ioctl
+hpcout,grackle,0.5,1,hpcout match,grackle match
+apm,aps,related,apm suspend,aps suspend,apm resume,aps resume,aps match,apm match
+main,piixide,no,main match,piixide match
+elb,argpio,no,elb match,argpio match
+jxtp,sbjcn,no,jxtp match,sbjcn match
+socket,lutimes,no,rump sys socket,rump sys lutimes
+nat,xbseeprom,no,nat match,xbseeprom match
+iee,light,no,iee ioctl,light ioctl
+mask,hpcin,no,mask match,hpcin match
+copyrows,replaceattr,related,pcdisplay copyrows,pcdisplay replaceattr,vga raster copyrows,vga raster replaceattr
+gio,hcide,no,gio match,hcide match
+mavb,dsrtc,no,mavb match,dsrtc match
+root,nttimetounix,no,ntfs root,ntfs nttimetounix
+sbgbus,wsmouse,no,sbgbus match,wsmouse match
+dmac,spic,no,dmac intr,spic intr
+opm,clkctrl,no,opm match,clkctrl match
+icpsp,ofdisk,no,icpsp match,ofdisk match
+jmide,arcvideo,no,jmide match,arcvideo match,jmide intr,arcvideo intr
+sv,adw,no,sv intr,adw intr
+acphy,urlphy,related,acphy service,urlphy service,acphy status,urlphy status
+sm,wdc,no,sm obio match,wdc obio match,sm pcmcia match,wdc pcmcia match,sm pcmcia detach,wdc pcmcia detach,sm obio attach,wdc obio attach,sm pcmcia attach,wdc pcmcia attach,sm isa attach,wdc isa attach
+irt,eco,no,irt ioctl,eco ioctl
+dtkbd,tcbus,no,dtkbd match,tcbus match
+cg,sifdma,no,cg reset,sifdma reset
+ste,rscrtc,no,ste match,rscrtc match
+setfd,drain,no,tav setfd,tav drain
+jtp,iommu,no,jtp match,iommu match
+cs,cpuunit,no,cs match,cpuunit match
+spd,ztp,no,spd match,ztp match
+cmi,zbbus,no,cmi match,zbbus match,cmi print,zbbus print
+ipftune,natunload,no,fr ipftune,fr natunload
+icp,atusart,no,icp intr,atusart intr
+viaide,ibmcpc,no,viaide match,ibmcpc match
+tl,cd,no,tl reset,cd reset
+getinfo,channelmsg,no,umidi getinfo,umidi channelmsg
+npcb,auixp,no,npcb free,auixp free
+ia,vextr,no,ia dasm,vextr dasm
+fsync,print,no,union fsync,union print,sysvbfs fsync,sysvbfs print,sync print,sync fsync,tmpfs fsync,tmpfs print,puffs vnop print,puffs vnop fsync,spec fsync,spec print,mfs fsync,mfs print,layer fsync,layer print,msdosfs fsync,msdosfs print,ntfs print,ntfs fsync,smbfs fsync,smbfs print
+ucbtp,msiiep,no,ucbtp match,msiiep match
+idma,empsc,no,idma intr,empsc intr
+vga,bce,no,vga ioctl,bce ioctl,bce reset,vga reset
+kbd,bioscons,no,kbd getc,bioscons getc
+ubc,ttyldisc,no,ubc release,ttyldisc release
+optiide,voodoofb,no,optiide match,voodoofb match
+vrdcu,pdcsata,no,vrdcu match,pdcsata match
+opb,toasterlcd,no,opb match,toasterlcd match
+exec,loader,related,elf exec,elf loader
+gaps,pshpwr,no,gaps match,pshpwr match
+tp,oboe,no,tp detach,oboe detach
+b,vsbus,no,b match,vsbus match
+mc,shpcic,no,mc match,shpcic match
+awi,vrgiu,no,awi intr,vrgiu intr
+kbd,njsc,no,kbd intr,njsc intr
+hdvideo,armadillopcic,no,hdvideo match,armadillopcic match
+fget,vptofh,no,ntfs fget,ntfs vptofh
+nfsmb,vesafb,no,nfsmb match,vesafb match
+vrcmu,gpiic,no,vrcmu match,gpiic match
+zyd,yds,no,zyd intr,yds intr
+vref,setattr,no,lfs vref,lfs setattr
+aapic,gxpcic,no,aapic match,gxpcic match
+agpdev,battery,no,agpdev match,battery match
+dge,callout,no,dge reset,callout reset

@@ -1,0 +1,101 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context
+eos,transient,related,apr bucket eos make,apr bucket transient make
+maint,start,related,cgid maint,cgid start
+pstrndup,pstrcatv,no,apr pstrndup,apr pstrcatv
+ftp,balancer,no,ap proxy ftp register hook,ap proxy balancer register hook,proxy ftp canon,proxy balancer canon
+read,write,antonym,test fail read flush,test fail write flush,char buffer read,char buffer write,test open read,test open write,bio filter out read,bio filter out write
+end,restart,near antonym,end handler,restart handler
+bind,report,no,dav method bind,dav method report
+win,netware,related,win pre config,netware pre config
+cert,connection,no,ssl print cert info,ssl print connection info
+echo,send,no,echo header,send header
+query,select,related,dbd freetds query,dbd freetds select
+usage,interrupted,no,htdbm usage,htdbm interrupted
+create,signal,no,create threads,signal threads
+entity,postfile,no,open entity,open postfile
+prot,symlink,no,resolve prot,resolve symlink
+eoc,immortal,no,ap bucket eoc make,apr bucket immortal make
+exports,connection,no,read exports,read connection
+init,release,related,lock init,lock release
+palloc,pstrdup,no,apr palloc,apr pstrdup
+report,delete,related,dav method report,dav method delete
+exists,freedatum,no,vt db exists,vt db freedatum,vt gdbm exists,vt gdbm freedatum,vt sdbm exists,vt sdbm freedatum,vt ndbm exists,vt ndbm freedatum
+atoi,pstrmemdup,no,apr atoi,apr pstrmemdup
+mmap,cdata,no,mmap handler,cdata handler
+copy,write,related,copy request,write request
+fixup,needsdomain,no,proxy fixup,proxy needsdomain
+quoted,connection,no,read quoted,read connection
+cols,tuples,related,dbd freetds num cols,dbd freetds num tuples,dbd sqlite num cols,dbd sqlite num tuples,dbd oracle num cols,dbd sqlite num tuples,dbd freetds num cols,dbd sqlite num tuples,dbd mysql num cols,dbd sqlite num tuples,dbd pgsql num cols,dbd sqlite num tuples,odbc num cols,odbc num tuples,dbd sqlite num cols,dbd mysql num tuples,dbd oracle num cols,dbd mysql num tuples,dbd freetds num cols,dbd mysql num tuples,dbd mysql num cols,dbd mysql num tuples,dbd pgsql num cols,dbd mysql num tuples,dbd sqlite num cols,dbd pgsql num tuples,dbd sqlite num cols,dbd oracle num tuples,dbd sqlite num cols,dbd freetds num tuples,dbd oracle num cols,dbd pgsql num tuples,dbd oracle num cols,dbd oracle num tuples,dbd oracle num cols,dbd freetds num tuples,dbd freetds num cols,dbd pgsql num tuples,dbd mysql num cols,dbd pgsql num tuples,dbd pgsql num cols,dbd pgsql num tuples,dbd freetds num cols,dbd oracle num tuples,dbd mysql num cols,dbd oracle num tuples,dbd mysql num cols,dbd freetds num tuples,dbd pgsql num cols,dbd oracle num tuples,dbd pgsql num cols,dbd freetds num tuples
+type,access,no,x type checker,x access checker
+child,reqtimeout,no,child init,reqtimeout init
+kat,exists,no,rand kat,rand exists
+check,unblock,no,check signal,unblock signal
+restart,shutdown,near antonym,,ap start restart,ap start shutdown
+suexec,filter,no,suexec hooks,filter hooks
+excl,readwrite,no,test open excl,test open readwrite
+socket,filename,no,create socket,create filename
+absolute,relative,antonym,root absolute,root relative
+oracle,sqlite,related,dbd oracle num tuples,dbd sqlite num tuples,dbd oracle num cols,dbd sqlite num cols,dbd sqlite end transaction,dbd oracle end transaction,dbd sqlite transaction mode get,dbd oracle transaction mode get,dbd sqlite pselect,dbd oracle pselect,dbd sqlite query,dbd oracle query,dbd oracle bind,dbd sqlite bind,dbd oracle num cols,dbd sqlite num tuples,dbd sqlite num cols,dbd oracle num tuples,dbd oracle pbselect,dbd sqlite pbselect,dbd oracle pbquery,dbd sqlite pbquery,dbd sqlite pquery,dbd oracle pquery
+notrel,notrelfail,no,merge notrel,merge notrelfail
+make,notimpl,no,apr bucket socket make,apr bucket setaside notimpl
+entity,listeners,no,open entity,open listeners
+label,unlock,no,dav method label,dav method unlock
+pre,process,no,x pre connection,x process connection
+read,writecreate,no,test open read,test open writecreate
+setget,incrdecr,no,test memcache setget,test memcache incrdecr
+ipaddr,hostname,related,proxy match ipaddr,proxy match hostname
+exec,multi,no,handle exec,handle multi
+clear,inaddr,no,hash clear,hash inaddr
+menu,terminate,no,menu header,terminate header
+setup,pstrmemdup,no,apr setup,apr pstrmemdup
+trans,server,no,proxy trans,proxy server
+puts,flush,related,bio filter out puts,bio filter out flush
+blank,footer,no,menu blank,menu footer
+threads,testfile,no,create threads,create testfile
+imap,start,no,imap handler,start handler
+mime,winnt,no,mime post config,winnt post config
+footer,comment,no,menu footer,menu comment
+proc,accept,no,proc mutex cleanup,accept mutex cleanup
+copymove,checkout,no,dav method copymove,dav method checkout
+cookie,worker,no,make cookie,make worker,add worker,add cookie
+ex,unmanaged,no,apr pollcb create ex,apr pool create unmanaged,apr pollset create ex,apr pool create unmanaged
+iconv,sqlite,no,iconv open,sqlite open
+xlate,brigade,no,apr xlate cleanup,apr brigade cleanup
+attr,datum,no,attr cleanup,datum cleanup
+unlock,create,related,apr thread mutex unlock,apr global mutex create,apr proc mutex create,apr thread mutex unlock
+regex,regkey,related,regex cleanup,regkey cleanup
+pool,file,related,apr bucket pool make,apr bucket file make,file bucket destroy,pool bucket destroy,apr pool owner set,apr file inherit set,apr file inherit set,apr pool userdata set,apr os file get,apr foo pool get
+get,discard,related,ap get request note,ap discard request body
+mutex,rwlock,no,thread mutex cleanup,thread rwlock cleanup,apr thread mutex destroy,apr thread rwlock destroy,apr proc mutex destroy,apr thread rwlock destroy
+string,pollset,no,string cleanup,pollset cleanup
+atomic,checker,no,atomic cleanup,checker cleanup
+pool,info,no,apr foo pool get,apr sockaddr info get
+show,display,synonym,show info,display info
+reslist,pollset,apr reslist create,apr pollset create,apr reslist create,apr pollset create ex
+dso,mmap,no,dso cleanup,mmap cleanup
+cond,once,no,thread cond cleanup,thread once cleanup
+io,util,related,ssl io filter cleanup,ssl util thread cleanup
+reslist,pollcb,no,apr reslist create,apr pollcb create ex,apr pollcb create,apr reslist create
+smmem,getopt,no,apr smmem init,apr getopt init
+Start,Control,no,Start Service,Control Service
+lock,defname,no,apr thread mutex lock,apr proc mutex defname
+to,from,antonym,ajp xlate to ascii,ajp xlate from ascii,ap xlate proto to ascii,ap xlate proto from ascii
+hash,compare,no,util ldap search node hash,util ldap url node compare,util ldap search node hash,util ldap compare node compare
+proc,global,no,apr proc mutex destroy,apr global mutex create,apr proc mutex defname,apr global mutex create,apr proc mutex create,apr global mutex create,proc mutex cleanup,global mutex cleanup
+get,register,related,ap get request note,ap register request note
+file,alloc,no,file cleanup,alloc cleanup
+Value,Section,no,Xml Entity Value Tok,Xml Ignore Section Tok,Xml Ignore Section Tok,Xml Attribute Value Tok,Xml Entity Value Tok,Xml Cdata Section Tok,Xml Cdata Section Tok,Xml Attribute Value Tok
+pollset,checker,no,pollset cleanup,checker cleanup
+file,brigade,no,file cleanup,brigade cleanup,apr file cleanup,apr brigade cleanup
+read,close,near antonym,read connection,close connection
+shm,filter,no,shm cleanup,filter cleanup
+dir,database,no,dir cleanup,database cleanup
+eos,pipe,no,apr bucket eos make,apr bucket pipe make
+out,insert,no,xlate out filter,xlate insert filter
+atomic,database,no,atomic cleanup,database cleanup
+regkey,socket,no,regkey cleanup,socket cleanup
+cb,version,no,ap down server cb,ap get server version
+dso,string,no,dso cleanup,string cleanup
+foo,sockaddr,no,apr foo pool get,apr sockaddr info get
+pool,pollset,apr pool create ex,apr pollset create ex,apr pollset create,apr pool create core,apr pool create,apr pollset create,apr pool create ex,apr pollset create,apr pollset create ex,apr pool create unmanaged,apr pool create core,apr pollset create ex,apr pool destroy,apr pollset destroy
+hash,table,related,apr hash do,apr table do

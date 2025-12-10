@@ -1,0 +1,100 @@
+static text,round rectangle, 0.5,1,static text report element,round rectangle report element
+check,insert,related,check update,insert update
+dataset,xyzdataset,related,read dataset,read xyzdataset
+value,element,related,update values,update elements,add value to serie,add element to group
+plot,dplot,related,read bar plot,read bar dplot,bar plot,bar dplot,read pie plot,read pie dplot,pie plot,pie dplot
+added,reset,related,get added group,get reset group,set added group,set reset group
+insert,export,related,insert string,export string
+plugins,configuration, 0.5,1,load plugins,load configuration
+state,language, 0.5,1,state changed,language changed
+low,high,antonym,j rtext expression low text changed,j rtext expression high text changed,set low expression,set high expression,get low expression,get high expression
+key,serie,no,get key expression,get serie expression,set key expression,set serie expression,get key name,get serie name,set key name,set serie name
+key,unit,related,get key name,get unit name,set key name,set unit name
+reset,process,related,reset series,process series
+update,duplicate,related,update parameters,duplicate parameters,update variables,duplicate variables,update fields,duplicate fields
+close,zvalue, 0.666666666666667,2,set close expression,set zvalue expression,get close expression,get zvalue expression
+min,conversion, 0.666666666666667,2,get min value,get conversion value,set min value,set conversion value
+view,font, 0.666666666666667,2,get view mode,get font mode,set view mode,set font mode
+box,xmlgraphic, 0.666666666666667,1,write box element,write xmlgraphic element
+key,locale, 0.5,1,key adapter,locale adapter
+translated,default,related,get translated compile directory,get default compilation directory
+key,xvalue, 0.666666666666667,2,get key expression,get xvalue expression,set key expression,set xvalue expression
+handler,changed,no,document handler,document changed
+replaced,transform,related,replaced elements operation,transform elements operation
+focus,component,no,focus handler,component handler
+connection,compatibility,no,connection dialog,compatibility dialog
+height,directory,no,set report height,set report directory,get report height,get report directory
+number,plugin,no,number entry,plugin entry
+name,element,related,set chart name,set chart element
+file,filename,related,find report frame by file,find report frame by filename
+fonts,prompt,no,fonts dialog,prompt dialog
+reset,expression,no,set serie reset,set serie expression,get serie reset,get serie expression
+wizard,options,no,wizard dialog,options dialog
+style,connection,no,update styles,update connections,style dialog,connection dialog,styles dialog,connections dialog
+next,export,no,next page,export page
+title,value,related,set title expression,set value expression,get value expression,get title expression
+drag,press,related,mouse dragged,mouse pressed
+start,finished,near antonym,start compiling,finished compiling,start find,finished find
+load,apply,related,load configuration,apply configuration
+entry,element,related,add entry,add element
+name,reference,related,set anchor name expression,set hyperlink reference expression,get anchor name expression,get hyperlink reference expression
+jrempty,dispose,no,jrempty data source,dispose data source
+size,transformation,no,page size,page transformation
+vertical,center,related,format command align vertical axis,format command align center horizontally
+type,expression,related,set serie type,set serie expression,get serie type,get serie expression
+xmltext,xmlreport,related,read xmltext element,read xmlreport element,write xmltext element element,write xmlreport element element
+field,notify,no,remove field,remove notify
+child,style,no,add child,add style
+group,properties,no,group dialog,properties dialog
+child,token,no,add child,add token
+dplot,dchart,related,bar dplot,bar dchart,pie dplot,pie dchart
+serie,category,related,get serie expression,get category expression,set serie expression,set category expression
+serie,prompt,no,serie dialog,prompt dialog
+write,candlestick,no,write plot,candlestick plot
+sub,image,no,sub report element,image report element
+background,foreground,related,get background alpha,get foreground alpha,set background alpha,set foreground alpha
+line,ellipse,related,line report element,ellipse report element
+bar,xybar,related,bar chart,xybar chart
+added,increment,synonym,get added group,get increment group,set added group,set increment group
+boolean,integer,related,get value as boolean,get value as integer,get attribute integer,get attribute boolean,get attribute as integer,get attribute as boolean
+value,zvalue,related,set value expression,set zvalue expression,get value expression,get zvalue expression
+prev,next,related,prev step,next step,prev word,next word,next line,prev line,prev page,next page,next char,prev char
+save,paste,related,set save enebled,set paste enebled
+XValue,Series,related,set XValue Expression,set Series Expression,get Series Expression,get XValue Expression
+text,image,related,text report element,image report element
+add,get,related,add Item,get Item,get Undo Operation,add Undo Operation,get Parameter,add Parameter,add Childs,get Childs,get Keywords,add Keywords,get Sheet Property,add Sheet Property,get Element Group,add Element To Group,add Group,get Group,get Field,add Field,get Element,add Element,add Style,get Style,get Child,add Child,get Variable,add Variable,add Sub Dataset,get Sub Dataset
+Left,Bottom,related,j Spinner Left State Changed,j Spinner Bottom State Changed,get Left Border Color,get Bottom Border Color,set Left Border Color,set Bottom Border Color,set Left Margin,set Bottom Margin,set Left Padding,set Bottom Padding,set Left Border,set Bottom Border,set Bottom Border,set Left Border Color,get Left Margin,get Bottom Margin,get Bottom Border,get Left Border Color,get Left Border,get Bottom Border,get Left Padding,get Bottom Padding,get Left Border Color,set Bottom Border Color,set Left Border Color,get Bottom Border Color
+Styles,Import,no,Styles Dialog,Import Dialog
+Bar,Scatter,no,Bar Chart,Scatter Chart,read Bar Plot,read Scatter Plot,Bar Plot,Scatter Plot
+serie,styles,related,serie dialog,styles dialog
+Style,JRProperty,no,Style Dialog,JRProperty Dialog
+parse,update,related,parse properties,update properties
+Values,Properties,no,Values Dialog,Properties Dialog
+Values,Prompt,no,Values Dialog,Prompt Dialog
+Action,Locale,no,get Action Name,get Locale Name
+JRule,Library,no,JRule Panel,Library Panel
+Integer,Stream,no,get Value As Integer,get Resource As Stream,get Resource As Stream,get Attribute As Integer
+Key,Group,no,get Key Expression,get Group Expression,get Next Element Key,get New Element Group,get Next Element Key,get Old Element Group,get Key Name,get Group Name
+Key,Image,no,get Key Expression,get Image Expression
+Low,Class,no,get Low Expression,get Class Expression
+JRFont,Properties,no,JRFont Dialog,Properties Dialog
+get,JRDesign,get Parameter,JRDesign Parameter,get Expression,JRDesign Expression
+set,modify,related,set Font Size,modify Font Size
+Text,Chart,related,Text Report Element,Chart Report Element
+IDLToken,PLSQLToken,no,IDLToken Marker,PLSQLToken Marker
+High,Select,no,set High Expression,set Select Expression,get High Expression,get Select Expression
+check,String,no,check Selection,String Selection
+Tabular,Columnar,related,create Tabular Report,create Columnar Report
+Project,Property,get Project Name,get Property Name
+Label,XValue,set Label Expression,set XValue Expression,get Label Expression,get XValue Expression
+Sub,Pie,no,set Sub Dataset,set Pie Dataset,get Sub Dataset,get Pie Dataset,Pie Dataset,Sub Dataset
+get,XYLine,get Chart,XYLine Chart
+Chart,Locale,get Chart Name,get Locale Name
+Named,Scrollable,no,Named List,Scrollable List
+resize,shrink,related,resize Band,shrink Band
+Element,Evaluation,no,get Element Group,get Evaluation Group,set Element Group,set Evaluation Group
+XMLText,XMLReport,related,read XMLText Element,read XMLReport Element,write XMLText Element Element,write XMLReport Element Element
+area,volume,related,j rtext expression area text changed,j rtext expression volume text changed
+Parent,New,no,set Parent Element,set New Element Group,get Parent Element,get New Element Group,get New Element,get Parent Element
+value,parameter,related,update values,update parameters
+load,save,related,load File List,save File List,save Configuration,load Configuration

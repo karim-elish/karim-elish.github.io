@@ -1,0 +1,7 @@
+@inproceedings{dep,
+   title={Generating Precise Dependencies For Large Software}, 
+   author={Pei Wang and Jinqiu Yang and  Lin Tan and Robert Kroeger and David Morgenthaler}, 
+   booktitle ={Proceedings of the Fourth International Workshop on Managing Technical Debt (MTD) in conjunction with ICSE 2013}, 
+    month  = {May},
+    year   = {2013},
+}

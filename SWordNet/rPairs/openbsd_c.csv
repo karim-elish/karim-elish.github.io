@@ -1,0 +1,101 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context
+marc,doug,no,copyright c marc espie all rights reserved,copyright c doug rabson all rights reserved
+package,getgid,no,define if you have the readline package,define if you have the function getgid
+padt,pads,related,send a padt packet,send a pads packet
+nonaka,masanori,no,copyright c nonaka kimihiro all rights reserved,copyright c masanori kanaoka all rights reserved
+glass,kanaoka,no,copyright c adam glass all rights reserved,copyright c masanori kanaoka all rights reserved
+linux_getfsuid,sigsuspend,no,syscall linux_getfsuid ret int args,syscall sigsuspend ret int args caddr_t int int,syscall linux_getfsuid ret int args,syscall sigsuspend ret int args int
+y,v,related,y attenuation for component video,v attenuation for component video
+ip,gre,related,names for ip sysctl objects,names for gre sysctl objects,accept incoming ip packets,accept incoming gre packets
+fpu,non-fpu,antonym,emulate a cop fpu instruction,emulate a cop non-fpu instruction,emulate a copx fpu instruction,emulate a copx non-fpu instruction
+sched_get_priority_min,signal,no,syscall sched_get_priority_min ret int args int,syscall signal ret int args int linux_handler_t
+getprogname,kernel_vnode_pager_generic_getpages,no,define to if you have the `getprogname function,define to if you have the `kernel_vnode_pager_generic_getpages function
+pool,module,no,initialize the pmap pool,initialize the pmap module
+fadvise,getpgid,no,syscall fadvise ret int args,syscall getpgid ret int args int
+u_int_t,getspnam,no,define to if you have the `u_int_t function,define to if you have the `getspnam function
+strndup,strcasecmp,no,define if you have the function `strndup,define if you have the function `strcasecmp
+iv,salt,identifier,copy out iv to the counter block,copy out salt to the counter block
+zyd_cmd_iowr,iwi_cmd_set_pairwise_key,no,structure for command zyd_cmd_iowr,structure for command iwi_cmd_set_pairwise_key
+ssize_t,initstate,no,define to if you have the `ssize_t function,define to if you have the `initstate function
+vfs_done,default_file_ops,no,define if struct vfsops has field vfs_done,define if struct inode_operations has field default_file_ops
+dz,sii,no,while the dz does level interrupts,while the sii does level interrupts
+rbd,desc,no,-pointer to next rbd,-pointer to next desc,pointer to next rbd,pointer to next desc
+wmap,cdevsw,no,number of entries in wmap,number of entries in cdevsw
+akm,cipher,no,if akm suite missing,if cipher suite missing
+device,page,no,pointer to the device,get a pointer to the page,we need to make it point to the last page,we need to make it absolute to the underlying device
+enable,ctr,no,hardware volume control enable,left hardware volume control ctr
+nfsservctl,linux_exit_group,no,syscall nfsservctl ret int args,syscall linux_exit_group ret int args int
+initialize,create,related,initialize a new block,create a new tcp control block,initialize the pmap pools,create the pmap and pv_entry pools,initialize the transmit descriptor,create the transmit descriptor dma maps
+brezak,zoulas,no,copyright c john brezak all rights reserved,copyright c christos zoulas all rights reserved
+fifocc,readwrite,no,fifo configuration control fifocc,fifo configuration control readwrite
+iwn_int,iwn_eeprom_gp,identifier,possible flags for register iwn_int,possible flags for register iwn_eeprom_gp
+faddsdq,fabssdq,related,handler for faddsdq emulation,handler for fabssdq emulation
+getcwd,innetgr,no,define if you have the function `getcwd,define if you have the function `innetgr
+hc_reg,mcp_reg,no,hc_reg definition offset x,mcp_reg definition offset x
+valid,used,related,only the lower bits are valid,only the lower bits of each mailbox are used
+iwn_gio,tx_stat_fifo,identifier,possible flags for register iwn_gio,possible flags for register tx_stat_fifo
+setsid,closefrom,no,syscall setsid ret int args,syscall closefrom ret int args int
+third,second,related,sets the increent of the third subcarrier phase generation dda,sets the increent of the second subcarrier phase generation dda,sets the rollover for the third subcarrier phase generation dda,sets the rollover for the second subcarrier phase generation dda,third enhanced sleep register,second enhanced sleep register
+frame,packet,related,end of frame marker,end of packet marker xmit,end of frame marker,end of packet marker,end of frame marker,end of packet marker tx,send a setup frame,send a fake setup packet,try to send a packet,and then try to send a frame,start of frame marker,start of packet marker tx,start of frame marker,start of packet marker,start of frame marker,start of packet marker xmit,always accept broadcast frames,always accept broadcast packets,check for vlan tagged frames,check for vlan tagged packets,a copy of the packet,first get a local copy of the frame,a copy of the packet,first get a local copy of the frame,tx fifo frame count,tx data fifo packet count - rw,last descriptor in frame,last descriptor in packet,a packet was sent to the chip,a frame was downloaded to the chip,accept all multicast frames,accept all multicast packets,size of setup packet,size of a setup frame,number of frames dropped,number of packets dropped,a frame has been received,a packet has been received,push the packet up,push the frame up to the stack,pass the packet to any bpf listeners,send a copy of the frame to any bpf listeners
+buffer,log,no,build pool of parity buffers,build pool of unused parity logs
+dbopen,kernel_vfs_register,no,define to if you have the `dbopen function,define to if you have the `kernel_vfs_register function
+ftime,sched_get_priority_max,no,syscall ftime ret int args,syscall sched_get_priority_max ret int args int
+kernel_vfs_cache_lookup,kernel_vnode_pager_setsize,no,define to if you have the `kernel_vfs_cache_lookup function,define to if you have the `kernel_vnode_pager_setsize function
+eprom_csr,iwn_fh_tx_config,identifier,possible flags for register eprom_csr,possible flags for register iwn_fh_tx_config
+stty,init_module,no,syscall stty ret int args,syscall init_module ret int args
+io,read,related,0.7,1,find and issue the next io on the indicated disk,tries to issue the next read on the indicated disk
+strndup,initgroups,no,define if you have the function `strndup,define if you have the function `initgroups
+optreset,dn_expand,no,define if you have the `optreset variable,define to if you have the `dn_expand function
+phys,rfork,no,syscall phys ret int args,syscall rfork ret int args int
+wide,bass,no,lch of wide d enhanced control,lch of bass d enhanced control,rch of wide d enhanced control,rch of bass d enhanced control,d enhanced control wide rw,d enhanced control bass rw
+engine,channel,related,initialize the dma engine,initialize the dma channel
+vasnprintf,kernel_genfs_revoke,no,define to if you have the `vasnprintf function,define to if you have the `kernel_genfs_revoke function
+setenv,list_del_init,no,define if you have the function `setenv,define if you have a function list_del_init
+io,distinguished,no,reset the io functions of the card,initialize all the distinguished functions of the card
+buffer,element,no,next buffer in chain,next element in chain,rx buffer too small,rx element too small
+mac_sys_ctrl,wpi_hw_if_config,identifier,possible flags for register mac_sys_ctrl,possible flags for register wpi_hw_if_config
+iwn_fh_rx_status,zyd_fw_link_status,identifier,possible flags for register iwn_fh_rx_status,possible flags for register zyd_fw_link_status
+int_t,strtoq,identifier,define to if you have the `int_t function,define to if you have the `strtoq function
+disable,clear,related,disable all interrupt sources,clear all gpio interrupt sources,disable all interrupt sources,clear all gpio interrupt sources,clear the watchdog timer,disable the watchdog timer,and disable all interrupts,mask and clear all interrupts
+clock,power,related,disable internal dac clock,disable internal dac power
+issetugid,kernel_genfs_mmap,no,define to if you have the `issetugid function,define to if you have the `kernel_genfs_mmap function
+stop,reset,related,0.775,2,stop block ack inactivity timer,reset block ack inactivity timer,stop the command processor,reset the command processor
+strvisx,ubc_pushdirty,no,define if the system is missing a prototype for strvisx,define if the system is missing a prototype for ubc_pushdirty
+read,squeeze,no,read in the header,squeeze in the mobility header
+recv,xmit,related,recv clock taken from dpll,xmit clock taken from dpll,xmit clock taken from brg,recv clock taken from brg,channel b xmit int pending,channel b recv int pending,number of entries in the recv desc ring,number of entries in the xmit desc ring,enable xmit crc calculation,enable recv crc calculation,channel a recv int pending,channel a xmit int pending,xmit buffer alias for data,recv buffer alias for data
+u_int_t,kernel_vfs_register,no,define to if you have the `u_int_t function,define to if you have the `kernel_vfs_register function
+glass,grossmann,no,copyright c adam glass all rights reserved,copyright c rolf grossmann all rights reserved
+once,check,no,once the command completed,check the previous command is completed
+kernel_nosys,kernel_vfs_deallocate_syncvnode,no,define to if you have the `kernel_nosys function,define to if you have the `kernel_vfs_deallocate_syncvnode function
+timer,rx_free_list,no,move it to timer,then move it to rx_free_list
+verr,sendmsg,no,define if you have the function `verr,define if you have the function `sendmsg
+iwi_cmd_set_rates,wpi_cmd_associate,no,structure for command iwi_cmd_set_rates,structure for command wpi_cmd_associate
+getspnam,kernel_cdevsw_add,no,define to if you have the `getspnam function,define to if you have the `kernel_cdevsw_add function
+xed,xee,0.732142857142857,2,remarks handles opcode xed,remarks handles opcode xee,xed latin small letter i with acute,xee latin small letter i with circumflex
+`asprintf,`setattrlist,0.875,1,define to if you have the `asprintf function,define to if you have the `setattrlist function
+tbtt_sync_cfg,iwn_gio_chicken,0.8,1,possible flags for register tbtt_sync_cfg,possible flags for register iwn_gio_chicken
+ar,package,0.75,1,special case for ar,special case for package
+delete,insert,antonym,compute the timeout hash value and delete the entry,compute the timeout hash value and insert the entry,insert forwarding cache entry,delete forwarding cache entry
+wcid_attr,iwn_reset,0.8,1,possible flags for register wcid_attr,possible flags for register iwn_reset
+personality,ptrace,0.816666666666667,2,syscall personality ret int args int,syscall ptrace ret int args int pid_t caddr_t int,syscall ptrace ret int args,syscall personality ret int args int
+`getfh,`kernel_vfs_getvfs,0.875,1,define to if you have the `getfh function,define to if you have the `kernel_vfs_getvfs function
+mlockall,ptrace,0.811111111111111,3,syscall mlockall ret int args int,syscall ptrace ret int args int pid_t caddr_t int,syscall ptrace ret int args,syscall mlockall ret int args int,syscall ptrace ret int args,syscall mlockall ret int args
+h_nerr,hstrerror,identifier,define if you have the `h_nerr variable,define to if you have the `hstrerror function
+primary,second,related,maps to the primary copy of the data,maps to the second copy of the mirror pair,maps to the primary copy of the data,maps to the second copy of the mirror pair
+__progname,kernel_vfs_register,no,define if you have the `__progname variable,define to if you have the `kernel_vfs_register function
+contigous,contiguous,related,allocate contigous free clusters,allocate contiguous free clusters
+setenv,snprintf,no,define if the system is missing a prototype for setenv,define if the system is missing a prototype for snprintf
+kernel_sys_nosys,kernel_vfs_add_vnodeops,no,define to if you have the `kernel_sys_nosys function,define to if you have the `kernel_vfs_add_vnodeops function
+csr,iwn_fh_rx_status,no,possible flags for register csr,possible flags for register iwn_fh_rx_status
+ifp,uobjpage,no,if ifp is null,if uobjpage is null
+sc_pgid,tun_pgid,identifier,uid for process that set sc_pgid,uid for process that set tun_pgid,euid for process that set sc_pgid,euid for process that set tun_pgid
+gtty,init_module,no,syscall gtty ret int args,syscall init_module ret int args
+crypt,strvis,no,define to if you have the `crypt function,define to if you have the `strvis function
+pseudo-isa,isa-compatible,related,run in pseudo-isa mode,run in isa-compatible mode only using a
+below,ifaltq,no,xxx keep in sync with switch below,xxx keep in sync with struct ifaltq
+miff_,viff_,no,miff_ flags defined above,viff_ flags defined above
+node,entry,related,information for this node,no mpls information for this entry
+pci,cardbus,related,pci bus front-end for the admtek adm macbbp chip,cardbus bus front-end for the admtek adm macbbp driver,com pci chip device ids,com cardbus chip device ids,we need to access pci config space from the driver,we need to access cardbus config space from the driver,set pci latency timer,set cardbus latency timer,pci front-end for the broadcom airforce,cardbus front-end for the broadcom airforce,enable the appropriate bits in the pci csr,enable the appropriate bits in the cardbus csr,enable the appropriate bits in the pci csr,enable the appropriate bits in the cardbus csr,pci mem space tag,cardbus mem space tag,pci mem space tag,cardbus mem space tag,pci front-end for the prismgt,cardbus front-end for the prismgt,pci io space tag,cardbus io space tag,pci io space tag,cardbus io space tag,pci front-end for the acx,cardbus front-end for the texas instruments acx driver,pci front-end for the realtek,cardbus front-end for the realtek rtl macbbp driver,pci front-end for the realtek,cardbus front-end for the realtek
+sii,lance,no,while the sii does level interrupts,while the lance does level interrupts
+adb,pramrtc,no,its from the adb device or,its from the pramrtc device
+bool,kernel_lockmgr,no,define to if you have the `bool function,define to if you have the `kernel_lockmgr function

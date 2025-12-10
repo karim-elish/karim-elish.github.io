@@ -1,0 +1,100 @@
+reverse,transformed,related,reverse list iterator,transformed list iterator
+entry,utils,no,map entry,map utils
+decorate,predicated,related,decorate map,predicated map,decorate collection,predicated collection,decorate buffer,predicated buffer,decorate list,predicated list,decorate bag,predicated bag
+factory,constant,no,test factory transformer,test constant transformer,factory transformer,constant transformer
+tail,full,no,bulk test tail map,test full map serialization,bulk test tail map,test full map iterator,bulk test tail map,test full map compatibility
+link,entry,no,link iterator,entry iterator,link iterator,entry iterator
+list,key,related,test sub list remove,test multi key remove
+flat,switch,related,test flat map iterator,test switch map closure,test flat map iterator,test switch map transformer
+map,iterator,related,bulk test sub map,bulk test list iterator
+sub,iterable,related,bulk test sub map,abstract test iterable map
+bean,invert,related,test bean map,test invert map
+create,current,no,create entry,current entry
+tail,verify,no,tail map,verify map
+leaf,notifying,no,leaf iterator,notifying iterator
+double,object,no,get some double value,set some object value,set some double value,set some object value,get some double value,get some object value,set some double value,get some object value
+full,empty,antonym,test full map serialization,test empty list serialization,make full map iterator,make empty list iterator,test full map iterator,test empty list iterator,test full map compatibility,test empty list compatibility
+bag,list,related,test full bag serialization,test empty list serialization,test full bag compatibility,test empty list compatibility
+list,singleton,related,test list iterator navigation,test singleton iterator remove,test list iterator set,test singleton iterator remove,test list iterator,test singleton iterator,bulk test list iterator,test singleton iterator remove,list iterator,singleton iterator,list iterator,singleton iterator,test list iterator add,test singleton iterator remove,test list list iterator,test singleton list iterator,abstract test list iterator,test singleton iterator remove,test list iterator wrapper,test singleton iterator remove,test list iterator remove,test singleton iterator remove,test list iterator,test singleton iterator
+null,entry,no,next null,next entry
+add,supports,related,add set value,supports set value
+key,capacity,no,check key,check capacity
+factory,serialization,no,test lazy map factory,test full map serialization
+remove,serialization,no,test sub list remove,test full list serialization,test sub list remove,test empty list serialization
+isempty,hashcode,no,test map is empty,test map hash code
+put,map,no,test multi key put,test lrumulti key map,test multi key put,test multi key map
+bounded,circular,near antonym,bounded fifo buffer,circular fifo buffer,test bounded fifo buffer,test circular fifo buffer,test bounded fifo buffer remove,test circular fifo buffer remove,test bounded fifo buffer remove,test circular fifo buffer circular
+lru,first,no,test remove lru,test remove first,remove lru,remove first
+label,stream,no,test verbose print null label,test verbose print null stream,test debug print null label,test debug print null stream,test debug print null label,test verbose print null stream,test debug print null stream,test verbose print null label
+remove,circular,no,test bounded fifo buffer remove,test circular fifo buffer circular,test circular fifo buffer remove,test circular fifo buffer circular,test unbounded fifo buffer remove,test circular fifo buffer circular
+list,collection,related,test value list view,test value collection type
+keyed,empty,related,test keyed iterator,test empty iterator
+interval,capacity,no,check interval,check capacity
+add,hash,no,add iterator,hash iterator,add entry,hash entry,add entry,hash entry
+hash,tree,no,test dual hash bidi map,test dual tree bidi map,dual hash bidi map,dual tree bidi map,test fast hash map,test fast tree map,fast hash map,fast tree map,hash map,tree map,tree iterator,hash iterator,test tree bag,test hash bag,hash bag,tree bag
+multi,transform,no,multi key,transform key
+closure,decorate,no,test transformer closure,test transformer decorate
+sorted,ordered,synonym,test lazy sorted map,test list ordered map
+composite,defaulted,related,test composite map,test defaulted map,composite map,defaulted map
+list,array,related,test list list iterator,test object array iterator
+and,instanceof,no,and predicate,instanceof predicate
+flat,transform,related,flat map,transform map
+map,view,no,map iterator,view iterator
+check,verify,synonym,check map,verify map
+string,decorate,no,string buffer,decorate buffer
+invert,reference,no,test invert map,test reference map
+map,collection,related,abstract sorted map decorator,abstract serializable collection decorator
+inverse,unmodifiable,related,test inverse bidi map,test unmodifiable ordered map
+char,float,related,set some char value,get some float value,set some char value,set some float value,get some char value,get some float value,get some char value,set some float value
+hash,previous,no,hash index,previous index,hash entry,previous entry,hash entry,previous entry
+proxy,linked,related,proxy map,linked map,proxy list iterator,linked list iterator
+bidi,delegate,related,create bidi map,create delegate map
+first,previous,related,test first key,test previous key,first key,previous key
+bag,collection,related,bag utils,collection utils,test bag utils,test collection utils,typed bag,typed collection,test typed bag,test typed collection,typed bag,typed collection,test typed bag,test typed collection,test predicated bag,test predicated collection,test predicated bag,test predicated collection,test predicated bag,test predicated collection,test predicated bag,test predicated collection,predicated bag,predicated collection,make test bag,make test collection,make bag,make collection,test bag add,test collection add,decorate bag,decorate collection,test synchronized bag,test synchronized collection,synchronized bag,synchronized collection,test synchronized bag,test synchronized collection,transformed bag,transformed collection,test transformed bag,test transformed collection,test transformed bag,test transformed collection,test transformed bag,test transformed collection,test transformed bag,test transformed collection,test unmodifiable bag,test unmodifiable collection,unmodifiable bag,unmodifiable collection,test unmodifiable bag,test unmodifiable collection,abstract bag decorator,abstract collection decorator,abstract test bag,abstract test collection
+check,identity,no,check map,identity map
+object,integer,no,set some object value,get some integer value,set some object value,set some integer value,get some object value,get some integer value,get some object value,set some integer value
+dual,ordered,,related,abstract dual bidi map,unmodifiable ordered bidi map
+switch,exception,no,switch closure,exception closure,switch closure,exception closure,test switch closure,test exception closure,switch transformer,exception transformer,test switch transformer,test exception transformer,switch transformer,exception transformer
+notifying,singleton,no,notifying iterator,singleton iterator,singleton iterator,notifying iterator
+typed,full,no,bulk test typed map,test full map serialization,bulk test typed map,test full map iterator,bulk test typed map,test full map compatibility
+nodes,interval,no,check nodes,check interval
+constant,executor,no,test constant transformer,test executor transformer
+tree,composited,no,add tree,add composited
+mid,first,related,test cursor next index mid,test cursor next index first
+entry,serialization,no,abstract test map entry,test full map serialization,test tied map entry,test full map serialization,test to map entry,test full map serialization,test unmodifiable map entry,test full map serialization,test default map entry,test full map serialization
+link,bind,no,test linked map,test bounded map
+null,entry,no,next null,next entry
+chained,transformer,no,test chained closure,test transformer closure,chained closure,transformer closure
+one,neither,no,test one predicate ex,test neither predicate ex,test one predicate,test neither predicate
+keys,remove,no,get multi key keys,test multi key remove
+predicate,synchronize,related,predicated collection,synchronized collection,test predicated collection,test synchronized collection,test predicated collection,test synchronized collection,test predicated collection,test synchronized collection,test predicated collection,test synchronized collection,test predicated buffer,test synchronized buffer,predicated buffer,synchronized buffer,test predicated sorted bag,test synchronized sorted bag,test predicated sorted bag,test synchronized sorted set,test predicated sorted map,test synchronized sorted bag,test predicated sorted bag,test synchronized sorted bag,test predicated sorted set,test synchronized sorted bag,test predicated sorted map,test synchronized sorted set,test predicated sorted bag,test synchronized sorted set,test predicated sorted set,test synchronized sorted set,predicated sorted bag,synchronized sorted bag,predicated sorted set,synchronized sorted set,predicated list,synchronized list,test predicated list,test synchronized list,predicated bag,synchronized bag,test predicated bag,test synchronized bag,test predicated bag,test synchronized bag
+insert,contains,related,insert value,contains value
+code,map,no,test set hash code,test multi hash map,test set hash code,test sequenced hash map,test fast hash map,test set hash code,test list hash code,test multi hash map,test list hash code,test sequenced hash map,test fast hash map,test list hash code,hash map,hash code
+list,map,related,test empty list iterator,test unmodifiable map iterator
+map,predicate,no,test map utils,test predicate utils,map utils,predicate utils,identity map,identity predicate,test identity map,test identity predicate,test transformed map,test transformed predicate,transformed map,transformed predicate,test transformed map,test transformed predicate,test map transformer,test predicate transformer,map transformer,predicate transformer
+verify,transform,related,verify map,transform map
+proxy,dummy,related,proxy map,dummy map
+write,read,antonym,write external form to stream,read external form from stream,write external form to disk,read external form from disk,purge before read,purge before write,do read object,do write object,read object,write object,get read method,get write method,read external,write external
+buffer,writer,no,string buffer,string writer
+list,array,related,test empty list iterator,test object array iterator
+sorted,serializable,related,abstract sorted set decorator,abstract serializable set decorator
+name,exists,no,get canonical empty collection name,test canonical empty collection exists,get canonical full collection name,test canonical full collection exists
+map,value,related,test lazy map transformer,test string value transformer
+tree,defaulted,no,test tree map,test defaulted map,tree map,defaulted map
+transform,unmodifiable,near antonym,transform map,unmodifiable map,transform iterator,unmodifiable iterator
+clear,remove,related,test bidi clear by head map,test bidi remove by entry set,test bidi clear by tail map,test bidi remove by entry set,test bidi clear by sub map,test bidi remove by entry set,test bidi remove by key set,test bidi clear by head map,test bidi remove by sub map,test bidi clear by head map,test bidi clear by head map,test bidi remove by head map,test bidi clear by head map,test bidi remove by tail map,test bidi remove by key set,test bidi clear by tail map,test bidi remove by sub map,test bidi clear by tail map,test bidi clear by tail map,test bidi remove by head map,test bidi clear by tail map,test bidi remove by tail map,test bidi clear by sub map,test bidi remove by key set,test bidi clear by sub map,test bidi remove by sub map,test bidi clear by sub map,test bidi remove by head map,test bidi clear by sub map,test bidi remove by tail map,test values clear changes map,test values remove changes map,test map clear,test map remove,test key set clear changes map,test key set remove changes map,test key set remove changes map,test entry set clear changes map,test collection clear,test collection remove,test bidi clear,test bidi remove
+tree,check,no,tree map,check map
+tree,decorate,no,tree map,decorate map,tree list,decorate list,tree bag,decorate bag
+inverse,double,no,inverse ordered bidi map,double ordered map iterator
+link,array,no,link iterator,array iterator
+iter,utils,no,list iter,list utils
+contains,transform,related,contains value,transform value,contains key,transform key
+remove,mutator,no,test add remove,test add mutator
+simple,mismatch,no,test instantiate factory simple,test instantiate factory mismatch
+array,ordered,no,array iterator,ordered iterator
+self,mapping,no,remove self,remove mapping
+cursor,timeout,no,test cursor remove,test timeout remove
+init,value,no,init iterator,value iterator,init iterator,value iterator
+typed,identity,no,typed map,identity map
+hash,defaulted,no,hash map,defaulted map
+bean,predicated,no,test bean map,test predicated map,bean map,predicated map,test bean map,test predicated map

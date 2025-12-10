@@ -1,0 +1,38 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context
+davresponsedescription,open,no,DAVresponsedescription error log,open error log
+listener,server,no,listener main loop,server main loop
+potential,dav,no,potential error response,dav error response,potential error response,dav error response
+remove,chk,related,remove filter from chain,chk filter chain
+per-dir,setenvif,related,create per-dir config,create setenvif config p
+means,do,no, means something else,do something else
+content,imap,related,content handler internal redirects,imap handler internal
+to,more,no,To ignore case,more ignore case
+dir,empty,no,create dir config,create empty config p
+plus,open,no,plus error log above,open error log
+per-dir,empty,no,create per-dir config,create empty config p
+apr_dbd_,odbc,related,apr_dbd_transaction_mode_set mode transaction,odbc transaction mode set,apr_dbd_transaction_mode_set mode transaction,odbc transaction mode get,apr_dbd_transaction_mode_get mode transaction,odbc transaction mode set,apr_dbd_transaction_mode_get mode transaction,odbc transaction mode get
+each,meta,no,scan each file within ,scan meta file
+such,xlate,no,log such error,log xlate error
+server,setenvif,related,create server config,create setenvif config p
+pre,module,no,pre request hook,module request hook participate
+post,module,no,post request hook,module request hook participate
+walk,chk,related,walk filter chain,chk filter chain
+found,do,no,found something else,do something else
+dir,setenvif,related,create dir config,create setenvif config p
+end,server,no,End main loop,server main loop
+parse,send,related,parse request body,send request body
+there,send,no,there request body,send request body
+server,empty,no,create server config,create empty config p
+into,over,no,copy into existing bucket,copy over existing
+just,cache,no,Just remove filter,cache remove url filter
+to,less,no,To ignore case,less ignore case
+initialize,crypt,related,Initialize mutex lock,crypt mutex lock
+internal,open,no,internal error log something,open error log
+fake,read,related,fake request line,read request line
+next,chk,no,next filter chain,chk filter chain
+report,yy,no,Report fatal error,yy fatal error
+name,open,no,name error log,open error log
+handle,send,related,handle request body,send request body
+give,yy,no,give fatal error,yy fatal error
+initialise,setup,synonym,Initialise signal names,setup signal names char
+iterate,copy,no,Iterate over existing rules,copy over existing

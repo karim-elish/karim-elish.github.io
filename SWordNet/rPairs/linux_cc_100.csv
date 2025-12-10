@@ -1,0 +1,101 @@
+Word,Word,Category(synonym/antonym/near-antonym/related/identifier),Context
+attaching,return,related,attaching first slave,return first slave m
+eos,int,no,EOS wake up,int wake up state,EOS wake up,int wake up process
+master,rar,no,init master params,int init rar params
+hamoa,int,no,HAMOA card present,int card present
+stamp,to,no,time stamp jiffies,u64 time to jiffies
+irq,int,no,irq tps chip,int tps chip,irq out ep,int  out ep mapping
+prepare,void,no,Prepare tty device,void tty unregister device
+let,void,no,let close connection,void close connection
+system,mx51,no,int system revision,int mx51 revision,int system revision,int mx51 revision void
+target,ftrace,no,clear target pid,void clear ftrace pid
+bail,int,no,bail device disconnected,int device is disconnected
+empty,request,no,send empty reply,int send request reply
+device,event,related,start device scan,void start event scan
+aux,dac,related,build Aux controls,int build dac controls
+dle,uart,related,enter dle mode,void enter uart mode
+send-immediate,4op,no,enter send-immediate mode,void enter 4op mode
+line,dac,no,build Line controls,int build dac controls
+logical,int,no,Logical eraseblock erase,int erase eraseblock
+mem,only,no,int mem parity err,int only parity
+read,u16,no,read fft mode,u16 fft to mode
+csrow,queue,no,remove csrow kobjects,void remove queue kobjects
+usb,void,no,USB clk disable,void clk prcmu disable,USB clk disable,void clk gpio11 disable,USB clk disable,void  clk hsc disable,USB clk disable,void  clk spll disable,USB clk disable,void clk ipu disable,USB clk disable,void clk prcc disable,USB clk disable,void  clk disable struct,USB clk disable,void clk disable unlocked,USB clk disable,void clk pout disable,USB clk disable,void  clk disable,USB clk disable,void  clk ccgr disable,USB clk disable,void  clk max disable,USB clk disable,void clk disable struct,USB clk disable,void clk gpio12 disable,USB clk disable,void  clk pll disable,USB clk disable,void clk dummy disable,USB clk disable,void clk cgcr disable,USB clk disable,void clk gpio27 disable,USB clk disable,void clk cgr disable,USB clk disable,void clk spll disable,USB clk disable,void clk reg disable,USB clk disable,void clk pccr disable
+packet,node,related,drop packet buffer,void drop node buffer
+szc,int,no,SZC setup mic,int setup mic
+pingpong,conf,no,enter pingpong mode,void enter conf mode
+toneport,int,no,Toneport device disconnected,int device is disconnected
+property,kfree,no,return property ptr,return  kfree ptr
+crb,7220,no,handle CRB errors,void handle 7220 errors,handle CRB errors,* handle 7220 errors
+ignore,void,no,Ignore spurious interrupt,void spurious interrupt bug,Ignore spurious interrupt,void spurious interrupt,ignore loop back packets,void loop back
+bulk,void,no,bulk urb callback,void urb irq callback,bulk urb callback,void urb ctl callback
+signals,irqs,related,This return signals disabled,return irqs disabled
+radacal,call,no,RADACAL misc register data,call misc register
+buffer,cached,no,free buffer lists,void free cached lists
+checksum,void,no,checksum symbol table,void symbol table free,checksum string table,void string table free,checksum file header record,void file record
+inode,hypervisor,related,query inode info,int query hypervisor info
+after,void,no,After power supply,void power supply unregister,After power supply,void power supply changed,After power supply,void power supply exit,After amd interrupt,void amd threshold interrupt,after paging init,void paging init void,after paging init,void paging init,After udc enable,void udc clock enable,After udc enable,void udc enable
+layer,requeue,no,blk layer request,void blk requeue request
+already,res,no,command already completed,void command res completed
+also,int,no,also decode PCI bits,int decode bits,Also start watchdog running,int start watchdog,also enable wakeup,int  enable wakeup
+cannot,faulty,no,Returns void cannot fail,void faulty fail
+still,init,no,blk still free list,int blk init free list
+simple,cancel,no,send simple reply,int send cancel reply
+parity,ecrc,related,disable parity checking,int disable ecrc checking,enable parity checking,int enable ecrc checking
+script,gdbstub,no,int script single step,int gdbstub single step
+these,void,no,these do nothing,void do nothing,these do nothing,void do nothing notify,These reserve memory later,void reserve memory
+dma,pcmcia,no,acknowledge dma interrupt,void acknowledge pcmcia interrupt
+ni_diag_parms,uint,no,NI_DIAG_PARMS mask shift definitions,uint mask shift
+spec,nigpctupdownpingateselect,no,lookup return specific i,return  NIGPCTUPDOWNPINGATESELECT i
+notify,int,0.75,1,Notify wake up reader process,int wake up process
+qd,int,no,QD dual channel,int dual channel active
+max,int,0.75,1,max device queue depth,int device queue depth
+controller,int,no,controller lock held,int lock is held,controller lock held,int  lock is held
+command,conf,related,enter command mode,void enter conf mode
+simple,request,no,send simple reply,int send request reply
+error,source,no,zero error counters,void  zero source counters
+general,void,no,general clean up,void clean up,General ext int enable,void ext enable
+center,adc,no,build center controls,int build adc controls
+radacal,int,no,RADACAL misc register data,int misc register
+property,xchg32,no,return property ptr,return  xchg32 ptr x
+setclear,bool,no,SetClear single bit,bool single bit flip
+its,ptrerr,no,return its parent,return  PTRERR parent,return its result,return  PTRERR result
+receiver,int,no,Receiver software reset,int software reset
+binary,i2c,related,check binary image,int check i2c image
+posted,pending,near antonym,flush posted writes,void flush pending writes
+closeint,mmc,no,int closeint sd,int mmc sd alive,int closeint sd,int mmc sd suspend,int closeint sd,int mmc sd resume
+nan,ptrerr,no,return NaN st,return  PTRERR st
+end,free,related,antonym,move to end list,void move to free list,move to end list,void  move to free list
+line,input,no,build Line controls,int build input controls
+demux,int,no,Demux handle errors,int handle errors
+spdif,generic,no,build SPDIF controls,int build generic controls
+allocated,global,no,release allocated resources,void release global resources
+allocated,offload,near antonym,release allocated resources,void release offload resources
+radacal,when,no,RADACAL misc register data,when misc register
+cal_vco,4op,related,enter CAL_VCO mode,void enter 4op mode
+down,on,near antonym,power down panel,void power on panel
+kernel,unix,related,create kernel socket,int create unix socket
+mft,ntfs,related,mark mft record dirty,void mark ntfs record dirty
+ht,int,no,HT on primary,int on primary thread
+suni,interrupt,no,clear SUNI counters,void clear interrupt counters
+iscp,long,no,ISCP phys addr,long  phys addr
+to,int,no,To erase logical eraseblock,int erase eraseblock,to enter l state,int enter state,To enter download state,int enter state,To build frame,int build auth frame,to sleep thread on,int sleep thread,To make new reservation,int make reservation,to erase sector,int erase sector
+anonymous,process,related,install anonymous keyring,int install process keyring
+sunv,long,no,SUNV pte bits,long pte sz bits
+cpu,ioremap,related,early cpu init,void early ioremap init
+eop,crypt,related,setup EOP desc,int setup crypt desc
+preamble,ecrc,related,enable preamble checking,int enable ecrc checking
+dyntick-idle,conf,related,enter dyntick-idle mode,void enter conf mode
+multi-priority,int,no,multi-priority pkt queue,int pkt handle queue
+eep,u8,related,EEP check sum,u8 check sum,EEP check sum error,u8 check sum
+mdb's,offload,no,release MDB's resources,void release offload resources
+abandoned,free,related,move to abandoned list,void move to free list,move to abandoned list,void  move to free list
+stop,return,no,Stop start video stream transport,return start video stream pd
+dont,void,no,dont terminate monitor,void terminate monitor
+sample,void,no,Sample right on edge,void right edge,sample tracepoint probes,void tracepoint update probes
+psr,int,no,PSR scom addr,int scom addr set,PSR scom addr,int scom addr get
+activity,timer,related,init activity stats,void init timer stats
+transfer,bool,no,transfer data segment,bool data segment valid
+master,rar,no,init master params,int init rar params
+bits,void,no,bits enable clocks,void  enable optional clocks,bits enable clocks,void enable lcd clocks,bits enable clocks,void enable digit clocks,bits enable clocks,void enable clocks
+unused,ptrerr,no,copy return unused part,return  PTRERR part
