@@ -1,5 +1,5 @@
 body {
-  max-width: 1120px;
+  max-width: 960px;
   margin: auto;
   padding: 0.5em;
   line-height: 1.5em;
@@ -64,7 +64,7 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
   --card-bg: #ffffff;
   --shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
 
-  max-width: 1120px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 20px 4px 50px;
   color: var(--text);
