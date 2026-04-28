@@ -1,307 +1,16 @@
 
-<style>
-  :root {
-    --primary: #0b1f3a;
-    --secondary: #0b4eb3;
-    --text: #1f2937;
-    --muted: #6b7280;
-    --border: #e5e7eb;
-    --card-bg: #ffffff;
-    --soft-bg: #f8fafc;
-    --shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
-  }
-
-  .dataset-page {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 20px 10px 50px;
-    color: var(--text);
-  }
-
-  .dataset-header {
-    margin-bottom: 34px;
-  }
-
-  .dataset-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-    color: var(--primary);
-    font-weight: 700;
-  }
-
-  .dataset-header p {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    max-width: 760px;
-    color: var(--muted);
-  }
-
-  .dataset-section {
-    margin-top: 38px;
-  }
-
-  .section-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 22px;
-  }
-
-  .section-title .section-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
-    background: #eef4ff;
-    color: var(--secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-  }
-
-  .section-title h2 {
-    font-size: 1.45rem;
-    color: var(--primary);
-    margin: 0;
-    white-space: nowrap;
-  }
-
-  .section-title::after {
-    content: "";
-    height: 1px;
-    background: var(--border);
-    flex: 1;
-    margin-left: 10px;
-  }
-
-.dataset-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 22px;
-}
-
-  .dataset-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
-  }
-
-  .dataset-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
-  }
-
-  .dataset-card-main {
-    display: grid;
-    grid-template-columns: 76px 1fr;
-    gap: 18px;
-    padding: 24px 22px 22px;
-    min-height: 155px;
-  }
-
-  .dataset-icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 2rem;
-    font-weight: 700;
-    flex-shrink: 0;
-  }
-
-  .icon-malware {
-    background: linear-gradient(135deg, #0b1f3a, #2563eb);
-  }
-
-  .icon-metrics {
-    background: linear-gradient(135deg, #0f766e, #2563eb);
-  }
-
-  .icon-wear {
-    background: linear-gradient(135deg, #312e81, #2563eb);
-  }
-
-  .icon-smell {
-    background: linear-gradient(135deg, #065f46, #0f766e);
-  }
-
-  .icon-mirror {
-    background: linear-gradient(135deg, #0b1f3a, #0f766e);
-  }
-
-  .icon-mvc {
-    background: linear-gradient(135deg, #0f766e, #4f46e5);
-  }
-
-  .dataset-content h3 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    font-size: 1.25rem;
-    color: var(--primary);
-    margin: 0 0 10px;
-  }
-
-  .badge {
-    font-size: 0.72rem;
-    font-weight: 600;
-    padding: 5px 9px;
-    border-radius: 999px;
-    white-space: nowrap;
-  }
-
-  .badge-malware {
-    background: #fee2e2;
-    color: #991b1b;
-  }
-
-  .badge-metrics {
-    background: #dbeafe;
-    color: #1d4ed8;
-  }
-
-  .badge-wear {
-    background: #ede9fe;
-    color: #5b21b6;
-  }
-
-  .badge-smell {
-    background: #dcfce7;
-    color: #166534;
-  }
-
-  .badge-repackaging {
-    background: #fef3c7;
-    color: #92400e;
-  }
-
-  .badge-architecture {
-    background: #ccfbf1;
-    color: #115e59;
-  }
-
-  .dataset-content p {
-    margin: 0;
-    color: #374151;
-    font-size: 0.95rem;
-    line-height: 1.55;
-  }
-
-  .dataset-actions {
-    border-top: 1px solid var(--border);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background: #fbfdff;
-  }
-
-  .dataset-actions a {
-    text-align: center;
-    padding: 14px 8px;
-    color: var(--secondary);
-    text-decoration: none;
-    font-size: 0.92rem;
-    font-weight: 600;
-    border-right: 1px solid var(--border);
-  }
-
-  .dataset-actions a:last-child {
-    border-right: none;
-  }
-
-  .dataset-actions a:hover {
-    background: #eef4ff;
-    text-decoration: none;
-  }
-
-  .dataset-note {
-    margin-top: 34px;
-    padding: 18px 20px;
-    background: #f1f5ff;
-    border: 1px solid #dbeafe;
-    border-radius: 12px;
-    color: #1e3a8a;
-    font-size: 0.96rem;
-    line-height: 1.55;
-  }
-
-  .citation-block {
-    display: none;
-    margin: 12px 22px 20px;
-    padding: 14px;
-    background: #f8fafc;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow-x: auto;
-    font-size: 0.78rem;
-    color: #111827;
-  }
-
-  .citation-block pre {
-    margin: 0;
-    white-space: pre-wrap;
-  }
-
-
-  @media (max-width: 680px) {
-    .dataset-header h1 {
-      font-size: 2.2rem;
-    }
-
-    .dataset-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .section-title h2 {
-      white-space: normal;
-    }
-
-    .dataset-card-main {
-      grid-template-columns: 64px 1fr;
-      gap: 14px;
-    }
-
-    .dataset-icon {
-      width: 62px;
-      height: 62px;
-      font-size: 1.6rem;
-    }
-
-    .dataset-content h3 {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-</style>
-
-<script>
-  function toggleCitation(id) {
-    const block = document.getElementById(id);
-    if (!block) return;
-    block.style.display = block.style.display === "block" ? "none" : "block";
-  }
-</script>
-
 <div class="dataset-page">
 
 
-
-  <!-- ========================= -->
-  <!-- Security & Malware Section -->
-  <!-- ========================= -->
-
   <section class="dataset-section">
+    <div class="section-title">
+      <div class="section-icon">🛡️</div>
+      <h2>Security &amp; Malware</h2>
+    </div>
 
     <div class="dataset-grid">
 
-      <!-- DroidMalVet -->
-      <div class="dataset-card">
+      <article class="dataset-card">
         <div class="dataset-card-main">
           <div class="dataset-icon icon-malware">DM</div>
           <div class="dataset-content">
@@ -317,12 +26,11 @@
         </div>
 
         <div class="dataset-actions">
-          <a href="https://ieeexplore.ieee.org/document/9735313" target="_blank">Paper</a>
-          <a href="https://zenodo.org/records/18315281" target="_blank">Dataset</a>
-          <a href="javascript:void(0)" onclick="toggleCitation('cite-droidmalvet')">Citation</a>
-        </div>
-
-        <div class="citation-block" id="cite-droidmalvet">
+          <a href="https://ieeexplore.ieee.org/document/9735313" target="_blank" rel="noopener">Paper</a>
+          <a href="https://zenodo.org/records/18315281" target="_blank" rel="noopener">Dataset</a>
+          <details>
+            <summary>Citation</summary>
+            <div class="citation-block">
 <pre>@ARTICLE{DroidMalVet,
   author  = {Elish, Karim and Elish, Mahmoud and Almohri, Hussain},
   journal = {IEEE Transactions on Computers},
@@ -332,11 +40,12 @@
   number  = {11},
   pages   = {2982--2995}
 }</pre>
+            </div>
+          </details>
         </div>
-      </div>
+      </article>
 
-      <!-- AndroMetric -->
-      <div class="dataset-card">
+      <article class="dataset-card">
         <div class="dataset-card-main">
           <div class="dataset-icon icon-metrics">AM</div>
           <div class="dataset-content">
@@ -352,23 +61,23 @@
         </div>
 
         <div class="dataset-actions">
-          <a href="#" target="_blank">Paper</a>
-          <a href="https://zenodo.org/records/17559667" target="_blank">Dataset</a>
-          <a href="javascript:void(0)" onclick="toggleCitation('cite-andrometric')">Citation</a>
-        </div>
-
-        <div class="citation-block" id="cite-andrometric">
+          <a href="#" target="_blank" rel="noopener">Paper</a>
+          <a href="https://zenodo.org/records/17559667" target="_blank" rel="noopener">Dataset</a>
+          <details>
+            <summary>Citation</summary>
+            <div class="citation-block">
 <pre>@inproceedings{AndroMetric,
   author    = {Karim Elish and others},
   title     = {AndroMetric: An Android Application Metrics Dataset},
   booktitle = {Please update with the final venue information},
   year      = {2026}
 }</pre>
+            </div>
+          </details>
         </div>
-      </div>
+      </article>
 
-      <!-- WearAppSec -->
-      <div class="dataset-card">
+      <article class="dataset-card">
         <div class="dataset-card-main">
           <div class="dataset-icon icon-wear">WS</div>
           <div class="dataset-content">
@@ -384,34 +93,34 @@
         </div>
 
         <div class="dataset-actions">
-          <a href="#" target="_blank">Paper</a>
-          <a href="https://ieee-dataport.org/documents/wearappsec-wearable-mobile-app-security-dataset" target="_blank">Dataset</a>
-          <a href="javascript:void(0)" onclick="toggleCitation('cite-wearappsec')">Citation</a>
-        </div>
-
-        <div class="citation-block" id="cite-wearappsec">
+          <a href="#" target="_blank" rel="noopener">Paper</a>
+          <a href="https://ieee-dataport.org/documents/wearappsec-wearable-mobile-app-security-dataset" target="_blank" rel="noopener">Dataset</a>
+          <details>
+            <summary>Citation</summary>
+            <div class="citation-block">
 <pre>@dataset{WearAppSec,
   author    = {Karim Elish and others},
   title     = {WearAppSec: Wearable Mobile App Security Dataset},
   publisher = {IEEE DataPort},
   year      = {2026}
 }</pre>
+            </div>
+          </details>
         </div>
-      </div>
+      </article>
 
     </div>
   </section>
 
-  <!-- ================================= -->
-  <!-- Quality, Reuse & Architecture Section -->
-  <!-- ================================= -->
-
   <section class="dataset-section">
+    <div class="section-title">
+      <div class="section-icon">🏛️</div>
+      <h2>Quality, Reuse &amp; Architecture</h2>
+    </div>
 
     <div class="dataset-grid">
 
-      <!-- SMELLDroid -->
-      <div class="dataset-card">
+      <article class="dataset-card">
         <div class="dataset-card-main">
           <div class="dataset-icon icon-smell">SD</div>
           <div class="dataset-content">
@@ -427,23 +136,23 @@
         </div>
 
         <div class="dataset-actions">
-          <a href="#" target="_blank">Paper</a>
-          <a href="https://zenodo.org/records/17559693" target="_blank">Dataset</a>
-          <a href="javascript:void(0)" onclick="toggleCitation('cite-smelldroid')">Citation</a>
-        </div>
-
-        <div class="citation-block" id="cite-smelldroid">
+          <a href="#" target="_blank" rel="noopener">Paper</a>
+          <a href="https://zenodo.org/records/17559693" target="_blank" rel="noopener">Dataset</a>
+          <details>
+            <summary>Citation</summary>
+            <div class="citation-block">
 <pre>@inproceedings{SMELLDroid,
   author    = {Joyce Champie and Karim Elish and Mahmoud Elish},
   booktitle = {23rd IEEE/ACM International Conference on Mining Software Repositories},
   title     = {SMELLDroid: A Dataset for Code Smells in Android Apps},
   year      = {2026}
 }</pre>
+            </div>
+          </details>
         </div>
-      </div>
+      </article>
 
-      <!-- MIRROR -->
-      <div class="dataset-card">
+      <article class="dataset-card">
         <div class="dataset-card-main">
           <div class="dataset-icon icon-mirror">MR</div>
           <div class="dataset-content">
@@ -459,23 +168,23 @@
         </div>
 
         <div class="dataset-actions">
-          <a href="#" target="_blank">Paper</a>
-          <a href="https://zenodo.org/records/17666395" target="_blank">Dataset</a>
-          <a href="javascript:void(0)" onclick="toggleCitation('cite-mirror')">Citation</a>
-        </div>
-
-        <div class="citation-block" id="cite-mirror">
+          <a href="#" target="_blank" rel="noopener">Paper</a>
+          <a href="https://zenodo.org/records/17666395" target="_blank" rel="noopener">Dataset</a>
+          <details>
+            <summary>Citation</summary>
+            <div class="citation-block">
 <pre>@inproceedings{MIRROR,
   author    = {Sebastian Siedler and Karim Elish},
   booktitle = {3rd ACM International Conference on AI Foundation Models and Software Engineering},
   title     = {MIRROR: A Dataset of Structural Metrics for Repackaged Android Apps},
   year      = {2026}
 }</pre>
+            </div>
+          </details>
         </div>
-      </div>
+      </article>
 
-      <!-- MVCDroid -->
-      <div class="dataset-card">
+      <article class="dataset-card">
         <div class="dataset-card-main">
           <div class="dataset-icon icon-mvc">MVC</div>
           <div class="dataset-content">
@@ -491,20 +200,21 @@
         </div>
 
         <div class="dataset-actions">
-          <a href="#" target="_blank">Paper</a>
-          <a href="https://zenodo.org/records/18633276" target="_blank">Dataset</a>
-          <a href="javascript:void(0)" onclick="toggleCitation('cite-mvcdroid')">Citation</a>
-        </div>
-
-        <div class="citation-block" id="cite-mvcdroid">
+          <a href="#" target="_blank" rel="noopener">Paper</a>
+          <a href="https://zenodo.org/records/18633276" target="_blank" rel="noopener">Dataset</a>
+          <details>
+            <summary>Citation</summary>
+            <div class="citation-block">
 <pre>@inproceedings{MVCDroid,
   author    = {Mohamed Sylla and Karim Elish},
   title     = {Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications},
   booktitle = {23rd IEEE International Conference on Software Architecture},
   year      = {2026}
 }</pre>
+            </div>
+          </details>
         </div>
-      </div>
+      </article>
 
     </div>
   </section>
