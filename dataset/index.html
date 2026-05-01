@@ -36,32 +36,37 @@
     
 <div class="dataset-page">
 
+  <h1>Datasets</h1>
 
-<section class="dataset-section">
+  <p class="dataset-intro">
+    Curated datasets for empirical research in Android security, malware analysis,
+    software quality, software reuse, and mobile software architecture.
+  </p>
 
-    <div class="dataset-grid">
+  <h2 class="dataset-group-title">Security &amp; Malware</h2>
 
-      <article class="dataset-card">
-        <div class="dataset-card-main">
-          <div class="dataset-icon icon-malware">DM</div>
-          <div class="dataset-content">
-            <h3>
-              DroidMalVet
-              <span class="badge badge-malware">Malware</span>
-            </h3>
-            <p>
-              Android malware family dataset with compact code-level metrics for
-              malware family detection, characterization, and analysis.
-            </p>
-          </div>
+  <div class="dataset-list">
+
+    <article class="dataset-item">
+      <div class="dataset-logo logo-malware">DM</div>
+      <div class="dataset-info">
+        <h3>DroidMalVet</h3>
+        <p class="dataset-authors">Karim Elish, Mahmoud Elish, and Hussain Almohri.</p>
+        <p class="dataset-desc">
+          Android malware family dataset with compact code-level metrics for malware
+          family detection, characterization, and analysis.
+        </p>
+        <div class="dataset-tags">
+          <span class="dataset-tag">Android Malware</span>
+          <span class="dataset-tag">Code Metrics</span>
+          <span class="dataset-tag">Malware Families</span>
         </div>
-
-        <div class="dataset-actions">
-          <a href="https://ieeexplore.ieee.org/document/9735313" target="_blank" rel="noopener">Paper</a>
-          <a href="https://zenodo.org/records/18315281" target="_blank" rel="noopener">Dataset</a>
+        <div class="dataset-links">
+          <a href="https://ieeexplore.ieee.org/document/9735313" target="_blank" rel="noopener">PDF</a>
+          <a href="https://zenodo.org/records/18315281" target="_blank" rel="noopener">Data</a>
           <details>
             <summary>Citation</summary>
-            <div class="citation-block">
+            <div class="dataset-citation">
 <pre>@ARTICLE{DroidMalVet,
   author  = {Elish, Karim and Elish, Mahmoud and Almohri, Hussain},
   journal = {IEEE Transactions on Computers},
@@ -74,29 +79,29 @@
             </div>
           </details>
         </div>
-      </article>
+      </div>
+    </article>
 
-      <article class="dataset-card">
-        <div class="dataset-card-main">
-          <div class="dataset-icon icon-metrics">AM</div>
-          <div class="dataset-content">
-            <h3>
-              AndroMetric
-              <span class="badge badge-metrics">Metrics</span>
-            </h3>
-            <p>
-              Android app metrics dataset for malware-risk analysis, empirical
-              software analytics, and security-oriented predictive modeling.
-            </p>
-          </div>
+    <article class="dataset-item">
+      <div class="dataset-logo logo-metrics">AM</div>
+      <div class="dataset-info">
+        <h3>AndroMetric</h3>
+        <p class="dataset-authors">Karim Elish and collaborators.</p>
+        <p class="dataset-desc">
+          Android app metrics dataset for malware-risk analysis, empirical software
+          analytics, and security-oriented predictive modeling.
+        </p>
+        <div class="dataset-tags">
+          <span class="dataset-tag">Android Metrics</span>
+          <span class="dataset-tag">Malware Risk</span>
+          <span class="dataset-tag">Software Analytics</span>
         </div>
-
-        <div class="dataset-actions">
-          <a href="#" target="_blank" rel="noopener">Paper</a>
-          <a href="https://zenodo.org/records/17559667" target="_blank" rel="noopener">Dataset</a>
+        <div class="dataset-links">
+          <a href="#" target="_blank" rel="noopener">PDF</a>
+          <a href="https://zenodo.org/records/17559667" target="_blank" rel="noopener">Data</a>
           <details>
             <summary>Citation</summary>
-            <div class="citation-block">
+            <div class="dataset-citation">
 <pre>@inproceedings{AndroMetric,
   author    = {Karim Elish and others},
   title     = {AndroMetric: An Android Application Metrics Dataset},
@@ -106,29 +111,29 @@
             </div>
           </details>
         </div>
-      </article>
+      </div>
+    </article>
 
-      <article class="dataset-card">
-        <div class="dataset-card-main">
-          <div class="dataset-icon icon-wear">WS</div>
-          <div class="dataset-content">
-            <h3>
-              WearAppSec
-              <span class="badge badge-wear">Wearables</span>
-            </h3>
-            <p>
-              Security dataset for wearable companion mobile applications,
-              supporting mobile and wearable app security assessment.
-            </p>
-          </div>
+    <article class="dataset-item">
+      <div class="dataset-logo logo-wear">WS</div>
+      <div class="dataset-info">
+        <h3>WearAppSec</h3>
+        <p class="dataset-authors">Karim Elish and collaborators.</p>
+        <p class="dataset-desc">
+          Security dataset for wearable companion mobile applications, supporting
+          mobile and wearable app security assessment.
+        </p>
+        <div class="dataset-tags">
+          <span class="dataset-tag">Wearables</span>
+          <span class="dataset-tag">Mobile Security</span>
+          <span class="dataset-tag">OWASP MASVS</span>
         </div>
-
-        <div class="dataset-actions">
-          <a href="#" target="_blank" rel="noopener">Paper</a>
-          <a href="https://ieee-dataport.org/documents/wearappsec-wearable-mobile-app-security-dataset" target="_blank" rel="noopener">Dataset</a>
+        <div class="dataset-links">
+          <a href="#" target="_blank" rel="noopener">PDF</a>
+          <a href="https://ieee-dataport.org/documents/wearappsec-wearable-mobile-app-security-dataset" target="_blank" rel="noopener">Data</a>
           <details>
             <summary>Citation</summary>
-            <div class="citation-block">
+            <div class="dataset-citation">
 <pre>@dataset{WearAppSec,
   author    = {Karim Elish and others},
   title     = {WearAppSec: Wearable Mobile App Security Dataset},
@@ -138,34 +143,35 @@
             </div>
           </details>
         </div>
-      </article>
+      </div>
+    </article>
 
-    </div>
+  </div>
 
+  <h2 class="dataset-group-title">Quality, Reuse &amp; Architecture</h2>
 
-    <div class="dataset-grid">
+  <div class="dataset-list">
 
-      <article class="dataset-card">
-        <div class="dataset-card-main">
-          <div class="dataset-icon icon-smell">SD</div>
-          <div class="dataset-content">
-            <h3>
-              SMELLDroid
-              <span class="badge badge-smell">Code Smells</span>
-            </h3>
-            <p>
-              Large-scale Android code smell dataset for maintainability,
-              software quality, and comparative app analysis.
-            </p>
-          </div>
+    <article class="dataset-item">
+      <div class="dataset-logo logo-smell">SD</div>
+      <div class="dataset-info">
+        <h3>SMELLDroid</h3>
+        <p class="dataset-authors">Joyce Champie, Karim Elish, and Mahmoud Elish.</p>
+        <p class="dataset-desc">
+          Large-scale Android code smell dataset for maintainability, software quality,
+          and comparative app analysis.
+        </p>
+        <div class="dataset-tags">
+          <span class="dataset-tag">Code Smells</span>
+          <span class="dataset-tag">Maintainability</span>
+          <span class="dataset-tag">Android Apps</span>
         </div>
-
-        <div class="dataset-actions">
-          <a href="#" target="_blank" rel="noopener">Paper</a>
-          <a href="https://zenodo.org/records/17559693" target="_blank" rel="noopener">Dataset</a>
+        <div class="dataset-links">
+          <a href="#" target="_blank" rel="noopener">PDF</a>
+          <a href="https://zenodo.org/records/17559693" target="_blank" rel="noopener">Data</a>
           <details>
             <summary>Citation</summary>
-            <div class="citation-block">
+            <div class="dataset-citation">
 <pre>@inproceedings{SMELLDroid,
   author    = {Joyce Champie and Karim Elish and Mahmoud Elish},
   booktitle = {23rd IEEE/ACM International Conference on Mining Software Repositories},
@@ -175,29 +181,29 @@
             </div>
           </details>
         </div>
-      </article>
+      </div>
+    </article>
 
-      <article class="dataset-card">
-        <div class="dataset-card-main">
-          <div class="dataset-icon icon-mirror">MR</div>
-          <div class="dataset-content">
-            <h3>
-              MIRROR
-              <span class="badge badge-repackaging">Repackaging</span>
-            </h3>
-            <p>
-              Structural metrics dataset for original and repackaged Android
-              applications, supporting reuse and repackaging analysis.
-            </p>
-          </div>
+    <article class="dataset-item">
+      <div class="dataset-logo logo-mirror">MR</div>
+      <div class="dataset-info">
+        <h3>MIRROR</h3>
+        <p class="dataset-authors">Sebastian Siedler and Karim Elish.</p>
+        <p class="dataset-desc">
+          Structural metrics dataset for original and repackaged Android applications,
+          supporting reuse, repackaging, and structural similarity analysis.
+        </p>
+        <div class="dataset-tags">
+          <span class="dataset-tag">Repackaging</span>
+          <span class="dataset-tag">Structural Metrics</span>
+          <span class="dataset-tag">Software Reuse</span>
         </div>
-
-        <div class="dataset-actions">
-          <a href="#" target="_blank" rel="noopener">Paper</a>
-          <a href="https://zenodo.org/records/17666395" target="_blank" rel="noopener">Dataset</a>
+        <div class="dataset-links">
+          <a href="#" target="_blank" rel="noopener">PDF</a>
+          <a href="https://zenodo.org/records/17666395" target="_blank" rel="noopener">Data</a>
           <details>
             <summary>Citation</summary>
-            <div class="citation-block">
+            <div class="dataset-citation">
 <pre>@inproceedings{MIRROR,
   author    = {Sebastian Siedler and Karim Elish},
   booktitle = {3rd ACM International Conference on AI Foundation Models and Software Engineering},
@@ -207,29 +213,29 @@
             </div>
           </details>
         </div>
-      </article>
+      </div>
+    </article>
 
-      <article class="dataset-card">
-        <div class="dataset-card-main">
-          <div class="dataset-icon icon-mvc">MVC</div>
-          <div class="dataset-content">
-            <h3>
-              MVCDroid
-              <span class="badge badge-architecture">Architecture</span>
-            </h3>
-            <p>
-              Architectural MVC-separation dataset for Android security studies,
-              structural analysis, and architecture-level empirical research.
-            </p>
-          </div>
+    <article class="dataset-item">
+      <div class="dataset-logo logo-mvc">MVC</div>
+      <div class="dataset-info">
+        <h3>MVCDroid</h3>
+        <p class="dataset-authors">Mohamed Sylla and Karim Elish.</p>
+        <p class="dataset-desc">
+          Architectural MVC-separation dataset for Android security studies,
+          structural analysis, and architecture-level empirical research.
+        </p>
+        <div class="dataset-tags">
+          <span class="dataset-tag">Architecture</span>
+          <span class="dataset-tag">MVC Separation</span>
+          <span class="dataset-tag">Android Security</span>
         </div>
-
-        <div class="dataset-actions">
-          <a href="#" target="_blank" rel="noopener">Paper</a>
-          <a href="https://zenodo.org/records/18633276" target="_blank" rel="noopener">Dataset</a>
+        <div class="dataset-links">
+          <a href="#" target="_blank" rel="noopener">PDF</a>
+          <a href="https://zenodo.org/records/18633276" target="_blank" rel="noopener">Data</a>
           <details>
             <summary>Citation</summary>
-            <div class="citation-block">
+            <div class="dataset-citation">
 <pre>@inproceedings{MVCDroid,
   author    = {Mohamed Sylla and Karim Elish},
   title     = {Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications},
@@ -239,16 +245,15 @@
             </div>
           </details>
         </div>
-      </article>
+      </div>
+    </article>
 
-    </div>
+  </div>
 
-</section>
-
-  <div class="dataset-note">
+  <p class="dataset-note">
     <strong>Note:</strong> These datasets are provided for academic and research purposes.
     Please cite the corresponding paper when using any of these resources.
-  </div>
+  </p>
 
 </div>
 
