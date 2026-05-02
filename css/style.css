@@ -13,7 +13,6 @@ body {
 
 .menu {
   padding: 8px;
-  border-radius: 6px;
 }
 
 .menu li {
@@ -23,14 +22,14 @@ body {
 .article-meta,
 .menu a {
   text-decoration: none;
-  color: #0645ad;
+  color: #000000;   /* black menu/header link color */
   padding: 3px 8px;
   border-radius: 4px;
 }
 
 .menu a:hover {
-  background: #dbeafe;
-  text-decoration: none;
+  color: #000000;
+  text-decoration: underline;
 }
 
 .menu,
@@ -41,6 +40,7 @@ footer {
 
 .title {
   font-size: 0.9em;
+  color: #000000;   /* black page title/header text */
 }
 
 footer {
@@ -50,16 +50,12 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: #0645ad;
+  color: #000000;
 }
 
 footer a:hover {
+  color: #000000;
   text-decoration: underline;
-}
-
-hr {
-  border: 0;
-  border-top: 1px dashed #c7d7f2;
 }
 
 /* =============================== */
