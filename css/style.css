@@ -11,11 +11,11 @@ body {
 .menu li { display: inline-block; }
 .article-meta, .menu a {
   text-decoration: none;
-  background: #eee;
+  background: #f9f9f9;
   padding: 2px 6px;
   border-radius: 3px;
 }
-.menu, .article-meta, footer { text-align: center; background: #f9f9f9;}
+.menu, .article-meta, footer { text-align: center;}
 .title { font-size: 0.9em; }
 footer a { text-decoration: none; }
 hr {
