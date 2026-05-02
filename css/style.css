@@ -21,6 +21,7 @@ footer a { text-decoration: none; }
 hr {
   border-style: dashed;
   color: #ddd;
+   background: #f9f9f9;
 }
 
 /* code */
