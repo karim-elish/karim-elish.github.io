@@ -20,7 +20,8 @@ body {
 footer a { text-decoration: none; }
 hr {
   border-style: dashed;
-  color: #f9f9f9;
+  background: #f9f9f9;
+  color: #ddd;
 }
 
 /* code */
