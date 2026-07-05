@@ -1,69 +1,276 @@
 
+
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Datasets| Karim Elish</title>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Datasets | Karim Elish
+  </title>
+  <meta content="Research datasets and tools by Karim Elish, including Android malware detection, mobile security analysis, software metrics, and AI-driven software assurance." name="description"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/fonts.css" rel="stylesheet"/>
+  <style id="dataset-card-theme">
+   /* Dataset page card styling
+   Scoped to .datasets-page so the rest of the site keeps its existing theme. */
+.datasets-page {
+  max-width: 980px;
+  margin: 0 auto;
+}
 
-<meta name="description"
-      content="Research datasets and tools by Karim Elish, including Android malware detection, mobile security analysis, software metrics, and AI-driven software assurance.">
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/fonts.css" />
-    
-  </head>
+.datasets-page .article-meta {
+  margin-bottom: 0.75rem;
+}
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-     <li><a href="../">Home</a></li>
-      
-      <li><a href="../publications/">Publications</a></li>
-	  <li><a href="../dataset/">Datasets</a></li>
-      <li><a href="../awards/">Honors & Awards</a></li>
-      
-      
-    </ul>
-    <hr/>
-    </nav>
+.datasets-page .article-meta h2 {
+  margin-bottom: 0.25rem;
+}
 
+.dataset-page {
+  margin-top: 0.75rem;
+}
 
- <div class="article-meta">
-<h2><span class="title">Datasets</span></h2>
-</div> 
+.dataset-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+}
 
-<div class="dataset-page">
+.dataset-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem 1.25rem;
+  align-items: start;
+  margin: 0;
+  padding: 1.05rem 1.15rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #2b6cb0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  line-height: 1.55;
+}
 
-  <div class="dataset-list">
+.dataset-item:hover {
+  border-left-color: #1a365d;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.10);
+  transform: translateY(-1px);
+  transition: box-shadow 0.18s ease, transform 0.18s ease, border-left-color 0.18s ease;
+}
 
-    <article class="dataset-item">
+.dataset-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 95px;
+  padding: 0.55rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
 
+.dataset-logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 82px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
 
-	<div class="dataset-logo logo-malware">
-  		<img src="../images/DroidMalVet.png">
-	</div>
-		
+.dataset-info h3 {
+  margin: 0 0 0.25rem 0;
+  color: #1a365d;
+  font-size: 1.18rem;
+  line-height: 1.3;
+}
 
+.dataset-authors {
+  margin: 0 0 0.45rem 0;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.dataset-desc {
+  margin: 0 0 0.7rem 0;
+  color: #2d3748;
+}
+
+.dataset-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 0.8rem 0;
+}
+
+.dataset-tag {
+  display: inline-block;
+  padding: 0.16rem 0.5rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  color: #4a5568;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.dataset-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.dataset-links > a,
+.dataset-links summary {
+  display: inline-block;
+  padding: 0.28rem 0.65rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  color: #2b6cb0;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dataset-links > a:hover,
+.dataset-links summary:hover {
+  background: #f7fafc;
+  border-color: #2b6cb0;
+  color: #1a365d;
+}
+
+.dataset-links details {
+  width: 100%;
+}
+
+.dataset-citation {
+  margin-top: 0.55rem;
+}
+
+.dataset-citation pre {
+  overflow-x: auto;
+  margin: 0;
+  padding: 0.75rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  color: #2d3748;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  white-space: pre;
+}
+
+.dataset-note {
+  margin: 1.25rem 0 2rem 0;
+  padding: 0.85rem 1rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #2b6cb0;
+  border-radius: 8px;
+  color: #2d3748;
+}
+
+.dataset-note strong {
+  color: #1a365d;
+}
+
+@media (max-width: 700px) {
+  .dataset-item {
+    grid-template-columns: 1fr;
+    padding: 0.95rem;
+  }
+
+  .dataset-logo {
+    justify-content: flex-start;
+    min-height: auto;
+  }
+
+  .dataset-logo img {
+    max-height: 70px;
+  }
+}
+  </style>
+ </head>
+ <body>
+  <nav>
+   <ul class="menu">
+    <li>
+     <a href="../">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="../publications/">
+      Publications
+     </a>
+    </li>
+    <li>
+     <a href="../dataset/">
+      Datasets
+     </a>
+    </li>
+    <li>
+     <a href="../awards/">
+      Honors &amp; Awards
+     </a>
+    </li>
+   </ul>
+   <hr/>
+  </nav>
+  <main class="datasets-page">
+   <div class="article-meta">
+    <h2>
+     <span class="title">
+      Datasets
+     </span>
+    </h2>
+   </div>
+   <div class="dataset-page">
+    <div class="dataset-list">
+     <article class="dataset-item">
+      <div class="dataset-logo logo-malware">
+       <img src="../images/DroidMalVet.png"/>
+      </div>
       <div class="dataset-info">
-        <h3>DroidMalVet</h3>
-        <p class="dataset-authors">Karim Elish, Mahmoud Elish, and Hussain Almohri.</p>
-        <p class="dataset-desc">
-          Android malware family dataset with compact code-level metrics for malware
+       <h3>
+        DroidMalVet
+       </h3>
+       <p class="dataset-authors">
+        Karim Elish, Mahmoud Elish, and Hussain Almohri.
+       </p>
+       <p class="dataset-desc">
+        Android malware family dataset with compact code-level metrics for malware
           family detection, characterization, and analysis.
-        </p>
-        <div class="dataset-tags">
-          <span class="dataset-tag">Android Malware</span>
-          <span class="dataset-tag">Code Metrics</span>
-          <span class="dataset-tag">Malware Families</span>
-        </div>
-        <div class="dataset-links">
-          <a href="https://ieeexplore.ieee.org/document/9682574" target="_blank" rel="noopener">PDF</a>
-          <a href="https://zenodo.org/records/18315281" target="_blank" rel="noopener">Data</a>
-          <details>
-            <summary>Citation</summary>
-            <div class="dataset-citation">
-<pre>@ARTICLE{DroidMalVet,
+       </p>
+       <div class="dataset-tags">
+        <span class="dataset-tag">
+         Android Malware
+        </span>
+        <span class="dataset-tag">
+         Code Metrics
+        </span>
+        <span class="dataset-tag">
+         Malware Families
+        </span>
+       </div>
+       <div class="dataset-links">
+        <a href="https://ieeexplore.ieee.org/document/9682574" rel="noopener" target="_blank">
+         PDF
+        </a>
+        <a href="https://zenodo.org/records/18315281" rel="noopener" target="_blank">
+         Data
+        </a>
+        <details>
+         <summary>
+          Citation
+         </summary>
+         <div class="dataset-citation">
+          <pre>@ARTICLE{DroidMalVet,
   author  = {Elish, Karim and Elish, Mahmoud and Almohri, Hussain},
   journal = {IEEE Transactions on Computers},
   title   = {Lightweight, Effective Detection and Characterization of Mobile Malware Families},
@@ -72,201 +279,279 @@
   number  = {11},
   pages   = {2982--2995}
 }</pre>
-            </div>
-          </details>
-        </div>
+         </div>
+        </details>
+       </div>
       </div>
-    </article>
-
-    <article class="dataset-item">
+     </article>
+     <article class="dataset-item">
       <div class="dataset-logo logo-metrics">
-		  <img src="../images/AndroMetric.png">
-	  </div>
-
-
-		
+       <img src="../images/AndroMetric.png"/>
+      </div>
       <div class="dataset-info">
-        <h3>AndroMetric</h3>
-        <p class="dataset-authors">Sebastian Siedler and Karim Elish.</p>
-        <p class="dataset-desc">
-          Android app metrics dataset for malware-risk analysis, empirical software
+       <h3>
+        AndroMetric
+       </h3>
+       <p class="dataset-authors">
+        Sebastian Siedler and Karim Elish.
+       </p>
+       <p class="dataset-desc">
+        Android app metrics dataset for malware-risk analysis, empirical software
           analytics, and security-oriented predictive modeling.
-        </p>
-        <div class="dataset-tags">
-          <span class="dataset-tag">Android Metrics</span>
-          <span class="dataset-tag">Malware Risk</span>
-          <span class="dataset-tag">Software Analytics</span>
-        </div>
-        <div class="dataset-links">
-          <a href="#" target="_blank" rel="noopener">PDF</a>
-          <a href="https://zenodo.org/records/17559667" target="_blank" rel="noopener">Data</a>
-          <details>
-            <summary>Citation</summary>
-            <div class="dataset-citation">
-<pre>@inproceedings{AndroMetric,
+       </p>
+       <div class="dataset-tags">
+        <span class="dataset-tag">
+         Android Metrics
+        </span>
+        <span class="dataset-tag">
+         Malware Risk
+        </span>
+        <span class="dataset-tag">
+         Software Analytics
+        </span>
+       </div>
+       <div class="dataset-links">
+        <a href="#" rel="noopener" target="_blank">
+         PDF
+        </a>
+        <a href="https://zenodo.org/records/17559667" rel="noopener" target="_blank">
+         Data
+        </a>
+        <details>
+         <summary>
+          Citation
+         </summary>
+         <div class="dataset-citation">
+          <pre>@inproceedings{AndroMetric,
   author    = {Sebastian Siedler and Karim Elish},
   title     = {AndroMetric: Bridging Multi-Dimensional Software Metrics and Mobile Application Security},
   booktitle = {23rd IEEE/ACM International Conference on Mining Software Repositories (MSR)},
   year      = {2026}
 }</pre>
-            </div>
-          </details>
-        </div>
+         </div>
+        </details>
+       </div>
       </div>
-    </article>
-
-    <article class="dataset-item">
+     </article>
+     <article class="dataset-item">
       <div class="dataset-logo logo-wear">
-			<img src="../images/WearAppSec.png">
-	  </div>
-		
+       <img src="../images/WearAppSec.png"/>
+      </div>
       <div class="dataset-info">
-        <h3>WearAppSec</h3>
-        <p class="dataset-authors">Sebastian Siedler, Mohamed Sylla, and Karim Elish.</p>
-        <p class="dataset-desc">
-          Security dataset for wearable companion mobile applications, supporting wearable app security assessment.
-        </p>
-        <div class="dataset-tags">
-          <span class="dataset-tag">Wearables</span>
-          <span class="dataset-tag">Mobile Security</span>
-          <span class="dataset-tag">OWASP MASVS</span>
-        </div>
-        <div class="dataset-links">
-          <a href="#" target="_blank" rel="noopener">PDF</a>
-          <a href="https://ieee-dataport.org/documents/wearappsec-wearable-mobile-app-security-dataset" target="_blank" rel="noopener">Data</a>
-          <details>
-            <summary>Citation</summary>
-            <div class="dataset-citation">
-<pre>@dataset{WearAppSec,
+       <h3>
+        WearAppSec
+       </h3>
+       <p class="dataset-authors">
+        Sebastian Siedler, Mohamed Sylla, and Karim Elish.
+       </p>
+       <p class="dataset-desc">
+        Security dataset for wearable companion mobile applications, supporting wearable app security assessment.
+       </p>
+       <div class="dataset-tags">
+        <span class="dataset-tag">
+         Wearables
+        </span>
+        <span class="dataset-tag">
+         Mobile Security
+        </span>
+        <span class="dataset-tag">
+         OWASP MASVS
+        </span>
+       </div>
+       <div class="dataset-links">
+        <a href="#" rel="noopener" target="_blank">
+         PDF
+        </a>
+        <a href="https://ieee-dataport.org/documents/wearappsec-wearable-mobile-app-security-dataset" rel="noopener" target="_blank">
+         Data
+        </a>
+        <details>
+         <summary>
+          Citation
+         </summary>
+         <div class="dataset-citation">
+          <pre>@dataset{WearAppSec,
   author    = {Sebastian Siedler, Mohamed Sylla, and Karim Elish},
   title     = {WearAppSec: Wearable Mobile App Security Dataset},
   publisher = {IEEE DataPort},
   year      = {2026}
 }</pre>
-            </div>
-          </details>
-        </div>
+         </div>
+        </details>
+       </div>
       </div>
-    </article>
-
-
-    <article class="dataset-item">
-      <div class="dataset-logo logo-smell">			
-		  <img src="../images/SMELLDroid.png">
-	  </div>
-		
+     </article>
+     <article class="dataset-item">
+      <div class="dataset-logo logo-smell">
+       <img src="../images/SMELLDroid.png"/>
+      </div>
       <div class="dataset-info">
-        <h3>SMELLDroid</h3>
-        <p class="dataset-authors">Joyce Champie, Karim Elish, and Mahmoud Elish.</p>
-        <p class="dataset-desc">
-          Large-scale Android code smell dataset for maintainability, software quality,
+       <h3>
+        SMELLDroid
+       </h3>
+       <p class="dataset-authors">
+        Joyce Champie, Karim Elish, and Mahmoud Elish.
+       </p>
+       <p class="dataset-desc">
+        Large-scale Android code smell dataset for maintainability, software quality,
           and comparative app analysis.
-        </p>
-        <div class="dataset-tags">
-          <span class="dataset-tag">Code Smells</span>
-          <span class="dataset-tag">Maintainability</span>
-          <span class="dataset-tag">Android Apps</span>
-        </div>
-        <div class="dataset-links">
-          <a href="#" target="_blank" rel="noopener">PDF</a>
-          <a href="https://zenodo.org/records/17559693" target="_blank" rel="noopener">Data</a>
-          <details>
-            <summary>Citation</summary>
-            <div class="dataset-citation">
-<pre>@inproceedings{SMELLDroid,
+       </p>
+       <div class="dataset-tags">
+        <span class="dataset-tag">
+         Code Smells
+        </span>
+        <span class="dataset-tag">
+         Maintainability
+        </span>
+        <span class="dataset-tag">
+         Android Apps
+        </span>
+       </div>
+       <div class="dataset-links">
+        <a href="#" rel="noopener" target="_blank">
+         PDF
+        </a>
+        <a href="https://zenodo.org/records/17559693" rel="noopener" target="_blank">
+         Data
+        </a>
+        <details>
+         <summary>
+          Citation
+         </summary>
+         <div class="dataset-citation">
+          <pre>@inproceedings{SMELLDroid,
   author    = {Joyce Champie and Karim Elish and Mahmoud Elish},
   title     = {SMELLDroid: A Dataset for Code Smells in Android Apps},
   booktitle = {23rd IEEE/ACM International Conference on Mining Software Repositories (MSR)},
   year      = {2026}
 }</pre>
-            </div>
-          </details>
-        </div>
+         </div>
+        </details>
+       </div>
       </div>
-    </article>
-
-    <article class="dataset-item">
+     </article>
+     <article class="dataset-item">
       <div class="dataset-logo logo-mirror">
-		  <img src="../images/MIRROR.png">
-	  </div>
-
-		
+       <img src="../images/MIRROR.png"/>
+      </div>
       <div class="dataset-info">
-        <h3>MIRROR</h3>
-        <p class="dataset-authors">Sebastian Siedler and Karim Elish.</p>
-        <p class="dataset-desc">
-          Structural metrics dataset for original and repackaged Android applications,
+       <h3>
+        MIRROR
+       </h3>
+       <p class="dataset-authors">
+        Sebastian Siedler and Karim Elish.
+       </p>
+       <p class="dataset-desc">
+        Structural metrics dataset for original and repackaged Android applications,
           supporting reuse, repackaging, and structural similarity analysis.
-        </p>
-        <div class="dataset-tags">
-          <span class="dataset-tag">Repackaging</span>
-          <span class="dataset-tag">Structural Metrics</span>
-          <span class="dataset-tag">Software Reuse</span>
-        </div>
-        <div class="dataset-links">
-          <a href="#" target="_blank" rel="noopener">PDF</a>
-          <a href="https://zenodo.org/records/17666395" target="_blank" rel="noopener">Data</a>
-          <details>
-            <summary>Citation</summary>
-            <div class="dataset-citation">
-<pre>@inproceedings{MIRROR,
+       </p>
+       <div class="dataset-tags">
+        <span class="dataset-tag">
+         Repackaging
+        </span>
+        <span class="dataset-tag">
+         Structural Metrics
+        </span>
+        <span class="dataset-tag">
+         Software Reuse
+        </span>
+       </div>
+       <div class="dataset-links">
+        <a href="#" rel="noopener" target="_blank">
+         PDF
+        </a>
+        <a href="https://zenodo.org/records/17666395" rel="noopener" target="_blank">
+         Data
+        </a>
+        <details>
+         <summary>
+          Citation
+         </summary>
+         <div class="dataset-citation">
+          <pre>@inproceedings{MIRROR,
   author    = {Sebastian Siedler and Karim Elish},
   title     = {MIRROR: A Dataset of Structural Metrics for Repackaged Android Apps},
   booktitle = {3rd ACM International Conference on AI Foundation Models and Software Engineering},
   year      = {2026}
 }</pre>
-            </div>
-          </details>
-        </div>
+         </div>
+        </details>
+       </div>
       </div>
-    </article>
-
-    <article class="dataset-item">
-      <div class="dataset-logo logo-mvc">		 
-		  <img src="../images/MVCDroid.png">
-	  </div>
-		
+     </article>
+     <article class="dataset-item">
+      <div class="dataset-logo logo-mvc">
+       <img src="../images/MVCDroid.png"/>
+      </div>
       <div class="dataset-info">
-        <h3>MVCDroid</h3>
-        <p class="dataset-authors">Mohamed Sylla and Karim Elish.</p>
-        <p class="dataset-desc">
-          Architectural MVC-separation dataset for Android security studies,
+       <h3>
+        MVCDroid
+       </h3>
+       <p class="dataset-authors">
+        Mohamed Sylla and Karim Elish.
+       </p>
+       <p class="dataset-desc">
+        Architectural MVC-separation dataset for Android security studies,
           structural analysis, and architecture-level empirical research.
-        </p>
-        <div class="dataset-tags">
-          <span class="dataset-tag">Architecture</span>
-          <span class="dataset-tag">MVC Separation</span>
-          <span class="dataset-tag">Android Security</span>
-        </div>
-        <div class="dataset-links">
-          <a href="#" target="_blank" rel="noopener">PDF</a>
-          <a href="https://zenodo.org/records/18633276" target="_blank" rel="noopener">Data</a>
-          <details>
-            <summary>Citation</summary>
-            <div class="dataset-citation">
-<pre>@inproceedings{MVCDroid,
+       </p>
+       <div class="dataset-tags">
+        <span class="dataset-tag">
+         Architecture
+        </span>
+        <span class="dataset-tag">
+         MVC Separation
+        </span>
+        <span class="dataset-tag">
+         Android Security
+        </span>
+       </div>
+       <div class="dataset-links">
+        <a href="#" rel="noopener" target="_blank">
+         PDF
+        </a>
+        <a href="https://zenodo.org/records/18633276" rel="noopener" target="_blank">
+         Data
+        </a>
+        <details>
+         <summary>
+          Citation
+         </summary>
+         <div class="dataset-citation">
+          <pre>@inproceedings{MVCDroid,
   author    = {Mohamed Sylla and Karim Elish},
   title     = {Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications},
   booktitle = {23rd IEEE International Conference on Software Architecture},
   year      = {2026}
 }</pre>
-            </div>
-          </details>
-        </div>
+         </div>
+        </details>
+       </div>
       </div>
-    </article>
-
-
-
-
-  <div class="dataset-note">
-    <strong>Note:</strong> These datasets are provided for academic and research purposes.
+     </article>
+    </div>
+    <div class="dataset-note">
+     <strong>
+      Note:
+     </strong>
+     These datasets are provided for academic and research purposes.
     Please cite the corresponding paper when using any of these resources.
-  </div>
-
-</div>
-
- <footer>
-  <hr/>
-  &copy; <a href="https://karim-elish.github.io">Karim Elish</a> 2025 | <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&hl=en" target="_blank">Google Scholar</a> | <a href="">NEXUS Research Lab</a>
+    </div>
+   </div>
+  </main>
+  <footer>
+   <hr/>
+   ©
+   <a href="https://karim-elish.github.io">
+    Karim Elish
+   </a>
+   2025 |
+   <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" target="_blank">
+    Google Scholar
+   </a>
+   |
+   <a href="">
+    NEXUS Research Lab
+   </a>
   </footer>
+ </body>
+</html>
