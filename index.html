@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-	  
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ3V3NVGX8"></script>
 <script>
@@ -12,228 +13,345 @@
   gtag('config', 'G-KJ3V3NVGX8');
 </script>
 
-	  
-	<meta name="generator" content="Hugo 0.31.1" />
+    <meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prof. Karim Elish | Florida Polytechnic University</title>
+    <title>Prof. Karim Elish | Florida Polytechnic University</title>
 
-<meta name="description"
+    <meta name="description"
       content="Karim Elish is a Full Professor of Computer Science at Florida Polytechnic University and director of the NEXUS Lab. His research focuses on mobile and Android security, malware detection, software analytics, and AI/ML for secure software engineering.">
 
-	  <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/fonts.css" />
-    
+
+    <style>
+      .home-page {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+
+      .profile-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 190px;
+        gap: 1.5rem;
+        align-items: start;
+        padding: 1.35rem 1.45rem;
+        margin: 1.4rem 0 1.35rem;
+        border: 1px solid #d9e2ec;
+        border-radius: 14px;
+        background: #ffffff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.045);
+      }
+
+      .profile-hero h2 {
+        margin-top: 0;
+        margin-bottom: 0.35rem;
+        font-size: 1.7rem;
+        line-height: 1.2;
+      }
+
+      .profile-title {
+        margin: 0.25rem 0 0.9rem;
+        color: #364152;
+        line-height: 1.55;
+      }
+
+      .profile-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin: 0.7rem 0 0.95rem;
+      }
+
+      .profile-links a {
+        display: inline-block;
+        padding: 0.28rem 0.6rem;
+        border: 1px solid #c8d3df;
+        border-radius: 999px;
+        text-decoration: none;
+        background: #f8fafc;
+        font-size: 0.92rem;
+      }
+
+      .profile-links a:hover {
+        background: #eef4f8;
+      }
+
+      .profile-contact {
+        margin: 0.9rem 0 0;
+        color: #3f4a5a;
+        line-height: 1.55;
+      }
+
+      .profile-photo {
+        margin: 0;
+        justify-self: end;
+      }
+
+      .profile-photo img {
+        width: 100%;
+        max-width: 190px;
+        aspect-ratio: 2.25 / 3;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid #d9e2ec;
+        display: block;
+      }
+
+      .home-card {
+        border: 1px solid #d9e2ec;
+        border-radius: 14px;
+        background: #ffffff;
+        padding: 1.15rem 1.3rem;
+        margin: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.035);
+      }
+
+      .home-card h3 {
+        margin-top: 0;
+        margin-bottom: 0.65rem;
+        padding-bottom: 0.35rem;
+        border-bottom: 1px solid #eef2f6;
+      }
+
+      .home-card p {
+        margin-top: 0.35rem;
+      }
+
+      .home-card ul {
+        margin-top: 0.45rem;
+        margin-bottom: 0;
+        padding-left: 1.25rem;
+      }
+
+      .home-card li {
+        margin-bottom: 0.38rem;
+        line-height: 1.5;
+      }
+
+      .home-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        align-items: start;
+      }
+
+      .subheading {
+        font-weight: 700;
+        margin-top: 0.95rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .compact-list li {
+        margin-bottom: 0.28rem;
+      }
+
+      .service-list {
+        margin-bottom: 0.8rem;
+      }
+
+      @media (max-width: 760px) {
+        .profile-hero {
+          grid-template-columns: 1fr;
+        }
+
+        .profile-photo {
+          justify-self: start;
+          order: -1;
+        }
+
+        .profile-photo img {
+          max-width: 170px;
+        }
+
+        .home-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
   </head>
 
   <body>
     <nav>
-    <ul class="menu">
-      
-      <li><a href="../">Home</a></li>
-      
-
-      <li><a href="../publications/">Publications</a></li>
-	  <li><a href="../dataset/">Datasets</a></li>
-      <li><a href="../awards/">Honors & Awards</a></li>
-
-      
-    </ul>
-    <hr/>
+      <ul class="menu">
+        <li><a href="./">Home</a></li>
+        <li><a href="./publications/">Publications</a></li>
+        <li><a href="./dataset/">Datasets</a></li>
+        <li><a href="./awards/">Honors & Awards</a></li>
+      </ul>
+      <hr/>
     </nav>
 
+    <main class="home-page">
 
-<p>
-<img src="images/karim.png"
-     style="
-	   width:100%;
-       max-width:200px;
-       aspect-ratio: 2.25 / 3;
-       object-fit: cover;
-       float: right;
-       border-radius: 5%;
-       margin-left: 15px;
-     ">
-</p>
+      <section class="profile-hero">
+        <div>
+          <h2 id="karim-elish">Dr. Karim Elish</h2>
 
+          <p class="profile-title">
+            Full Professor | Fulbright Specialist<br>
+            Department of Computer Science<br>
+            Florida Polytechnic University
+          </p>
 
-<!-- <p><img src="images/karim.png" style="max-width:40%;min-width:70px;float:right; border-radius: 5%"/></p> <!-- border-radius: 20% -->
+          <div class="profile-links">
+            <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://www.linkedin.com/in/karimelish" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://orcid.org/0000-0001-6060-4090" target="_blank" rel="noopener">ORCID</a>
+          </div>
 
-<h2 style="font-size: 25px;" id="karim-elish">Dr. Karim Elish</h2>
+          <p class="profile-contact">
+            <strong>Contact</strong><br>
+            BARC-2227, 4700 Research Way<br>
+            Lakeland, FL 33805<br>
+            Phone: +1 (863) 874-8646<br>
+            Email: kelish at floridapoly.edu
+          </p>
+        </div>
 
+        <figure class="profile-photo">
+          <img src="images/karim.png" alt="Karim Elish">
+        </figure>
+      </section>
 
-	  <div class="profile-block">
-  <p>Full Professor | Fulbright Specialist <br>
-	<!--  Co-director of the NEXUS Research Lab<br> -->
-     Department of Computer Science<br>
-     Florida Polytechnic University
-  </p>
+      <section class="home-card">
+        <h3>Short Bio</h3>
+        <p>
+          I am a Full Professor in the <a href="https://floridapoly.edu/academics/programs/computer-science/" target="_blank" rel="noopener">Department of Computer Science</a> at <a href="https://floridapoly.edu/" target="_blank" rel="noopener">Florida Polytechnic University</a> and Director of the NEXUS Lab, which focuses on secure, trustworthy, and intelligent software engineering through empirical and AI-driven research. At NEXUS, I have been fortunate to collaborate with and mentor students, including Fulbright scholars and graduate fellows.
+        </p>
+        <p>
+          Before joining Florida Poly, I held a faculty appointment as an Assistant Professor of Computer Science at Purdue University Fort Wayne. I am also a <a href="https://fulbrightspecialist.worldlearning.org/" target="_blank" rel="noopener">Fulbright Specialist</a>, selected to the Fulbright Specialist Roster of the U.S. Department of State for 2025–present. In 2018, I received the Florida Poly <a href="https://floridapoly.edu/news/florida-polytechnic-university-employees-honored-with-inaugural-faculty-and-staff-awards/" target="_blank" rel="noopener">ABLAZE Award for Excellence in Teaching</a>, recognizing exemplary pedagogical practices, teaching effectiveness, contributions to course and program development, and sustained efforts to foster students’ intellectual growth and critical thinking. I am a Senior Member of ACM and IEEE.
+        </p>
+      </section>
 
-  <p>
-    <!-- <span>Email:</span> kelish at floridapoly.edu <br> -->
-    <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&hl=en" target="_blank">Google Scholar</a> /
-    <a href="https://www.linkedin.com/in/karimelish" target="_blank">LinkedIn</a> <br>
-    ORCID: <a href="https://orcid.org/0000-0001-6060-4090" target="_blank">0000-0001-6060-4090</a>
-  </p>
+      <div class="home-grid">
+        <section class="home-card">
+          <h3>Education</h3>
+          <ul class="compact-list">
+            <li>2015: Ph.D. in Computer Science, Virginia Tech, Blacksburg, VA, USA</li>
+            <li>2011: M.S. in Computer Science, Virginia Tech, Blacksburg, VA, USA</li>
+            <li>2008: M.S. in Computer Science, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia</li>
+            <li>2006: B.S. in Computer Science, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia</li>
+          </ul>
+        </section>
 
-<h3>Contact</h3>
-  <p>
-    Address: BARC-2227,
-	4700 Research Way <br>
-    Lakeland, FL 33805 <br>
-    Phone: +1 (863) 874-8646<br>
-    Email: kelish at floridapoly.edu<br>
-  </p>
-</div>
+        <section class="home-card">
+          <h3>Research Interests</h3>
+          <ul>
+            <li>Software security, with a focus on mobile application security, malware detection, secure code analysis, and automated assurance;</li>
+            <li>Software analytics and quality, including metrics, code smells, bug localization, and vulnerability detection;</li>
+            <li>AI/ML for security and software engineering; and</li>
+            <li>Broader topics in security, privacy, and software engineering.</li>
+          </ul>
+        </section>
+      </div>
 
-<h3>Short Bio</h3>
+      <section class="home-card">
+        <h3>Publications</h3>
+        <p>
+          All my publications are available on my <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
+          Selected publications can be found <a href="https://karim-elish.github.io/publications/">here</a>.
+        </p>
+      </section>
 
-<p>
-I am a Full Professor in the <a href="https://floridapoly.edu/academics/programs/computer-science/" target="_blank">Department of Computer Science</a> at <a href="https://floridapoly.edu/" target="_blank">Florida Polytechnic University</a> and Director of the NEXUS Lab, which focuses on secure, trustworthy, and intelligent software engineering through empirical and AI-driven research. At NEXUS, I have been fortunate to collaborate with and mentor students, including Fulbright scholars and graduate fellows. 
-	
-Before joining Florida Poly, I held a faculty appointment as an Assistant Professor of Computer Science at Purdue University Fort Wayne. I am also a <a href="https://fulbrightspecialist.worldlearning.org/" target="_blank">Fulbright Specialist</a>, selected to the Fulbright Specialist Roster of the U.S. Department of State for 2025–present. In 2018, I received the Florida Poly <a href="https://floridapoly.edu/news/florida-polytechnic-university-employees-honored-with-inaugural-faculty-and-staff-awards/" target="_blank">ABLAZE Award for Excellence in Teaching</a>, recognizing exemplary pedagogical practices, teaching effectiveness, contributions to course and program development, and sustained efforts to foster students’ intellectual growth and critical thinking. I am a Senior Member of ACM and IEEE.
-</p>
+      <section class="home-card">
+        <h3>Advising</h3>
+        <ul>
+          <li>Sebastian Siedler (Fulbright Graduate Fellow), Master's Student: 2025-</li>
+          <li>Mohamed Sylla (Fulbright Graduate Fellow), Master's Student: 2025-</li>
+          <li>Nicholas Carracino, Master's Student: 2026-</li>
+          <li>Joyce Champie, Master's Student: 2025-2026</li>
+          <li>Nesreen Dalhy, Master's Student: 2024-2025</li>
+          <li>Vinicius Seixas, Master's Student: 2021-2022</li>
+          <li>Tito Leadon, Master's Student: 2021-2022</li>
+          <li>Vikranth Meka, Master's Student: 2017-2018</li>
+          <li>Dennis Carey, Undergraduate Student: 2025-</li>
+          <li>Gurjas Chalana (Killam Fellowships), Undergraduate Student: 2026</li>
+          <li>William Blanc, Undergraduate Student: 2019-2020</li>
+        </ul>
+      </section>
 
-	  
-<h3>Education</h3>	  
-<p>
-  <ul>
-    <li> 2015: Ph.D. in Computer Science, Virginia Tech, Blacksburg, VA, USA </li> 
-    <li> 2011: M.S. in Computer Science, Virginia Tech, Blacksburg, VA, USA </li>
-    <li> 2008: M.S. in Computer Science, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia</li>
-    <li> 2006: B.S. in Computer Science, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia</li>
-  </ul>
-</p>
-	  
-<h3>Research Interests</h3>	  
-<p>
-<!-- I am working in Software Security, Software Engineering, and Applied AI/ML, with a specific focus on: -->
-  <ul>
-    <li> Software security, with a focus on mobile application security (malware detection, secure code analysis, automated assurance);</li> 
-    <li> Software analytics and quality (metrics, code smells, bug localization, vulnerability detection);</li>
-    <li> AI/ML for security and software engineering; and </li>
-	<li> Broader topics in security, privacy, and software engineering. </li>
-  </ul>
-</p>
+      <section class="home-card">
+        <h3>Teaching</h3>
+        <p>
+          At Florida Polytechnic University, I teach a broad range of undergraduate and graduate courses spanning software engineering and cybersecurity. Over the years, I have designed and delivered courses that integrate hands-on practice, current technologies, and effective teaching methods. My teaching portfolio includes:
+        </p>
 
+        <div class="home-grid">
+          <div>
+            <p class="subheading">Undergraduate Courses</p>
+            <ul>
+              <li>CEN 4033 Secure Software Engineering</li>
+              <li>CEN 4088 Software Security Testing</li>
+              <li>CIS 4369 Web Application Security</li>
+              <li>CEN 4010 Software Engineering</li>
+              <li>CEN 4065 Software Design and Architecture</li>
+              <li>COP 4656 Mobile Device Applications</li>
+              <li>CEN 3820 Systems Analysis and Design</li>
+              <li>COP 3710 Database I</li>
+              <li>COP 3330C Computer Programming 2</li>
+              <li>COP 4934 Senior Design 1 (Capstone I)</li>
+              <li>COP 4935 Senior Design 2 (Capstone II)</li>
+            </ul>
+          </div>
 
+          <div>
+            <p class="subheading">Graduate Courses and Thesis</p>
+            <ul>
+              <li>CEN 5035 Advanced Software Engineering</li>
+              <li>COP 5727 Advanced Database Systems Design</li>
+              <li>CEN 5088 Advanced Software Security Testing</li>
+              <li>IDS 5970 Thesis 1</li>
+              <li>IDS 5975 Thesis 2</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-	  
-<h3>Publications</h3>	
-<p>         
-All my publications are available on my <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&hl=en" target="_blank"> Google Scholar</a>. 
-<br>
-Selected publications can be found <a href="https://karim-elish.github.io/publications/"> here</a>.
-</p>
+      <section class="home-card">
+        <h3>Selected Services</h3>
 
+        <ul class="service-list">
+          <li>Guest Editor, Applied Sciences Journal, special issue on “Cybersecurity: Novel Technologies and Applications”, 2025-2026.</li>
+          <li>Session Chair, IEEE/ACIS SERA, 2025.</li>
+          <li>Editorial Board Member, EAI Transactions on Security and Safety Journal: 2019-2021.</li>
+          <li>Conference Program Committee Member: KDD'26 AgenticSE Workshop, SecDev'26, SecureComm'20, SecureComm'19, ICPADS'19 Security & Dependable Computing Track.</li>
+          <li>Conference Reviewer: NeurIPS'26.</li>
+          <li>Panel Reviewer, National Science Foundation (NSF), Cybersecurity Education Program, 2016.</li>
+          <li>External reviewer for the following conferences: CCS'15, ASIACCS'15, CODASPY'15, ACSAC'15, CCS'14, ACSAC'14, ASIACCS'14, Inscrypt'13, ASIACCS'13, ISC'13, CODASPY'13, CNS'13, SecureComm'13, ACNS'12, GLOBECOM'11.</li>
+          <li>Reviewer for the following journals: ACM Transactions on Software Engineering and Methodology, IEEE Transactions on Software Engineering, IEEE Transactions on Information Forensics and Security (TIFS), IEEE Transactions on Dependable and Secure Computing (TDSC), International Journal of Information Security, IEEE Transactions on Mobile Computing (TMC), IEEE Systems Journal, Journal of Information Security and Applications, IEEE Intelligent Transportation Systems, Computers & Security.</li>
+        </ul>
 
-<h3>Advising</h3>	
-<p>         
-<ul>
-      <li> Sebastian Siedler (Fulbright Graduate Fellow), Masters Student: 2025- </li>
-	  <li> Mohamed Sylla (Fulbright Graduate Fellow), Masters Student: 2025-  </li>
-	  <li> Nicholas Carracino, Masters Student: 2026- </li>
-	  <li> Joyce Champie, Masters Student: 2025-2026 </li>
-	  <li> Nesreen Dalhy, Masters Student: 2024-2025 </li>
-	  <li> Vinicius Seixas, Masters Student: 2021-2022 </li>
-	  <li> Tito Leadon, Masters Student: 2021-2022</li>
-      <li> Vikranth Meka, Masters Student: 2017-2018 </li>
+        <p class="subheading">University Service Activities at Florida Poly</p>
+        <ul>
+          <li>2022-2025: CS Graduate Council Representative</li>
+          <li>2025: Member, Technology Transfer Steering Committee</li>
+          <li>2022-2025: Member, CS Search Committee</li>
+          <li>2024-2025: Member, CS Department Evaluation Panel for Reappointment and Promotion</li>
+          <li>2025: Member, ECE Department Evaluation Panel for Reappointment and Promotion</li>
+          <li>2024: Member, DSBA Department Evaluation Panel for Reappointment and Promotion</li>
+          <li>2018-2025: Member, CS Department Curriculum Committee</li>
+          <li>2022-2024: Chair, CS/DSBA Thesis and Graduate Project Review and Approval Committee</li>
+          <li>2023-2024: Member, Data Science & Business Analytics Search Committee</li>
+          <li>2024: Member, Faculty Evaluation Committee</li>
+          <li>2023-2024: Member, Cybersecurity Engineering Search Committee</li>
+          <li>2023: Member, ECE Search Committee</li>
+          <li>2020, 2022, 2023: Member, ABLAZE Excellence in Teaching Award Selection Committee</li>
+          <li>2023: Member, Institutional Effectiveness Committee</li>
+          <li>2022: Judge, Senior Capstone Projects Showcase</li>
+          <li>2021-2022: Member, CS Curriculum and Assessment Committee</li>
+          <li>2022: Member, Cybersecurity Engineering Program Committee</li>
+          <li>2019-2021: Member, CS Academic Excellence and Teaching Quality Committee</li>
+          <li>2017: Member, Instructor Search Committee</li>
+        </ul>
+      </section>
 
-	  <li> Dennis Carey, Undergraduate Student: 2025- </li>
-	  <li> Gurjas Chalana (Killam Fellowships), Undergraduate Student: 2026</li>
-      <li> William Blanc, Undergraduate Student: 2019-2020 </li>
-	</ul>
-</p>
+    </main>
 
-
-
-	  
-<h3>Teaching</h3>	
-<p>
-
-At Florida Polytechnic University, I teach a broad range of undergraduate and graduate courses spanning software engineering and cybersecurity. Over the years, I have designed and delivered courses that integrate hands-on practice, current technologies, and effective teaching methods. My teaching portfolio includes: 
-  <ul>
-      <li> CEN 4033 Secure Software Engineering </li>
-	  <li> CEN 4088 Software Security Testing </li>
-	  <li> CIS 4369 Web Application Security </li>
-	  <li> CEN 4010 Software Engineering </li>
-	  <li> CEN 4065 Software Design and Architecture </li>
-	  <li> COP 4656 Mobile Device Applications </li>
-
-	   <li> CEN 3820 Systems Analysis and Design </li>
-       <li> COP 3710 Database I </li>
-       <li> COP 3330C Computer Programming 2 </li>
-	  
-	  <li> COP 4934 Senior Design 1 (Capstone I) </li>
-	  <li> COP 4935 Senior Design 2 (Capstone II) </li>
-	</ul>
-	  
-	  Graduate Courses/Thesis: 
-	   <ul>
-  		<li> CEN 5035 Advanced Software Engineering </li>
-	  <li>   COP 5727 Advanced Database Systems Design </li>
-		<li> CEN 5088 Advanced Software Security Testing </li>
-	  <li> IDS 5970 Thesis 1 </li>
-	  <li> IDS 5975 Thesis 2 </li>
-	   </ul>
-  </ul>
-</p>  
-
-
-<h3>Selected Services</h3>	
-<p>
-
- 
-<ul>
-<li> Guest Editor, Applied Sciences Journal, special issue on ”Cybersecurity: Novel Technologies and Applications”, 2025-2026. </li>
-
-<li> Session Chair, IEEE/ACIS SERA, 2025. </li>
-
-<li> Editorial Board Member, EAI Transactions on Security and Safety Journal: 2019 - 2021. </li>
-
-<li> Conference Program Committee Member: KDD'26 AgenticSE Workshop, SecDev'26, SecureComm'20, SecureComm'19, ICPADS'19 Security & Dependable Computing Track. </li>
-
-<li> Conference Reviewer: NeurIPS'26. </li>
-
-<li> Panel Reviewer, National Science Foundation (NSF), Cybersecurity Education Program, 2016. </li>
-	  
-	  
-<li> External reviewer for the following conferences: CCS'15, ASIACCS'15, CODASPY'15, ACSAC'15, CCS'14, ACSAC'14, ASIACCS'14, Inscrypt'13, ASIACCS'13, ISC'13, CODASPY'13, CNS'13, SecureComm'13, ACNS'12, GLOBECOM'11. </li>
-	
-<li> Reviewer for the following journals: ACM Transactions on Software Engineering and Methodology, IEEE Transactions on Software Engineering, IEEE Transactions on Information Forensics and Security (TIFS), IEEE Transactions on Dependable and Secure Computing (TDSC), International Journal of Information Security, IEEE Transactions on Mobile Computing (TMC), IEEE Systems Journal, Journal of Information Security and Applications, IEEE Intelligent Transportation Systems, Computers & Security. </li>
-</ul> 
-	  
-University Service Activities at Florida Poly: 
-<ul>
-<li> 2022-2025: CS Graduate Council Representative </li>
-<li> 2025: Member, Technology Transfer Steering Committee </li>
-<li> 2022-2025: Member, CS Search Committee </li>
-<li> 2024-2025: Member, CS Department Evaluation Panel for Reappointment and Promotion </li>
-<li> 2025: Member, ECE Department Evaluation Panel for Reappointment and Promotion </li>
-<li> 2024: Member, DSBA Department Evaluation Panel for Reappointment and Promotion </li>
-<li> 2018-2025: Member, CS Department Curriculum Committee </li>
-<li> 2022-2024: Chair, CS/DSBA Thesis and Graduate Project Review and Approval Committee </li>
-<li> 2023-2024: Member, Data Science & Business Analytics Search Committee </li>
-<li> 2024: Member, Faculty Evaluation Committee </li>
-<li> 2023-2024: Member, Cybersecurity Engineering Search Committee </li>
-<li> 2023: Member, ECE Search Committee </li>
-<li> 2020, 2022, 2023: Member, ABLAZ Excellence in Teaching Award Selection Committee, 2020, 2022, 2023 </li>
-<li> 2023: Member, Institutional Effectiveness Committee </li>
-<li> 2022: Judge, Senior Capstone Projects Showcase </li>
-<li> 2021-2022: Member, CS Curriculum and Assessment Committee </li>
-<li> 2022: Member, Cybersecurity Engineering Program Committee </li>
-<li> 2019-2021: Member, CS Academic Excellence and Teaching Quality Committee </li>
-<li> 2017: Member, Instructor Search Committee </li>
-</ul>  
-	  
-</p>
-
-	  
-  <footer>
-
-  <hr/>
-  &copy; <a href="https://karim-elish.github.io">Karim Elish</a> 2025 | <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&hl=en" target="_blank">Google Scholar</a> | <a href="">NEXUS Research Lab</a>
-  </footer>
+    <footer>
+      <hr/>
+      &copy; <a href="https://karim-elish.github.io">Karim Elish</a> 2025 | <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> | <a href="">NEXUS Research Lab</a>
+    </footer>
   </body>
 </html>
-
