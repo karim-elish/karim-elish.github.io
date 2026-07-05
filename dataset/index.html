@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en-us">
  <head>
@@ -120,8 +119,8 @@
 .dataset-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
-  align-items: center;
+  gap: 0.35rem;
+  align-items: flex-start;
 }
 
 .dataset-links > a,
@@ -145,15 +144,27 @@
 }
 
 .dataset-links details {
-  width: 100%;
+  display: contents;
+  margin: 0;
+}
+
+.dataset-links details > summary {
+  flex: 0 0 auto;
 }
 
 .dataset-citation {
+  flex: 1 0 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   margin-top: 0.55rem;
+  box-sizing: border-box;
 }
 
 .dataset-citation pre {
   overflow-x: auto;
+  max-width: 100%;
+  box-sizing: border-box;
   margin: 0;
   padding: 0.75rem;
   background: #f7fafc;
@@ -162,7 +173,9 @@
   color: #2d3748;
   font-size: 0.88rem;
   line-height: 1.45;
-  white-space: pre;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .dataset-note {
@@ -180,6 +193,15 @@
 }
 
 @media (max-width: 700px) {
+  .dataset-links {
+    gap: 0.3rem;
+  }
+
+  .dataset-links > a,
+  .dataset-links summary {
+    padding: 0.24rem 0.55rem;
+  }
+
   .dataset-item {
     grid-template-columns: 1fr;
     padding: 0.95rem;
