@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
-
 <html lang="en-us">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Publications | Karim Elish</title>
-
-<meta content="Publications by Karim Elish in software security, mobile and Android malware detection, inter-app communication analysis, software analytics, AI/ML for security, and software engineering, published in IEEE, ACM, and leading journals and conferences." name="description"/>
-<link href="../css/style.css" rel="stylesheet"/>
-<link href="../css/fonts.css" rel="stylesheet"/><style id="publication-card-theme">
-/* Publication page card styling
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Publications | Karim Elish
+  </title>
+  <meta content="Publications by Karim Elish in software security, mobile and Android malware detection, inter-app communication analysis, software analytics, AI/ML for security, and software engineering, published in IEEE, ACM, and leading journals and conferences." name="description"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/fonts.css" rel="stylesheet"/>
+  <style id="publication-card-theme">
+   /* Publication page card styling
    Scoped to .publications-page so the rest of the site keeps its existing theme. */
 .publications-page {
   max-width: 980px;
@@ -44,9 +45,23 @@
   letter-spacing: 0.01em;
 }
 
+.publications-page h4.publication-year {
+  margin-top: 1.25rem;
+  margin-bottom: 0.65rem;
+  padding: 0.35rem 0.65rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #2b6cb0;
+  border-radius: 6px;
+  color: #1a365d;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+
 .publication-list {
   list-style: none;
-  margin: 0 0 2rem 0;
+  margin: 0 0 1.3rem 0;
   padding: 0;
 }
 
@@ -90,6 +105,10 @@
 }
 
 @media (max-width: 640px) {
+  .publications-page h4.publication-year {
+    font-size: 1rem;
+  }
+
   .publication-list li {
     padding: 0.9rem 0.95rem 0.9rem 1.05rem;
   }
@@ -98,300 +117,765 @@
     font-size: 1.1rem;
   }
 }
-</style>
-    
-</head>
-<body>
-<nav>
-<ul class="menu">
-<li><a href="../">Home</a></li>
-<li><a href="../publications/">Publications</a></li>
-<li><a href="../dataset/">Datasets</a></li>
-<li><a href="../awards/">Honors &amp; Awards</a></li>
-</ul>
-<hr/>
-</nav>
-<main class="publications-page"><div class="article-meta">
-<h2><span class="title">Selected Publications</span></h2>
-</div><p class="publication-intro"><strong>Full List: <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" target="_blank">Google Scholar </a></strong></p><h3>Refereed Journal Publications</h3><ul class="publication-list">
-<li>
-<strong>Large Language Models for Malware Detection: A Systematic Review, Taxonomy, and Open Challenges</strong><br/>
-  Joyce Champie and Karim Elish<br/>
-<em>IEEE Access</em>, vol. 14, pp. 52734-52752, April 2026.
-</li>
-
-<li>
-<strong>RepackDroid: An Efficient Detection Model for Repackaged Android Applications</strong><br/>
-  Tito Leadon and Karim Elish<br/>
-<em>Information</em>, vol. 16, no. 12, Article 1075, December 2025.
-</li>
-
-<li>
-<strong>Lightweight, Effective Detection and Characterization of Mobile Malware Families</strong><br/>
-  Karim Elish, Mahmoud Elish, and Hussain Almohri<br/>
-<em>IEEE Transactions on Computers (TC)</em>, vol. 71, no. 11, November 2022.
-</li>
-
-<li>
-<strong>An Empirical Comparison of Resampling Ensemble Methods of Deep Learning Neural Networks for Cross-Project Software Defect Prediction</strong><br/>
-  Mahmoud Elish and Karim Elish<br/>
-<em>International Journal of Intelligent Engineering and Systems (IJISAE)</em>, vol. 14, no. 3, 2021.
-</li>
-
-<li>
-<strong>A Client Bootstrapping Protocol for DoS Attack Mitigation on Entry Point Services in the Cloud</strong><br/>
-  Hussain Almohri, M. Almutawa, M. Alawadh, and Karim Elish<br/>
-<em>Security and Communication Networks (SCN)</em>, 2020.
-</li>
-
-<li>
-<strong>Identifying Mobile Inter-App Communication Risks</strong><br/>
-  Karim Elish, Haipeng Cai, Daniel Barton, Danfeng Yao, and Barbara Ryder<br/>
-<em>IEEE Transactions on Mobile Computing (TMC)</em>, vol. 19, no. 1, January 2020.
-</li>
-
-<li>
-<strong>Profiling User-Trigger Dependence for Android Malware Detection</strong><br/>
-  Karim Elish, Xiaokui Shu, Danfeng Yao, Barbara Ryder, and Xuxian Jiang<br/>
-<em>Computers &amp; Security</em>, vol. 49, pp. 255–273, March 2015.
-</li>
-
-<li>
-<strong>Using Software Quality Attributes to Classify Refactoring to Patterns</strong><br/>
-  Karim Elish and Mohammed Alshayeb<br/>
-<em>Journal of Software (JSW)</em>, vol. 7, no. 2, February 2012.
-</li>
-
-<li>
-<strong>A Classification of Refactoring Methods Based on Software Quality Attributes</strong><br/>
-  Karim Elish and Mohammed Alshayeb<br/>
-<em>Arabian Journal for Science and Engineering (AJSE)</em>, vol. 36, no. 7, November 2011.
-</li>
-
-<li>
-<strong>Predicting Defect-Prone Software Modules Using Support Vector Machines</strong><br/>
-  Karim Elish and Mahmoud Elish<br/>
-<em>Journal of Systems and Software (JSS)</em>, vol. 81, no. 5, May 2008.<br/>
-<span class="note"><strong>Among Top 10 Most Cited Papers Published by JSS</strong></span>
-</li>
-</ul><h3>Refereed Conference and Workshop Publications</h3><ul class="publication-list">
-<li>
-<strong>STALKER: Composed Quasi-Identifiers and LLM-Amplified Behavioral Leakage in Anonymized Marketplace Data</strong><br/>
-    Anastasiya Dmytryk, Sami El-Yaagoubi, Lucas Batista, Philipp Kouterguine, Samuel Gerken, Abdulaziz Alhamadani, and Karim Elish<br/>
-<em>Proceedings of the 12th ACM International Workshop on Security and Privacy Analytics (IWSPA)</em>, co-located with the <em>16th ACM Conference on Data and Application Security and Privacy (CODASPY)</em><br/>
-    Frankfurt am Main, Germany, June 2026.
-  </li>
-
-<li>
-<strong>Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications</strong><br/>
-    Mohamed Sylla and Karim Elish<br/>
-<em>Proceedings of the 23rd IEEE International Conference on Software Architecture (ICSA), New and Emerging Ideas Track</em><br/>
-    Amsterdam, Netherlands, June 2026. <br/>
-       <span class="note"><strong>Distinguished Paper Award Candidate</strong></span>
-  </li>
-
-<li>
-<strong>Automated Reproduction of Android Application Bugs with LLMs: Are We There Yet?</strong><br/>
-    Dennis Carey, Karim Elish, and Paniz Abedin<br/>
-<em>Proceedings of the 19th IEEE International Conference on Software Testing, Verification and Validation (ICST), Short Papers, Vision and Emerging Results Track</em><br/>
-    Daejeon, South Korea, May 2026.
-  </li>
-
-<li>
-<strong>AndroMetric: Bridging Multi-Dimensional Software Metrics and Mobile Application Security</strong><br/>
-    Sebastian Siedler and Karim Elish<br/>
-<em>Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track</em><br/>
-    Rio de Janeiro, Brazil, April 2026.
-  </li>
-
-<li>
-<strong>SMELLDroid: A Dataset for Code Smells in Android Apps</strong><br/>
-    Joyce Champie, Karim Elish, and Mahmoud Elish<br/>
-<em>Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track</em><br/>
-    Rio de Janeiro, Brazil, April 2026.
-  </li>
-
-<li>
-<strong>MIRROR: A Dataset of Structural Metrics for Repackaged Android Apps</strong><br/>
-    Sebastian Siedler and Karim Elish<br/>
-<em>Proceedings of the 3rd ACM International Conference on AI Foundation Models and Software Engineering (FORGE), Data and Benchmarking Track</em><br/>
-    Rio de Janeiro, Brazil, April 2026.
-  </li>
-
-<li>
-<strong>High-Accuracy Android Ransomware Detection Using SMALI Code-Based Analysis</strong><br/>
-    Vinicius Seixas and Karim Elish<br/>
-<em>Proceedings of the IEEE International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA)</em><br/>
-    Antalya, Turkey, August 2025.
-  </li>
-
-<li>
-<strong>A New Collaborative Approach to Multidisciplinary Capstone Design at Florida Polytechnic University</strong><br/>
-    M. Bohm, J. Dewey, Karim Elish, E. Kames, A. Murphy, O. Toker, and D. Ulybyshev<br/>
-<em>Proceedings of the ASEE Annual Conference and Exposition, American Society for Engineering Education</em><br/>
-    Montreal, Canada, June 2025.
-  </li>
-
-<li>
-<strong>Stealthy No More: An Effective Ensemble Learning Approach for Detecting Android RATs</strong><br/>
-    Nesreen Dalhy and Karim Elish<br/>
-<em>Proceedings of the IEEE/ACIS 23rd International Conference on Software Engineering Research, Management and Applications (SERA)</em><br/>
-    Las Vegas, NV, May 2025.
-  </li>
-
-<li>
-<strong>FSProtoTransfer: Synergizing Few-Shot, Prototypical Networks, and Transfer Learning for Intrusion Detection in VANETs</strong><br/>
-    Ayesha Dina, Colby Edell, Karim Elish, and Arijet Sarker<br/>
-<em>Proceedings of the 38th International FLAIRS Conference, Florida Artificial Intelligence Research Society (FLAIRS)</em><br/>
-    Daytona Beach, FL, May 2025.
-  </li>
-
-<li>
-<strong>Identifying Android Malware Families Using Android-Oriented Metrics</strong><br/>
-    William Blanc, Lina Hashem, Karim Elish, and Hussain Almohri<br/>
-<em>Proceedings of the IEEE International Conference on Big Data (Big Data)</em><br/>
-    Los Angeles, CA, December 2019.
-  </li>
-
-<li>
-<strong>Machine Learning-based Prediction of Prolonged Length of Stay in Newborns</strong><br/>
-    Brandon Thompson, Karim Elish, and Robert Steele<br/>
-<em>Proceedings of the 17th IEEE International Conference on Machine Learning and Applications (ICMLA)</em><br/>
-    Orlando, FL, December 2018.
-  </li>
-
-<li>
-<strong>Enabling Smart Cities Through V2X Communication</strong><br/>
-    Mert Aydin, Mohammad Samarah, and Karim Elish<br/>
-<em>Proceedings of the IEEE International Conference on Computer and Communications (ICCC)</em><br/>
-    Chengdu, China, December 2018.
-  </li>
-
-<li>
-<strong>BetterChoice: A Migraine Drug Recommendation System Based on Neo4J</strong><br/>
-    Benjamin Stark, Constanze Knahl, Mert Aydin, Mohammad Samarah, and Karim Elish<br/>
-<em>Proceedings of the IEEE International Conference on Computational Intelligence and Applications (ICCIA)</em><br/>
-    Beijing, China, September 2017.
-  </li>
-
-<li>
-<strong>Prioritized Analysis of Inter-App Communication Risks</strong><br/>
-    Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, Karim Elish, and Barbara Ryder<br/>
-<em>Proceedings of the ACM Conference on Data and Application Security and Privacy (CODASPY) </em><br/>
-    Scottsdale, AZ, March 2017 (poster paper).
-  </li>
-
-<li>
-<strong>MR-Droid: A Scalable and Prioritized Analysis of Inter-App Communication Risks</strong><br/>
-    Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, Karim Elish, and Barbara Ryder<br/>
-<em>Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)</em>, in conjunction with the <em>IEEE Symposium on Security and Privacy (IEEE S&amp;P)</em><br/>
-    San Jose, CA, May 2017.
-  </li>
-
-<li>
-<strong>On the Need of Precise Inter-App ICC Classification for Detecting Android Malware Collusions</strong><br/>
-    Karim Elish, Danfeng Yao, and Barbara Ryder<br/>
-<em>Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)</em>, in conjunction with the <em>IEEE Symposium on Security and Privacy (IEEE S&amp;P)</em><br/>
-    San Jose, CA, May 2015.
-  </li>
-
-<li>
-<strong>High Precision Screening for Android Malware using Dimensionality Reduction</strong><br/>
-    Britton Wolfe, Karim Elish, and Danfeng Yao<br/>
-<em>Proceedings of the 13th IEEE International Conference on Machine Learning and Applications (ICMLA)</em><br/>
-    Detroit, MI, December 2014.
-  </li>
-
-<li>
-<strong>Comprehensive Behavior Profiling for Proactive Android Malware Detection</strong><br/>
-    Britton Wolfe, Karim Elish, and Danfeng Yao<br/>
-<em>Proceedings of the 17th International Information Security Conference (ISC)</em><br/>
-    Hong Kong, October 2014.
-  </li>
-
-<li>
-<strong>Device-Based Isolation for Securing Cryptographic Keys</strong><br/>
-    Karim Elish, Yipan Deng, Danfeng Yao, and Dennis Kafura<br/>
-<em>Proceedings of the 3rd International Symposium on Internet of Ubiquitous and Pervasive Things (IUPT)</em>, <em>Procedia Computer Science</em> (Elsevier)<br/>
-    Halifax, Canada, June 2013.
-  </li>
-
-<li>
-<strong>User-Centric Dependence Analysis for Identifying Malicious Mobile Apps</strong><br/>
-    Karim Elish, Danfeng Yao, and Barbara Ryder<br/>
-<em>Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)</em>, in conjunction with the <em>IEEE Symposium on Security and Privacy (IEEE S&amp;P)</em><br/>
-    San Jose, CA, May 2012.
-  </li>
-
-<li>
-<strong>Investigating the Effect of Refactoring on Software Testing Effort</strong><br/>
-    Karim Elish and Mohammad Alshayeb<br/>
-<em>Proceedings of the 16th IEEE Asia-Pacific Software Engineering Conference (APSEC)</em><br/>
-    Penang, Malaysia, December 2009.
-  </li>
-
-<li>
-<strong>Application of TreeNet in Predicting Object-Oriented Software Maintainability: A Comparative Study</strong><br/>
-    Mahmoud Elish and Karim Elish<br/>
-<em>Proceedings of the 13th IEEE European Conference on Software Maintenance and Reengineering (CSMR)</em><br/>
-    Kaiserslautern, Germany, March 2009.
-  </li>
-</ul><h3>Refereed Posters and Abstracts</h3><ul class="publication-list">
-<li>
-<strong>Towards Intelligent Detection of Android Remote Access Trojans (RATs)</strong><br/>
-    Nesreen Dalhy and Karim Elish<br/>
-<em>10th North American IEOM Conference on Industrial Engineering and Operations Management</em>, Computer Science Track<br/>
-    Orlando, FL, June 2025.<br/>
-    <span class="note"><strong>Nesreen Dalhy: 2nd Place in Master’s Thesis Competition</strong></span>
-</li>
-
-<li>
-<strong>Evaluating the Capabilities of LLMs in Security Analysis for Mobile Applications</strong><br/>
-    Joyce Champie and Karim Elish<br/>
-<em>10th North American IEOM Conference on Industrial Engineering and Operations Management</em>, Computer Science Track<br/>
-    Orlando, FL, June 2025.<br/>
-    <span class="note"><strong>Joyce Champie: 1st Place in Poster Competition</strong></span>
-</li>
-
-<li>
-<strong>Inter-Component and Inter-App Communication Analysis in Android for Malware Detection</strong><br/>
-    Karim Elish, Danfeng Yao, and Barbara Ryder<br/>
-<em>9th Showcase of the Security and Software Engineering Research Center (S2ERC)</em><br/>
-    Washington, DC, May 2014.
-  </li>
-
-<li>
-<strong>User-Intention Based Program Analysis for Android Security</strong><br/>
-    Karim Elish, Danfeng Yao, and Barbara Ryder<br/>
-<em>2nd Annual Graduate Student Poster Showcase</em>, Computer Science Department, Virginia Tech<br/>
-    April 2014.<br/>
-    <span class="note"><strong>Best Poster Award</strong></span>
-</li>
-
-<li>
-<strong>User-Intention Based Android Malware Detection</strong><br/>
-    Karim Elish, Danfeng Yao, Barbara Ryder, and Xuxian Jiang<br/>
-<em>22nd USENIX Security Symposium</em><br/>
-    Washington, DC, August 2013.
-  </li>
-
-<li>
-<strong>DataGuard: A Mobile System for Securing Ultra-Sensitive Information</strong><br/>
-    Karim Elish, Yipan Deng, Danfeng Yao, and Dennis Kafura<br/>
-<em>28th Annual Graduate Research Symposium</em>, Virginia Tech<br/>
-    March 2012.<br/>
-    <span class="note"><strong>1st Place Poster Award</strong></span>
-</li>
-
-<li>
-<strong>User-Centric Dependence Analysis in Programs for Identifying Malware</strong><br/>
-    Karim Elish, Danfeng Yao, and Barbara Ryder<br/>
-<em>4th Showcase of the Security and Software Engineering Research Center (S2ERC)</em><br/>
-    Iowa, November 2011.
-  </li>
-</ul></main><footer>
-<hr/>
-  © <a href="https://karim-elish.github.io">Karim Elish</a> 2026 | <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" target="_blank">Google Scholar</a> | <a href="">NEXUS Research Lab</a>
-</footer>
-</body>
+  </style>
+ </head>
+ <body>
+  <nav>
+   <ul class="menu">
+    <li>
+     <a href="../">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="../publications/">
+      Publications
+     </a>
+    </li>
+    <li>
+     <a href="../dataset/">
+      Datasets
+     </a>
+    </li>
+    <li>
+     <a href="../awards/">
+      Honors &amp; Awards
+     </a>
+    </li>
+   </ul>
+   <hr/>
+  </nav>
+  <main class="publications-page">
+   <div class="article-meta">
+    <h2>
+     <span class="title">
+      Selected Publications
+     </span>
+    </h2>
+   </div>
+   <p class="publication-intro">
+    <strong>
+     Full List:
+     <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" target="_blank">
+      Google Scholar
+     </a>
+    </strong>
+   </p>
+   <h3>
+    Refereed Journal Publications
+   </h3>
+   <h4 class="publication-year">
+    2026
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      Large Language Models for Malware Detection: A Systematic Review, Taxonomy, and Open Challenges
+     </strong>
+     <br/>
+     Joyce Champie and Karim Elish
+     <br/>
+     <em>
+      IEEE Access
+     </em>
+     , vol. 14, pp. 52734-52752, April 2026.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2025
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      RepackDroid: An Efficient Detection Model for Repackaged Android Applications
+     </strong>
+     <br/>
+     Tito Leadon and Karim Elish
+     <br/>
+     <em>
+      Information
+     </em>
+     , vol. 16, no. 12, Article 1075, December 2025.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2022
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      Lightweight, Effective Detection and Characterization of Mobile Malware Families
+     </strong>
+     <br/>
+     Karim Elish, Mahmoud Elish, and Hussain Almohri
+     <br/>
+     <em>
+      IEEE Transactions on Computers (TC)
+     </em>
+     , vol. 71, no. 11, November 2022.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2021
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      An Empirical Comparison of Resampling Ensemble Methods of Deep Learning Neural Networks for Cross-Project Software Defect Prediction
+     </strong>
+     <br/>
+     Mahmoud Elish and Karim Elish
+     <br/>
+     <em>
+      International Journal of Intelligent Engineering and Systems (IJISAE)
+     </em>
+     , vol. 14, no. 3, 2021.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2020
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      A Client Bootstrapping Protocol for DoS Attack Mitigation on Entry Point Services in the Cloud
+     </strong>
+     <br/>
+     Hussain Almohri, M. Almutawa, M. Alawadh, and Karim Elish
+     <br/>
+     <em>
+      Security and Communication Networks (SCN)
+     </em>
+     , 2020.
+    </li>
+    <li>
+     <strong>
+      Identifying Mobile Inter-App Communication Risks
+     </strong>
+     <br/>
+     Karim Elish, Haipeng Cai, Daniel Barton, Danfeng Yao, and Barbara Ryder
+     <br/>
+     <em>
+      IEEE Transactions on Mobile Computing (TMC)
+     </em>
+     , vol. 19, no. 1, January 2020.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2015
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      Profiling User-Trigger Dependence for Android Malware Detection
+     </strong>
+     <br/>
+     Karim Elish, Xiaokui Shu, Danfeng Yao, Barbara Ryder, and Xuxian Jiang
+     <br/>
+     <em>
+      Computers &amp; Security
+     </em>
+     , vol. 49, pp. 255&ndash;273, March 2015.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2012
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      Using Software Quality Attributes to Classify Refactoring to Patterns
+     </strong>
+     <br/>
+     Karim Elish and Mohammed Alshayeb
+     <br/>
+     <em>
+      Journal of Software (JSW)
+     </em>
+     , vol. 7, no. 2, February 2012.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2011
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      A Classification of Refactoring Methods Based on Software Quality Attributes
+     </strong>
+     <br/>
+     Karim Elish and Mohammed Alshayeb
+     <br/>
+     <em>
+      Arabian Journal for Science and Engineering (AJSE)
+     </em>
+     , vol. 36, no. 7, November 2011.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2008
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      Predicting Defect-Prone Software Modules Using Support Vector Machines
+     </strong>
+     <br/>
+     Karim Elish and Mahmoud Elish
+     <br/>
+     <em>
+      Journal of Systems and Software (JSS)
+     </em>
+     , vol. 81, no. 5, May 2008.
+     <br/>
+     <span class="note">
+      <strong>
+       Among Top 10 Most Cited Papers Published by JSS
+      </strong>
+     </span>
+    </li>
+   </ul>
+   <h3>
+    Refereed Conference and Workshop Publications
+   </h3>
+   <h4 class="publication-year">
+    2026
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      STALKER: Composed Quasi-Identifiers and LLM-Amplified Behavioral Leakage in Anonymized Marketplace Data
+     </strong>
+     <br/>
+     Anastasiya Dmytryk, Sami El-Yaagoubi, Lucas Batista, Philipp Kouterguine, Samuel Gerken, Abdulaziz Alhamadani, and Karim Elish
+     <br/>
+     <em>
+      Proceedings of the 12th ACM International Workshop on Security and Privacy Analytics (IWSPA)
+     </em>
+     , co-located with the
+     <em>
+      16th ACM Conference on Data and Application Security and Privacy (CODASPY)
+     </em>
+     <br/>
+     Frankfurt am Main, Germany, June 2026.
+    </li>
+    <li>
+     <strong>
+      Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications
+     </strong>
+     <br/>
+     Mohamed Sylla and Karim Elish
+     <br/>
+     <em>
+      Proceedings of the 23rd IEEE International Conference on Software Architecture (ICSA), New and Emerging Ideas Track
+     </em>
+     <br/>
+     Amsterdam, Netherlands, June 2026.
+     <br/>
+     <span class="note">
+      <strong>
+       Distinguished Paper Award Candidate
+      </strong>
+     </span>
+    </li>
+    <li>
+     <strong>
+      Automated Reproduction of Android Application Bugs with LLMs: Are We There Yet?
+     </strong>
+     <br/>
+     Dennis Carey, Karim Elish, and Paniz Abedin
+     <br/>
+     <em>
+      Proceedings of the 19th IEEE International Conference on Software Testing, Verification and Validation (ICST), Short Papers, Vision and Emerging Results Track
+     </em>
+     <br/>
+     Daejeon, South Korea, May 2026.
+    </li>
+    <li>
+     <strong>
+      AndroMetric: Bridging Multi-Dimensional Software Metrics and Mobile Application Security
+     </strong>
+     <br/>
+     Sebastian Siedler and Karim Elish
+     <br/>
+     <em>
+      Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track
+     </em>
+     <br/>
+     Rio de Janeiro, Brazil, April 2026.
+    </li>
+    <li>
+     <strong>
+      SMELLDroid: A Dataset for Code Smells in Android Apps
+     </strong>
+     <br/>
+     Joyce Champie, Karim Elish, and Mahmoud Elish
+     <br/>
+     <em>
+      Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track
+     </em>
+     <br/>
+     Rio de Janeiro, Brazil, April 2026.
+    </li>
+    <li>
+     <strong>
+      MIRROR: A Dataset of Structural Metrics for Repackaged Android Apps
+     </strong>
+     <br/>
+     Sebastian Siedler and Karim Elish
+     <br/>
+     <em>
+      Proceedings of the 3rd ACM International Conference on AI Foundation Models and Software Engineering (FORGE), Data and Benchmarking Track
+     </em>
+     <br/>
+     Rio de Janeiro, Brazil, April 2026.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2025
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      High-Accuracy Android Ransomware Detection Using SMALI Code-Based Analysis
+     </strong>
+     <br/>
+     Vinicius Seixas and Karim Elish
+     <br/>
+     <em>
+      Proceedings of the IEEE International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA)
+     </em>
+     <br/>
+     Antalya, Turkey, August 2025.
+    </li>
+    <li>
+     <strong>
+      A New Collaborative Approach to Multidisciplinary Capstone Design at Florida Polytechnic University
+     </strong>
+     <br/>
+     M. Bohm, J. Dewey, Karim Elish, E. Kames, A. Murphy, O. Toker, and D. Ulybyshev
+     <br/>
+     <em>
+      Proceedings of the ASEE Annual Conference and Exposition, American Society for Engineering Education
+     </em>
+     <br/>
+     Montreal, Canada, June 2025.
+    </li>
+    <li>
+     <strong>
+      Stealthy No More: An Effective Ensemble Learning Approach for Detecting Android RATs
+     </strong>
+     <br/>
+     Nesreen Dalhy and Karim Elish
+     <br/>
+     <em>
+      Proceedings of the IEEE/ACIS 23rd International Conference on Software Engineering Research, Management and Applications (SERA)
+     </em>
+     <br/>
+     Las Vegas, NV, May 2025.
+    </li>
+    <li>
+     <strong>
+      FSProtoTransfer: Synergizing Few-Shot, Prototypical Networks, and Transfer Learning for Intrusion Detection in VANETs
+     </strong>
+     <br/>
+     Ayesha Dina, Colby Edell, Karim Elish, and Arijet Sarker
+     <br/>
+     <em>
+      Proceedings of the 38th International FLAIRS Conference, Florida Artificial Intelligence Research Society (FLAIRS)
+     </em>
+     <br/>
+     Daytona Beach, FL, May 2025.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2019
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      Identifying Android Malware Families Using Android-Oriented Metrics
+     </strong>
+     <br/>
+     William Blanc, Lina Hashem, Karim Elish, and Hussain Almohri
+     <br/>
+     <em>
+      Proceedings of the IEEE International Conference on Big Data (Big Data)
+     </em>
+     <br/>
+     Los Angeles, CA, December 2019.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2018
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      Machine Learning-based Prediction of Prolonged Length of Stay in Newborns
+     </strong>
+     <br/>
+     Brandon Thompson, Karim Elish, and Robert Steele
+     <br/>
+     <em>
+      Proceedings of the 17th IEEE International Conference on Machine Learning and Applications (ICMLA)
+     </em>
+     <br/>
+     Orlando, FL, December 2018.
+    </li>
+    <li>
+     <strong>
+      Enabling Smart Cities Through V2X Communication
+     </strong>
+     <br/>
+     Mert Aydin, Mohammad Samarah, and Karim Elish
+     <br/>
+     <em>
+      Proceedings of the IEEE International Conference on Computer and Communications (ICCC)
+     </em>
+     <br/>
+     Chengdu, China, December 2018.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2017
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      BetterChoice: A Migraine Drug Recommendation System Based on Neo4J
+     </strong>
+     <br/>
+     Benjamin Stark, Constanze Knahl, Mert Aydin, Mohammad Samarah, and Karim Elish
+     <br/>
+     <em>
+      Proceedings of the IEEE International Conference on Computational Intelligence and Applications (ICCIA)
+     </em>
+     <br/>
+     Beijing, China, September 2017.
+    </li>
+    <li>
+     <strong>
+      Prioritized Analysis of Inter-App Communication Risks
+     </strong>
+     <br/>
+     Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, Karim Elish, and Barbara Ryder
+     <br/>
+     <em>
+      Proceedings of the ACM Conference on Data and Application Security and Privacy (CODASPY)
+     </em>
+     <br/>
+     Scottsdale, AZ, March 2017 (poster paper).
+    </li>
+    <li>
+     <strong>
+      MR-Droid: A Scalable and Prioritized Analysis of Inter-App Communication Risks
+     </strong>
+     <br/>
+     Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, Karim Elish, and Barbara Ryder
+     <br/>
+     <em>
+      Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)
+     </em>
+     , in conjunction with the
+     <em>
+      IEEE Symposium on Security and Privacy (IEEE S&amp;P)
+     </em>
+     <br/>
+     San Jose, CA, May 2017.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2015
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      On the Need of Precise Inter-App ICC Classification for Detecting Android Malware Collusions
+     </strong>
+     <br/>
+     Karim Elish, Danfeng Yao, and Barbara Ryder
+     <br/>
+     <em>
+      Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)
+     </em>
+     , in conjunction with the
+     <em>
+      IEEE Symposium on Security and Privacy (IEEE S&amp;P)
+     </em>
+     <br/>
+     San Jose, CA, May 2015.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2014
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      High Precision Screening for Android Malware using Dimensionality Reduction
+     </strong>
+     <br/>
+     Britton Wolfe, Karim Elish, and Danfeng Yao
+     <br/>
+     <em>
+      Proceedings of the 13th IEEE International Conference on Machine Learning and Applications (ICMLA)
+     </em>
+     <br/>
+     Detroit, MI, December 2014.
+    </li>
+    <li>
+     <strong>
+      Comprehensive Behavior Profiling for Proactive Android Malware Detection
+     </strong>
+     <br/>
+     Britton Wolfe, Karim Elish, and Danfeng Yao
+     <br/>
+     <em>
+      Proceedings of the 17th International Information Security Conference (ISC)
+     </em>
+     <br/>
+     Hong Kong, October 2014.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2013
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      Device-Based Isolation for Securing Cryptographic Keys
+     </strong>
+     <br/>
+     Karim Elish, Yipan Deng, Danfeng Yao, and Dennis Kafura
+     <br/>
+     <em>
+      Proceedings of the 3rd International Symposium on Internet of Ubiquitous and Pervasive Things (IUPT)
+     </em>
+     ,
+     <em>
+      Procedia Computer Science
+     </em>
+     (Elsevier)
+     <br/>
+     Halifax, Canada, June 2013.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2012
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      User-Centric Dependence Analysis for Identifying Malicious Mobile Apps
+     </strong>
+     <br/>
+     Karim Elish, Danfeng Yao, and Barbara Ryder
+     <br/>
+     <em>
+      Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)
+     </em>
+     , in conjunction with the
+     <em>
+      IEEE Symposium on Security and Privacy (IEEE S&amp;P)
+     </em>
+     <br/>
+     San Jose, CA, May 2012.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2009
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      Investigating the Effect of Refactoring on Software Testing Effort
+     </strong>
+     <br/>
+     Karim Elish and Mohammad Alshayeb
+     <br/>
+     <em>
+      Proceedings of the 16th IEEE Asia-Pacific Software Engineering Conference (APSEC)
+     </em>
+     <br/>
+     Penang, Malaysia, December 2009.
+    </li>
+    <li>
+     <strong>
+      Application of TreeNet in Predicting Object-Oriented Software Maintainability: A Comparative Study
+     </strong>
+     <br/>
+     Mahmoud Elish and Karim Elish
+     <br/>
+     <em>
+      Proceedings of the 13th IEEE European Conference on Software Maintenance and Reengineering (CSMR)
+     </em>
+     <br/>
+     Kaiserslautern, Germany, March 2009.
+    </li>
+   </ul>
+   <h3>
+    Refereed Posters and Abstracts
+   </h3>
+   <h4 class="publication-year">
+    2025
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      Towards Intelligent Detection of Android Remote Access Trojans (RATs)
+     </strong>
+     <br/>
+     Nesreen Dalhy and Karim Elish
+     <br/>
+     <em>
+      10th North American IEOM Conference on Industrial Engineering and Operations Management
+     </em>
+     , Computer Science Track
+     <br/>
+     Orlando, FL, June 2025.
+     <br/>
+     <span class="note">
+      <strong>
+       Nesreen Dalhy: 2nd Place in Master&rsquo;s Thesis Competition
+      </strong>
+     </span>
+    </li>
+    <li>
+     <strong>
+      Evaluating the Capabilities of LLMs in Security Analysis for Mobile Applications
+     </strong>
+     <br/>
+     Joyce Champie and Karim Elish
+     <br/>
+     <em>
+      10th North American IEOM Conference on Industrial Engineering and Operations Management
+     </em>
+     , Computer Science Track
+     <br/>
+     Orlando, FL, June 2025.
+     <br/>
+     <span class="note">
+      <strong>
+       Joyce Champie: 1st Place in Poster Competition
+      </strong>
+     </span>
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2014
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      Inter-Component and Inter-App Communication Analysis in Android for Malware Detection
+     </strong>
+     <br/>
+     Karim Elish, Danfeng Yao, and Barbara Ryder
+     <br/>
+     <em>
+      9th Showcase of the Security and Software Engineering Research Center (S2ERC)
+     </em>
+     <br/>
+     Washington, DC, May 2014.
+    </li>
+    <li>
+     <strong>
+      User-Intention Based Program Analysis for Android Security
+     </strong>
+     <br/>
+     Karim Elish, Danfeng Yao, and Barbara Ryder
+     <br/>
+     <em>
+      2nd Annual Graduate Student Poster Showcase
+     </em>
+     , Computer Science Department, Virginia Tech
+     <br/>
+     April 2014.
+     <br/>
+     <span class="note">
+      <strong>
+       Best Poster Award
+      </strong>
+     </span>
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2013
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      User-Intention Based Android Malware Detection
+     </strong>
+     <br/>
+     Karim Elish, Danfeng Yao, Barbara Ryder, and Xuxian Jiang
+     <br/>
+     <em>
+      22nd USENIX Security Symposium
+     </em>
+     <br/>
+     Washington, DC, August 2013.
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2012
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      DataGuard: A Mobile System for Securing Ultra-Sensitive Information
+     </strong>
+     <br/>
+     Karim Elish, Yipan Deng, Danfeng Yao, and Dennis Kafura
+     <br/>
+     <em>
+      28th Annual Graduate Research Symposium
+     </em>
+     , Virginia Tech
+     <br/>
+     March 2012.
+     <br/>
+     <span class="note">
+      <strong>
+       1st Place Poster Award
+      </strong>
+     </span>
+    </li>
+   </ul>
+   <h4 class="publication-year">
+    2011
+   </h4>
+   <ul class="publication-list">
+    <li>
+     <strong>
+      User-Centric Dependence Analysis in Programs for Identifying Malware
+     </strong>
+     <br/>
+     Karim Elish, Danfeng Yao, and Barbara Ryder
+     <br/>
+     <em>
+      4th Showcase of the Security and Software Engineering Research Center (S2ERC)
+     </em>
+     <br/>
+     Iowa, November 2011.
+    </li>
+   </ul>
+  </main>
+  <footer>
+   <hr/>
+   &copy;
+   <a href="https://karim-elish.github.io">
+    Karim Elish
+   </a>
+   2026 |
+   <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" target="_blank">
+    Google Scholar
+   </a>
+   |
+   <a href="">
+    NEXUS Research Lab
+   </a>
+  </footer>
+ </body>
 </html>
