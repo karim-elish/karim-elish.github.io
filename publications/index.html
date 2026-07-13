@@ -14,7 +14,7 @@
    /* Publication page card styling
    Scoped to .publications-page so the rest of the site keeps its existing theme. */
 .publications-page {
-  max-width: 980px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
@@ -179,7 +179,7 @@
   display: block;
   margin-top: 0.12rem;
   color: #4a5568;
-  font-size: 0.72rem;
+  font-size: 0.71rem;
   font-weight: 700;
 }
 
@@ -229,7 +229,7 @@
 .impact-note {
   margin: 0.48rem 0 0 0;
   color: #718096;
-  font-size: 0.72rem;
+  font-size: 0.71rem;
   line-height: 1.35;
 }
 
@@ -259,8 +259,8 @@
 /* Compact Topic, Venue, and Year publication filters */
 .publication-overview-grid.with-year {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 0.85fr);
-  gap: 0.6rem;
+  grid-template-columns: minmax(0, 1.30fr) minmax(0, 1.30fr) minmax(0, 0.58fr);
+  gap: 0.55rem;
   margin: 0 0 1.1rem 0;
   padding: 0.65rem;
   background: #ffffff;
@@ -306,7 +306,7 @@
 .topic-bar-row,
 .year-bar-row {
   display: grid;
-  grid-template-columns: minmax(108px, 0.95fr) minmax(55px, 1fr) 1.45rem;
+  grid-template-columns: minmax(180px, 1.25fr) minmax(44px, 0.65fr) 1.35rem;
   gap: 0.32rem;
   align-items: center;
   padding: 0.04rem 0;
@@ -319,7 +319,8 @@
 }
 
 .year-bar-row {
-  grid-template-columns: 2.55rem minmax(45px, 1fr) 1.45rem;
+  grid-template-columns: 2.45rem minmax(36px, 1fr) 1.3rem;
+  gap: 0.22rem;
 }
 
 .topic-bar-row:hover .topic-bar-label,
@@ -333,9 +334,13 @@
 .topic-bar-label,
 .year-bar-label {
   color: #2b6cb0;
-  font-size: 0.72rem;
+  font-size: 0.71rem;
   font-weight: 700;
   line-height: 1.18;
+}
+
+.topic-bar-label {
+  white-space: nowrap;
 }
 
 .topic-bar-track,
@@ -357,7 +362,7 @@
 .topic-bar-count,
 .year-bar-count {
   color: #1a365d;
-  font-size: 0.72rem;
+  font-size: 0.71rem;
   font-weight: 800;
   text-align: right;
 }
@@ -372,7 +377,7 @@
   width: 100%;
   border-collapse: collapse;
   margin: 0;
-  font-size: 0.74rem;
+  font-size: 0.73rem;
   line-height: 1.18;
 }
 
@@ -383,7 +388,7 @@
 }
 
 .publication-venue-card td:last-child {
-  width: 1.75rem;
+  width: 1.45rem;
   text-align: right;
   color: #1a365d;
   font-weight: 700;
@@ -394,6 +399,7 @@
 }
 
 .publication-filter-row {
+  white-space: nowrap;
   display: inline;
   width: 100%;
   padding: 0;
@@ -442,7 +448,7 @@
   color: #1a365d;
   font-weight: 700;
   cursor: pointer;
-  font-size: 0.74rem;
+  font-size: 0.73rem;
 }
 
 .publication-filter-tag span {
@@ -491,7 +497,7 @@ button.filter-unavailable {
   font-size: 0.86rem;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1020px) {
   .publication-overview-grid.with-year {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
@@ -506,6 +512,10 @@ button.filter-unavailable {
 }
 
 @media (max-width: 640px) {
+  .topic-bar-label {
+    white-space: normal;
+  }
+
   .publication-overview-grid.with-year {
     grid-template-columns: 1fr;
   }
@@ -575,7 +585,6 @@ button.filter-unavailable {
      </span>
     </h2>
    </div>
-  
    <section aria-label="Research impact summary" class="research-impact-card">
     <div class="impact-header">
      <div>
@@ -851,6 +860,66 @@ button.filter-unavailable {
        <tbody>
         <tr>
          <td>
+          <button class="publication-filter-row" data-filter-venue="ajse" type="button">
+           [Journal] Arabian Journal for Science and Engineering
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="computers-security" type="button">
+           [Journal] Computers &amp; Security
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-access" type="button">
+           [Journal] IEEE Access
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-tc" type="button">
+           [Journal] IEEE Transactions on Computers
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-tmc" type="button">
+           [Journal] IEEE Transactions on Mobile Computing
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ijisae" type="button">
+           [Journal] IJISAE
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
           <button class="publication-filter-row" data-filter-venue="information" type="button">
            [Journal] Information
           </button>
@@ -861,52 +930,32 @@ button.filter-unavailable {
         </tr>
         <tr>
          <td>
-          <button class="publication-filter-row" data-filter-venue="ieee-spw-most" type="button">
-           [Workshop] IEEE SPW / MoST
+          <button class="publication-filter-row" data-filter-venue="journal-software" type="button">
+           [Journal] Journal of Software
           </button>
          </td>
          <td>
-          3
+          1
          </td>
         </tr>
         <tr>
          <td>
-          <button class="publication-filter-row" data-filter-venue="ieee-icmla" type="button">
-           [Conference] IEEE ICMLA
+          <button class="publication-filter-row" data-filter-venue="jss" type="button">
+           [Journal] Journal of Systems and Software
           </button>
          </td>
          <td>
-          2
+          1
          </td>
         </tr>
         <tr>
          <td>
-          <button class="publication-filter-row" data-filter-venue="ieee-acm-msr" type="button">
-           [Conference] IEEE/ACM MSR
+          <button class="publication-filter-row" data-filter-venue="scn" type="button">
+           [Journal] Security and Communication Networks
           </button>
          </td>
          <td>
-          2
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="ieom" type="button">
-           [Poster] IEOM
-          </button>
-         </td>
-         <td>
-          2
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="s2erc" type="button">
-           [Poster] S2ERC
-          </button>
-         </td>
-         <td>
-          2
+          1
          </td>
         </tr>
         <tr>
@@ -1011,6 +1060,16 @@ button.filter-unavailable {
         </tr>
         <tr>
          <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-icmla" type="button">
+           [Conference] IEEE ICMLA
+          </button>
+         </td>
+         <td>
+          2
+         </td>
+        </tr>
+        <tr>
+         <td>
           <button class="publication-filter-row" data-filter-venue="ieee-icsa" type="button">
            [Conference] IEEE ICSA
           </button>
@@ -1041,6 +1100,16 @@ button.filter-unavailable {
         </tr>
         <tr>
          <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-acm-msr" type="button">
+           [Conference] IEEE/ACM MSR
+          </button>
+         </td>
+         <td>
+          2
+         </td>
+        </tr>
+        <tr>
+         <td>
           <button class="publication-filter-row" data-filter-venue="isc" type="button">
            [Conference] ISC
           </button>
@@ -1061,8 +1130,8 @@ button.filter-unavailable {
         </tr>
         <tr>
          <td>
-          <button class="publication-filter-row" data-filter-venue="ajse" type="button">
-           [Journal] Arabian Journal for Science and Engineering
+          <button class="publication-filter-row" data-filter-venue="acm-iwspa-codaspy" type="button">
+           [Workshop] ACM IWSPA / CODASPY
           </button>
          </td>
          <td>
@@ -1071,82 +1140,32 @@ button.filter-unavailable {
         </tr>
         <tr>
          <td>
-          <button class="publication-filter-row" data-filter-venue="computers-security" type="button">
-           [Journal] Computers &amp; Security
+          <button class="publication-filter-row" data-filter-venue="ieee-spw-most" type="button">
+           [Workshop] IEEE SPW / MoST
           </button>
          </td>
          <td>
-          1
+          3
          </td>
         </tr>
         <tr>
          <td>
-          <button class="publication-filter-row" data-filter-venue="ieee-access" type="button">
-           [Journal] IEEE Access
+          <button class="publication-filter-row" data-filter-venue="ieom" type="button">
+           [Poster] IEOM
           </button>
          </td>
          <td>
-          1
+          2
          </td>
         </tr>
         <tr>
          <td>
-          <button class="publication-filter-row" data-filter-venue="ieee-tc" type="button">
-           [Journal] IEEE Transactions on Computers
+          <button class="publication-filter-row" data-filter-venue="s2erc" type="button">
+           [Poster] S2ERC
           </button>
          </td>
          <td>
-          1
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="ieee-tmc" type="button">
-           [Journal] IEEE Transactions on Mobile Computing
-          </button>
-         </td>
-         <td>
-          1
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="ijisae" type="button">
-           [Journal] IJISAE
-          </button>
-         </td>
-         <td>
-          1
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="journal-software" type="button">
-           [Journal] Journal of Software
-          </button>
-         </td>
-         <td>
-          1
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="jss" type="button">
-           [Journal] Journal of Systems and Software
-          </button>
-         </td>
-         <td>
-          1
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="scn" type="button">
-           [Journal] Security and Communication Networks
-          </button>
-         </td>
-         <td>
-          1
+          2
          </td>
         </tr>
         <tr>
@@ -1163,16 +1182,6 @@ button.filter-unavailable {
          <td>
           <button class="publication-filter-row" data-filter-venue="vt-poster-showcase" type="button">
            [Poster] Virginia Tech Graduate  Showcase
-          </button>
-         </td>
-         <td>
-          1
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="acm-iwspa-codaspy" type="button">
-           [Workshop] ACM IWSPA / CODASPY
           </button>
          </td>
          <td>
@@ -1418,7 +1427,7 @@ button.filter-unavailable {
      </em>
      , vol. 14, pp. 52734-52752, April 2026.
     </li>
-    <li data-topic-labels="Mobile Security; Datasets / Benchmarks" data-topics="mobile-security datasets" data-venue="information" data-venue-label="[Journal] Information" data-year="2025">
+    <li data-topic-labels="Mobile Security; Datasets / Benchmarks" data-topics="mobile-security android-malware software-security" data-venue="information" data-venue-label="[Journal] Information" data-year="2025">
      <strong>
       RepackDroid: An Efficient Detection Model for Repackaged Android Applications
      </strong>
