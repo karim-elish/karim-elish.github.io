@@ -35,38 +35,19 @@
   border-radius: 8px;
 }
 
-.publications-page h3.publication-year {
-  margin-top: 2.25rem;
-  margin-bottom: 0.85rem;
-  padding: 0.55rem 0.8rem;
-  background: #f7fafc;
-  border: 1px solid #e2e8f0;
-  border-left: 5px solid #2b6cb0;
-  border-radius: 8px;
+.publications-page h3 {
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid #e2e8f0;
   color: #1a365d;
-  font-size: 1.1rem;
+  font-size: 1.22rem;
   letter-spacing: 0.01em;
-}
-
-.publications-page h4.publication-type {
-  margin-top: 1.15rem;
-  margin-bottom: 0.65rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid #e2e8f0;
-  color: #2d3748;
-  font-size: 1.05rem;
-  font-weight: 700;
-}
-
-.publication-organization-note {
-  margin: -0.75rem 0 1.5rem 0;
-  color: #4a5568;
-  font-size: 0.96rem;
 }
 
 .publication-list {
   list-style: none;
-  margin: 0 0 1.35rem 0;
+  margin: 0 0 2rem 0;
   padding: 0;
 }
 
@@ -114,11 +95,271 @@
     padding: 0.9rem 0.95rem 0.9rem 1.05rem;
   }
 
-  .publications-page h3.publication-year {
-    font-size: 1.12rem;
+  .publications-page h3 {
+    font-size: 1.1rem;
   }
 }
-  </style>
+
+/* Compact Topic, Venue, and Year publication filters */
+.publication-overview-grid.with-year {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: 0.6rem;
+  margin: 0 0 1.1rem 0;
+  padding: 0.65rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #2b6cb0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.publication-topic-chart.compact,
+.publication-venue-card,
+.publication-year-chart {
+  min-width: 0;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.publication-topic-chart.compact h3,
+.publication-venue-card h3,
+.publication-year-chart h3 {
+  margin: 0;
+  padding: 0.38rem 0.5rem;
+  background: #edf6ff;
+  border: none;
+  border-bottom: 1px solid #dbe7f3;
+  color: #1a365d;
+  font-size: 0.86rem;
+  line-height: 1.15;
+}
+
+.topic-bar-chart,
+.year-bar-chart {
+  display: grid;
+  gap: 0.2rem;
+  max-height: 170px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.38rem 0.45rem;
+}
+
+.topic-bar-row,
+.year-bar-row {
+  display: grid;
+  grid-template-columns: minmax(108px, 0.95fr) minmax(55px, 1fr) 1.45rem;
+  gap: 0.32rem;
+  align-items: center;
+  padding: 0.04rem 0;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.year-bar-row {
+  grid-template-columns: 2.55rem minmax(45px, 1fr) 1.45rem;
+}
+
+.topic-bar-row:hover .topic-bar-label,
+.topic-bar-row.active .topic-bar-label,
+.year-bar-row:hover .year-bar-label,
+.year-bar-row.active .year-bar-label {
+  color: #1a365d;
+  text-decoration: underline;
+}
+
+.topic-bar-label,
+.year-bar-label {
+  color: #2b6cb0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.topic-bar-track,
+.year-bar-track {
+  height: 0.42rem;
+  background: #edf2f7;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.topic-bar-fill,
+.year-bar-fill {
+  display: block;
+  height: 100%;
+  background: #2b6cb0;
+  border-radius: 999px;
+}
+
+.topic-bar-count,
+.year-bar-count {
+  color: #1a365d;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.publication-filter-scroll {
+  max-height: 170px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.publication-venue-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.74rem;
+  line-height: 1.18;
+}
+
+.publication-venue-card th,
+.publication-venue-card td {
+  padding: 0.21rem 0.38rem;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.publication-venue-card th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #ffffff;
+  color: #4a5568;
+  font-weight: 700;
+  text-align: left;
+}
+
+.publication-venue-card th:last-child,
+.publication-venue-card td:last-child {
+  width: 1.75rem;
+  text-align: right;
+  color: #1a365d;
+  font-weight: 700;
+}
+
+.publication-venue-card tr:last-child td {
+  border-bottom: none;
+}
+
+.publication-filter-row {
+  display: inline;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #2b6cb0;
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.publication-filter-row:hover,
+.publication-filter-row.active {
+  color: #1a365d;
+  text-decoration: underline;
+}
+
+.publication-year-chart {
+  grid-column: auto;
+}
+
+.publication-filter-summary {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.45rem;
+  align-items: center;
+  color: #4a5568;
+  font-size: 0.76rem;
+}
+
+#publication-clear-filters {
+  padding: 0.24rem 0.5rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e0;
+  border-radius: 5px;
+  color: #2b6cb0;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.76rem;
+}
+
+#publication-clear-filters:hover {
+  background: #f7fafc;
+  border-color: #2b6cb0;
+  color: #1a365d;
+}
+
+.publication-no-results {
+  margin: 0 0 1.1rem 0;
+  padding: 0.7rem 0.85rem;
+  background: #fffaf0;
+  border: 1px solid #fbd38d;
+  border-radius: 8px;
+  color: #744210;
+  font-size: 0.86rem;
+}
+
+@media (max-width: 880px) {
+  .publication-overview-grid.with-year {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .publication-year-chart {
+    grid-column: 1 / -1;
+  }
+
+  .year-bar-chart {
+    grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .publication-overview-grid.with-year {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-year-chart {
+    grid-column: auto;
+  }
+
+  .topic-bar-chart,
+  .publication-filter-scroll,
+  .year-bar-chart {
+    max-height: 175px;
+  }
+
+  .publication-filter-summary {
+    display: block;
+  }
+
+  #publication-clear-filters {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .topic-bar-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .topic-bar-count {
+    text-align: left;
+  }
+}
+
+</style>
  </head>
  <body>
   <nav>
@@ -154,23 +395,735 @@
      </span>
     </h2>
    </div>
-   
+   <p class="publication-intro">
     <strong>
      Full List:
      <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" target="_blank">
       Google Scholar
      </a>
     </strong>
-
-  
-   <h3 class="publication-year">
-    2026
+   </p>
+   <section aria-label="Publication topic, venue, and year filters" class="publication-overview-grid with-year">
+    <div class="publication-topic-chart compact">
+     <h3>
+      Topic
+     </h3>
+     <div class="topic-bar-chart">
+      <button aria-label="Filter by Software Security" class="topic-bar-row" data-filter-topic="software-security" type="button">
+       <span class="topic-bar-label">
+        Software Security
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 100.0%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        26
+       </span>
+      </button>
+      <button aria-label="Filter by Android / Mobile Malware" class="topic-bar-row" data-filter-topic="android-malware" type="button">
+       <span class="topic-bar-label">
+        Android / Mobile Malware
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 65.38%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        17
+       </span>
+      </button>
+      <button aria-label="Filter by Mobile App Security" class="topic-bar-row" data-filter-topic="mobile-app-security" type="button">
+       <span class="topic-bar-label">
+        Mobile App Security
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 61.54%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        16
+       </span>
+      </button>
+      <button aria-label="Filter by Empirical Study" class="topic-bar-row" data-filter-topic="empirical-study" type="button">
+       <span class="topic-bar-label">
+        Empirical Study
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 50.0%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        13
+       </span>
+      </button>
+      <button aria-label="Filter by Software Metrics / Quality" class="topic-bar-row" data-filter-topic="software-metrics-quality" type="button">
+       <span class="topic-bar-label">
+        Software Metrics / Quality
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 34.62%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        9
+       </span>
+      </button>
+      <button aria-label="Filter by Privacy / Data Security" class="topic-bar-row" data-filter-topic="privacy-data-security" type="button">
+       <span class="topic-bar-label">
+        Privacy / Data Security
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 19.23%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        5
+       </span>
+      </button>
+      <button aria-label="Filter by Software Maintainability" class="topic-bar-row" data-filter-topic="software-maintainability" type="button">
+       <span class="topic-bar-label">
+        Software Maintainability
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 19.23%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        5
+       </span>
+      </button>
+      <button aria-label="Filter by Applied AI / Data Science" class="topic-bar-row" data-filter-topic="applied-ai-data-science" type="button">
+       <span class="topic-bar-label">
+        Applied AI / Data Science
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 15.38%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        4
+       </span>
+      </button>
+      <button aria-label="Filter by LLMs / AI for Security &amp; SE" class="topic-bar-row" data-filter-topic="llm-ai-se" type="button">
+       <span class="topic-bar-label">
+        LLMs / AI for Security &amp; SE
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 15.38%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        4
+       </span>
+      </button>
+      <button aria-label="Filter by Software Refactoring" class="topic-bar-row" data-filter-topic="software-refactoring" type="button">
+       <span class="topic-bar-label">
+        Software Refactoring
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 11.54%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        3
+       </span>
+      </button>
+      <button aria-label="Filter by Systems Security" class="topic-bar-row" data-filter-topic="systems-security" type="button">
+       <span class="topic-bar-label">
+        Systems Security
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 11.54%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        3
+       </span>
+      </button>
+      <button aria-label="Filter by Defect Prediction" class="topic-bar-row" data-filter-topic="defect-prediction" type="button">
+       <span class="topic-bar-label">
+        Defect Prediction
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 7.69%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        2
+       </span>
+      </button>
+      <button aria-label="Filter by Computing Education" class="topic-bar-row" data-filter-topic="computing-education" type="button">
+       <span class="topic-bar-label">
+        Computing Education
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 3.85%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        1
+       </span>
+      </button>
+      <button aria-label="Filter by Software Bugs" class="topic-bar-row" data-filter-topic="software-bugs" type="button">
+       <span class="topic-bar-label">
+        Software Bugs
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 3.85%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        1
+       </span>
+      </button>
+     </div>
+    </div>
+    <div class="publication-venue-card">
+     <h3>
+      Venue
+     </h3>
+     <div class="publication-filter-scroll">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Venue
+         </th>
+         <th>
+          #
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-spw-most" type="button">
+           IEEE SPW / MoST
+          </button>
+         </td>
+         <td>
+          3
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="information" type="button">
+           Information
+          </button>
+         </td>
+         <td>
+          3
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-icmla" type="button">
+           IEEE ICMLA
+          </button>
+         </td>
+         <td>
+          2
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-acm-msr" type="button">
+           IEEE/ACM MSR
+          </button>
+         </td>
+         <td>
+          2
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieom" type="button">
+           IEOM
+          </button>
+         </td>
+         <td>
+          2
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="s2erc" type="button">
+           S2ERC
+          </button>
+         </td>
+         <td>
+          2
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="acm-codaspy" type="button">
+           ACM CODASPY
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="acm-forge" type="button">
+           ACM FORGE
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="acm-iwspa-codaspy" type="button">
+           ACM IWSPA / CODASPY
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="apsec" type="button">
+           APSEC
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="asee" type="button">
+           ASEE Annual Conference
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ajse" type="button">
+           Arabian Journal for Science and Engineering
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="computers-security" type="button">
+           Computers &amp; Security
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="flairs" type="button">
+           FLAIRS
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-acdsa" type="button">
+           IEEE ACDSA
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-access" type="button">
+           IEEE Access
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-bigdata" type="button">
+           IEEE Big Data
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-csmr" type="button">
+           IEEE CSMR
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-iccc" type="button">
+           IEEE ICCC
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-iccia" type="button">
+           IEEE ICCIA
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-icsa" type="button">
+           IEEE ICSA
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-icst" type="button">
+           IEEE ICST
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-tc" type="button">
+           IEEE Transactions on Computers
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-tmc" type="button">
+           IEEE Transactions on Mobile Computing
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-acis-sera" type="button">
+           IEEE/ACIS SERA
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="iupt-procedia" type="button">
+           IUPT / Procedia Computer Science
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ijisae" type="button">
+           International Journal of Intelligent Engineering and Systems
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="journal-software" type="button">
+           Journal of Software
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="jss" type="button">
+           Journal of Systems and Software
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="scn" type="button">
+           Security and Communication Networks
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="usenix-security" type="button">
+           USENIX Security Symposium
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="vt-poster-showcase" type="button">
+           Virginia Tech Graduate Poster Showcase
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="publication-year-chart">
+     <h3>
+      Year
+     </h3>
+     <div class="year-bar-chart">
+      <button aria-label="Filter by 2026" class="year-bar-row" data-filter-year="2026" type="button">
+       <span class="year-bar-label">
+        2026
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 100.0%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        7
+       </span>
+      </button>
+      <button aria-label="Filter by 2025" class="year-bar-row" data-filter-year="2025" type="button">
+       <span class="year-bar-label">
+        2025
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 100.0%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        7
+       </span>
+      </button>
+      <button aria-label="Filter by 2022" class="year-bar-row" data-filter-year="2022" type="button">
+       <span class="year-bar-label">
+        2022
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 14.29%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        1
+       </span>
+      </button>
+      <button aria-label="Filter by 2021" class="year-bar-row" data-filter-year="2021" type="button">
+       <span class="year-bar-label">
+        2021
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 14.29%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        1
+       </span>
+      </button>
+      <button aria-label="Filter by 2020" class="year-bar-row" data-filter-year="2020" type="button">
+       <span class="year-bar-label">
+        2020
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 28.57%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        2
+       </span>
+      </button>
+      <button aria-label="Filter by 2019" class="year-bar-row" data-filter-year="2019" type="button">
+       <span class="year-bar-label">
+        2019
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 14.29%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        1
+       </span>
+      </button>
+      <button aria-label="Filter by 2018" class="year-bar-row" data-filter-year="2018" type="button">
+       <span class="year-bar-label">
+        2018
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 28.57%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        2
+       </span>
+      </button>
+      <button aria-label="Filter by 2017" class="year-bar-row" data-filter-year="2017" type="button">
+       <span class="year-bar-label">
+        2017
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 42.86%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        3
+       </span>
+      </button>
+      <button aria-label="Filter by 2015" class="year-bar-row" data-filter-year="2015" type="button">
+       <span class="year-bar-label">
+        2015
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 28.57%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        2
+       </span>
+      </button>
+      <button aria-label="Filter by 2014" class="year-bar-row" data-filter-year="2014" type="button">
+       <span class="year-bar-label">
+        2014
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 57.14%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        4
+       </span>
+      </button>
+      <button aria-label="Filter by 2013" class="year-bar-row" data-filter-year="2013" type="button">
+       <span class="year-bar-label">
+        2013
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 28.57%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        2
+       </span>
+      </button>
+      <button aria-label="Filter by 2012" class="year-bar-row" data-filter-year="2012" type="button">
+       <span class="year-bar-label">
+        2012
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 42.86%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        3
+       </span>
+      </button>
+      <button aria-label="Filter by 2011" class="year-bar-row" data-filter-year="2011" type="button">
+       <span class="year-bar-label">
+        2011
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 28.57%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        2
+       </span>
+      </button>
+      <button aria-label="Filter by 2009" class="year-bar-row" data-filter-year="2009" type="button">
+       <span class="year-bar-label">
+        2009
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 28.57%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        2
+       </span>
+      </button>
+      <button aria-label="Filter by 2008" class="year-bar-row" data-filter-year="2008" type="button">
+       <span class="year-bar-label">
+        2008
+       </span>
+       <span class="year-bar-track">
+        <span class="year-bar-fill" style="width: 14.29%;">
+        </span>
+       </span>
+       <span class="year-bar-count">
+        1
+       </span>
+      </button>
+     </div>
+    </div>
+    <div class="publication-filter-summary">
+     <span id="publication-active-filter">
+      Showing all selected publications.
+     </span>
+     <button id="publication-clear-filters" type="button">
+      Clear filters
+     </button>
+    </div>
+   </section>
+   <p class="publication-no-results" hidden="" id="publication-no-results">
+    No publications match the selected topic, venue, and year.
+   </p>
+   <h3>
+    Refereed Journal Publications
    </h3>
-   <h4 class="publication-type">
-    Journal Publications
-   </h4>
    <ul class="publication-list">
-    <li>
+    <li data-topic-labels="LLMs / AI for Security &amp; SE; Android / Mobile Malware; Software Security" data-topics="llm-ai-se android-malware software-security" data-venue="ieee-access" data-venue-label="IEEE Access" data-year="2026">
      <strong>
       Large Language Models for Malware Detection: A Systematic Review, Taxonomy, and Open Challenges
      </strong>
@@ -182,12 +1135,126 @@
      </em>
      , vol. 14, pp. 52734-52752, April 2026.
     </li>
+    <li data-topic-labels="Mobile App Security; Software Metrics / Quality" data-topics="mobile-app-security software-metrics-quality" data-venue="information" data-venue-label="Information" data-year="2025">
+     <strong>
+      RepackDroid: An Efficient Detection Model for Repackaged Android Applications
+     </strong>
+     <br/>
+     Tito Leadon and Karim Elish
+     <br/>
+     <em>
+      Information
+     </em>
+     , vol. 16, no. 12, Article 1075, December 2025.
+    </li>
+    <li data-topic-labels="Android / Mobile Malware; Empirical Study; Software Security" data-topics="android-malware empirical-study software-security" data-venue="ieee-tc" data-venue-label="IEEE Transactions on Computers" data-year="2022">
+     <strong>
+      Lightweight, Effective Detection and Characterization of Mobile Malware Families
+     </strong>
+     <br/>
+     Karim Elish, Mahmoud Elish, and Hussain Almohri
+     <br/>
+     <em>
+      IEEE Transactions on Computers (TC)
+     </em>
+     , vol. 71, no. 11, November 2022.
+    </li>
+    <li data-topic-labels="Defect Prediction; Empirical Study" data-topics="defect-prediction empirical-study" data-venue="ijisae" data-venue-label="International Journal of Intelligent Engineering and Systems" data-year="2021">
+     <strong>
+      An Empirical Comparison of Resampling Ensemble Methods of Deep Learning Neural Networks for Cross-Project Software Defect Prediction
+     </strong>
+     <br/>
+     Mahmoud Elish and Karim Elish
+     <br/>
+     <em>
+      International Journal of Intelligent Engineering and Systems (IJISAE)
+     </em>
+     , vol. 14, no. 3, 2021.
+    </li>
+    <li data-topic-labels="Systems Security; Software Security" data-topics="systems-security software-security" data-venue="scn" data-venue-label="Security and Communication Networks" data-year="2020">
+     <strong>
+      A Client Bootstrapping Protocol for DoS Attack Mitigation on Entry Point Services in the Cloud
+     </strong>
+     <br/>
+     Hussain Almohri, M. Almutawa, M. Alawadh, and Karim Elish
+     <br/>
+     <em>
+      Security and Communication Networks (SCN)
+     </em>
+     , 2020.
+    </li>
+    <li data-topic-labels="Mobile App Security; Empirical Study; Software Security" data-topics="mobile-app-security empirical-study software-security" data-venue="ieee-tmc" data-venue-label="IEEE Transactions on Mobile Computing" data-year="2020">
+     <strong>
+      Identifying Mobile Inter-App Communication Risks
+     </strong>
+     <br/>
+     Karim Elish, Haipeng Cai, Daniel Barton, Danfeng Yao, and Barbara Ryder
+     <br/>
+     <em>
+      IEEE Transactions on Mobile Computing (TMC)
+     </em>
+     , vol. 19, no. 1, January 2020.
+    </li>
+    <li data-topic-labels="Android / Mobile Malware; Empirical Study; Software Security" data-topics="android-malware empirical-study software-security" data-venue="computers-security" data-venue-label="Computers &amp; Security" data-year="2015">
+     <strong>
+      Profiling User-Trigger Dependence for Android Malware Detection
+     </strong>
+     <br/>
+     Karim Elish, Xiaokui Shu, Danfeng Yao, Barbara Ryder, and Xuxian Jiang
+     <br/>
+     <em>
+      Computers &amp; Security
+     </em>
+     , vol. 49, pp. 255&ndash;273, March 2015.
+    </li>
+    <li data-topic-labels="Software Metrics / Quality; Software Refactoring; Software Maintainability" data-topics="software-metrics-quality software-refactoring software-maintainability" data-venue="journal-software" data-venue-label="Journal of Software" data-year="2012">
+     <strong>
+      Using Software Quality Attributes to Classify Refactoring to Patterns
+     </strong>
+     <br/>
+     Karim Elish and Mohammed Alshayeb
+     <br/>
+     <em>
+      Journal of Software (JSW)
+     </em>
+     , vol. 7, no. 2, February 2012.
+    </li>
+    <li data-topic-labels="Software Metrics / Quality; Empirical Study; Software Refactoring; Software Maintainability" data-topics="software-metrics-quality empirical-study software-refactoring software-maintainability" data-venue="ajse" data-venue-label="Arabian Journal for Science and Engineering" data-year="2011">
+     <strong>
+      A Classification of Refactoring Methods Based on Software Quality Attributes
+     </strong>
+     <br/>
+     Karim Elish and Mohammed Alshayeb
+     <br/>
+     <em>
+      Arabian Journal for Science and Engineering (AJSE)
+     </em>
+     , vol. 36, no. 7, November 2011.
+    </li>
+    <li data-topic-labels="Defect Prediction" data-topics="defect-prediction" data-venue="jss" data-venue-label="Journal of Systems and Software" data-year="2008">
+     <strong>
+      Predicting Defect-Prone Software Modules Using Support Vector Machines
+     </strong>
+     <br/>
+     Karim Elish and Mahmoud Elish
+     <br/>
+     <em>
+      Journal of Systems and Software (JSS)
+     </em>
+     , vol. 81, no. 5, May 2008.
+     <br/>
+     <span class="note">
+      <strong>
+       Among Top 10 Most Cited Papers Published by JSS
+      </strong>
+     </span>
+    </li>
    </ul>
-   <h4 class="publication-type">
-    Conference Publications
-   </h4>
+   <h3>
+    Refereed Conference and Workshop Publications
+   </h3>
    <ul class="publication-list">
-    <li>
+    <li data-topic-labels="LLMs / AI for Security &amp; SE; Privacy / Data Security; Software Security" data-topics="llm-ai-se privacy-data-security software-security" data-venue="acm-iwspa-codaspy" data-venue-label="ACM IWSPA / CODASPY" data-year="2026">
      <strong>
       STALKER: Composed Quasi-Identifiers and LLM-Amplified Behavioral Leakage in Anonymized Marketplace Data
      </strong>
@@ -204,7 +1271,7 @@
      <br/>
      Frankfurt am Main, Germany, June 2026.
     </li>
-    <li>
+    <li data-topic-labels="Mobile App Security; Software Metrics / Quality; Software Security" data-topics="mobile-app-security software-metrics-quality software-security" data-venue="ieee-icsa" data-venue-label="IEEE ICSA" data-year="2026">
      <strong>
       Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications
      </strong>
@@ -223,7 +1290,7 @@
       </strong>
      </span>
     </li>
-    <li>
+    <li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile App Security; Software Bugs" data-topics="llm-ai-se mobile-app-security software-bugs" data-venue="ieee-icst" data-venue-label="IEEE ICST" data-year="2026">
      <strong>
       Automated Reproduction of Android Application Bugs with LLMs: Are We There Yet?
      </strong>
@@ -236,7 +1303,7 @@
      <br/>
      Daejeon, South Korea, May 2026.
     </li>
-    <li>
+    <li data-topic-labels="Mobile App Security; Software Metrics / Quality" data-topics="mobile-app-security software-metrics-quality" data-venue="ieee-acm-msr" data-venue-label="IEEE/ACM MSR" data-year="2026">
      <strong>
       AndroMetric: Bridging Multi-Dimensional Software Metrics and Mobile Application Security
      </strong>
@@ -249,7 +1316,7 @@
      <br/>
      Rio de Janeiro, Brazil, April 2026.
     </li>
-    <li>
+    <li data-topic-labels="Mobile App Security; Software Metrics / Quality; Empirical Study; Software Maintainability" data-topics="mobile-app-security software-metrics-quality empirical-study software-maintainability" data-venue="ieee-acm-msr" data-venue-label="IEEE/ACM MSR" data-year="2026">
      <strong>
       SMELLDroid: A Dataset for Code Smells in Android Apps
      </strong>
@@ -262,7 +1329,7 @@
      <br/>
      Rio de Janeiro, Brazil, April 2026.
     </li>
-    <li>
+    <li data-topic-labels="Mobile App Security; Software Metrics / Quality; Empirical Study" data-topics="mobile-app-security software-metrics-quality empirical-study" data-venue="acm-forge" data-venue-label="ACM FORGE" data-year="2026">
      <strong>
       MIRROR: A Dataset of Structural Metrics for Repackaged Android Apps
      </strong>
@@ -275,32 +1342,7 @@
      <br/>
      Rio de Janeiro, Brazil, April 2026.
     </li>
-   </ul>
-   <h3 class="publication-year">
-    2025
-   </h3>
-   <h4 class="publication-type">
-    Journal Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      RepackDroid: An Efficient Detection Model for Repackaged Android Applications
-     </strong>
-     <br/>
-     Tito Leadon and Karim Elish
-     <br/>
-     <em>
-      Information
-     </em>
-     , vol. 16, no. 12, Article 1075, December 2025.
-    </li>
-   </ul>
-   <h4 class="publication-type">
-    Conference Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
+    <li data-topic-labels="Android / Mobile Malware; Software Security" data-topics="android-malware software-security" data-venue="ieee-acdsa" data-venue-label="IEEE ACDSA" data-year="2025">
      <strong>
       High-Accuracy Android Ransomware Detection Using SMALI Code-Based Analysis
      </strong>
@@ -313,7 +1355,7 @@
      <br/>
      Antalya, Turkey, August 2025.
     </li>
-    <li>
+    <li data-topic-labels="Android / Mobile Malware; Software Security; Computing Education" data-topics="android-malware software-security computing-education" data-venue="asee" data-venue-label="ASEE Annual Conference" data-year="2025">
      <strong>
       A New Collaborative Approach to Multidisciplinary Capstone Design at Florida Polytechnic University
      </strong>
@@ -326,7 +1368,7 @@
      <br/>
      Montreal, Canada, June 2025.
     </li>
-    <li>
+    <li data-topic-labels="Android / Mobile Malware; Software Security" data-topics="android-malware software-security" data-venue="ieee-acis-sera" data-venue-label="IEEE/ACIS SERA" data-year="2025">
      <strong>
       Stealthy No More: An Effective Ensemble Learning Approach for Detecting Android RATs
      </strong>
@@ -339,7 +1381,7 @@
      <br/>
      Las Vegas, NV, May 2025.
     </li>
-    <li>
+    <li data-topic-labels="Applied AI / Data Science" data-topics="applied-ai-data-science" data-venue="flairs" data-venue-label="FLAIRS" data-year="2025">
      <strong>
       FSProtoTransfer: Synergizing Few-Shot, Prototypical Networks, and Transfer Learning for Intrusion Detection in VANETs
      </strong>
@@ -352,12 +1394,198 @@
      <br/>
      Daytona Beach, FL, May 2025.
     </li>
+    <li data-topic-labels="Android / Mobile Malware; Software Metrics / Quality; Empirical Study; Software Security" data-topics="android-malware software-metrics-quality empirical-study software-security" data-venue="ieee-bigdata" data-venue-label="IEEE Big Data" data-year="2019">
+     <strong>
+      Identifying Android Malware Families Using Android-Oriented Metrics
+     </strong>
+     <br/>
+     William Blanc, Lina Hashem, Karim Elish, and Hussain Almohri
+     <br/>
+     <em>
+      Proceedings of the IEEE International Conference on Big Data (Big Data)
+     </em>
+     <br/>
+     Los Angeles, CA, December 2019.
+    </li>
+    <li data-topic-labels="Applied AI / Data Science" data-topics="applied-ai-data-science" data-venue="ieee-icmla" data-venue-label="IEEE ICMLA" data-year="2018">
+     <strong>
+      Machine Learning-based Prediction of Prolonged Length of Stay in Newborns
+     </strong>
+     <br/>
+     Brandon Thompson, Karim Elish, and Robert Steele
+     <br/>
+     <em>
+      Proceedings of the 17th IEEE International Conference on Machine Learning and Applications (ICMLA)
+     </em>
+     <br/>
+     Orlando, FL, December 2018.
+    </li>
+    <li data-topic-labels="Mobile App Security; Applied AI / Data Science" data-topics="mobile-app-security applied-ai-data-science" data-venue="ieee-iccc" data-venue-label="IEEE ICCC" data-year="2018">
+     <strong>
+      Enabling Smart Cities Through V2X Communication
+     </strong>
+     <br/>
+     Mert Aydin, Mohammad Samarah, and Karim Elish
+     <br/>
+     <em>
+      Proceedings of the IEEE International Conference on Computer and Communications (ICCC)
+     </em>
+     <br/>
+     Chengdu, China, December 2018.
+    </li>
+    <li data-topic-labels="Mobile App Security; Applied AI / Data Science" data-topics="mobile-app-security applied-ai-data-science" data-venue="ieee-iccia" data-venue-label="IEEE ICCIA" data-year="2017">
+     <strong>
+      BetterChoice: A Migraine Drug Recommendation System Based on Neo4J
+     </strong>
+     <br/>
+     Benjamin Stark, Constanze Knahl, Mert Aydin, Mohammad Samarah, and Karim Elish
+     <br/>
+     <em>
+      Proceedings of the IEEE International Conference on Computational Intelligence and Applications (ICCIA)
+     </em>
+     <br/>
+     Beijing, China, September 2017.
+    </li>
+    <li data-topic-labels="Mobile App Security; Privacy / Data Security; Software Security" data-topics="mobile-app-security privacy-data-security software-security" data-venue="acm-codaspy" data-venue-label="ACM CODASPY" data-year="2017">
+     <strong>
+      Prioritized Analysis of Inter-App Communication Risks
+     </strong>
+     <br/>
+     Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, Karim Elish, and Barbara Ryder
+     <br/>
+     <em>
+      Proceedings of the ACM Conference on Data and Application Security and Privacy (CODASPY)
+     </em>
+     <br/>
+     Scottsdale, AZ, March 2017 (poster paper).
+    </li>
+    <li data-topic-labels="Mobile App Security; Privacy / Data Security; Software Security" data-topics="mobile-app-security privacy-data-security software-security" data-venue="ieee-spw-most" data-venue-label="IEEE SPW / MoST" data-year="2017">
+     <strong>
+      MR-Droid: A Scalable and Prioritized Analysis of Inter-App Communication Risks
+     </strong>
+     <br/>
+     Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, Karim Elish, and Barbara Ryder
+     <br/>
+     <em>
+      Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)
+     </em>
+     , in conjunction with the
+     <em>
+      IEEE Symposium on Security and Privacy (IEEE S&amp;P)
+     </em>
+     <br/>
+     San Jose, CA, May 2017.
+    </li>
+    <li data-topic-labels="Android / Mobile Malware; Mobile App Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-app-security empirical-study privacy-data-security software-security" data-venue="ieee-spw-most" data-venue-label="IEEE SPW / MoST" data-year="2015">
+     <strong>
+      On the Need of Precise Inter-App ICC Classification for Detecting Android Malware Collusions
+     </strong>
+     <br/>
+     Karim Elish, Danfeng Yao, and Barbara Ryder
+     <br/>
+     <em>
+      Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)
+     </em>
+     , in conjunction with the
+     <em>
+      IEEE Symposium on Security and Privacy (IEEE S&amp;P)
+     </em>
+     <br/>
+     San Jose, CA, May 2015.
+    </li>
+    <li data-topic-labels="Android / Mobile Malware; Software Security" data-topics="android-malware software-security" data-venue="ieee-icmla" data-venue-label="IEEE ICMLA" data-year="2014">
+     <strong>
+      High Precision Screening for Android Malware using Dimensionality Reduction
+     </strong>
+     <br/>
+     Britton Wolfe, Karim Elish, and Danfeng Yao
+     <br/>
+     <em>
+      Proceedings of the 13th IEEE International Conference on Machine Learning and Applications (ICMLA)
+     </em>
+     <br/>
+     Detroit, MI, December 2014.
+    </li>
+    <li data-topic-labels="Android / Mobile Malware; Empirical Study; Software Security" data-topics="android-malware empirical-study software-security" data-venue="information" data-venue-label="Information" data-year="2014">
+     <strong>
+      Comprehensive Behavior Profiling for Proactive Android Malware Detection
+     </strong>
+     <br/>
+     Britton Wolfe, Karim Elish, and Danfeng Yao
+     <br/>
+     <em>
+      Proceedings of the 17th International Information Security Conference (ISC)
+     </em>
+     <br/>
+     Hong Kong, October 2014.
+    </li>
+    <li data-topic-labels="Systems Security; Software Security" data-topics="systems-security software-security" data-venue="iupt-procedia" data-venue-label="IUPT / Procedia Computer Science" data-year="2013">
+     <strong>
+      Device-Based Isolation for Securing Cryptographic Keys
+     </strong>
+     <br/>
+     Karim Elish, Yipan Deng, Danfeng Yao, and Dennis Kafura
+     <br/>
+     <em>
+      Proceedings of the 3rd International Symposium on Internet of Ubiquitous and Pervasive Things (IUPT)
+     </em>
+     ,
+     <em>
+      Procedia Computer Science
+     </em>
+     (Elsevier)
+     <br/>
+     Halifax, Canada, June 2013.
+    </li>
+    <li data-topic-labels="Android / Mobile Malware; Mobile App Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-app-security empirical-study privacy-data-security software-security" data-venue="ieee-spw-most" data-venue-label="IEEE SPW / MoST" data-year="2012">
+     <strong>
+      User-Centric Dependence Analysis for Identifying Malicious Mobile Apps
+     </strong>
+     <br/>
+     Karim Elish, Danfeng Yao, and Barbara Ryder
+     <br/>
+     <em>
+      Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)
+     </em>
+     , in conjunction with the
+     <em>
+      IEEE Symposium on Security and Privacy (IEEE S&amp;P)
+     </em>
+     <br/>
+     San Jose, CA, May 2012.
+    </li>
+    <li data-topic-labels="Software Metrics / Quality; Empirical Study; Software Refactoring; Software Maintainability" data-topics="software-metrics-quality empirical-study software-refactoring software-maintainability" data-venue="apsec" data-venue-label="APSEC" data-year="2009">
+     <strong>
+      Investigating the Effect of Refactoring on Software Testing Effort
+     </strong>
+     <br/>
+     Karim Elish and Mohammad Alshayeb
+     <br/>
+     <em>
+      Proceedings of the 16th IEEE Asia-Pacific Software Engineering Conference (APSEC)
+     </em>
+     <br/>
+     Penang, Malaysia, December 2009.
+    </li>
+    <li data-topic-labels="Android / Mobile Malware; Software Maintainability; Software Security" data-topics="android-malware software-maintainability software-security" data-venue="ieee-csmr" data-venue-label="IEEE CSMR" data-year="2009">
+     <strong>
+      Application of TreeNet in Predicting Object-Oriented Software Maintainability: A Comparative Study
+     </strong>
+     <br/>
+     Mahmoud Elish and Karim Elish
+     <br/>
+     <em>
+      Proceedings of the 13th IEEE European Conference on Software Maintenance and Reengineering (CSMR)
+     </em>
+     <br/>
+     Kaiserslautern, Germany, March 2009.
+    </li>
    </ul>
-   <h4 class="publication-type">
-    Posters and Abstracts
-   </h4>
+   <h3>
+    Refereed Posters and Abstracts
+   </h3>
    <ul class="publication-list">
-    <li>
+    <li data-topic-labels="Android / Mobile Malware; Software Security" data-topics="android-malware software-security" data-venue="ieom" data-venue-label="IEOM" data-year="2025">
      <strong>
       Towards Intelligent Detection of Android Remote Access Trojans (RATs)
      </strong>
@@ -377,7 +1605,7 @@
       </strong>
      </span>
     </li>
-    <li>
+    <li data-topic-labels="LLMs / AI for Security &amp; SE; Android / Mobile Malware; Mobile App Security; Software Security" data-topics="llm-ai-se android-malware mobile-app-security software-security" data-venue="ieom" data-venue-label="IEOM" data-year="2025">
      <strong>
       Evaluating the Capabilities of LLMs in Security Analysis for Mobile Applications
      </strong>
@@ -397,266 +1625,7 @@
       </strong>
      </span>
     </li>
-   </ul>
-   <h3 class="publication-year">
-    2022
-   </h3>
-   <h4 class="publication-type">
-    Journal Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      Lightweight, Effective Detection and Characterization of Mobile Malware Families
-     </strong>
-     <br/>
-     Karim Elish, Mahmoud Elish, and Hussain Almohri
-     <br/>
-     <em>
-      IEEE Transactions on Computers (TC)
-     </em>
-     , vol. 71, no. 11, November 2022.
-    </li>
-   </ul>
-   <h3 class="publication-year">
-    2021
-   </h3>
-   <h4 class="publication-type">
-    Journal Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      An Empirical Comparison of Resampling Ensemble Methods of Deep Learning Neural Networks for Cross-Project Software Defect Prediction
-     </strong>
-     <br/>
-     Mahmoud Elish and Karim Elish
-     <br/>
-     <em>
-      International Journal of Intelligent Engineering and Systems (IJISAE)
-     </em>
-     , vol. 14, no. 3, 2021.
-    </li>
-   </ul>
-   <h3 class="publication-year">
-    2020
-   </h3>
-   <h4 class="publication-type">
-    Journal Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      A Client Bootstrapping Protocol for DoS Attack Mitigation on Entry Point Services in the Cloud
-     </strong>
-     <br/>
-     Hussain Almohri, M. Almutawa, M. Alawadh, and Karim Elish
-     <br/>
-     <em>
-      Security and Communication Networks (SCN)
-     </em>
-     , 2020.
-    </li>
-    <li>
-     <strong>
-      Identifying Mobile Inter-App Communication Risks
-     </strong>
-     <br/>
-     Karim Elish, Haipeng Cai, Daniel Barton, Danfeng Yao, and Barbara Ryder
-     <br/>
-     <em>
-      IEEE Transactions on Mobile Computing (TMC)
-     </em>
-     , vol. 19, no. 1, January 2020.
-    </li>
-   </ul>
-   <h3 class="publication-year">
-    2019
-   </h3>
-   <h4 class="publication-type">
-    Conference Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      Identifying Android Malware Families Using Android-Oriented Metrics
-     </strong>
-     <br/>
-     William Blanc, Lina Hashem, Karim Elish, and Hussain Almohri
-     <br/>
-     <em>
-      Proceedings of the IEEE International Conference on Big Data (Big Data)
-     </em>
-     <br/>
-     Los Angeles, CA, December 2019.
-    </li>
-   </ul>
-   <h3 class="publication-year">
-    2018
-   </h3>
-   <h4 class="publication-type">
-    Conference Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      Machine Learning-based Prediction of Prolonged Length of Stay in Newborns
-     </strong>
-     <br/>
-     Brandon Thompson, Karim Elish, and Robert Steele
-     <br/>
-     <em>
-      Proceedings of the 17th IEEE International Conference on Machine Learning and Applications (ICMLA)
-     </em>
-     <br/>
-     Orlando, FL, December 2018.
-    </li>
-    <li>
-     <strong>
-      Enabling Smart Cities Through V2X Communication
-     </strong>
-     <br/>
-     Mert Aydin, Mohammad Samarah, and Karim Elish
-     <br/>
-     <em>
-      Proceedings of the IEEE International Conference on Computer and Communications (ICCC)
-     </em>
-     <br/>
-     Chengdu, China, December 2018.
-    </li>
-   </ul>
-   <h3 class="publication-year">
-    2017
-   </h3>
-   <h4 class="publication-type">
-    Conference Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      BetterChoice: A Migraine Drug Recommendation System Based on Neo4J
-     </strong>
-     <br/>
-     Benjamin Stark, Constanze Knahl, Mert Aydin, Mohammad Samarah, and Karim Elish
-     <br/>
-     <em>
-      Proceedings of the IEEE International Conference on Computational Intelligence and Applications (ICCIA)
-     </em>
-     <br/>
-     Beijing, China, September 2017.
-    </li>
-    <li>
-     <strong>
-      Prioritized Analysis of Inter-App Communication Risks
-     </strong>
-     <br/>
-     Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, Karim Elish, and Barbara Ryder
-     <br/>
-     <em>
-      Proceedings of the ACM Conference on Data and Application Security and Privacy (CODASPY)
-     </em>
-     <br/>
-     Scottsdale, AZ, March 2017 (poster paper).
-    </li>
-    <li>
-     <strong>
-      MR-Droid: A Scalable and Prioritized Analysis of Inter-App Communication Risks
-     </strong>
-     <br/>
-     Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, Karim Elish, and Barbara Ryder
-     <br/>
-     <em>
-      Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)
-     </em>
-     , in conjunction with the
-     <em>
-      IEEE Symposium on Security and Privacy (IEEE S&amp;P)
-     </em>
-     <br/>
-     San Jose, CA, May 2017.
-    </li>
-   </ul>
-   <h3 class="publication-year">
-    2015
-   </h3>
-   <h4 class="publication-type">
-    Journal Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      Profiling User-Trigger Dependence for Android Malware Detection
-     </strong>
-     <br/>
-     Karim Elish, Xiaokui Shu, Danfeng Yao, Barbara Ryder, and Xuxian Jiang
-     <br/>
-     <em>
-      Computers &amp; Security
-     </em>
-     , vol. 49, pp. 255&ndash;273, March 2015.
-    </li>
-   </ul>
-   <h4 class="publication-type">
-    Conference Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      On the Need of Precise Inter-App ICC Classification for Detecting Android Malware Collusions
-     </strong>
-     <br/>
-     Karim Elish, Danfeng Yao, and Barbara Ryder
-     <br/>
-     <em>
-      Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)
-     </em>
-     , in conjunction with the
-     <em>
-      IEEE Symposium on Security and Privacy (IEEE S&amp;P)
-     </em>
-     <br/>
-     San Jose, CA, May 2015.
-    </li>
-   </ul>
-   <h3 class="publication-year">
-    2014
-   </h3>
-   <h4 class="publication-type">
-    Conference Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      High Precision Screening for Android Malware using Dimensionality Reduction
-     </strong>
-     <br/>
-     Britton Wolfe, Karim Elish, and Danfeng Yao
-     <br/>
-     <em>
-      Proceedings of the 13th IEEE International Conference on Machine Learning and Applications (ICMLA)
-     </em>
-     <br/>
-     Detroit, MI, December 2014.
-    </li>
-    <li>
-     <strong>
-      Comprehensive Behavior Profiling for Proactive Android Malware Detection
-     </strong>
-     <br/>
-     Britton Wolfe, Karim Elish, and Danfeng Yao
-     <br/>
-     <em>
-      Proceedings of the 17th International Information Security Conference (ISC)
-     </em>
-     <br/>
-     Hong Kong, October 2014.
-    </li>
-   </ul>
-   <h4 class="publication-type">
-    Posters and Abstracts
-   </h4>
-   <ul class="publication-list">
-    <li>
+    <li data-topic-labels="Android / Mobile Malware; Mobile App Security; Software Security" data-topics="android-malware mobile-app-security software-security" data-venue="s2erc" data-venue-label="S2ERC" data-year="2014">
      <strong>
       Inter-Component and Inter-App Communication Analysis in Android for Malware Detection
      </strong>
@@ -669,7 +1638,7 @@
      <br/>
      Washington, DC, May 2014.
     </li>
-    <li>
+    <li data-topic-labels="Mobile App Security; Software Security" data-topics="mobile-app-security software-security" data-venue="vt-poster-showcase" data-venue-label="Virginia Tech Graduate Poster Showcase" data-year="2014">
      <strong>
       User-Intention Based Program Analysis for Android Security
      </strong>
@@ -689,38 +1658,7 @@
       </strong>
      </span>
     </li>
-   </ul>
-   <h3 class="publication-year">
-    2013
-   </h3>
-   <h4 class="publication-type">
-    Conference Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      Device-Based Isolation for Securing Cryptographic Keys
-     </strong>
-     <br/>
-     Karim Elish, Yipan Deng, Danfeng Yao, and Dennis Kafura
-     <br/>
-     <em>
-      Proceedings of the 3rd International Symposium on Internet of Ubiquitous and Pervasive Things (IUPT)
-     </em>
-     ,
-     <em>
-      Procedia Computer Science
-     </em>
-     (Elsevier)
-     <br/>
-     Halifax, Canada, June 2013.
-    </li>
-   </ul>
-   <h4 class="publication-type">
-    Posters and Abstracts
-   </h4>
-   <ul class="publication-list">
-    <li>
+    <li data-topic-labels="Android / Mobile Malware; Software Security" data-topics="android-malware software-security" data-venue="usenix-security" data-venue-label="USENIX Security Symposium" data-year="2013">
      <strong>
       User-Intention Based Android Malware Detection
      </strong>
@@ -733,54 +1671,7 @@
      <br/>
      Washington, DC, August 2013.
     </li>
-   </ul>
-   <h3 class="publication-year">
-    2012
-   </h3>
-   <h4 class="publication-type">
-    Journal Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      Using Software Quality Attributes to Classify Refactoring to Patterns
-     </strong>
-     <br/>
-     Karim Elish and Mohammed Alshayeb
-     <br/>
-     <em>
-      Journal of Software (JSW)
-     </em>
-     , vol. 7, no. 2, February 2012.
-    </li>
-   </ul>
-   <h4 class="publication-type">
-    Conference Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      User-Centric Dependence Analysis for Identifying Malicious Mobile Apps
-     </strong>
-     <br/>
-     Karim Elish, Danfeng Yao, and Barbara Ryder
-     <br/>
-     <em>
-      Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)
-     </em>
-     , in conjunction with the
-     <em>
-      IEEE Symposium on Security and Privacy (IEEE S&amp;P)
-     </em>
-     <br/>
-     San Jose, CA, May 2012.
-    </li>
-   </ul>
-   <h4 class="publication-type">
-    Posters and Abstracts
-   </h4>
-   <ul class="publication-list">
-    <li>
+    <li data-topic-labels="Systems Security; Software Security" data-topics="systems-security software-security" data-venue="information" data-venue-label="Information" data-year="2012">
      <strong>
       DataGuard: A Mobile System for Securing Ultra-Sensitive Information
      </strong>
@@ -800,32 +1691,7 @@
       </strong>
      </span>
     </li>
-   </ul>
-   <h3 class="publication-year">
-    2011
-   </h3>
-   <h4 class="publication-type">
-    Journal Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      A Classification of Refactoring Methods Based on Software Quality Attributes
-     </strong>
-     <br/>
-     Karim Elish and Mohammed Alshayeb
-     <br/>
-     <em>
-      Arabian Journal for Science and Engineering (AJSE)
-     </em>
-     , vol. 36, no. 7, November 2011.
-    </li>
-   </ul>
-   <h4 class="publication-type">
-    Posters and Abstracts
-   </h4>
-   <ul class="publication-list">
-    <li>
+    <li data-topic-labels="Android / Mobile Malware; Empirical Study; Software Security" data-topics="android-malware empirical-study software-security" data-venue="s2erc" data-venue-label="S2ERC" data-year="2011">
      <strong>
       User-Centric Dependence Analysis in Programs for Identifying Malware
      </strong>
@@ -837,66 +1703,6 @@
      </em>
      <br/>
      Iowa, November 2011.
-    </li>
-   </ul>
-   <h3 class="publication-year">
-    2009
-   </h3>
-   <h4 class="publication-type">
-    Conference Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      Investigating the Effect of Refactoring on Software Testing Effort
-     </strong>
-     <br/>
-     Karim Elish and Mohammad Alshayeb
-     <br/>
-     <em>
-      Proceedings of the 16th IEEE Asia-Pacific Software Engineering Conference (APSEC)
-     </em>
-     <br/>
-     Penang, Malaysia, December 2009.
-    </li>
-    <li>
-     <strong>
-      Application of TreeNet in Predicting Object-Oriented Software Maintainability: A Comparative Study
-     </strong>
-     <br/>
-     Mahmoud Elish and Karim Elish
-     <br/>
-     <em>
-      Proceedings of the 13th IEEE European Conference on Software Maintenance and Reengineering (CSMR)
-     </em>
-     <br/>
-     Kaiserslautern, Germany, March 2009.
-    </li>
-   </ul>
-   <h3 class="publication-year">
-    2008
-   </h3>
-   <h4 class="publication-type">
-    Journal Publications
-   </h4>
-   <ul class="publication-list">
-    <li>
-     <strong>
-      Predicting Defect-Prone Software Modules Using Support Vector Machines
-     </strong>
-     <br/>
-     Karim Elish and Mahmoud Elish
-     <br/>
-     <em>
-      Journal of Systems and Software (JSS)
-     </em>
-     , vol. 81, no. 5, May 2008.
-     <br/>
-     <span class="note">
-      <strong>
-       Among Top 10 Most Cited Papers Published by JSS
-      </strong>
-     </span>
     </li>
    </ul>
   </main>
@@ -915,5 +1721,101 @@
     NEXUS Research Lab
    </a>
   </footer>
+  <script>
+   document.addEventListener('DOMContentLoaded', function () {
+  const items = Array.from(document.querySelectorAll('.publication-list li[data-topics][data-venue][data-year]'));
+  const topicButtons = Array.from(document.querySelectorAll('.topic-bar-row[data-filter-topic]'));
+  const venueButtons = Array.from(document.querySelectorAll('.publication-filter-row[data-filter-venue]'));
+  const yearButtons = Array.from(document.querySelectorAll('.year-bar-row[data-filter-year]'));
+  const clearButton = document.getElementById('publication-clear-filters');
+  const activeFilterText = document.getElementById('publication-active-filter');
+  const noResults = document.getElementById('publication-no-results');
+
+  let selectedTopic = 'all';
+  let selectedVenue = 'all';
+  let selectedYear = 'all';
+
+  function labelFor(buttons, attr, value) {
+    if (value === 'all') return 'All';
+    const button = buttons.find(btn => btn.dataset[attr] === value);
+    return button ? button.textContent.trim() : value;
+  }
+
+  function updateSectionVisibility() {
+    document.querySelectorAll('.publications-page > h3').forEach(heading => {
+      const list = heading.nextElementSibling;
+      if (!list || !list.classList.contains('publication-list')) return;
+      const hasVisible = Array.from(list.querySelectorAll('li')).some(item => item.style.display !== 'none');
+      heading.style.display = hasVisible ? '' : 'none';
+      list.style.display = hasVisible ? '' : 'none';
+    });
+  }
+
+  function applyFilters() {
+    let visible = 0;
+
+    items.forEach(item => {
+      const topicMatch = selectedTopic === 'all' || item.dataset.topics.split(' ').includes(selectedTopic);
+      const venueMatch = selectedVenue === 'all' || item.dataset.venue === selectedVenue;
+      const yearMatch = selectedYear === 'all' || item.dataset.year === selectedYear;
+      const show = topicMatch && venueMatch && yearMatch;
+
+      item.style.display = show ? '' : 'none';
+      if (show) visible += 1;
+    });
+
+    topicButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.filterTopic === selectedTopic));
+    venueButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.filterVenue === selectedVenue));
+    yearButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.filterYear === selectedYear));
+
+    updateSectionVisibility();
+
+    const topicLabel = labelFor(topicButtons, 'filterTopic', selectedTopic);
+    const venueLabel = labelFor(venueButtons, 'filterVenue', selectedVenue);
+    const yearLabel = labelFor(yearButtons, 'filterYear', selectedYear);
+
+    if (selectedTopic === 'all' && selectedVenue === 'all' && selectedYear === 'all') {
+      activeFilterText.textContent = 'Showing all selected publications.';
+    } else {
+      activeFilterText.textContent = 'Showing ' + visible + ' publication(s) | Topic: ' + topicLabel + ' | Venue: ' + venueLabel + ' | Year: ' + yearLabel + '.';
+    }
+
+    noResults.hidden = visible !== 0;
+  }
+
+  topicButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const value = button.dataset.filterTopic;
+      selectedTopic = selectedTopic === value ? 'all' : value;
+      applyFilters();
+    });
+  });
+
+  venueButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const value = button.dataset.filterVenue;
+      selectedVenue = selectedVenue === value ? 'all' : value;
+      applyFilters();
+    });
+  });
+
+  yearButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const value = button.dataset.filterYear;
+      selectedYear = selectedYear === value ? 'all' : value;
+      applyFilters();
+    });
+  });
+
+  clearButton.addEventListener('click', function () {
+    selectedTopic = 'all';
+    selectedVenue = 'all';
+    selectedYear = 'all';
+    applyFilters();
+  });
+
+  applyFilters();
+});
+  </script>
  </body>
 </html>
