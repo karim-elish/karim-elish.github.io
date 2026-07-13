@@ -100,6 +100,162 @@
   }
 }
 
+
+/* Research impact card */
+.research-impact-card {
+  margin: 0 0 1rem 0;
+  padding: 0.75rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #2b6cb0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.impact-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 0.65rem;
+}
+
+.impact-header h3 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #1a365d;
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+
+.impact-header p {
+  margin: 0.15rem 0 0 0;
+  color: #4a5568;
+  font-size: 0.8rem;
+}
+
+.impact-profile-link {
+  display: inline-flex;
+  white-space: nowrap;
+  padding: 0.28rem 0.55rem;
+  background: #edf6ff;
+  border: 1px solid #b7d7f0;
+  border-radius: 999px;
+  color: #1a365d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.impact-profile-link:hover {
+  background: #dbeeff;
+  border-color: #2b6cb0;
+}
+
+.impact-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.45rem;
+  margin-bottom: 0.65rem;
+}
+
+.impact-stat {
+  padding: 0.45rem 0.55rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+}
+
+.impact-stat-value {
+  display: block;
+  color: #1a365d;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.impact-stat-label {
+  display: block;
+  margin-top: 0.12rem;
+  color: #4a5568;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.impact-chart {
+  display: grid;
+  gap: 0.28rem;
+  padding: 0.45rem 0.55rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+}
+
+.impact-chart-row {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(120px, 1fr) 3rem;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.impact-chart-label {
+  color: #2b6cb0;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.impact-chart-track {
+  height: 0.48rem;
+  background: #edf2f7;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.impact-chart-fill {
+  display: block;
+  height: 100%;
+  background: #2b6cb0;
+  border-radius: 999px;
+}
+
+.impact-chart-value {
+  color: #1a365d;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.impact-note {
+  margin: 0.48rem 0 0 0;
+  color: #718096;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 640px) {
+  .impact-header {
+    display: block;
+  }
+
+  .impact-profile-link {
+    margin-top: 0.45rem;
+  }
+
+  .impact-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .impact-chart-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .impact-chart-value {
+    text-align: left;
+  }
+}
+
 /* Compact Topic, Venue, and Year publication filters */
 .publication-overview-grid.with-year {
   display: grid;
@@ -419,13 +575,85 @@ button.filter-unavailable {
      </span>
     </h2>
    </div>
-   <p class="publication-intro">
-    <strong>
-     <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" target="_blank">
+  
+   <section aria-label="Research impact summary" class="research-impact-card">
+    <div class="impact-header">
+     <div>
+      <h3>
+       Research Impact
+      </h3>
+      <p>
+       Google Scholar citation summary
+      </p>
+     </div>
+     <a class="impact-profile-link" href="https://scholar.google.com/citations?hl=en&amp;user=DW96hOsAAAAJ" rel="noopener" target="_blank">
       Google Scholar
      </a>
-    </strong>
-   </p>
+    </div>
+    <div class="impact-stat-grid">
+     <div class="impact-stat">
+      <span class="impact-stat-value">
+       1,762
+      </span>
+      <span class="impact-stat-label">
+       Citations
+      </span>
+     </div>
+     <div class="impact-stat">
+      <span class="impact-stat-value">
+       652
+      </span>
+      <span class="impact-stat-label">
+       Since 2021
+      </span>
+     </div>
+     <div class="impact-stat">
+      <span class="impact-stat-value">
+       19
+      </span>
+      <span class="impact-stat-label">
+       h-index
+      </span>
+     </div>
+     <div class="impact-stat">
+      <span class="impact-stat-value">
+       19
+      </span>
+      <span class="impact-stat-label">
+       i10-index
+      </span>
+     </div>
+    </div>
+    <div aria-label="Citation momentum chart" class="impact-chart">
+     <div class="impact-chart-row">
+      <span class="impact-chart-label">
+       All citations
+      </span>
+      <span class="impact-chart-track">
+       <span class="impact-chart-fill" style="width: 100%;">
+       </span>
+      </span>
+      <span class="impact-chart-value">
+       1,762
+      </span>
+     </div>
+     <div class="impact-chart-row">
+      <span class="impact-chart-label">
+       Since 2021
+      </span>
+      <span class="impact-chart-track">
+       <span class="impact-chart-fill" style="width: 37.0%;">
+       </span>
+      </span>
+      <span class="impact-chart-value">
+       652
+      </span>
+     </div>
+    </div>
+    <p class="impact-note">
+     Recent citations represent 37.0% of all Google Scholar citations. Since-2021 metrics: h-index 14, i10-index 15. Updated July 2026.
+    </p>
+   </section>
    <section aria-label="Publication topic, venue, and year filters" class="publication-overview-grid with-year">
     <div class="publication-topic-chart compact">
      <h3>
