@@ -220,24 +220,12 @@
   line-height: 1.18;
 }
 
-.publication-venue-card th,
 .publication-venue-card td {
   padding: 0.21rem 0.38rem;
   border-bottom: 1px solid #e2e8f0;
   vertical-align: top;
 }
 
-.publication-venue-card th {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background: #ffffff;
-  color: #4a5568;
-  font-weight: 700;
-  text-align: left;
-}
-
-.publication-venue-card th:last-child,
 .publication-venue-card td:last-child {
   width: 1.75rem;
   text-align: right;
@@ -281,6 +269,43 @@
   align-items: center;
   color: #4a5568;
   font-size: 0.76rem;
+}
+
+.publication-active-filter-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.publication-filter-tag {
+  padding: 0.22rem 0.45rem;
+  background: #edf6ff;
+  border: 1px solid #b7d7f0;
+  border-radius: 999px;
+  color: #1a365d;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.74rem;
+}
+
+.publication-filter-tag span {
+  margin-left: 0.25rem;
+  font-weight: 900;
+}
+
+.publication-filter-tag:hover {
+  background: #dbeeff;
+  border-color: #2b6cb0;
+}
+
+.filter-unavailable {
+  opacity: 0.32;
+}
+
+.filter-unavailable button,
+button.filter-unavailable {
+  cursor: not-allowed;
 }
 
 #publication-clear-filters {
@@ -358,8 +383,7 @@
     text-align: left;
   }
 }
-
-</style>
+  </style>
  </head>
  <body>
   <nav>
@@ -397,7 +421,6 @@
    </div>
    <p class="publication-intro">
     <strong>
-     Full List:
      <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" target="_blank">
       Google Scholar
      </a>
@@ -409,40 +432,16 @@
       Topic
      </h3>
      <div class="topic-bar-chart">
-      <button aria-label="Filter by Software Security" class="topic-bar-row" data-filter-topic="software-security" type="button">
+      <button aria-label="Filter by Mobile Security" class="topic-bar-row" data-filter-topic="mobile-security" type="button">
        <span class="topic-bar-label">
-        Software Security
+        Mobile Security
        </span>
        <span class="topic-bar-track">
         <span class="topic-bar-fill" style="width: 100.0%;">
         </span>
        </span>
        <span class="topic-bar-count">
-        26
-       </span>
-      </button>
-      <button aria-label="Filter by Android / Mobile Malware" class="topic-bar-row" data-filter-topic="android-malware" type="button">
-       <span class="topic-bar-label">
-        Android / Mobile Malware
-       </span>
-       <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 65.38%;">
-        </span>
-       </span>
-       <span class="topic-bar-count">
-        17
-       </span>
-      </button>
-      <button aria-label="Filter by Mobile App Security" class="topic-bar-row" data-filter-topic="mobile-app-security" type="button">
-       <span class="topic-bar-label">
-        Mobile App Security
-       </span>
-       <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 61.54%;">
-        </span>
-       </span>
-       <span class="topic-bar-count">
-        16
+        24
        </span>
       </button>
       <button aria-label="Filter by Empirical Study" class="topic-bar-row" data-filter-topic="empirical-study" type="button">
@@ -450,83 +449,83 @@
         Empirical Study
        </span>
        <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 50.0%;">
+        <span class="topic-bar-fill" style="width: 79.17%;">
         </span>
        </span>
        <span class="topic-bar-count">
-        13
+        19
        </span>
       </button>
-      <button aria-label="Filter by Software Metrics / Quality" class="topic-bar-row" data-filter-topic="software-metrics-quality" type="button">
+      <button aria-label="Filter by Android Malware" class="topic-bar-row" data-filter-topic="android-malware" type="button">
+       <span class="topic-bar-label">
+        Android Malware
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 70.83%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        17
+       </span>
+      </button>
+      <button aria-label="Filter by Software Metrics / Quality" class="topic-bar-row" data-filter-topic="software-metrics" type="button">
        <span class="topic-bar-label">
         Software Metrics / Quality
        </span>
        <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 34.62%;">
+        <span class="topic-bar-fill" style="width: 29.17%;">
         </span>
        </span>
        <span class="topic-bar-count">
-        9
+        7
        </span>
       </button>
-      <button aria-label="Filter by Privacy / Data Security" class="topic-bar-row" data-filter-topic="privacy-data-security" type="button">
+      <button aria-label="Filter by Software Security" class="topic-bar-row" data-filter-topic="software-security" type="button">
+       <span class="topic-bar-label">
+        Software Security
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 29.17%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        7
+       </span>
+      </button>
+      <button aria-label="Filter by Privacy / Data Security" class="topic-bar-row" data-filter-topic="privacy" type="button">
        <span class="topic-bar-label">
         Privacy / Data Security
        </span>
        <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 19.23%;">
+        <span class="topic-bar-fill" style="width: 25.0%;">
         </span>
        </span>
        <span class="topic-bar-count">
-        5
+        6
        </span>
       </button>
-      <button aria-label="Filter by Software Maintainability" class="topic-bar-row" data-filter-topic="software-maintainability" type="button">
-       <span class="topic-bar-label">
-        Software Maintainability
-       </span>
-       <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 19.23%;">
-        </span>
-       </span>
-       <span class="topic-bar-count">
-        5
-       </span>
-      </button>
-      <button aria-label="Filter by Applied AI / Data Science" class="topic-bar-row" data-filter-topic="applied-ai-data-science" type="button">
-       <span class="topic-bar-label">
-        Applied AI / Data Science
-       </span>
-       <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 15.38%;">
-        </span>
-       </span>
-       <span class="topic-bar-count">
-        4
-       </span>
-      </button>
-      <button aria-label="Filter by LLMs / AI for Security &amp; SE" class="topic-bar-row" data-filter-topic="llm-ai-se" type="button">
+      <button aria-label="Filter by LLMs / AI for Security &amp; SE" class="topic-bar-row" data-filter-topic="llms-ai" type="button">
        <span class="topic-bar-label">
         LLMs / AI for Security &amp; SE
        </span>
        <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 15.38%;">
+        <span class="topic-bar-fill" style="width: 20.83%;">
         </span>
        </span>
        <span class="topic-bar-count">
-        4
+        5
        </span>
       </button>
-      <button aria-label="Filter by Software Refactoring" class="topic-bar-row" data-filter-topic="software-refactoring" type="button">
+      <button aria-label="Filter by Software Maintainability" class="topic-bar-row" data-filter-topic="maintainability" type="button">
        <span class="topic-bar-label">
-        Software Refactoring
+        Software Maintainability
        </span>
        <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 11.54%;">
+        <span class="topic-bar-fill" style="width: 20.83%;">
         </span>
        </span>
        <span class="topic-bar-count">
-        3
+        5
        </span>
       </button>
       <button aria-label="Filter by Systems Security" class="topic-bar-row" data-filter-topic="systems-security" type="button">
@@ -534,11 +533,47 @@
         Systems Security
        </span>
        <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 11.54%;">
+        <span class="topic-bar-fill" style="width: 20.83%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        5
+       </span>
+      </button>
+      <button aria-label="Filter by Datasets / Benchmarks" class="topic-bar-row" data-filter-topic="datasets" type="button">
+       <span class="topic-bar-label">
+        Datasets / Benchmarks
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 16.67%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        4
+       </span>
+      </button>
+      <button aria-label="Filter by Software Refactoring" class="topic-bar-row" data-filter-topic="refactoring" type="button">
+       <span class="topic-bar-label">
+        Software Refactoring
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 12.5%;">
         </span>
        </span>
        <span class="topic-bar-count">
         3
+       </span>
+      </button>
+      <button aria-label="Filter by Applied AI / Data Science" class="topic-bar-row" data-filter-topic="applied-ai" type="button">
+       <span class="topic-bar-label">
+        Applied AI / Data Science
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 8.33%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        2
        </span>
       </button>
       <button aria-label="Filter by Defect Prediction" class="topic-bar-row" data-filter-topic="defect-prediction" type="button">
@@ -546,31 +581,31 @@
         Defect Prediction
        </span>
        <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 7.69%;">
+        <span class="topic-bar-fill" style="width: 8.33%;">
         </span>
        </span>
        <span class="topic-bar-count">
         2
        </span>
       </button>
-      <button aria-label="Filter by Computing Education" class="topic-bar-row" data-filter-topic="computing-education" type="button">
+      <button aria-label="Filter by Software Bugs / Testing" class="topic-bar-row" data-filter-topic="software-bugs" type="button">
+       <span class="topic-bar-label">
+        Software Bugs / Testing
+       </span>
+       <span class="topic-bar-track">
+        <span class="topic-bar-fill" style="width: 8.33%;">
+        </span>
+       </span>
+       <span class="topic-bar-count">
+        2
+       </span>
+      </button>
+      <button aria-label="Filter by Computing Education" class="topic-bar-row" data-filter-topic="education" type="button">
        <span class="topic-bar-label">
         Computing Education
        </span>
        <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 3.85%;">
-        </span>
-       </span>
-       <span class="topic-bar-count">
-        1
-       </span>
-      </button>
-      <button aria-label="Filter by Software Bugs" class="topic-bar-row" data-filter-topic="software-bugs" type="button">
-       <span class="topic-bar-label">
-        Software Bugs
-       </span>
-       <span class="topic-bar-track">
-        <span class="topic-bar-fill" style="width: 3.85%;">
+        <span class="topic-bar-fill" style="width: 4.17%;">
         </span>
        </span>
        <span class="topic-bar-count">
@@ -585,21 +620,11 @@
      </h3>
      <div class="publication-filter-scroll">
       <table>
-       <thead>
-        <tr>
-         <th>
-          Venue
-         </th>
-         <th>
-          #
-         </th>
-        </tr>
-       </thead>
        <tbody>
         <tr>
          <td>
-          <button class="publication-filter-row" data-filter-venue="ieee-spw-most" type="button">
-           IEEE SPW / MoST
+          <button class="publication-filter-row" data-filter-venue="information" type="button">
+           [Journal] Information
           </button>
          </td>
          <td>
@@ -608,8 +633,8 @@
         </tr>
         <tr>
          <td>
-          <button class="publication-filter-row" data-filter-venue="information" type="button">
-           Information
+          <button class="publication-filter-row" data-filter-venue="ieee-spw-most" type="button">
+           [Workshop] IEEE SPW / MoST
           </button>
          </td>
          <td>
@@ -619,7 +644,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="ieee-icmla" type="button">
-           IEEE ICMLA
+           [Conference] IEEE ICMLA
           </button>
          </td>
          <td>
@@ -629,7 +654,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="ieee-acm-msr" type="button">
-           IEEE/ACM MSR
+           [Conference] IEEE/ACM MSR
           </button>
          </td>
          <td>
@@ -639,7 +664,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="ieom" type="button">
-           IEOM
+           [Conference] IEOM
           </button>
          </td>
          <td>
@@ -649,7 +674,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="s2erc" type="button">
-           S2ERC
+           [Conference] S2ERC
           </button>
          </td>
          <td>
@@ -659,7 +684,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="acm-codaspy" type="button">
-           ACM CODASPY
+           [Conference] ACM CODASPY
           </button>
          </td>
          <td>
@@ -669,17 +694,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="acm-forge" type="button">
-           ACM FORGE
-          </button>
-         </td>
-         <td>
-          1
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="acm-iwspa-codaspy" type="button">
-           ACM IWSPA / CODASPY
+           [Conference] ACM FORGE
           </button>
          </td>
          <td>
@@ -689,7 +704,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="apsec" type="button">
-           APSEC
+           [Conference] APSEC
           </button>
          </td>
          <td>
@@ -699,27 +714,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="asee" type="button">
-           ASEE Annual Conference
-          </button>
-         </td>
-         <td>
-          1
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="ajse" type="button">
-           Arabian Journal for Science and Engineering
-          </button>
-         </td>
-         <td>
-          1
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="computers-security" type="button">
-           Computers &amp; Security
+           [Conference] ASEE Annual Conference
           </button>
          </td>
          <td>
@@ -729,7 +724,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="flairs" type="button">
-           FLAIRS
+           [Conference] FLAIRS
           </button>
          </td>
          <td>
@@ -739,17 +734,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="ieee-acdsa" type="button">
-           IEEE ACDSA
-          </button>
-         </td>
-         <td>
-          1
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="ieee-access" type="button">
-           IEEE Access
+           [Conference] IEEE ACDSA
           </button>
          </td>
          <td>
@@ -759,7 +744,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="ieee-bigdata" type="button">
-           IEEE Big Data
+           [Conference] IEEE Big Data
           </button>
          </td>
          <td>
@@ -769,7 +754,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="ieee-csmr" type="button">
-           IEEE CSMR
+           [Conference] IEEE CSMR
           </button>
          </td>
          <td>
@@ -779,7 +764,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="ieee-iccc" type="button">
-           IEEE ICCC
+           [Conference] IEEE ICCC
           </button>
          </td>
          <td>
@@ -789,7 +774,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="ieee-iccia" type="button">
-           IEEE ICCIA
+           [Conference] IEEE ICCIA
           </button>
          </td>
          <td>
@@ -799,7 +784,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="ieee-icsa" type="button">
-           IEEE ICSA
+           [Conference] IEEE ICSA
           </button>
          </td>
          <td>
@@ -809,27 +794,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="ieee-icst" type="button">
-           IEEE ICST
-          </button>
-         </td>
-         <td>
-          1
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="ieee-tc" type="button">
-           IEEE Transactions on Computers
-          </button>
-         </td>
-         <td>
-          1
-         </td>
-        </tr>
-        <tr>
-         <td>
-          <button class="publication-filter-row" data-filter-venue="ieee-tmc" type="button">
-           IEEE Transactions on Mobile Computing
+           [Conference] IEEE ICST
           </button>
          </td>
          <td>
@@ -839,7 +804,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="ieee-acis-sera" type="button">
-           IEEE/ACIS SERA
+           [Conference] IEEE/ACIS SERA
           </button>
          </td>
          <td>
@@ -849,7 +814,57 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="iupt-procedia" type="button">
-           IUPT / Procedia Computer Science
+           [Conference] IUPT / Procedia Computer Science
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ajse" type="button">
+           [Journal] Arabian Journal for Science and Engineering
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="computers-security" type="button">
+           [Journal] Computers &amp; Security
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-access" type="button">
+           [Journal] IEEE Access
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-tc" type="button">
+           [Journal] IEEE Transactions on Computers
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="ieee-tmc" type="button">
+           [Journal] IEEE Transactions on Mobile Computing
           </button>
          </td>
          <td>
@@ -859,7 +874,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="ijisae" type="button">
-           International Journal of Intelligent Engineering and Systems
+           [Journal] IJISAE
           </button>
          </td>
          <td>
@@ -869,7 +884,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="journal-software" type="button">
-           Journal of Software
+           [Journal] Journal of Software
           </button>
          </td>
          <td>
@@ -879,7 +894,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="jss" type="button">
-           Journal of Systems and Software
+           [Journal] Journal of Systems and Software
           </button>
          </td>
          <td>
@@ -889,7 +904,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="scn" type="button">
-           Security and Communication Networks
+           [Journal] Security and Communication Networks
           </button>
          </td>
          <td>
@@ -899,7 +914,7 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="usenix-security" type="button">
-           USENIX Security Symposium
+           [Poster] USENIX Security Symposium
           </button>
          </td>
          <td>
@@ -909,7 +924,17 @@
         <tr>
          <td>
           <button class="publication-filter-row" data-filter-venue="vt-poster-showcase" type="button">
-           Virginia Tech Graduate Poster Showcase
+           [Poster] Virginia Tech Graduate Poster Showcase
+          </button>
+         </td>
+         <td>
+          1
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <button class="publication-filter-row" data-filter-venue="acm-iwspa-codaspy" type="button">
+           [Workshop] ACM IWSPA / CODASPY
           </button>
          </td>
          <td>
@@ -1111,9 +1136,29 @@
      <span id="publication-active-filter">
       Showing all selected publications.
      </span>
-     <button id="publication-clear-filters" type="button">
-      Clear filters
-     </button>
+     <div aria-label="Active filters" class="publication-active-filter-tags">
+      <button class="publication-filter-tag" hidden="" id="publication-clear-topic" type="button">
+       Topic
+       <span aria-hidden="true">
+        &times;
+       </span>
+      </button>
+      <button class="publication-filter-tag" hidden="" id="publication-clear-venue" type="button">
+       Venue
+       <span aria-hidden="true">
+        &times;
+       </span>
+      </button>
+      <button class="publication-filter-tag" hidden="" id="publication-clear-year" type="button">
+       Year
+       <span aria-hidden="true">
+        &times;
+       </span>
+      </button>
+      <button id="publication-clear-filters" type="button">
+       Clear all
+      </button>
+     </div>
     </div>
    </section>
    <p class="publication-no-results" hidden="" id="publication-no-results">
@@ -1123,7 +1168,7 @@
     Refereed Journal Publications
    </h3>
    <ul class="publication-list">
-    <li data-topic-labels="LLMs / AI for Security &amp; SE; Android / Mobile Malware; Software Security" data-topics="llm-ai-se android-malware software-security" data-venue="ieee-access" data-venue-label="IEEE Access" data-year="2026">
+    <li data-topic-labels="LLMs / AI for Security &amp; SE; Android Malware; Empirical Study" data-topics="llms-ai android-malware empirical-study" data-venue="ieee-access" data-venue-label="[Journal] IEEE Access" data-year="2026">
      <strong>
       Large Language Models for Malware Detection: A Systematic Review, Taxonomy, and Open Challenges
      </strong>
@@ -1135,7 +1180,7 @@
      </em>
      , vol. 14, pp. 52734-52752, April 2026.
     </li>
-    <li data-topic-labels="Mobile App Security; Software Metrics / Quality" data-topics="mobile-app-security software-metrics-quality" data-venue="information" data-venue-label="Information" data-year="2025">
+    <li data-topic-labels="Mobile Security; Datasets / Benchmarks" data-topics="mobile-security datasets" data-venue="information" data-venue-label="[Journal] Information" data-year="2025">
      <strong>
       RepackDroid: An Efficient Detection Model for Repackaged Android Applications
      </strong>
@@ -1147,7 +1192,7 @@
      </em>
      , vol. 16, no. 12, Article 1075, December 2025.
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Empirical Study; Software Security" data-topics="android-malware empirical-study software-security" data-venue="ieee-tc" data-venue-label="IEEE Transactions on Computers" data-year="2022">
+    <li data-topic-labels="Android Malware; Empirical Study" data-topics="android-malware empirical-study" data-venue="ieee-tc" data-venue-label="[Journal] IEEE Transactions on Computers" data-year="2022">
      <strong>
       Lightweight, Effective Detection and Characterization of Mobile Malware Families
      </strong>
@@ -1159,7 +1204,7 @@
      </em>
      , vol. 71, no. 11, November 2022.
     </li>
-    <li data-topic-labels="Defect Prediction; Empirical Study" data-topics="defect-prediction empirical-study" data-venue="ijisae" data-venue-label="International Journal of Intelligent Engineering and Systems" data-year="2021">
+    <li data-topic-labels="Defect Prediction; Empirical Study; Systems Security" data-topics="defect-prediction empirical-study systems-security" data-venue="ijisae" data-venue-label="[Journal] IJISAE" data-year="2021">
      <strong>
       An Empirical Comparison of Resampling Ensemble Methods of Deep Learning Neural Networks for Cross-Project Software Defect Prediction
      </strong>
@@ -1171,7 +1216,7 @@
      </em>
      , vol. 14, no. 3, 2021.
     </li>
-    <li data-topic-labels="Systems Security; Software Security" data-topics="systems-security software-security" data-venue="scn" data-venue-label="Security and Communication Networks" data-year="2020">
+    <li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="scn" data-venue-label="[Journal] Security and Communication Networks" data-year="2020">
      <strong>
       A Client Bootstrapping Protocol for DoS Attack Mitigation on Entry Point Services in the Cloud
      </strong>
@@ -1183,7 +1228,7 @@
      </em>
      , 2020.
     </li>
-    <li data-topic-labels="Mobile App Security; Empirical Study; Software Security" data-topics="mobile-app-security empirical-study software-security" data-venue="ieee-tmc" data-venue-label="IEEE Transactions on Mobile Computing" data-year="2020">
+    <li data-topic-labels="Mobile Security; Empirical Study" data-topics="mobile-security empirical-study" data-venue="ieee-tmc" data-venue-label="[Journal] IEEE Transactions on Mobile Computing" data-year="2020">
      <strong>
       Identifying Mobile Inter-App Communication Risks
      </strong>
@@ -1195,7 +1240,7 @@
      </em>
      , vol. 19, no. 1, January 2020.
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Empirical Study; Software Security" data-topics="android-malware empirical-study software-security" data-venue="computers-security" data-venue-label="Computers &amp; Security" data-year="2015">
+    <li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="computers-security" data-venue-label="[Journal] Computers &amp; Security" data-year="2015">
      <strong>
       Profiling User-Trigger Dependence for Android Malware Detection
      </strong>
@@ -1207,7 +1252,7 @@
      </em>
      , vol. 49, pp. 255&ndash;273, March 2015.
     </li>
-    <li data-topic-labels="Software Metrics / Quality; Software Refactoring; Software Maintainability" data-topics="software-metrics-quality software-refactoring software-maintainability" data-venue="journal-software" data-venue-label="Journal of Software" data-year="2012">
+    <li data-topic-labels="Software Metrics / Quality; Software Maintainability; Software Refactoring" data-topics="software-metrics maintainability refactoring" data-venue="journal-software" data-venue-label="[Journal] Journal of Software" data-year="2012">
      <strong>
       Using Software Quality Attributes to Classify Refactoring to Patterns
      </strong>
@@ -1219,7 +1264,7 @@
      </em>
      , vol. 7, no. 2, February 2012.
     </li>
-    <li data-topic-labels="Software Metrics / Quality; Empirical Study; Software Refactoring; Software Maintainability" data-topics="software-metrics-quality empirical-study software-refactoring software-maintainability" data-venue="ajse" data-venue-label="Arabian Journal for Science and Engineering" data-year="2011">
+    <li data-topic-labels="Software Metrics / Quality; Software Maintainability; Software Refactoring; Empirical Study" data-topics="software-metrics maintainability refactoring empirical-study" data-venue="ajse" data-venue-label="[Journal] Arabian Journal for Science and Engineering" data-year="2011">
      <strong>
       A Classification of Refactoring Methods Based on Software Quality Attributes
      </strong>
@@ -1231,7 +1276,7 @@
      </em>
      , vol. 36, no. 7, November 2011.
     </li>
-    <li data-topic-labels="Defect Prediction" data-topics="defect-prediction" data-venue="jss" data-venue-label="Journal of Systems and Software" data-year="2008">
+    <li data-topic-labels="Defect Prediction" data-topics="defect-prediction" data-venue="jss" data-venue-label="[Journal] Journal of Systems and Software" data-year="2008">
      <strong>
       Predicting Defect-Prone Software Modules Using Support Vector Machines
      </strong>
@@ -1254,7 +1299,7 @@
     Refereed Conference and Workshop Publications
    </h3>
    <ul class="publication-list">
-    <li data-topic-labels="LLMs / AI for Security &amp; SE; Privacy / Data Security; Software Security" data-topics="llm-ai-se privacy-data-security software-security" data-venue="acm-iwspa-codaspy" data-venue-label="ACM IWSPA / CODASPY" data-year="2026">
+    <li data-topic-labels="LLMs / AI for Security &amp; SE; Privacy / Data Security; Software Security" data-topics="llms-ai privacy software-security" data-venue="acm-iwspa-codaspy" data-venue-label="[Workshop] ACM IWSPA / CODASPY" data-year="2026">
      <strong>
       STALKER: Composed Quasi-Identifiers and LLM-Amplified Behavioral Leakage in Anonymized Marketplace Data
      </strong>
@@ -1271,7 +1316,7 @@
      <br/>
      Frankfurt am Main, Germany, June 2026.
     </li>
-    <li data-topic-labels="Mobile App Security; Software Metrics / Quality; Software Security" data-topics="mobile-app-security software-metrics-quality software-security" data-venue="ieee-icsa" data-venue-label="IEEE ICSA" data-year="2026">
+    <li data-topic-labels="Mobile Security; Software Metrics / Quality; Software Maintainability; Software Security" data-topics="mobile-security software-metrics maintainability software-security" data-venue="ieee-icsa" data-venue-label="[Conference] IEEE ICSA" data-year="2026">
      <strong>
       Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications
      </strong>
@@ -1290,7 +1335,7 @@
       </strong>
      </span>
     </li>
-    <li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile App Security; Software Bugs" data-topics="llm-ai-se mobile-app-security software-bugs" data-venue="ieee-icst" data-venue-label="IEEE ICST" data-year="2026">
+    <li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Bugs / Testing" data-topics="llms-ai mobile-security software-bugs" data-venue="ieee-icst" data-venue-label="[Conference] IEEE ICST" data-year="2026">
      <strong>
       Automated Reproduction of Android Application Bugs with LLMs: Are We There Yet?
      </strong>
@@ -1303,7 +1348,7 @@
      <br/>
      Daejeon, South Korea, May 2026.
     </li>
-    <li data-topic-labels="Mobile App Security; Software Metrics / Quality" data-topics="mobile-app-security software-metrics-quality" data-venue="ieee-acm-msr" data-venue-label="IEEE/ACM MSR" data-year="2026">
+    <li data-topic-labels="Mobile Security; Software Metrics / Quality; Datasets / Benchmarks" data-topics="mobile-security software-metrics datasets" data-venue="ieee-acm-msr" data-venue-label="[Conference] IEEE/ACM MSR" data-year="2026">
      <strong>
       AndroMetric: Bridging Multi-Dimensional Software Metrics and Mobile Application Security
      </strong>
@@ -1316,7 +1361,7 @@
      <br/>
      Rio de Janeiro, Brazil, April 2026.
     </li>
-    <li data-topic-labels="Mobile App Security; Software Metrics / Quality; Empirical Study; Software Maintainability" data-topics="mobile-app-security software-metrics-quality empirical-study software-maintainability" data-venue="ieee-acm-msr" data-venue-label="IEEE/ACM MSR" data-year="2026">
+    <li data-topic-labels="Mobile Security; Software Metrics / Quality; Software Maintainability; Datasets / Benchmarks" data-topics="mobile-security software-metrics maintainability datasets" data-venue="ieee-acm-msr" data-venue-label="[Conference] IEEE/ACM MSR" data-year="2026">
      <strong>
       SMELLDroid: A Dataset for Code Smells in Android Apps
      </strong>
@@ -1329,7 +1374,7 @@
      <br/>
      Rio de Janeiro, Brazil, April 2026.
     </li>
-    <li data-topic-labels="Mobile App Security; Software Metrics / Quality; Empirical Study" data-topics="mobile-app-security software-metrics-quality empirical-study" data-venue="acm-forge" data-venue-label="ACM FORGE" data-year="2026">
+    <li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Metrics / Quality; Datasets / Benchmarks" data-topics="llms-ai mobile-security software-metrics datasets" data-venue="acm-forge" data-venue-label="[Conference] ACM FORGE" data-year="2026">
      <strong>
       MIRROR: A Dataset of Structural Metrics for Repackaged Android Apps
      </strong>
@@ -1342,7 +1387,7 @@
      <br/>
      Rio de Janeiro, Brazil, April 2026.
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Software Security" data-topics="android-malware software-security" data-venue="ieee-acdsa" data-venue-label="IEEE ACDSA" data-year="2025">
+    <li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="ieee-acdsa" data-venue-label="[Conference] IEEE ACDSA" data-year="2025">
      <strong>
       High-Accuracy Android Ransomware Detection Using SMALI Code-Based Analysis
      </strong>
@@ -1355,7 +1400,7 @@
      <br/>
      Antalya, Turkey, August 2025.
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Software Security; Computing Education" data-topics="android-malware software-security computing-education" data-venue="asee" data-venue-label="ASEE Annual Conference" data-year="2025">
+    <li data-topic-labels="Android Malware; Computing Education" data-topics="android-malware education" data-venue="asee" data-venue-label="[Conference] ASEE Annual Conference" data-year="2025">
      <strong>
       A New Collaborative Approach to Multidisciplinary Capstone Design at Florida Polytechnic University
      </strong>
@@ -1368,7 +1413,7 @@
      <br/>
      Montreal, Canada, June 2025.
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Software Security" data-topics="android-malware software-security" data-venue="ieee-acis-sera" data-venue-label="IEEE/ACIS SERA" data-year="2025">
+    <li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieee-acis-sera" data-venue-label="[Conference] IEEE/ACIS SERA" data-year="2025">
      <strong>
       Stealthy No More: An Effective Ensemble Learning Approach for Detecting Android RATs
      </strong>
@@ -1381,7 +1426,7 @@
      <br/>
      Las Vegas, NV, May 2025.
     </li>
-    <li data-topic-labels="Applied AI / Data Science" data-topics="applied-ai-data-science" data-venue="flairs" data-venue-label="FLAIRS" data-year="2025">
+    <li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="flairs" data-venue-label="[Conference] FLAIRS" data-year="2025">
      <strong>
       FSProtoTransfer: Synergizing Few-Shot, Prototypical Networks, and Transfer Learning for Intrusion Detection in VANETs
      </strong>
@@ -1394,7 +1439,7 @@
      <br/>
      Daytona Beach, FL, May 2025.
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Software Metrics / Quality; Empirical Study; Software Security" data-topics="android-malware software-metrics-quality empirical-study software-security" data-venue="ieee-bigdata" data-venue-label="IEEE Big Data" data-year="2019">
+    <li data-topic-labels="Android Malware; Mobile Security; Software Metrics / Quality; Empirical Study" data-topics="android-malware mobile-security software-metrics empirical-study" data-venue="ieee-bigdata" data-venue-label="[Conference] IEEE Big Data" data-year="2019">
      <strong>
       Identifying Android Malware Families Using Android-Oriented Metrics
      </strong>
@@ -1407,7 +1452,7 @@
      <br/>
      Los Angeles, CA, December 2019.
     </li>
-    <li data-topic-labels="Applied AI / Data Science" data-topics="applied-ai-data-science" data-venue="ieee-icmla" data-venue-label="IEEE ICMLA" data-year="2018">
+    <li data-topic-labels="Applied AI / Data Science" data-topics="applied-ai" data-venue="ieee-icmla" data-venue-label="[Conference] IEEE ICMLA" data-year="2018">
      <strong>
       Machine Learning-based Prediction of Prolonged Length of Stay in Newborns
      </strong>
@@ -1420,7 +1465,7 @@
      <br/>
      Orlando, FL, December 2018.
     </li>
-    <li data-topic-labels="Mobile App Security; Applied AI / Data Science" data-topics="mobile-app-security applied-ai-data-science" data-venue="ieee-iccc" data-venue-label="IEEE ICCC" data-year="2018">
+    <li data-topic-labels="Mobile Security; Systems Security" data-topics="mobile-security systems-security" data-venue="ieee-iccc" data-venue-label="[Conference] IEEE ICCC" data-year="2018">
      <strong>
       Enabling Smart Cities Through V2X Communication
      </strong>
@@ -1433,7 +1478,7 @@
      <br/>
      Chengdu, China, December 2018.
     </li>
-    <li data-topic-labels="Mobile App Security; Applied AI / Data Science" data-topics="mobile-app-security applied-ai-data-science" data-venue="ieee-iccia" data-venue-label="IEEE ICCIA" data-year="2017">
+    <li data-topic-labels="Mobile Security; Applied AI / Data Science" data-topics="mobile-security applied-ai" data-venue="ieee-iccia" data-venue-label="[Conference] IEEE ICCIA" data-year="2017">
      <strong>
       BetterChoice: A Migraine Drug Recommendation System Based on Neo4J
      </strong>
@@ -1446,7 +1491,7 @@
      <br/>
      Beijing, China, September 2017.
     </li>
-    <li data-topic-labels="Mobile App Security; Privacy / Data Security; Software Security" data-topics="mobile-app-security privacy-data-security software-security" data-venue="acm-codaspy" data-venue-label="ACM CODASPY" data-year="2017">
+    <li data-topic-labels="Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="mobile-security empirical-study privacy software-security" data-venue="acm-codaspy" data-venue-label="[Conference] ACM CODASPY" data-year="2017">
      <strong>
       Prioritized Analysis of Inter-App Communication Risks
      </strong>
@@ -1459,7 +1504,7 @@
      <br/>
      Scottsdale, AZ, March 2017 (poster paper).
     </li>
-    <li data-topic-labels="Mobile App Security; Privacy / Data Security; Software Security" data-topics="mobile-app-security privacy-data-security software-security" data-venue="ieee-spw-most" data-venue-label="IEEE SPW / MoST" data-year="2017">
+    <li data-topic-labels="Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2017">
      <strong>
       MR-Droid: A Scalable and Prioritized Analysis of Inter-App Communication Risks
      </strong>
@@ -1476,7 +1521,7 @@
      <br/>
      San Jose, CA, May 2017.
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Mobile App Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-app-security empirical-study privacy-data-security software-security" data-venue="ieee-spw-most" data-venue-label="IEEE SPW / MoST" data-year="2015">
+    <li data-topic-labels="Android Malware; Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2015">
      <strong>
       On the Need of Precise Inter-App ICC Classification for Detecting Android Malware Collusions
      </strong>
@@ -1493,7 +1538,7 @@
      <br/>
      San Jose, CA, May 2015.
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Software Security" data-topics="android-malware software-security" data-venue="ieee-icmla" data-venue-label="IEEE ICMLA" data-year="2014">
+    <li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieee-icmla" data-venue-label="[Conference] IEEE ICMLA" data-year="2014">
      <strong>
       High Precision Screening for Android Malware using Dimensionality Reduction
      </strong>
@@ -1506,7 +1551,7 @@
      <br/>
      Detroit, MI, December 2014.
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Empirical Study; Software Security" data-topics="android-malware empirical-study software-security" data-venue="information" data-venue-label="Information" data-year="2014">
+    <li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="information" data-venue-label="[Journal] Information" data-year="2014">
      <strong>
       Comprehensive Behavior Profiling for Proactive Android Malware Detection
      </strong>
@@ -1519,7 +1564,7 @@
      <br/>
      Hong Kong, October 2014.
     </li>
-    <li data-topic-labels="Systems Security; Software Security" data-topics="systems-security software-security" data-venue="iupt-procedia" data-venue-label="IUPT / Procedia Computer Science" data-year="2013">
+    <li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="iupt-procedia" data-venue-label="[Conference] IUPT / Procedia Computer Science" data-year="2013">
      <strong>
       Device-Based Isolation for Securing Cryptographic Keys
      </strong>
@@ -1537,7 +1582,7 @@
      <br/>
      Halifax, Canada, June 2013.
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Mobile App Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-app-security empirical-study privacy-data-security software-security" data-venue="ieee-spw-most" data-venue-label="IEEE SPW / MoST" data-year="2012">
+    <li data-topic-labels="Android Malware; Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2012">
      <strong>
       User-Centric Dependence Analysis for Identifying Malicious Mobile Apps
      </strong>
@@ -1554,7 +1599,7 @@
      <br/>
      San Jose, CA, May 2012.
     </li>
-    <li data-topic-labels="Software Metrics / Quality; Empirical Study; Software Refactoring; Software Maintainability" data-topics="software-metrics-quality empirical-study software-refactoring software-maintainability" data-venue="apsec" data-venue-label="APSEC" data-year="2009">
+    <li data-topic-labels="Software Refactoring; Software Bugs / Testing; Empirical Study" data-topics="refactoring software-bugs empirical-study" data-venue="apsec" data-venue-label="[Conference] APSEC" data-year="2009">
      <strong>
       Investigating the Effect of Refactoring on Software Testing Effort
      </strong>
@@ -1567,7 +1612,7 @@
      <br/>
      Penang, Malaysia, December 2009.
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Software Maintainability; Software Security" data-topics="android-malware software-maintainability software-security" data-venue="ieee-csmr" data-venue-label="IEEE CSMR" data-year="2009">
+    <li data-topic-labels="Android Malware; Software Maintainability; Empirical Study" data-topics="android-malware maintainability empirical-study" data-venue="ieee-csmr" data-venue-label="[Conference] IEEE CSMR" data-year="2009">
      <strong>
       Application of TreeNet in Predicting Object-Oriented Software Maintainability: A Comparative Study
      </strong>
@@ -1585,7 +1630,7 @@
     Refereed Posters and Abstracts
    </h3>
    <ul class="publication-list">
-    <li data-topic-labels="Android / Mobile Malware; Software Security" data-topics="android-malware software-security" data-venue="ieom" data-venue-label="IEOM" data-year="2025">
+    <li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieom" data-venue-label="[Conference] IEOM" data-year="2025">
      <strong>
       Towards Intelligent Detection of Android Remote Access Trojans (RATs)
      </strong>
@@ -1605,7 +1650,7 @@
       </strong>
      </span>
     </li>
-    <li data-topic-labels="LLMs / AI for Security &amp; SE; Android / Mobile Malware; Mobile App Security; Software Security" data-topics="llm-ai-se android-malware mobile-app-security software-security" data-venue="ieom" data-venue-label="IEOM" data-year="2025">
+    <li data-topic-labels="LLMs / AI for Security &amp; SE; Android Malware; Mobile Security; Empirical Study; Software Security" data-topics="llms-ai android-malware mobile-security empirical-study software-security" data-venue="ieom" data-venue-label="[Conference] IEOM" data-year="2025">
      <strong>
       Evaluating the Capabilities of LLMs in Security Analysis for Mobile Applications
      </strong>
@@ -1625,7 +1670,7 @@
       </strong>
      </span>
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Mobile App Security; Software Security" data-topics="android-malware mobile-app-security software-security" data-venue="s2erc" data-venue-label="S2ERC" data-year="2014">
+    <li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="s2erc" data-venue-label="[Conference] S2ERC" data-year="2014">
      <strong>
       Inter-Component and Inter-App Communication Analysis in Android for Malware Detection
      </strong>
@@ -1638,7 +1683,7 @@
      <br/>
      Washington, DC, May 2014.
     </li>
-    <li data-topic-labels="Mobile App Security; Software Security" data-topics="mobile-app-security software-security" data-venue="vt-poster-showcase" data-venue-label="Virginia Tech Graduate Poster Showcase" data-year="2014">
+    <li data-topic-labels="Mobile Security; Empirical Study" data-topics="mobile-security empirical-study" data-venue="vt-poster-showcase" data-venue-label="[Poster] Virginia Tech Graduate Poster Showcase" data-year="2014">
      <strong>
       User-Intention Based Program Analysis for Android Security
      </strong>
@@ -1658,7 +1703,7 @@
       </strong>
      </span>
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Software Security" data-topics="android-malware software-security" data-venue="usenix-security" data-venue-label="USENIX Security Symposium" data-year="2013">
+    <li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="usenix-security" data-venue-label="[Poster] USENIX Security Symposium" data-year="2013">
      <strong>
       User-Intention Based Android Malware Detection
      </strong>
@@ -1671,7 +1716,7 @@
      <br/>
      Washington, DC, August 2013.
     </li>
-    <li data-topic-labels="Systems Security; Software Security" data-topics="systems-security software-security" data-venue="information" data-venue-label="Information" data-year="2012">
+    <li data-topic-labels="Privacy / Data Security" data-topics="privacy" data-venue="information" data-venue-label="[Journal] Information" data-year="2012">
      <strong>
       DataGuard: A Mobile System for Securing Ultra-Sensitive Information
      </strong>
@@ -1691,7 +1736,7 @@
       </strong>
      </span>
     </li>
-    <li data-topic-labels="Android / Mobile Malware; Empirical Study; Software Security" data-topics="android-malware empirical-study software-security" data-venue="s2erc" data-venue-label="S2ERC" data-year="2011">
+    <li data-topic-labels="Android Malware; Empirical Study" data-topics="android-malware empirical-study" data-venue="s2erc" data-venue-label="[Conference] S2ERC" data-year="2011">
      <strong>
       User-Centric Dependence Analysis in Programs for Identifying Malware
      </strong>
@@ -1727,7 +1772,10 @@
   const topicButtons = Array.from(document.querySelectorAll('.topic-bar-row[data-filter-topic]'));
   const venueButtons = Array.from(document.querySelectorAll('.publication-filter-row[data-filter-venue]'));
   const yearButtons = Array.from(document.querySelectorAll('.year-bar-row[data-filter-year]'));
-  const clearButton = document.getElementById('publication-clear-filters');
+  const clearAllButton = document.getElementById('publication-clear-filters');
+  const clearTopicButton = document.getElementById('publication-clear-topic');
+  const clearVenueButton = document.getElementById('publication-clear-venue');
+  const clearYearButton = document.getElementById('publication-clear-year');
   const activeFilterText = document.getElementById('publication-active-filter');
   const noResults = document.getElementById('publication-no-results');
 
@@ -1737,8 +1785,99 @@
 
   function labelFor(buttons, attr, value) {
     if (value === 'all') return 'All';
+
     const button = buttons.find(btn => btn.dataset[attr] === value);
-    return button ? button.textContent.trim() : value;
+    if (!button) return value;
+
+    const topicLabel = button.querySelector('.topic-bar-label');
+    if (topicLabel) return topicLabel.textContent.trim();
+
+    const yearLabel = button.querySelector('.year-bar-label');
+    if (yearLabel) return yearLabel.textContent.trim();
+
+    return button.textContent.replace(/\s+\d+\s*$/, '').trim();
+  }
+
+  function itemMatches(item, options) {
+    const topic = options.topic ?? selectedTopic;
+    const venue = options.venue ?? selectedVenue;
+    const year = options.year ?? selectedYear;
+
+    const topicMatch = topic === 'all' || item.dataset.topics.split(' ').includes(topic);
+    const venueMatch = venue === 'all' || item.dataset.venue === venue;
+    const yearMatch = year === 'all' || item.dataset.year === year;
+
+    return topicMatch && venueMatch && yearMatch;
+  }
+
+  function countForTopic(topicValue) {
+    return items.filter(item => itemMatches(item, { topic: topicValue })).length;
+  }
+
+  function countForVenue(venueValue) {
+    return items.filter(item => itemMatches(item, { venue: venueValue })).length;
+  }
+
+  function countForYear(yearValue) {
+    return items.filter(item => itemMatches(item, { year: yearValue })).length;
+  }
+
+  function maxCount(values) {
+    return Math.max(1, ...values);
+  }
+
+  function setAvailability(button, count, isSelected) {
+    const row = button.closest('tr') || button;
+    const disabled = count === 0 && !isSelected;
+
+    row.classList.toggle('filter-unavailable', disabled);
+    button.disabled = disabled;
+    button.setAttribute('aria-disabled', disabled ? 'true' : 'false');
+  }
+
+  function updateDynamicFilterCounts() {
+    const topicCounts = topicButtons.map(button => countForTopic(button.dataset.filterTopic));
+    const yearCounts = yearButtons.map(button => countForYear(button.dataset.filterYear));
+
+    const maxTopic = maxCount(topicCounts);
+    const maxYear = maxCount(yearCounts);
+
+    topicButtons.forEach((button, index) => {
+      const value = button.dataset.filterTopic;
+      const count = topicCounts[index];
+      const isSelected = selectedTopic === value;
+      const fill = button.querySelector('.topic-bar-fill');
+      const countEl = button.querySelector('.topic-bar-count');
+
+      if (fill) fill.style.width = `${Math.round((count / maxTopic) * 10000) / 100}%`;
+      if (countEl) countEl.textContent = count;
+
+      setAvailability(button, count, isSelected);
+    });
+
+    venueButtons.forEach(button => {
+      const value = button.dataset.filterVenue;
+      const count = countForVenue(value);
+      const isSelected = selectedVenue === value;
+      const countCell = button.closest('tr')?.querySelector('td:last-child');
+
+      if (countCell) countCell.textContent = count;
+
+      setAvailability(button, count, isSelected);
+    });
+
+    yearButtons.forEach((button, index) => {
+      const value = button.dataset.filterYear;
+      const count = yearCounts[index];
+      const isSelected = selectedYear === value;
+      const fill = button.querySelector('.year-bar-fill');
+      const countEl = button.querySelector('.year-bar-count');
+
+      if (fill) fill.style.width = `${Math.round((count / maxYear) * 10000) / 100}%`;
+      if (countEl) countEl.textContent = count;
+
+      setAvailability(button, count, isSelected);
+    });
   }
 
   function updateSectionVisibility() {
@@ -1751,15 +1890,38 @@
     });
   }
 
+  function updateClearButtons() {
+    const topicLabel = labelFor(topicButtons, 'filterTopic', selectedTopic);
+    const venueLabel = labelFor(venueButtons, 'filterVenue', selectedVenue);
+    const yearLabel = labelFor(yearButtons, 'filterYear', selectedYear);
+
+    clearTopicButton.hidden = selectedTopic === 'all';
+    clearVenueButton.hidden = selectedVenue === 'all';
+    clearYearButton.hidden = selectedYear === 'all';
+
+    if (selectedTopic !== 'all') {
+      clearTopicButton.innerHTML = 'Topic: ' + topicLabel + ' <span aria-hidden="true">×</span>';
+      clearTopicButton.setAttribute('aria-label', 'Clear topic filter: ' + topicLabel);
+    }
+
+    if (selectedVenue !== 'all') {
+      clearVenueButton.innerHTML = 'Venue: ' + venueLabel + ' <span aria-hidden="true">×</span>';
+      clearVenueButton.setAttribute('aria-label', 'Clear venue filter: ' + venueLabel);
+    }
+
+    if (selectedYear !== 'all') {
+      clearYearButton.innerHTML = 'Year: ' + yearLabel + ' <span aria-hidden="true">×</span>';
+      clearYearButton.setAttribute('aria-label', 'Clear year filter: ' + yearLabel);
+    }
+
+    clearAllButton.hidden = selectedTopic === 'all' && selectedVenue === 'all' && selectedYear === 'all';
+  }
+
   function applyFilters() {
     let visible = 0;
 
     items.forEach(item => {
-      const topicMatch = selectedTopic === 'all' || item.dataset.topics.split(' ').includes(selectedTopic);
-      const venueMatch = selectedVenue === 'all' || item.dataset.venue === selectedVenue;
-      const yearMatch = selectedYear === 'all' || item.dataset.year === selectedYear;
-      const show = topicMatch && venueMatch && yearMatch;
-
+      const show = itemMatches(item, {});
       item.style.display = show ? '' : 'none';
       if (show) visible += 1;
     });
@@ -1768,16 +1930,14 @@
     venueButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.filterVenue === selectedVenue));
     yearButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.filterYear === selectedYear));
 
+    updateDynamicFilterCounts();
     updateSectionVisibility();
-
-    const topicLabel = labelFor(topicButtons, 'filterTopic', selectedTopic);
-    const venueLabel = labelFor(venueButtons, 'filterVenue', selectedVenue);
-    const yearLabel = labelFor(yearButtons, 'filterYear', selectedYear);
+    updateClearButtons();
 
     if (selectedTopic === 'all' && selectedVenue === 'all' && selectedYear === 'all') {
       activeFilterText.textContent = 'Showing all selected publications.';
     } else {
-      activeFilterText.textContent = 'Showing ' + visible + ' publication(s) | Topic: ' + topicLabel + ' | Venue: ' + venueLabel + ' | Year: ' + yearLabel + '.';
+      activeFilterText.textContent = 'Showing ' + visible + ' publication(s).';
     }
 
     noResults.hidden = visible !== 0;
@@ -1785,6 +1945,7 @@
 
   topicButtons.forEach(button => {
     button.addEventListener('click', function () {
+      if (button.disabled) return;
       const value = button.dataset.filterTopic;
       selectedTopic = selectedTopic === value ? 'all' : value;
       applyFilters();
@@ -1793,6 +1954,7 @@
 
   venueButtons.forEach(button => {
     button.addEventListener('click', function () {
+      if (button.disabled) return;
       const value = button.dataset.filterVenue;
       selectedVenue = selectedVenue === value ? 'all' : value;
       applyFilters();
@@ -1801,13 +1963,29 @@
 
   yearButtons.forEach(button => {
     button.addEventListener('click', function () {
+      if (button.disabled) return;
       const value = button.dataset.filterYear;
       selectedYear = selectedYear === value ? 'all' : value;
       applyFilters();
     });
   });
 
-  clearButton.addEventListener('click', function () {
+  clearTopicButton.addEventListener('click', function () {
+    selectedTopic = 'all';
+    applyFilters();
+  });
+
+  clearVenueButton.addEventListener('click', function () {
+    selectedVenue = 'all';
+    applyFilters();
+  });
+
+  clearYearButton.addEventListener('click', function () {
+    selectedYear = 'all';
+    applyFilters();
+  });
+
+  clearAllButton.addEventListener('click', function () {
     selectedTopic = 'all';
     selectedVenue = 'all';
     selectedYear = 'all';
