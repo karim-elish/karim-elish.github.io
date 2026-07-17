@@ -277,6 +277,15 @@
 
 
       @media (max-width: 760px) {
+
+        .bio-highlight-list {
+          gap: 0.38rem;
+        }
+
+        .bio-highlight-pill {
+          font-size: 0.78rem;
+        }
+
         .profile-hero {
           grid-template-columns: 1fr;
         }
@@ -293,6 +302,160 @@
         .home-grid {
           grid-template-columns: 1fr;
         }
+      }
+
+      /* Icon pill refinements */
+
+
+      .profile-pill i,
+      .subheading i,
+      .research-pill i {
+        line-height: 1;
+      }
+
+
+      .subheading {
+        font-size: 0.9rem;
+      }
+
+      .subheading i {
+        font-size: 0.85rem;
+      }
+
+      .research-pill {
+        font-size: 0.8rem;
+      }
+
+      .research-pill i {
+        font-size: 0.8rem;
+      }
+
+      .school-badge {
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.35);
+      }
+
+      @media (max-width: 760px) {
+
+        .bio-highlight-list {
+          gap: 0.38rem;
+        }
+
+        .bio-highlight-pill {
+          font-size: 0.78rem;
+        }
+
+        .profile-pill-list,
+        .profile-links,
+        .research-pill-list {
+          gap: 0.38rem;
+        }
+
+        .profile-pill,
+        .profile-links a,
+        .research-pill,
+        .subheading {
+          font-size: 0.8rem;
+        }
+
+        .education-list li {
+          gap: 0.45rem;
+        }
+      }
+
+      .bio-highlight-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin-top: 0.8rem;
+      }
+
+      .bio-highlight-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.38rem;
+        width: fit-content;
+        padding: 0.22rem 0.58rem;
+        background: #edf6ff;
+        border: 1px solid #b7d7f0;
+        border-radius: 999px;
+        color: #1a365d;
+        font-size: 0.82rem;
+        font-weight: 650;
+        line-height: 1.2;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+
+      .bio-highlight-pill:hover {
+        background: #dbeeff;
+        border-color: #2b6cb0;
+      }
+
+      .bio-highlight-pill i {
+        font-size: 0.82rem;
+        line-height: 1;
+      }
+
+      .school-logo-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 2.8rem;
+        width: 2.8rem;
+        height: 1.55rem;
+        padding: 0 0.35rem;
+        margin-top: 0.02rem;
+        border: 1px solid #d9e2ec;
+        border-radius: 999px;
+        background: #ffffff;
+        overflow: hidden;
+      }
+
+      .school-logo-badge img {
+        display: block;
+        max-width: 2.15rem;
+        max-height: 1.05rem;
+        object-fit: contain;
+      }
+
+      .school-logo-badge.kfupm img {
+        max-width: 2.25rem;
+      }
+
+      .school-logo-fallback {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        color: #1a365d;
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      .school-logo-badge.vt .school-logo-fallback {
+        color: #861f41;
+      }
+
+      .school-logo-badge.kfupm .school-logo-fallback {
+        color: #1f6f43;
+      }
+      /* Final official logo sizing overrides */
+      .school-logo-badge {
+        flex: 0 0 3rem;
+        width: 3rem;
+        height: 1.65rem;
+      }
+
+      .school-logo-badge img {
+        max-width: 2.35rem;
+        max-height: 1.12rem;
+        object-fit: contain;
+      }
+
+      .school-logo-badge.kfupm img {
+        max-width: 2.45rem;
       }
   </style>
  </head>
@@ -325,11 +488,15 @@
   <main class="home-page">
    <section class="profile-hero">
     <div>
-     <h2 id="karim-elish">Dr. Karim Elish
+     <h2 id="karim-elish">
+      Dr. Karim Elish
      </h2>
-     <p class="profile-title">Full Professor
-      <br/>Department of Computer Science
-      <br/>Florida Polytechnic University
+     <p class="profile-title">
+      Full Professor
+      <br/>
+      Department of Computer Science
+      <br/>
+      Florida Polytechnic University
      </p>
      <div class="profile-links">
       <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" rel="noopener" target="_blank">
@@ -371,18 +538,47 @@
      Short Bio
     </h3>
     <p>
-     I am a Full Professor in the
-     <a href="https://floridapoly.edu/academics/programs/computer-science/" rel="noopener" target="_blank">Department of Computer Science</a> at
-     <a href="https://floridapoly.edu/" rel="noopener" target="_blank">Florida Polytechnic University</a>
-     and Director of the NEXUS Lab, which focuses on secure, trustworthy, and intelligent software engineering through empirical and AI-driven research. At NEXUS, I have been fortunate to collaborate with and mentor students, including Fulbright scholars and graduate fellows.
+     I am a Full Professor in the <a href="https://floridapoly.edu/academics/programs/computer-science/" rel="noopener" target="_blank"> Department of Computer Science</a> at
+     <a href="https://floridapoly.edu/" rel="noopener" target="_blank">Florida Polytechnic University</a> and Director of the NEXUS Lab, which focuses on secure, trustworthy, and intelligent software engineering through empirical and AI-driven research. At NEXUS, I have been fortunate to collaborate with and mentor students, including Fulbright scholars and graduate fellows.
     </p>
     <p>
      Before joining Florida Poly, I held a faculty appointment as an Assistant Professor of Computer Science at Purdue University Fort Wayne. I am also a
-     <a href="https://fulbrightspecialist.worldlearning.org/" rel="noopener" target="_blank">
-      Fulbright Specialist</a>, selected to the Fulbright Specialist Roster of the U.S. Department of State for 2025&ndash;present. In 2018, I received the Florida Poly
+     <a href="https://fulbrightspecialist.worldlearning.org/" rel="noopener" target="_blank"> Fulbright Specialist</a>, selected to the Fulbright Specialist Roster of the U.S. Department of State for 2025&ndash;present. In 2018, I received the Florida Poly
      <a href="https://floridapoly.edu/news/florida-polytechnic-university-employees-honored-with-inaugural-faculty-and-staff-awards/" rel="noopener" target="_blank">
-      ABLAZE Award for Excellence in Teaching</a>, recognizing exemplary pedagogical practices, teaching effectiveness, contributions to course and program development, and sustained efforts to foster students&rsquo; intellectual growth and critical thinking. I am a Senior Member of ACM and IEEE.
+      ABLAZE Award for Excellence in Teaching
+     </a>
+     , recognizing exemplary pedagogical practices, teaching effectiveness, contributions to course and program development, and sustained efforts to foster students&rsquo; intellectual growth and critical thinking. I am a Senior Member of ACM and IEEE.
     </p>
+    <div aria-label="Profile highlights" class="bio-highlight-list">
+     <span class="bio-highlight-pill">
+      <i aria-hidden="true" class="fa-solid fa-diagram-project">
+      </i>
+      <span>
+       Director, NEXUS Lab
+      </span>
+     </span>
+     <a class="bio-highlight-pill" href="https://fulbrightspecialist.worldlearning.org/" rel="noopener" target="_blank">
+      <i aria-hidden="true" class="fa-solid fa-globe">
+      </i>
+      <span>
+       Fulbright Specialist
+      </span>
+     </a>
+     <a class="bio-highlight-pill" href="https://floridapoly.edu/news/florida-polytechnic-university-employees-honored-with-inaugural-faculty-and-staff-awards/" rel="noopener" target="_blank">
+      <i aria-hidden="true" class="fa-solid fa-award">
+      </i>
+      <span>
+       ABLAZE Award for Excellence in Teaching
+      </span>
+     </a>
+     <span class="bio-highlight-pill">
+      <i aria-hidden="true" class="fa-solid fa-certificate">
+      </i>
+      <span>
+       Senior Member ACM / IEEE
+      </span>
+     </span>
+    </div>
    </section>
    <section class="home-card">
     <h3>
@@ -390,32 +586,44 @@
     </h3>
     <ul class="compact-list education-list">
      <li>
-      <span aria-label="Virginia Tech" class="school-badge vt" title="Virginia Tech">
-       VT
+      <span aria-label="Virginia Tech" class="school-logo-badge vt" title="Virginia Tech">
+       <img alt="Virginia Tech logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/virginia-tech.svg"/>
+       <span aria-hidden="true" class="school-logo-fallback">
+        VT
+       </span>
       </span>
       <span class="education-text">
        Ph.D. in Computer Science, Virginia Tech, Blacksburg, VA, USA, 2015
       </span>
      </li>
      <li>
-      <span aria-label="Virginia Tech" class="school-badge vt" title="Virginia Tech">
-       VT
+      <span aria-label="Virginia Tech" class="school-logo-badge vt" title="Virginia Tech">
+       <img alt="Virginia Tech logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/virginia-tech.svg"/>
+       <span aria-hidden="true" class="school-logo-fallback">
+        VT
+       </span>
       </span>
       <span class="education-text">
        M.S. in Computer Science, Virginia Tech, Blacksburg, VA, USA, 2011
       </span>
      </li>
      <li>
-      <span aria-label="King Fahd University of Petroleum and Minerals" class="school-badge kfupm" title="King Fahd University of Petroleum and Minerals">
-       KFUPM
+      <span aria-label="KFUPM" class="school-logo-badge kfupm" title="KFUPM">
+       <img alt="KFUPM logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/kfupm.svg"/>
+       <span aria-hidden="true" class="school-logo-fallback">
+        KFUPM
+       </span>
       </span>
       <span class="education-text">
        M.S. in Computer Science, King Fahd University of Petroleum and Minerals, Saudi Arabia, 2008
       </span>
      </li>
      <li>
-      <span aria-label="King Fahd University of Petroleum and Minerals" class="school-badge kfupm" title="King Fahd University of Petroleum and Minerals">
-       KFUPM
+      <span aria-label="KFUPM" class="school-logo-badge kfupm" title="KFUPM">
+       <img alt="KFUPM logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/kfupm.svg"/>
+       <span aria-hidden="true" class="school-logo-fallback">
+        KFUPM
+       </span>
       </span>
       <span class="education-text">
        B.S. in Computer Science, King Fahd University of Petroleum and Minerals, Saudi Arabia, 2006
@@ -530,7 +738,11 @@
      Advising
     </h3>
     <p class="subheading">
-     Graduate Students
+     <i aria-hidden="true" class="fa-solid fa-user-graduate">
+     </i>
+     <span>
+      Graduate Students
+     </span>
     </p>
     <ul>
      <li>
@@ -583,7 +795,11 @@
      </li>
     </ul>
     <p class="subheading">
-     Undergraduate Students
+     <i aria-hidden="true" class="fa-solid fa-user">
+     </i>
+     <span>
+      Undergraduate Students
+     </span>
     </p>
     <ul>
      <li>
@@ -616,7 +832,11 @@
     <div class="home-grid">
      <div>
       <p class="subheading">
-       Undergraduate Courses
+       <i aria-hidden="true" class="fa-solid fa-book-open">
+       </i>
+       <span>
+        Undergraduate Courses
+       </span>
       </p>
       <ul>
        <li>
@@ -656,7 +876,11 @@
      </div>
      <div>
       <p class="subheading">
-       Graduate Courses and Thesis
+       <i aria-hidden="true" class="fa-solid fa-graduation-cap">
+       </i>
+       <span>
+        Graduate Courses and Thesis
+       </span>
       </p>
       <ul>
        <li>
@@ -683,7 +907,11 @@
      Selected Services
     </h3>
     <p class="subheading">
-     Editorial Service
+     <i aria-hidden="true" class="fa-solid fa-pen-nib">
+     </i>
+     <span>
+      Editorial Service
+     </span>
     </p>
     <ul class="service-list">
      <li>
@@ -694,7 +922,11 @@
      </li>
     </ul>
     <p class="subheading">
-     Program Committees &amp; Conference Service
+     <i aria-hidden="true" class="fa-solid fa-users-gear">
+     </i>
+     <span>
+      Program Committees &amp; Conference Service
+     </span>
     </p>
     <ul class="service-list">
      <li>
@@ -705,7 +937,11 @@
      </li>
     </ul>
     <p class="subheading">
-     Conference Reviewing
+     <i aria-hidden="true" class="fa-solid fa-comments">
+     </i>
+     <span>
+      Conference Reviewing
+     </span>
     </p>
     <ul class="service-list">
      <li>
@@ -716,7 +952,11 @@
      </li>
     </ul>
     <p class="subheading">
-     Journal Reviewing
+     <i aria-hidden="true" class="fa-solid fa-book-journal-whills">
+     </i>
+     <span>
+      Journal Reviewing
+     </span>
     </p>
     <ul class="service-list">
      <li>
@@ -724,7 +964,11 @@
      </li>
     </ul>
     <p class="subheading">
-     Grant &amp; Panel Service
+     <i aria-hidden="true" class="fa-solid fa-handshake">
+     </i>
+     <span>
+      Grant &amp; Panel Service
+     </span>
     </p>
     <ul class="service-list">
      <li>
@@ -732,7 +976,11 @@
      </li>
     </ul>
     <p class="subheading">
-     University Service Activities at Florida Poly
+     <i aria-hidden="true" class="fa-solid fa-building-columns">
+     </i>
+     <span>
+      University Service Activities at Florida Poly
+     </span>
     </p>
     <ul>
      <li>
