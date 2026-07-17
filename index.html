@@ -55,6 +55,26 @@
         line-height: 1.55;
       }
 
+      .profile-affiliation-line {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.42rem;
+        margin-top: 0.1rem;
+        color: #364152;
+        line-height: 1.35;
+      }
+
+      .profile-affiliation-line img {
+        display: inline-block;
+        width: 1.15rem;
+        height: 1.15rem;
+        object-fit: contain;
+        flex: 0 0 auto;
+      }
+
+
+
+
       .profile-links {
         display: flex;
         flex-wrap: wrap;
@@ -278,6 +298,8 @@
 
       @media (max-width: 760px) {
 
+
+
         .bio-highlight-list {
           gap: 0.38rem;
         }
@@ -335,6 +357,8 @@
       }
 
       @media (max-width: 760px) {
+
+
 
         .bio-highlight-list {
           gap: 0.38rem;
@@ -457,6 +481,31 @@
       .school-logo-badge.kfupm img {
         max-width: 2.45rem;
       }
+
+      /* Larger education logos with tighter badge spacing */
+      .school-logo-badge {
+        flex: 0 0 3.15rem;
+        width: 3.15rem;
+        height: 1.62rem;
+        padding: 0 0.18rem;
+        margin-top: 0;
+      }
+
+      .school-logo-badge img {
+        max-width: 2.8rem;
+        max-height: 1.32rem;
+        object-fit: contain;
+      }
+
+      .school-logo-badge.kfupm img {
+        max-width: 2.95rem;
+        max-height: 1.34rem;
+      }
+
+      .education-list li {
+        gap: 0.42rem;
+        margin-bottom: 0.42rem;
+      }
   </style>
  </head>
  <body>
@@ -496,7 +545,12 @@
       <br/>
       Department of Computer Science
       <br/>
-      Florida Polytechnic University
+      <span class="profile-affiliation-line">
+       <img alt="Florida Polytechnic University mark" src="images/logos/florida-poly-mark.png"/>
+       <span>
+        Florida Polytechnic University
+       </span>
+      </span>
      </p>
      <div class="profile-links">
       <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" rel="noopener" target="_blank">
@@ -538,16 +592,14 @@
      Short Bio
     </h3>
     <p>
-     I am a Full Professor in the <a href="https://floridapoly.edu/academics/programs/computer-science/" rel="noopener" target="_blank"> Department of Computer Science</a> at
-     <a href="https://floridapoly.edu/" rel="noopener" target="_blank">Florida Polytechnic University</a> and Director of the NEXUS Lab, which focuses on secure, trustworthy, and intelligent software engineering through empirical and AI-driven research. At NEXUS, I have been fortunate to collaborate with and mentor students, including Fulbright scholars and graduate fellows.
+     I am a Full Professor in the
+     <a href="https://floridapoly.edu/academics/programs/computer-science/" rel="noopener" target="_blank"> Department of Computer Science</a> at
+     <a href="https://floridapoly.edu/" rel="noopener" target="_blank"> Florida Polytechnic University</a> and Director of the NEXUS Lab, which focuses on secure, trustworthy, and intelligent software engineering through empirical and AI-driven research. At NEXUS, I have been fortunate to collaborate with and mentor students, including Fulbright scholars and graduate fellows.
     </p>
     <p>
      Before joining Florida Poly, I held a faculty appointment as an Assistant Professor of Computer Science at Purdue University Fort Wayne. I am also a
      <a href="https://fulbrightspecialist.worldlearning.org/" rel="noopener" target="_blank"> Fulbright Specialist</a>, selected to the Fulbright Specialist Roster of the U.S. Department of State for 2025&ndash;present. In 2018, I received the Florida Poly
-     <a href="https://floridapoly.edu/news/florida-polytechnic-university-employees-honored-with-inaugural-faculty-and-staff-awards/" rel="noopener" target="_blank">
-      ABLAZE Award for Excellence in Teaching
-     </a>
-     , recognizing exemplary pedagogical practices, teaching effectiveness, contributions to course and program development, and sustained efforts to foster students&rsquo; intellectual growth and critical thinking. I am a Senior Member of ACM and IEEE.
+     <a href="https://floridapoly.edu/news/florida-polytechnic-university-employees-honored-with-inaugural-faculty-and-staff-awards/" rel="noopener" target="_blank"> ABLAZE Award for Excellence in Teaching</a>, recognizing exemplary pedagogical practices, teaching effectiveness, contributions to course and program development, and sustained efforts to foster students&rsquo; intellectual growth and critical thinking. I am a Senior Member of ACM and IEEE.
     </p>
     <div aria-label="Profile highlights" class="bio-highlight-list">
      <span class="bio-highlight-pill">
