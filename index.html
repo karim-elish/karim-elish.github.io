@@ -55,28 +55,274 @@
         line-height: 1.55;
       }
 
+      .profile-affiliation-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.42rem;
+        width: fit-content;
+        margin-top: 0.34rem;
+        padding: 0.22rem 0.58rem;
+        background: #f8fafc;
+        border: 1px solid #c8d3df;
+        border-radius: 999px;
+        color: #1a365d;
+        font-size: 0.92rem;
+        font-weight: 650;
+        line-height: 1.2;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+
+      .profile-affiliation-pill img {
+        display: inline-block;
+        width: 1.05rem;
+        height: 1.05rem;
+        object-fit: contain;
+        flex: 0 0 auto;
+      }
+
+      .profile-affiliation-pill:hover {
+        background: #edf6ff;
+        border-color: #2b6cb0;
+      }
 
 
+
+
+
+
+      .profile-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin: 0.7rem 0 0.95rem;
+      }
+
+      .profile-links a {
+       display: inline-flex;
+       align-items: center;
+       gap: 0.38rem;
+       width: fit-content;
+       padding: 0.22rem 0.55rem;
+       background: #edf6ff;
+       border: 1px solid #b7d7f0;
+       border-radius: 999px;
+       color: #1a365d;
+       font-size: 0.92rem;
+       font-weight: 550;
+       white-space: nowrap;
+       text-decoration: none;
+      }
+
+      .profile-links a i {
+       font-size: 1rem;
+       line-height: 1;
+      }
+
+      .profile-links a:hover {
+       background: #dbeeff;
+       border-color: #2b6cb0;
+      }
+
+      .research-pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin-top: 0.8rem;
+      }
+
+      .research-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.38rem;
+        width: fit-content;
+        padding: 0.24rem 0.6rem;
+        background: #edf6ff;
+        border: 1px solid #b7d7f0;
+        border-radius: 999px;
+        color: #1a365d;
+        font-size: 0.8rem;
+        font-weight: 650;
+        white-space: nowrap;
+        line-height: 1.2;
+      }
+
+      .research-pill i {
+        font-size: 0.8rem;
+        line-height: 1;
+      }
+
+
+      .profile-contact {
+        margin: 0.9rem 0 0;
+        color: #3f4a5a;
+        line-height: 1.55;
+      }
+
+      .profile-photo {
+        margin: 0;
+        justify-self: end;
+      }
+
+      .profile-photo img {
+        width: 100%;
+        max-width: 190px;
+        aspect-ratio: 2.25 / 3;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid #d9e2ec;
+        display: block;
+      }
+
+      .home-card {
+        border: 1px solid #d9e2ec;
+        border-radius: 14px;
+        background: #ffffff;
+        padding: 1.15rem 1.3rem;
+        margin: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.035);
+      }
+
+      .home-card h3 {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.42rem;
+        border-bottom: 2px solid #e2e8f0;
+        color: #1a365d;
+        font-size: 1.22rem;
+        letter-spacing: 0.01em;
+      }
+
+      .home-card p {
+        margin-top: 0.35rem;
+      }
+
+      .home-card ul {
+        margin-top: 0.45rem;
+        margin-bottom: 0;
+        padding-left: 1.25rem;
+      }
+
+      .home-card li {
+        margin-bottom: 0.38rem;
+        line-height: 1.5;
+      }
+
+      .home-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        align-items: start;
+      }
+
+      .subheading {
+        display: inline-block;
+        margin: 0.65rem 0 0.45rem;
+        padding: 0.28rem 0.65rem;
+        border: 1px solid #c8d3df;
+        border-radius: 999px;
+        background: #f8fafc;
+        color: #1a365d;
+        font-size: 0.92rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .compact-list li {
+        margin-bottom: 0.28rem;
+      }
+
+      .education-list {
+        list-style: none;
+        padding-left: 0 !important;
+      }
+
+      .education-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.55rem;
+        margin-bottom: 0.48rem;
+      }
+
+      .school-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        min-width: 2.15rem;
+        height: 1.45rem;
+        padding: 0 0.42rem;
+        margin-top: 0.02rem;
+        border: 1px solid #b7d7f0;
+        border-radius: 999px;
+        background: #edf6ff;
+        color: #1a365d;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      .school-badge.vt {
+        background: #fff5f5;
+        border-color: #e7b3b3;
+        color: #861f41;
+      }
+
+      .school-badge.kfupm {
+        background: #f0fff4;
+        border-color: #b7dfc2;
+        color: #1f6f43;
+      }
+
+      .education-text {
+        display: inline-block;
+        line-height: 1.5;
+      }
+
+
+      .service-list {
+        margin-bottom: 0.8rem;
+      }
+
+      .advising-status {
+        display: inline-block;
+        margin-left: 0.4rem;
+        padding: 0.12rem 0.45rem;
+        border-radius: 999px;
+        border: 1px solid #c8d3df;
+        background: #f8fafc;
+        color: #1a365d;
+        font-size: 0.78rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .advising-status.in-progress {
+        border-color: #b7d7f0;
+        background: #edf6ff;
+        color: #1a365d;
+      }
+
+      .advising-status.completed {
+        border-color: #d9e2ec;
+        background: #f7fafc;
+        color: #4a5568;
+      }
 
 
       @media (max-width: 760px) {
-
-        .profile-affiliation-full-logo {
-          max-width: 238px;
-          padding: 0.22rem 0.6rem;
-        }
-
-
-
-
-
-
 
         .profile-affiliation-pill {
           font-size: 0.86rem;
           white-space: normal;
         }
 
+        .profile-affiliation-pill img {
+          width: 1rem;
+          height: 1rem;
+        }
 
 
 
@@ -139,13 +385,15 @@
 
       @media (max-width: 760px) {
 
-
-
         .profile-affiliation-pill {
           font-size: 0.86rem;
           white-space: normal;
         }
 
+        .profile-affiliation-pill img {
+          width: 1rem;
+          height: 1rem;
+        }
 
 
 
@@ -296,230 +544,6 @@
         gap: 0.42rem;
         margin-bottom: 0.42rem;
       }
-
-      .school-logo-badge {
-        text-decoration: none;
-        cursor: pointer;
-        transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
-      }
-
-      .school-logo-badge:hover {
-        background: #f8fafc;
-        border-color: #2b6cb0;
-        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
-        transform: translateY(-1px);
-      }
-
-      .school-logo-badge:focus-visible {
-        outline: 2px solid #2b6cb0;
-        outline-offset: 2px;
-      }
-
-      /* True Florida Poly logo pill */
-      .profile-affiliation-pill-logo {
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        width: auto !important;
-        max-width: 236px !important;
-        height: 2.05rem !important;
-        margin: 0.42rem 0 0.28rem !important;
-        padding: 0 0.78rem !important;
-        background: #edf6ff !important;
-        border: 1px solid #b7d7f0 !important;
-        border-radius: 9999px !important;
-        box-sizing: border-box !important;
-        overflow: hidden !important;
-        text-decoration: none !important;
-        line-height: 1 !important;
-        box-shadow: 0 1px 5px rgba(15, 23, 42, 0.05) !important;
-        transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease !important;
-      }
-
-      .profile-affiliation-pill-logo img {
-        display: block !important;
-        width: auto !important;
-        max-width: 185px !important;
-        max-height: 1.18rem !important;
-        object-fit: contain !important;
-        border: 0 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        background: transparent !important;
-      }
-
-      .profile-affiliation-pill-logo:hover {
-        background: #dbeeff !important;
-        border-color: #2b6cb0 !important;
-        box-shadow: 0 3px 10px rgba(15, 23, 42, 0.08) !important;
-        transform: translateY(-1px) !important;
-      }
-
-      .profile-affiliation-pill-logo:focus-visible {
-        outline: 2px solid #2b6cb0 !important;
-        outline-offset: 2px !important;
-      }
-
-      @media (max-width: 760px) {
-        .profile-affiliation-pill-logo {
-          max-width: 220px !important;
-          height: 1.95rem !important;
-          padding: 0 0.68rem !important;
-        }
-
-        .profile-affiliation-pill-logo img {
-          max-width: 172px !important;
-          max-height: 1.1rem !important;
-        }
-      }
-  
-      .profile-title {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 0.14rem !important;
-        margin: 0.28rem 0 0.9rem !important;
-        color: #364152 !important;
-        line-height: 1.45 !important;
-      }
-
-      .profile-rank {
-        color: #243447;
-        font-size: 1.02rem;
-        font-weight: 700;
-        line-height: 1.35;
-      }
-
-      .profile-department {
-        color: #4a5568;
-        font-size: 0.98rem;
-        font-weight: 500;
-        line-height: 1.35;
-      }
-
-      .profile-affiliation-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: fit-content;
-        max-width: 255px;
-        margin-top: 0.42rem;
-        padding: 0.28rem 0.7rem;
-        background: #ffffff;
-        border: 1px solid #d9e2ec;
-        border-radius: 12px;
-        box-sizing: border-box;
-        text-decoration: none;
-        box-shadow: 0 1px 5px rgba(15, 23, 42, 0.05);
-        transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
-      }
-
-      .profile-affiliation-badge img {
-        display: block;
-        width: auto;
-        max-width: 205px;
-        max-height: 36px;
-        object-fit: contain;
-        border: 0;
-        padding: 0;
-        margin: 0;
-        background: transparent;
-      }
-
-      .profile-affiliation-badge:hover {
-        background: #f8fafc;
-        border-color: #2b6cb0;
-        box-shadow: 0 3px 10px rgba(15, 23, 42, 0.08);
-        transform: translateY(-1px);
-      }
-
-      .profile-affiliation-badge:focus-visible {
-        outline: 2px solid #2b6cb0;
-        outline-offset: 2px;
-      }
-
-      @media (max-width: 760px) {
-        .profile-affiliation-badge {
-          max-width: 235px;
-          padding: 0.25rem 0.62rem;
-        }
-
-        .profile-affiliation-badge img {
-          max-width: 190px;
-          max-height: 33px;
-        }
-      }
-  
-      .profile-title {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 0.14rem !important;
-        margin: 0.28rem 0 0.9rem !important;
-        color: #364152 !important;
-        line-height: 1.45 !important;
-      }
-
-      .profile-rank {
-        color: #243447;
-        font-size: 1.02rem;
-        font-weight: 700;
-        line-height: 1.35;
-      }
-
-      .profile-department {
-        color: #4a5568;
-        font-size: 0.98rem;
-        font-weight: 500;
-        line-height: 1.35;
-      }
-
-      .profile-affiliation-row {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        width: fit-content;
-        margin-top: 0.34rem;
-        color: #1a365d;
-        font-size: 0.96rem;
-        font-weight: 650;
-        line-height: 1.3;
-        text-decoration: none;
-      }
-
-      .profile-affiliation-row img {
-        display: block;
-        width: 1.35rem;
-        height: 1.35rem;
-        object-fit: contain;
-        flex: 0 0 auto;
-        border: 0;
-        padding: 0;
-        margin: 0;
-        background: transparent;
-      }
-
-      .profile-affiliation-row:hover {
-        color: #2b6cb0;
-        text-decoration: underline;
-        text-underline-offset: 0.18rem;
-      }
-
-      .profile-affiliation-row:focus-visible {
-        outline: 2px solid #2b6cb0;
-        outline-offset: 3px;
-        border-radius: 4px;
-      }
-
-      @media (max-width: 760px) {
-        .profile-rank { font-size: 0.98rem; }
-        .profile-department { font-size: 0.94rem; }
-        .profile-affiliation-row { font-size: 0.92rem; }
-        .profile-affiliation-row img {
-          width: 1.25rem;
-          height: 1.25rem;
-        }
-      }
   </style>
  </head>
  <body>
@@ -555,14 +579,12 @@
       Dr. Karim Elish
      </h2>
      <p class="profile-title">
-      <span class="profile-rank">
-       Full Professor
-      </span>
-      <span class="profile-department">
-       Department of Computer Science
-      </span>
-      <a aria-label="Florida Polytechnic University" class="profile-affiliation-row" href="https://floridapoly.edu/" rel="noopener" target="_blank">
-       <img alt="Florida Polytechnic University logo" src="images/logos/florida-poly-mark.png"/>
+      Full Professor
+      <br/>
+      Department of Computer Science
+      <br/>
+      <a aria-label="Florida Polytechnic University" class="profile-affiliation-pill" href="https://floridapoly.edu/" rel="noopener" target="_blank">
+       <img alt="Florida Polytechnic University mark" src="images/logos/florida-poly-mark.png"/>
        <span>
         Florida Polytechnic University
        </span>
@@ -610,24 +632,15 @@
     <p>
      I am a Full Professor in the
      <a href="https://floridapoly.edu/academics/programs/computer-science/" rel="noopener" target="_blank">
-      Department of Computer Science
-     </a>
-     at
-     <a href="https://floridapoly.edu/" rel="noopener" target="_blank">
-      Florida Polytechnic University
-     </a>
+      Department of Computer Science</a>at <a href="https://floridapoly.edu/" rel="noopener" target="_blank">Florida Polytechnic University </a>
      and Director of the NEXUS Lab, which focuses on secure, trustworthy, and intelligent software engineering through empirical and AI-driven research. At NEXUS, I have been fortunate to collaborate with and mentor students, including Fulbright scholars and graduate fellows.
     </p>
     <p>
      Before joining Florida Poly, I held a faculty appointment as an Assistant Professor of Computer Science at Purdue University Fort Wayne. I am also a
      <a href="https://fulbrightspecialist.worldlearning.org/" rel="noopener" target="_blank">
-      Fulbright Specialist
-     </a>
-     , selected to the Fulbright Specialist Roster of the U.S. Department of State for 2025&ndash;present. In 2018, I received the Florida Poly
+      Fulbright Specialist</a>, selected to the Fulbright Specialist Roster of the U.S. Department of State for 2025&ndash;present. In 2018, I received the Florida Poly
      <a href="https://floridapoly.edu/news/florida-polytechnic-university-employees-honored-with-inaugural-faculty-and-staff-awards/" rel="noopener" target="_blank">
-      ABLAZE Award for Excellence in Teaching
-     </a>
-     , recognizing exemplary pedagogical practices, teaching effectiveness, contributions to course and program development, and sustained efforts to foster students&rsquo; intellectual growth and critical thinking. I am a Senior Member of ACM and IEEE.
+      ABLAZE Award for Excellence in Teaching</a>, recognizing exemplary pedagogical practices, teaching effectiveness, contributions to course and program development, and sustained efforts to foster students&rsquo; intellectual growth and critical thinking. I am a Senior Member of ACM and IEEE.
     </p>
     <div aria-label="Profile highlights" class="bio-highlight-list">
      <span class="bio-highlight-pill">
@@ -666,45 +679,45 @@
     </h3>
     <ul class="compact-list education-list">
      <li>
-      <a aria-label="Virginia Tech" class="school-logo-badge vt" href="https://www.vt.edu/" rel="noopener" target="_blank" title="Virginia Tech">
+      <span aria-label="Virginia Tech" class="school-logo-badge vt" title="Virginia Tech">
        <img alt="Virginia Tech logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/virginia-tech.svg"/>
        <span aria-hidden="true" class="school-logo-fallback">
         VT
        </span>
-      </a>
+      </span>
       <span class="education-text">
        Ph.D. in Computer Science, Virginia Tech, Blacksburg, VA, USA, 2015
       </span>
      </li>
      <li>
-      <a aria-label="Virginia Tech" class="school-logo-badge vt" href="https://www.vt.edu/" rel="noopener" target="_blank" title="Virginia Tech">
+      <span aria-label="Virginia Tech" class="school-logo-badge vt" title="Virginia Tech">
        <img alt="Virginia Tech logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/virginia-tech.svg"/>
        <span aria-hidden="true" class="school-logo-fallback">
         VT
        </span>
-      </a>
+      </span>
       <span class="education-text">
        M.S. in Computer Science, Virginia Tech, Blacksburg, VA, USA, 2011
       </span>
      </li>
      <li>
-      <a aria-label="King Fahd University of Petroleum and Minerals" class="school-logo-badge kfupm" href="https://www.kfupm.edu.sa/" rel="noopener" target="_blank" title="King Fahd University of Petroleum and Minerals">
+      <span aria-label="KFUPM" class="school-logo-badge kfupm" title="KFUPM">
        <img alt="KFUPM logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/kfupm.svg"/>
        <span aria-hidden="true" class="school-logo-fallback">
         KFUPM
        </span>
-      </a>
+      </span>
       <span class="education-text">
        M.S. in Computer Science, King Fahd University of Petroleum and Minerals, Saudi Arabia, 2008
       </span>
      </li>
      <li>
-      <a aria-label="King Fahd University of Petroleum and Minerals" class="school-logo-badge kfupm" href="https://www.kfupm.edu.sa/" rel="noopener" target="_blank" title="King Fahd University of Petroleum and Minerals">
+      <span aria-label="KFUPM" class="school-logo-badge kfupm" title="KFUPM">
        <img alt="KFUPM logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/kfupm.svg"/>
        <span aria-hidden="true" class="school-logo-fallback">
         KFUPM
        </span>
-      </a>
+      </span>
       <span class="education-text">
        B.S. in Computer Science, King Fahd University of Petroleum and Minerals, Saudi Arabia, 2006
       </span>
