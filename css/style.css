@@ -378,10 +378,11 @@ body > nav {
   padding: 0;
   background: #ffffff;
   border: 0;
+  border-radius: 0;
   box-shadow: 0 1px 8px rgba(15, 23, 42, 0.07);
 }
 
-/* Center the navigation links */
+/* Center only the menu links inside the full-width bar */
 body > nav .menu {
   display: flex;
   align-items: center;
@@ -389,19 +390,17 @@ body > nav .menu {
   flex-wrap: wrap;
   gap: 0.25rem;
 
-  max-width: 1120px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  justify-content: center;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.65rem 1rem;
 
   list-style: none;
+  box-sizing: border-box;
 }
 
-
-
-/* Remove default list spacing */
+/* Remove list spacing */
 body > nav .menu li {
-  display: block;
   margin: 0;
   padding: 0;
 }
@@ -420,7 +419,7 @@ body > nav .menu a {
   border-radius: 6px;
 }
 
-/* Remove underlines in all states */
+/* No underline in any state */
 body > nav .menu a:link,
 body > nav .menu a:visited,
 body > nav .menu a:hover,
@@ -428,17 +427,13 @@ body > nav .menu a:active {
   text-decoration: none;
 }
 
+/* Hover effect */
 body > nav .menu a:hover {
   color: #2b6cb0;
   background: #edf6ff;
 }
 
-body > nav .menu a:focus-visible {
-  outline: 2px solid #2b6cb0;
-  outline-offset: 2px;
-}
-
-/* Remove the old horizontal rule */
+/* Hide the old horizontal line */
 body > nav > hr {
   display: none;
 }
