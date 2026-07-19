@@ -391,7 +391,7 @@ body > nav .menu {
   gap: 0.25rem;
 
   width: 100%;
-  max-width: 1120px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 0.65rem 1rem;
 
@@ -448,7 +448,7 @@ main.publications-page,
 main.datasets-page,
 main.awards-page {
   width: calc(100% - 2rem) !important;
-  max-width: 1120px !important;
+  max-width: 1220px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
