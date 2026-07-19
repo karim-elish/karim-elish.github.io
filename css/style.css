@@ -603,7 +603,7 @@ html body > nav .menu a {
 /* Wider education logo pills */
 .school-logo-badge {
   flex: 0 0 4rem !important;
-  width: 4.2rem !important;
+  width: 4rem !important;
   height: 1.7rem !important;
   padding: 0 0.4rem !important;
 }
