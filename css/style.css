@@ -389,12 +389,15 @@ body > nav .menu {
   flex-wrap: wrap;
   gap: 0.25rem;
 
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0.65rem 1rem;
+  max-width: 1120px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  justify-content: center;
 
   list-style: none;
 }
+
+
 
 /* Remove default list spacing */
 body > nav .menu li {
@@ -440,14 +443,17 @@ body > nav > hr {
   display: none;
 }
 
-/* Slightly wider site layout */
+/* Force all website pages to use the wider centered layout */
 .home-page,
 .publications-page,
 .datasets-page,
-.awards-page {
-  width: calc(100% - 2rem);
-  max-width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
+.awards-page,
+main.home-page,
+main.publications-page,
+main.datasets-page,
+main.awards-page {
+  width: calc(100% - 2rem) !important;
+  max-width: 1120px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
-
