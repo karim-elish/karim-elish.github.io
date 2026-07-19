@@ -370,3 +370,109 @@ tr:nth-child(even) {
     margin-bottom: 6px;
   }
 }
+
+/* =========================================================
+   Full-width top navigation
+   ========================================================= */
+
+body {
+  margin: 0;
+}
+
+/* Full-width navigation background */
+body > nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  border: 0;
+  box-shadow: 0 1px 8px rgba(15, 23, 42, 0.07);
+}
+
+/* Keep links aligned with the 980px page content */
+body > nav .menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0.65rem 0;
+
+  list-style: none;
+}
+
+/* Remove inherited list spacing */
+body > nav .menu li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation links */
+body > nav .menu a {
+  display: block;
+  padding: 0.48rem 0.82rem;
+
+  color: #1a365d;
+  font-family: inherit;
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  text-decoration: none;
+  border: 0;
+  border-radius: 6px;
+
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+/* Remove underlines in every state */
+body > nav .menu a:link,
+body > nav .menu a:visited,
+body > nav .menu a:hover,
+body > nav .menu a:active {
+  text-decoration: none;
+}
+
+/* Subtle hover */
+body > nav .menu a:hover {
+  color: #2b6cb0;
+  background: #edf6ff;
+}
+
+/* Keyboard accessibility */
+body > nav .menu a:focus-visible {
+  outline: 2px solid #2b6cb0;
+  outline-offset: 2px;
+}
+
+/* Hide the old horizontal line */
+body > nav > hr {
+  display: none;
+}
+
+/* Mobile navigation */
+@media (max-width: 1020px) {
+  body > nav .menu {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body > nav .menu {
+    gap: 0.1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  body > nav .menu a {
+    padding: 0.42rem 0.58rem;
+    font-size: 0.88rem;
+  }
+}
