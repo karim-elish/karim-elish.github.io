@@ -3,7 +3,7 @@
    ========================================================= */
 
 :root {
-  --site-max-width: 1120px;
+  --site-max-width: 1020px;
   --page-gutter: 1rem;
 
   --background: #fbfdff;
@@ -108,7 +108,7 @@ body > nav .menu a {
 
   color: var(--heading);
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.02rem;
   font-weight: 600;
   line-height: 1.2;
 
@@ -524,7 +524,7 @@ html body .datasets-page,
 html body .awards-page,
 html body .dataset-page {
   width: calc(100% - 2rem) !important;
-  max-width: 1120px !important;
+  max-width: 1020px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -539,14 +539,14 @@ html body > nav {
 
 html body > nav .menu {
   width: 100% !important;
-  max-width: 1120px !important;
+  max-width: 1020px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   justify-content: center !important;
 }
 
 html body > nav .menu a {
-  font-size: 1.02rem !important;
+  font-size: 0.92rem !important;
   font-weight: 600 !important;
   text-decoration: none !important;
 }
@@ -565,6 +565,37 @@ html body > nav .menu a {
     width: calc(100% - 1.5rem) !important;
   }
 
+  html body > nav .menu a {
+    font-size: 0.92rem !important;
+  }
+}
+
+/* Final requested sizing */
+html body main,
+html body main.home-page,
+html body main.publications-page,
+html body main.datasets-page,
+html body main.awards-page,
+html body .home-page,
+html body .publications-page,
+html body .datasets-page,
+html body .awards-page,
+html body .dataset-page {
+  width: calc(100% - 2rem) !important;
+  max-width: 1020px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+html body > nav .menu {
+  max-width: 1020px !important;
+}
+
+html body > nav .menu a {
+  font-size: 1.02rem !important;
+}
+
+@media (max-width: 650px) {
   html body > nav .menu a {
     font-size: 0.92rem !important;
   }
