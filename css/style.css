@@ -442,9 +442,12 @@ body > nav > hr {
 
 /* Slightly wider site layout */
 .home-page,
-.datasets-page,
-.awards-page,
 .publications-page,
-main {
+.datasets-page,
+.awards-page {
+  width: calc(100% - 2rem);
   max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
