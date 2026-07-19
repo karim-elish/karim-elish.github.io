@@ -3,7 +3,7 @@
    ========================================================= */
 
 :root {
-  --site-max-width: 1020px;
+  --site-max-width: 1060px;
   --page-gutter: 1rem;
 
   --background: #fbfdff;
@@ -524,7 +524,7 @@ html body .datasets-page,
 html body .awards-page,
 html body .dataset-page {
   width: calc(100% - 2rem) !important;
-  max-width: 1020px !important;
+  max-width: 1060px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -539,7 +539,7 @@ html body > nav {
 
 html body > nav .menu {
   width: 100% !important;
-  max-width: 1020px !important;
+  max-width: 1060px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   justify-content: center !important;
@@ -582,13 +582,13 @@ html body .datasets-page,
 html body .awards-page,
 html body .dataset-page {
   width: calc(100% - 2rem) !important;
-  max-width: 1020px !important;
+  max-width: 1060px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
 html body > nav .menu {
-  max-width: 1020px !important;
+  max-width: 1060px !important;
 }
 
 html body > nav .menu a {
