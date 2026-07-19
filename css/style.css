@@ -601,18 +601,29 @@ html body > nav .menu a {
   }
 }
 /* Wider education logo pills */
+
 .school-logo-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
   flex: 0 0 4rem !important;
   width: 4rem !important;
-  height: 1.7rem !important;
-  padding: 0 0.4rem !important;
+  height: 1.75rem !important;
+
+  padding: 0 !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
 }
 
 .school-logo-badge img {
-  max-width: 3.5rem !important;
-  max-height: 1.4rem !important;
-}
+  display: block !important;
 
-.school-logo-badge.kfupm img {
-  max-width: 3.65rem !important;
+  width: 100% !important;
+  height: 100% !important;
+
+  padding: 0.18rem 0.32rem !important;
+  box-sizing: border-box !important;
+
+  object-fit: contain !important;
 }
