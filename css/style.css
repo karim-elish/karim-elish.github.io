@@ -476,3 +476,11 @@ body > nav > hr {
     font-size: 0.88rem;
   }
 }
+/* Slightly wider site layout */
+.home-page,
+.datasets-page,
+.awards-page,
+.publications-page,
+main {
+  max-width: 1080px;
+}
