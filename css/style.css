@@ -1,64 +1,193 @@
-body {
-  max-width: 900px;
-  margin: auto;
-  padding: 0.5em;
-  line-height: 1.5em;
-  color: #222;
-  background: #fbfdff;   /* almost white blue */
+/* =========================================================
+   Global site settings
+   ========================================================= */
+
+:root {
+  --site-max-width: 1220px;
+  --page-gutter: 1rem;
+
+  --background: #fbfdff;
+  --surface: #ffffff;
+  --surface-soft: #f8fbff;
+  --surface-blue: #f3f7ff;
+
+  --text: #222222;
+  --text-muted: #3f4f66;
+  --heading: #1a365d;
+
+  --link: #0645ad;
+  --link-hover: #003b8f;
+
+  --border: #c7d7f2;
+  --border-soft: #dbeafe;
+  --nav-hover: #edf6ff;
 }
 
-/* =============================== */
-/* Header and footer areas         */
-/* =============================== */
+* {
+  box-sizing: border-box;
+}
 
-nav {
+html {
+  background: var(--background);
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   Shared centered page layout
+   ========================================================= */
+
+main,
+.home-page,
+.publications-page,
+.datasets-page,
+.awards-page,
+.dataset-page {
+  width: calc(100% - (2 * var(--page-gutter)));
+  max-width: var(--site-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  hyphens: auto;
+}
+
+
+/* =========================================================
+   Full-width navigation
+   ========================================================= */
+
+body > nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #fbfdff;
-  padding-top: 0.5rem;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: var(--surface);
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 1px 8px rgba(15, 23, 42, 0.07);
 }
 
-.menu {
-  padding: 8px;
+body > nav .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+
+  width: 100%;
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  padding: 0.65rem var(--page-gutter);
+
+  list-style: none;
 }
 
-.menu li {
-  display: inline-block;
+body > nav .menu li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+body > nav .menu a {
+  display: block;
+  padding: 0.48rem 0.82rem;
+
+  color: var(--heading);
+  font-family: inherit;
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  text-decoration: none;
+  border: 0;
+  border-radius: 6px;
+
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+body > nav .menu a:link,
+body > nav .menu a:visited,
+body > nav .menu a:hover,
+body > nav .menu a:active {
+  text-decoration: none;
+}
+
+body > nav .menu a:hover {
+  color: #2b6cb0;
+  background: var(--nav-hover);
+}
+
+body > nav .menu a:focus-visible {
+  outline: 2px solid #2b6cb0;
+  outline-offset: 2px;
+}
+
+body > nav > hr {
+  display: none;
+}
+
+
+/* =========================================================
+   Page headings and metadata
+   ========================================================= */
+
+.article-meta {
+  text-align: center;
 }
 
 .article-meta,
 .menu a {
   text-decoration: none;
-  color: #000000;   /* black menu/header link color */
-  padding: 3px 8px;
-  border-radius: 4px;
-}
-
-.menu a:hover {
-  color: #000000;
-  text-decoration: underline;
-}
-
-.menu,
-.article-meta,
-footer {
-  text-align: center;
 }
 
 .title {
+  color: var(--heading);
   font-size: 0.9em;
-  color: #1a365d;   /* black page title/header text */
 }
 
+
+/* =========================================================
+   Links
+   ========================================================= */
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
 footer {
+  width: calc(100% - (2 * var(--page-gutter)));
+  max-width: var(--site-max-width);
+  margin: 30px auto 0;
   padding: 10px;
-  margin-top: 30px;
+  text-align: center;
 }
 
 footer a {
-  text-decoration: none;
   color: #000000;
+  text-decoration: none;
 }
 
 footer a:hover {
@@ -66,41 +195,38 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* =============================== */
-/* Links                           */
-/* =============================== */
 
-a {
-  color: #0645ad;
-}
-
-a:hover {
-  color: #003b8f;
-}
-
-/* =============================== */
-/* Code                            */
-/* =============================== */
+/* =========================================================
+   Code and quotations
+   ========================================================= */
 
 pre {
-  border: 1px solid #c7d7f2;
-  box-shadow: 3px 3px 3px #eaf2ff;
-  padding: 1em;
   overflow-x: auto;
-  background: #f8fbff;
+  padding: 1em;
+
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  box-shadow: 3px 3px 3px #eaf2ff;
 }
 
 code {
-  background: #f3f7ff;
+  background: var(--surface-blue);
 }
 
 pre code {
   background: none;
 }
 
-/* =============================== */
-/* Misc elements                   */
-/* =============================== */
+blockquote {
+  padding: 3px 1em;
+  background: var(--surface-blue);
+  border-left: 5px solid var(--border);
+}
+
+
+/* =========================================================
+   Media
+   ========================================================= */
 
 img,
 iframe,
@@ -108,28 +234,20 @@ video {
   max-width: 100%;
 }
 
-main {
-  hyphens: auto;
-}
 
-blockquote {
-  background: #f3f7ff;
-  border-left: 5px solid #c7d7f2;
-  padding: 3px 1em 3px;
-}
-
-/* =============================== */
-/* Tables                          */
-/* =============================== */
+/* =========================================================
+   Tables
+   ========================================================= */
 
 table {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   border-top: 1px solid #9db7df;
   border-bottom: 1px solid #9db7df;
 }
 
 table thead th {
-  border-bottom: 1px solid #c7d7f2;
+  border-bottom: 1px solid var(--border);
 }
 
 th,
@@ -140,16 +258,15 @@ td {
 thead,
 tfoot,
 tr:nth-child(even) {
-  background: #f3f7ff;
+  background: var(--surface-blue);
 }
 
-/* =============================== */
-/* Dataset page: one-row listing   */
-/* =============================== */
+
+/* =========================================================
+   Dataset page
+   ========================================================= */
 
 .dataset-page {
-  max-width: 900px;
-  margin: 0 auto;
   padding: 12px 0 40px;
 }
 
@@ -158,17 +275,18 @@ tr:nth-child(even) {
 }
 
 .dataset-intro {
-  color: #3f4f66;
-  line-height: 1.55em;
   margin-bottom: 28px;
+  color: var(--text-muted);
+  line-height: 1.55;
 }
 
 .dataset-group-title {
-  font-size: 1.15em;
   margin: 34px 0 14px;
   padding-bottom: 6px;
-  border-bottom: 1px solid #c7d7f2;
+
   color: #0b1f3a;
+  font-size: 1.15em;
+  border-bottom: 1px solid var(--border);
 }
 
 .dataset-list {
@@ -179,87 +297,89 @@ tr:nth-child(even) {
 
 .dataset-item {
   display: grid;
-  grid-template-columns: 125px 1fr;
+  grid-template-columns: 125px minmax(0, 1fr);
   column-gap: 24px;
   align-items: start;
+
   padding: 18px 0 24px;
-  border-bottom: 1px solid #dbeafe;
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .dataset-logo {
-  width: 115px;
-  height: 115px;
-  border-radius: 8px;
-  background: #f3f7ff;
-  border: 1px solid #c7d7f2;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0b3d75;
-  font-weight: bold;
-  font-size: 1.55em;
-  letter-spacing: 0.02em;
-  box-sizing: border-box;
+
+  width: 115px;
+  height: 115px;
+
   overflow: hidden;
+  box-sizing: border-box;
+
+  color: #0b3d75;
+  background: var(--surface-blue);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  font-size: 1.55em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .dataset-logo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
   padding: 8px;
-  box-sizing: border-box;
+  object-fit: contain;
 }
 
-/* Dataset logo color themes */
-
 .logo-malware {
-  background: linear-gradient(135deg, #eef2ff, #dbeafe);
   color: #1e3a8a;
+  background: linear-gradient(135deg, #eef2ff, #dbeafe);
 }
 
 .logo-metrics {
-  background: linear-gradient(135deg, #ecfeff, #dbeafe);
   color: #155e75;
+  background: linear-gradient(135deg, #ecfeff, #dbeafe);
 }
 
 .logo-wear {
-  background: linear-gradient(135deg, #eef2ff, #ede9fe);
   color: #4338ca;
+  background: linear-gradient(135deg, #eef2ff, #ede9fe);
 }
 
 .logo-smell {
-  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
   color: #166534;
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
 }
 
 .logo-mirror {
-  background: linear-gradient(135deg, #f8fafc, #ccfbf1);
   color: #0f766e;
+  background: linear-gradient(135deg, #f8fafc, #ccfbf1);
 }
 
 .logo-mvc {
-  background: linear-gradient(135deg, #f0fdfa, #e0e7ff);
   color: #115e59;
+  background: linear-gradient(135deg, #f0fdfa, #e0e7ff);
 }
 
 .dataset-info h3 {
   margin: 0 0 5px;
-  font-size: 1.25em;
-  line-height: 1.25em;
   color: #0b1f3a;
+  font-size: 1.25em;
+  line-height: 1.25;
 }
 
 .dataset-authors {
   margin: 0 0 8px;
-  color: #3f4f66;
+  color: var(--text-muted);
   font-size: 0.95em;
 }
 
 .dataset-desc {
   margin: 0 0 10px;
   color: #2f3b4d;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 
 .dataset-tags {
@@ -268,18 +388,16 @@ tr:nth-child(even) {
 
 .dataset-tag {
   display: inline-block;
-  font-size: 0.78em;
-  padding: 2px 7px;
   margin: 0 5px 5px 0;
-  border-radius: 3px;
-  background: #eaf2ff;
-  color: #0b3d75;
-  border: 1px solid #dbeafe;
-}
+  padding: 2px 7px;
 
-/* =============================== */
-/* Dataset action links and icons  */
-/* =============================== */
+  color: #0b3d75;
+  background: #eaf2ff;
+  border: 1px solid var(--border-soft);
+  border-radius: 3px;
+
+  font-size: 0.78em;
+}
 
 .dataset-links {
   margin-top: 6px;
@@ -290,10 +408,12 @@ tr:nth-child(even) {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  text-decoration: none;
-  color: #0645ad;
+
   margin-right: 18px;
+
+  color: var(--link);
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -315,14 +435,16 @@ tr:nth-child(even) {
 }
 
 .action-icon {
+  flex-shrink: 0;
+
   width: 18px;
   height: 18px;
-  stroke: #0645ad;
-  stroke-width: 2;
+
   fill: none;
+  stroke: var(--link);
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-  flex-shrink: 0;
 }
 
 .dataset-citation {
@@ -330,28 +452,42 @@ tr:nth-child(even) {
 }
 
 .dataset-citation pre {
-  font-size: 0.82em;
-  line-height: 1.35em;
-  background: #f8fbff;
-  border: 1px solid #c7d7f2;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
   box-shadow: 3px 3px 3px #eaf2ff;
+
+  font-size: 0.82em;
+  line-height: 1.35;
 }
 
 .dataset-note {
   margin-top: 30px;
   padding: 12px 14px;
-  background: #f3f7ff;
-  border-left: 4px solid #c7d7f2;
+
   color: #334155;
+  background: var(--surface-blue);
+  border-left: 4px solid var(--border);
 }
 
-/* =============================== */
-/* Responsive layout               */
-/* =============================== */
+
+/* =========================================================
+   Responsive layout
+   ========================================================= */
 
 @media (max-width: 650px) {
-  body {
-    max-width: 100%;
+  :root {
+    --page-gutter: 0.75rem;
+  }
+
+  body > nav .menu {
+    gap: 0.1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  body > nav .menu a {
+    padding: 0.42rem 0.58rem;
+    font-size: 0.88rem;
   }
 
   .dataset-item {
@@ -369,86 +505,4 @@ tr:nth-child(even) {
     margin-right: 12px;
     margin-bottom: 6px;
   }
-}
-
-/* Full-width navigation bar */
-body > nav {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-  border: 0;
-  border-radius: 0;
-  box-shadow: 0 1px 8px rgba(15, 23, 42, 0.07);
-}
-
-/* Center only the menu links inside the full-width bar */
-body > nav .menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-
-  width: 100%;
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0.65rem 1rem;
-
-  list-style: none;
-  box-sizing: border-box;
-}
-
-/* Remove list spacing */
-body > nav .menu li {
-  margin: 0;
-  padding: 0;
-}
-
-/* Navigation links */
-body > nav .menu a {
-  display: block;
-  padding: 0.48rem 0.82rem;
-  color: #1a365d;
-  font-family: inherit;
-  font-size: 0.96rem;
-  font-weight: 600;
-  line-height: 1.2;
-  text-decoration: none;
-  border: 0;
-  border-radius: 6px;
-}
-
-/* No underline in any state */
-body > nav .menu a:link,
-body > nav .menu a:visited,
-body > nav .menu a:hover,
-body > nav .menu a:active {
-  text-decoration: none;
-}
-
-/* Hover effect */
-body > nav .menu a:hover {
-  color: #2b6cb0;
-  background: #edf6ff;
-}
-
-/* Hide the old horizontal line */
-body > nav > hr {
-  display: none;
-}
-
-/* Force all website pages to use the wider centered layout */
-.home-page,
-.publications-page,
-.datasets-page,
-.awards-page,
-main.home-page,
-main.publications-page,
-main.datasets-page,
-main.awards-page {
-  width: calc(100% - 2rem) !important;
-  max-width: 1220px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
 }
