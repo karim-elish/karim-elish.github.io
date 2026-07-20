@@ -628,8 +628,3 @@ html body > nav .menu a {
   object-fit: contain !important;
 }
 
-/* Smaller bold text on the publications page */
-.publications-page strong {
-  font-size: 1em !important;
-}
-
