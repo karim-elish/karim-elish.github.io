@@ -630,7 +630,7 @@ html body > nav .menu a {
 
 /* Smaller bold text on the publications page */
 .publications-page strong {
-  font-size: 0.80em;
+  font-size: 0.80em !important;
 }
 .publications-page strong.author-me {
   font-size: inherit;
