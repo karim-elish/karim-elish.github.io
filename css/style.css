@@ -630,14 +630,13 @@ html body > nav .menu a {
 
 /* Smaller bold text on the publications page */
 .publications-page strong {
-  font-size: 0.88em;
+  font-size: 0.80em;
 }
-.publications-page .author-me {
+.publications-page strong.author-me {
+  font-size: inherit;
   font-weight: 700;
   color: #1a365d;
-  text-decoration: underline;
   text-decoration-color: #b7d7f0;
   text-decoration-thickness: 2px;
   text-underline-offset: 0.14rem;
-  white-space: nowrap;
 }
