@@ -627,3 +627,17 @@ html body > nav .menu a {
 
   object-fit: contain !important;
 }
+
+/* Slightly smaller publication-page text */
+.publications-page {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.publications-page h3 {
+  font-size: 1.15rem;
+}
+
+.publications-page li {
+  margin-bottom: 0.7rem;
+}
