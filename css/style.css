@@ -628,4 +628,7 @@ html body > nav .menu a {
   object-fit: contain !important;
 }
 
-
+.publications-page strong {
+  font-size: 0.95em;
+  font-weight: 600;
+}
