@@ -632,4 +632,17 @@ html body > nav .menu a {
 .publications-page strong {
   font-size: 0.95em !important;
 }
+/* Slightly smaller publication-page text */
+.publications-page {
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+}
+
+.publications-page h3 {
+  font-size: 1.15rem !important;
+}
+
+.publications-page li {
+  margin-bottom: 0.7rem !important;
+}
 
