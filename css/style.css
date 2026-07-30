@@ -28,6 +28,9 @@
 }
 
 html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   background: var(--background);
 }
 
@@ -37,6 +40,7 @@ body {
   padding: 0;
   color: var(--text);
   background: var(--background);
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -70,11 +74,9 @@ body > nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-
   width: 100%;
   margin: 0;
   padding: 0;
-
   background: var(--surface);
   border: 0;
   border-radius: 0;
@@ -87,12 +89,10 @@ body > nav .menu {
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.25rem;
-
   width: 100%;
   max-width: var(--site-max-width);
   margin: 0 auto;
   padding: 0.65rem var(--page-gutter);
-
   list-style: none;
 }
 
@@ -105,17 +105,14 @@ body > nav .menu li {
 body > nav .menu a {
   display: block;
   padding: 0.48rem 0.82rem;
-
   color: var(--heading);
   font-family: inherit;
   font-size: 1.02rem;
   font-weight: 600;
   line-height: 1.2;
-
   text-decoration: none;
   border: 0;
   border-radius: 6px;
-
   transition: color 0.18s ease, background-color 0.18s ease;
 }
 
@@ -142,27 +139,17 @@ body > nav > hr {
 
 
 /* =========================================================
-   Page headings and metadata
+   Headings, links, and footer
    ========================================================= */
 
 .article-meta {
   text-align: center;
 }
 
-.article-meta,
-.menu a {
-  text-decoration: none;
-}
-
 .title {
   color: var(--heading);
   font-size: 0.9em;
 }
-
-
-/* =========================================================
-   Links
-   ========================================================= */
 
 a {
   color: var(--link);
@@ -171,11 +158,6 @@ a {
 a:hover {
   color: var(--link-hover);
 }
-
-
-/* =========================================================
-   Footer
-   ========================================================= */
 
 footer {
   width: calc(100% - (2 * var(--page-gutter)));
@@ -197,13 +179,12 @@ footer a:hover {
 
 
 /* =========================================================
-   Code and quotations
+   Code, quotations, media, tables
    ========================================================= */
 
 pre {
   overflow-x: auto;
   padding: 1em;
-
   background: var(--surface-soft);
   border: 1px solid var(--border);
   box-shadow: 3px 3px 3px #eaf2ff;
@@ -223,21 +204,11 @@ blockquote {
   border-left: 5px solid var(--border);
 }
 
-
-/* =========================================================
-   Media
-   ========================================================= */
-
 img,
 iframe,
 video {
   max-width: 100%;
 }
-
-
-/* =========================================================
-   Tables
-   ========================================================= */
 
 table {
   margin-left: auto;
@@ -283,7 +254,6 @@ tr:nth-child(even) {
 .dataset-group-title {
   margin: 34px 0 14px;
   padding-bottom: 6px;
-
   color: #0b1f3a;
   font-size: 1.15em;
   border-bottom: 1px solid var(--border);
@@ -300,7 +270,6 @@ tr:nth-child(even) {
   grid-template-columns: 125px minmax(0, 1fr);
   column-gap: 24px;
   align-items: start;
-
   padding: 18px 0 24px;
   border-bottom: 1px solid var(--border-soft);
 }
@@ -309,18 +278,13 @@ tr:nth-child(even) {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 115px;
   height: 115px;
-
   overflow: hidden;
-  box-sizing: border-box;
-
   color: #0b3d75;
   background: var(--surface-blue);
   border: 1px solid var(--border);
   border-radius: 8px;
-
   font-size: 1.55em;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -390,12 +354,10 @@ tr:nth-child(even) {
   display: inline-block;
   margin: 0 5px 5px 0;
   padding: 2px 7px;
-
   color: #0b3d75;
   background: #eaf2ff;
   border: 1px solid var(--border-soft);
   border-radius: 3px;
-
   font-size: 0.78em;
 }
 
@@ -408,9 +370,7 @@ tr:nth-child(even) {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-
   margin-right: 18px;
-
   color: var(--link);
   font-weight: 600;
   text-decoration: none;
@@ -436,10 +396,8 @@ tr:nth-child(even) {
 
 .action-icon {
   flex-shrink: 0;
-
   width: 18px;
   height: 18px;
-
   fill: none;
   stroke: var(--link);
   stroke-width: 2;
@@ -455,7 +413,6 @@ tr:nth-child(even) {
   background: var(--surface-soft);
   border: 1px solid var(--border);
   box-shadow: 3px 3px 3px #eaf2ff;
-
   font-size: 0.82em;
   line-height: 1.35;
 }
@@ -463,10 +420,36 @@ tr:nth-child(even) {
 .dataset-note {
   margin-top: 30px;
   padding: 12px 14px;
-
   color: #334155;
   background: var(--surface-blue);
   border-left: 4px solid var(--border);
+}
+
+
+/* =========================================================
+   Education logo pills
+   ========================================================= */
+
+.school-logo-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 4rem !important;
+  width: 4rem !important;
+  height: 1.75rem !important;
+  padding: 0 !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  text-decoration: none !important;
+}
+
+.school-logo-badge img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0.08rem 0.22rem !important;
+  box-sizing: border-box !important;
+  object-fit: contain !important;
 }
 
 
@@ -487,7 +470,7 @@ tr:nth-child(even) {
 
   body > nav .menu a {
     padding: 0.42rem 0.58rem;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
   }
 
   .dataset-item {
@@ -506,125 +489,3 @@ tr:nth-child(even) {
     margin-bottom: 6px;
   }
 }
-
-/* =========================================================
-   Final cross-page overrides
-   These rules intentionally override page-level inline CSS.
-   ========================================================= */
-
-/* Slightly narrower, consistently centered content on every page */
-html body main,
-html body main.home-page,
-html body main.publications-page,
-html body main.datasets-page,
-html body main.awards-page,
-html body .home-page,
-html body .publications-page,
-html body .datasets-page,
-html body .awards-page,
-html body .dataset-page {
-  width: calc(100% - 2rem) !important;
-  max-width: 980px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Full-width navigation with clearly visible but restrained text */
-html body > nav {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-html body > nav .menu {
-  width: 100% !important;
-  max-width: 980px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  justify-content: center !important;
-}
-
-html body > nav .menu a {
-  font-size: 0.92rem !important;
-  font-weight: 600 !important;
-  text-decoration: none !important;
-}
-
-@media (max-width: 650px) {
-  html body main,
-  html body main.home-page,
-  html body main.publications-page,
-  html body main.datasets-page,
-  html body main.awards-page,
-  html body .home-page,
-  html body .publications-page,
-  html body .datasets-page,
-  html body .awards-page,
-  html body .dataset-page {
-    width: calc(100% - 1.5rem) !important;
-  }
-
-  html body > nav .menu a {
-    font-size: 0.92rem !important;
-  }
-}
-
-/* Final requested sizing */
-html body main,
-html body main.home-page,
-html body main.publications-page,
-html body main.datasets-page,
-html body main.awards-page,
-html body .home-page,
-html body .publications-page,
-html body .datasets-page,
-html body .awards-page,
-html body .dataset-page {
-  width: calc(100% - 2rem) !important;
-  max-width: 980px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-html body > nav .menu {
-  max-width: 980px !important;
-}
-
-html body > nav .menu a {
-  font-size: 1.02rem !important;
-}
-
-@media (max-width: 650px) {
-  html body > nav .menu a {
-    font-size: 0.92rem !important;
-  }
-}
-/* Wider education logo pills */
-
-.school-logo-badge {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  flex: 0 0 4rem !important;
-  width: 4rem !important;
-  height: 1.75rem !important;
-
-  padding: 0 !important;
-  border-radius: 999px !important;
-  overflow: hidden !important;
-}
-
-.school-logo-badge img {
-  display: block !important;
-
-  width: 100% !important;
-  height: 100% !important;
-
-  padding: 0rem 0.14rem !important;
-  box-sizing: border-box !important;
-
-  object-fit: contain !important;
-}
-
