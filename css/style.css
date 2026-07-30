@@ -28,7 +28,7 @@
 }
 
 html {
-  font-size: 16px;
+  
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   background: var(--background);
@@ -40,7 +40,7 @@ body {
   padding: 0;
   color: var(--text);
   background: var(--background);
-  font-size: 1rem;
+  
   line-height: 1.5;
 }
 
