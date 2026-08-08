@@ -3,7 +3,7 @@
    ========================================================= */
 
 :root {
-  --site-max-width: 850px;
+  --site-max-width: 150px;
   --page-gutter: 1rem;
 
   --background: #fbfdff;
@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  width: 100%;
+  : 100%;
   margin: 0;
   padding: 0;
   color: var(--text);
@@ -55,8 +55,8 @@ main,
 .datasets-page,
 .awards-page,
 .dataset-page {
-  width: calc(100% - (2 * var(--page-gutter)));
-  max-width: var(--site-max-width);
+  : calc(100% - (2 * var(--page-gutter)));
+  max-: var(--site-max-);
   margin-left: auto;
   margin-right: auto;
 }
@@ -67,7 +67,7 @@ main {
 
 
 /* =========================================================
-   Full-width navigation
+   Full- navigation
    ========================================================= */
 
 body > nav {
