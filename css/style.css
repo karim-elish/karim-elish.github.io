@@ -3,7 +3,7 @@
    ========================================================= */
 
 :root {
-  --site-max-width: 150px;
+  --site-max-width: 960px;
   --page-gutter: 1rem;
 
   --background: #fbfdff;
@@ -55,8 +55,8 @@ main,
 .datasets-page,
 .awards-page,
 .dataset-page {
-  : calc(100% - (2 * var(--page-gutter)));
-  max-: var(--site-max-);
+  width: calc(100% - (2 * var(--page-gutter)));
+  max-width: var(--site-max-width);
   margin-left: auto;
   margin-right: auto;
 }
