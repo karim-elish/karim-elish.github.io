@@ -159,7 +159,7 @@ button,input,select {
   margin:0 0 14px
 }
 .hero h1 {
-  font-size:clamp(2.25rem,4.4vw,4.2rem);
+  font-size: clamp(2.1rem, 4vw, 3.8rem);
   line-height:1.03;
   letter-spacing:-.045em;
   color:var(--navy);
@@ -284,7 +284,7 @@ button,input,select {
   margin:0
 }
 .section-head h2 {
-  font-size:clamp(1.75rem,3.5vw,2.5rem);
+  font-size: clamp(1.6rem, 3.2vw, 2.25rem);
   line-height:1.1
 }
 .section-head p {
@@ -470,7 +470,7 @@ button,input,select {
   border-bottom:1px solid #e8eef6
 }
 .page-hero h1 {
-  font-size:clamp(2rem,4.2vw,3.4rem);
+   font-size: clamp(1.85rem, 3.8vw, 3.1rem);
   line-height:1.08
 }
 .page-hero p {
@@ -505,7 +505,7 @@ button,input,select {
   object-fit:cover
 }
 .bio h2 {
-  font-size:1.75rem;
+  font-size: 1.6rem;
   color:var(--navy);
   margin:0 0 4px
 }
@@ -951,7 +951,7 @@ button,input,select {
     padding:62px 0 54px
   }
   .hero h1 {
-    font-size:2.2rem
+     font-size: 2rem;
   }
 
   .hero-visual {
