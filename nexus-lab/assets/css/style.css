@@ -180,6 +180,56 @@ button,input,select {
   gap:12px;
   flex-wrap:wrap
 }
+
+.hero-visual {
+  position:relative;
+  min-height:340px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  isolation:isolate
+}
+
+.hero-visual::before {
+  content:"";
+  position:absolute;
+  width:330px;
+  height:330px;
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(13,85,196,.10) 0%,
+      rgba(13,85,196,.045) 45%,
+      rgba(0,125,125,.02) 62%,
+      transparent 72%
+    );
+  z-index:-2
+}
+
+.hero-visual::after {
+  content:"";
+  position:absolute;
+  width:270px;
+  height:270px;
+  border:1px solid rgba(13,85,196,.10);
+  border-radius:50%;
+  z-index:-1
+}
+
+.hero-emblem {
+  width:min(100%,310px);
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+
+.hero-emblem img {
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  mix-blend-mode:multiply
+}
 .btn {
   display:inline-flex;
   align-items:center;
@@ -871,6 +921,24 @@ button,input,select {
     grid-template-columns:1fr;
     gap:34px
   }
+
+  .hero-visual {
+    min-height:250px
+  }
+
+  .hero-emblem {
+    width:min(100%,240px)
+  }
+
+  .hero-visual::before {
+    width:260px;
+    height:260px
+  }
+
+  .hero-visual::after {
+    width:210px;
+    height:210px
+  }
   .hero-mark {
     max-width:640px
   }
@@ -917,6 +985,24 @@ button,input,select {
   }
   .hero h1 {
     font-size:2.2rem
+  }
+
+  .hero-visual {
+    min-height:210px
+  }
+
+  .hero-emblem {
+    width:min(100%,200px)
+  }
+
+  .hero-visual::before {
+    width:220px;
+    height:220px
+  }
+
+  .hero-visual::after {
+    width:180px;
+    height:180px
   }
   .section {
     padding:64px 0
@@ -982,25 +1068,15 @@ button,input,select {
   }
 }
 
-/* Homepage hero: the site header already carries the NEXUS logo, so the hero
-   uses a single content column instead of repeating the full logo. */
-.hero-grid-single {
-  grid-template-columns: minmax(0, 900px);
-  justify-content: start;
+
 }
 
-@media (max-width: 980px) {
-  .hero-grid-single {
-    grid-template-columns: 1fr;
-  }
-
-  @media (max-width: 720px) {
+@media(max-width:720px) {
   .cta-actions {
-    width: 100%;
+    width:100%
   }
 
   .cta-actions .btn {
-    width: 100%;
+    width:100%
   }
-}
 }
