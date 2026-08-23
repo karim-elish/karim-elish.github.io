@@ -976,3 +976,16 @@ button,input,select {
     padding-top:52px
   }
 }
+
+/* Homepage hero: the site header already carries the NEXUS logo, so the hero
+   uses a single content column instead of repeating the full logo. */
+.hero-grid-single {
+  grid-template-columns: minmax(0, 900px);
+  justify-content: start;
+}
+
+@media (max-width: 980px) {
+  .hero-grid-single {
+    grid-template-columns: 1fr;
+  }
+}
