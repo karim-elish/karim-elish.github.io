@@ -778,6 +778,11 @@ button,input,select {
   background:#fff;
   color:var(--navy)
 }
+.cta-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 .site-footer {
   border-top:1px solid #e6edf5;
   background:#fbfdff;
@@ -988,4 +993,14 @@ button,input,select {
   .hero-grid-single {
     grid-template-columns: 1fr;
   }
+
+  @media (max-width: 720px) {
+  .cta-actions {
+    width: 100%;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+  }
+}
 }
