@@ -29,7 +29,7 @@ window.NEXUS_DATA = {
       {name:"Johannes Bohme",role:"Fulbright Graduate Fellow", photo: "/nexus-lab/assets/img/people/student-name.png"},
       {name:"Mohamed Sylla",role:"Master's Student · Fulbright Graduate Fellow", photo: "/nexus-lab/assets/img/people/student-name.png"},
       {name:"Nicholas Carracino",role:"Master's Student", photo: "/nexus-lab/assets/img/people/Nicholas.png"},
-      {name:"William Blaine",role:"Undergraduate Researcher", photo: "/nexus-lab/assets/img/people/student-name.png"}
+      {name:"William Blaine",role:"Undergraduate Researcher", photo: "/nexus-lab/assets/img/people/student-name.png"},
       {name:"Dennis Carey",role:"Undergraduate Researcher", photo: "/nexus-lab/assets/img/people/student-name.png"}
     ],
     alumni: [
@@ -39,7 +39,7 @@ window.NEXUS_DATA = {
       {name:"Nesreen Dalhy",role:"Master's Student",year:"2025", photo: "/nexus-lab/assets/img/people/student-name.png"},
       {name:"Vinicius Seixas",role:"Master's Student",year:"2022", photo: "/nexus-lab/assets/img/people/student-name.png"},
       {name:"Tito Leadon",role:"Master's Student",year:"2022", photo: "/nexus-lab/assets/img/people/student-name.png"},
-      {name:"William Blanc",role:"Undergraduate Researcher",year:"2021", photo: "/nexus-lab/assets/img/people/student-name.png"},
+      {name:"William Blanc",role:"Undergraduate Researcher",year:"2021", photo: "/nexus-lab/assets/img/people/student-name.png"}
     ]
   }
 };
