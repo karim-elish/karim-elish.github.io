@@ -1,2 +1,209 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>People | NEXUS Lab</title><meta name="description" content="People of NEXUS Lab at Florida Polytechnic University."><meta name="theme-color" content="#071d5e"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/nexus-lab/assets/css/style.css"><link rel="icon" type="image/png" sizes="32x32" href="/nexus-lab/assets/img/favicon.png">
-<link rel="apple-touch-icon" href="/nexus-lab/assets/img/favicon.png"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container nav-wrap"><a class="brand" href="/nexus-lab/" aria-label="NEXUS Lab home"><img src="/nexus-lab/assets/img/nexus-logo.png" alt="NEXUS Lab — Secure, Trustworthy, and Intelligent Software Engineering"></a><button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="nav" aria-label="Primary navigation"><a class="" href="/nexus-lab/">Home</a><a class="" href="/nexus-lab/research/">Research</a><a class="active" href="/nexus-lab/people/">People</a><a class="" href="/nexus-lab/publications/">Publications</a><a class="" href="/nexus-lab/artifacts/">Research Artifacts</a><a class="" href="/nexus-lab/news/">News</a><a class="" href="/nexus-lab/contact/">Contact</a></nav></div></header><main id="main"><section class="page-hero"><div class="container"><div class="breadcrumb"><a href="/nexus-lab/">NEXUS Lab</a> / People</div><h1>People</h1><p>NEXUS brings together collaborative research and student mentorship across software security, software engineering, and AI.</p></div></section><section class="section"><div class="container"><div class="people-director"><div class="portrait"><img src="/nexus-lab/assets/img/karim-elish.png" alt="Karim Elish"></div><div class="bio"><p class="eyebrow">Director</p><h2>Karim Elish, Ph.D.</h2><div class="role">Full Professor of Computer Science · Florida Polytechnic University</div><p>Karim Elish directs the NEXUS Lab. His research spans software security, mobile and Android security, malware analysis, software analytics and quality, empirical software engineering, and AI/ML for security and software engineering.</p><div class="hero-actions"><a class="btn btn-primary" href="https://karim-elish.github.io/" target="_blank" rel="noopener">Faculty website</a><a class="btn btn-secondary" href="https://scholar.google.com/citations?user=Zc5C9JIAAAAJ" target="_blank" rel="noopener">Google Scholar</a></div></div></div></div></section><section class="section section-soft"><div class="container"><div class="section-head"><div><p class="eyebrow">Current researchers</p><h2>Students</h2></div><p></p></div><div id="current-people" class="person-grid"></div></div></section><section class="section"><div class="container"><div class="section-head"><div><p class="eyebrow">Alumni</p><h2>Former student researchers</h2></div></div><div id="alumni-list" class="alumni-list"></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="/nexus-lab/assets/img/nexus-logo.png" alt="NEXUS Lab"><p>Secure, Trustworthy, and Intelligent Software Engineering at Florida Polytechnic University.</p></div><div class="footer-col"><h3>Explore</h3><a href="/nexus-lab/research/">Research</a><a href="/nexus-lab/people/">People</a><a href="/nexus-lab/publications/">Publications</a><a href="/nexus-lab/artifacts/">Research Artifacts</a></div><div class="footer-col"><h3>Connect</h3><a href="https://karim-elish.github.io/" target="_blank" rel="noopener">Karim Elish</a><a href="https://floridapoly.edu/" target="_blank" rel="noopener">Florida Polytechnic University</a><a href="mailto:kelish@floridapoly.edu">Email the lab</a></div></div><div class="footer-bottom"><span>© <span data-year></span> NEXUS Lab. Florida Polytechnic University.</span></div></div></footer><script src="/nexus-lab/assets/js/site.js"></script><script src="/nexus-lab/assets/js/data.js"></script><script>(function(){const d=NEXUS_DATA.people;const initials=n=>n.split(/\s+/).map(x=>x[0]).slice(0,2).join('');document.getElementById('current-people').innerHTML=d.current.map(p=>`<article class="person"><div class="initials">${initials(p.name)}</div><h3>${p.name}</h3><p>${p.role}</p></article>`).join('');document.getElementById('alumni-list').innerHTML=d.alumni.map(p=>`<div class="alumni-item"><div><strong>${p.name}</strong><div class="note">${p.role}</div></div><span>${p.year}</span></div>`).join('')})();</script></body></html>
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>People | NEXUS Lab</title>
+<meta name="description" content="People of NEXUS Lab at Florida Polytechnic University.">
+<meta name="theme-color" content="#071d5e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/nexus-lab/assets/css/style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="/nexus-lab/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/nexus-lab/assets/img/favicon.png">
+<style>
+    .person-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 14px;
+      overflow: hidden;
+      background: linear-gradient(145deg, #edf4ff, #eaf8f7);
+      border: 1px solid var(--line);
+      margin-bottom: 16px;
+    }
+
+    .person-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .person-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+    }
+
+    .person-photo-placeholder svg {
+      width: 46%;
+      height: 46%;
+      opacity: .55;
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="/nexus-lab/" aria-label="NEXUS Lab home">
+<img src="/nexus-lab/assets/img/nexus-logo.png" alt="NEXUS Lab — Secure, Trustworthy, and Intelligent Software Engineering">
+</a>
+<button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+<nav class="nav" aria-label="Primary navigation">
+<a class="" href="/nexus-lab/">Home</a>
+<a class="" href="/nexus-lab/research/">Research</a>
+<a class="active" href="/nexus-lab/people/">People</a>
+<a class="" href="/nexus-lab/publications/">Publications</a>
+<a class="" href="/nexus-lab/artifacts/">Research Artifacts</a>
+<a class="" href="/nexus-lab/news/">News</a>
+<a class="" href="/nexus-lab/contact/">Contact</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="/nexus-lab/">NEXUS Lab</a> / People</div>
+<h1>People</h1>
+<p>NEXUS brings together collaborative research and student mentorship across software security, software engineering, and AI.</p>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="people-director">
+<div class="portrait">
+<img src="/nexus-lab/assets/img/karim-elish.png" alt="Karim Elish">
+</div>
+<div class="bio">
+<p class="eyebrow">Director</p>
+<h2>Karim Elish, Ph.D.</h2>
+<div class="role">Full Professor of Computer Science · Florida Polytechnic University</div>
+<p>Karim Elish directs the NEXUS Lab. His research spans software security, mobile and Android security, malware analysis, software analytics and quality, empirical software engineering, and AI/ML for security and software engineering.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="https://karim-elish.github.io/" target="_blank" rel="noopener">Faculty website</a>
+<a class="btn btn-secondary" href="https://scholar.google.com/citations?user=Zc5C9JIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-soft">
+<div class="container">
+<div class="section-head">
+<div>
+<p class="eyebrow">Current researchers</p>
+<h2>Students</h2>
+</div>
+<p>
+</p>
+</div>
+<div id="current-people" class="person-grid">
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div>
+<p class="eyebrow">Alumni</p>
+<h2>Former student researchers</h2>
+</div>
+</div>
+<div id="alumni-list" class="alumni-list">
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<img src="/nexus-lab/assets/img/nexus-logo.png" alt="NEXUS Lab">
+<p>Secure, Trustworthy, and Intelligent Software Engineering at Florida Polytechnic University.</p>
+</div>
+<div class="footer-col">
+<h3>Explore</h3>
+<a href="/nexus-lab/research/">Research</a>
+<a href="/nexus-lab/people/">People</a>
+<a href="/nexus-lab/publications/">Publications</a>
+<a href="/nexus-lab/artifacts/">Research Artifacts</a>
+</div>
+<div class="footer-col">
+<h3>Connect</h3>
+<a href="https://karim-elish.github.io/" target="_blank" rel="noopener">Karim Elish</a>
+<a href="https://floridapoly.edu/" target="_blank" rel="noopener">Florida Polytechnic University</a>
+<a href="mailto:kelish@floridapoly.edu">Email the lab</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© <span data-year>
+</span> NEXUS Lab. Florida Polytechnic University.</span>
+</div>
+</div>
+</footer>
+<script src="/nexus-lab/assets/js/site.js">
+</script>
+<script src="/nexus-lab/assets/js/data.js">
+</script>
+<script>
+    (function () {
+      const d = NEXUS_DATA.people;
+
+      const photoPlaceholder = `
+        <div class="person-photo-placeholder" aria-hidden="true">
+<svg viewBox="0 0 64 64">
+<circle
+              cx="32"
+              cy="22"
+              r="12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+            />
+<path
+              d="M12 56c2-12 10-19 20-19s18 7 20 19"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+</svg>
+</div>
+      `;
+
+      document.getElementById("current-people").innerHTML = d.current
+        .map((p) => `
+          <article class="person">
+<div class="person-photo">
+              ${
+                p.photo
+                  ? `<img src="${p.photo}" alt="${p.name}">`
+                  : photoPlaceholder
+              }
+            </div>
+<h3>${p.name}</h3>
+<p>${p.role}</p>
+</article>
+        `)
+        .join("");
+
+      document.getElementById("alumni-list").innerHTML = d.alumni
+        .map((p) => `
+          <div class="alumni-item">
+<div>
+<strong>${p.name}</strong>
+<div class="note">${p.role}</div>
+</div>
+<span>${p.year}</span>
+</div>
+        `)
+        .join("");
+    })();
+  </script>
+</body>
+</html>
