@@ -1,2 +1,753 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Publications | NEXUS Lab</title><meta name="description" content="Selected NEXUS Lab publications in software security, Android security, malware analysis, software analytics, and AI-assisted software engineering."><meta name="theme-color" content="#071d5e"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/nexus-lab/assets/css/style.css"><link rel="icon" type="image/png" sizes="32x32" href="/nexus-lab/assets/img/favicon.png">
-<link rel="apple-touch-icon" href="/nexus-lab/assets/img/favicon.png"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container nav-wrap"><a class="brand" href="/nexus-lab/" aria-label="NEXUS Lab home"><img src="/nexus-lab/assets/img/nexus-logo.png" alt="NEXUS Lab — Secure, Trustworthy, and Intelligent Software Engineering"></a><button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="nav" aria-label="Primary navigation"><a class="" href="/nexus-lab/">Home</a><a class="" href="/nexus-lab/research/">Research</a><a class="" href="/nexus-lab/people/">People</a><a class="active" href="/nexus-lab/publications/">Publications</a><a class="" href="/nexus-lab/artifacts/">Research Artifacts</a><a class="" href="/nexus-lab/news/">News</a><a class="" href="/nexus-lab/contact/">Contact</a></nav></div></header><main id="main"><section class="page-hero"><div class="container"><div class="breadcrumb"><a href="/nexus-lab/">NEXUS Lab</a> / Publications</div><h1>Publications</h1><p>Selected publications reflecting NEXUS research in software security, mobile systems, AI-assisted software engineering, software analytics, and empirical software engineering.</p></div></section><section class="section"><div class="container"><div class="section-head"><div><p class="eyebrow">Selected work</p><h2>Browse publications</h2></div></div><div class="controls"><input id="pub-search" class="search-input" type="search" placeholder="Search title, author, venue, or topic…" aria-label="Search publications"><select id="pub-year" class="select" aria-label="Filter by year"><option value="">All years</option></select><select id="pub-topic" class="select" aria-label="Filter by topic"><option value="">All topics</option></select></div><div class="catalog-meta"><span id="pub-count"></span><span>Selected NEXUS-related publications</span></div><div id="pub-list" class="pub-list"></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="/nexus-lab/assets/img/nexus-logo.png" alt="NEXUS Lab"><p>Secure, Trustworthy, and Intelligent Software Engineering at Florida Polytechnic University.</p></div><div class="footer-col"><h3>Explore</h3><a href="/nexus-lab/research/">Research</a><a href="/nexus-lab/people/">People</a><a href="/nexus-lab/publications/">Publications</a><a href="/nexus-lab/artifacts/">Research Artifacts</a></div><div class="footer-col"><h3>Connect</h3><a href="https://karim-elish.github.io/" target="_blank" rel="noopener">Karim Elish</a><a href="https://floridapoly.edu/" target="_blank" rel="noopener">Florida Polytechnic University</a><a href="mailto:kelish@floridapoly.edu">Email the lab</a></div></div><div class="footer-bottom"><span>© <span data-year></span> NEXUS Lab. Florida Polytechnic University.</span></div></div></footer><script src="/nexus-lab/assets/js/site.js"></script><script src="/nexus-lab/assets/js/data.js"></script><script src="/nexus-lab/assets/js/publications.js"></script></body></html>
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Publications | NEXUS Lab</title>
+<meta name="description" content="Selected NEXUS Lab publications in software security, Android security, malware analysis, software analytics, and AI-assisted software engineering.">
+<meta name="theme-color" content="#071d5e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/nexus-lab/assets/css/style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="/nexus-lab/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/nexus-lab/assets/img/favicon.png">
+<style>
+  .publication-tools {
+    margin-top: 8px;
+  }
+
+  .publication-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 12px;
+    align-items: start;
+    margin: 24px 0 18px;
+  }
+
+  .topic-filter {
+    position: relative;
+  }
+
+  .topic-filter-button {
+    width: 100%;
+    min-height: 48px;
+    border: 1px solid #cfdceb;
+    border-radius: 12px;
+    background: #fff;
+    padding: 12px 14px;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .topic-filter-button:hover,
+  .topic-filter-button[aria-expanded="true"] {
+    border-color: var(--blue);
+  }
+
+  .topic-filter-button .topic-button-label {
+    font-weight: 600;
+  }
+
+  .topic-filter-button .topic-button-count {
+    color: var(--muted);
+    font-size: .82rem;
+    white-space: nowrap;
+  }
+
+  .topic-filter-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 30;
+    width: min(620px, 92vw);
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: var(--shadow);
+  }
+
+  .topic-filter-panel[hidden] {
+    display: none;
+  }
+
+  .topic-filter-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+
+  .topic-filter-head strong {
+    display: block;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+
+  .topic-filter-head span {
+    color: var(--muted);
+    font-size: .82rem;
+  }
+
+  .topic-close {
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .topic-search {
+    width: 100%;
+    border: 1px solid #cfdceb;
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px 12px;
+    color: var(--ink);
+    outline: none;
+    margin-bottom: 14px;
+  }
+
+  .topic-search:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(13,85,196,.08);
+  }
+
+  .topic-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-height: 255px;
+    overflow: auto;
+    padding-right: 4px;
+  }
+
+  .topic-option {
+    border: 1px solid #d8e4f0;
+    background: #f7fbff;
+    color: #30445f;
+    border-radius: 999px;
+    padding: 7px 10px;
+    font-size: .79rem;
+    font-weight: 650;
+    cursor: pointer;
+  }
+
+  .topic-option:hover {
+    border-color: #a9c4df;
+  }
+
+  .topic-option.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #fff;
+  }
+
+  .topic-option .count {
+    opacity: .68;
+    margin-left: 4px;
+  }
+
+  .topic-filter-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #edf2f7;
+  }
+
+  .topic-action {
+    border: 0;
+    background: transparent;
+    color: var(--blue);
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 5px 0;
+  }
+
+  .topic-done {
+    border: 0;
+    border-radius: 999px;
+    background: var(--navy);
+    color: #fff;
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 8px 14px;
+  }
+
+  .selected-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 0 0 28px;
+  }
+
+  .selected-topics:empty {
+    display: none;
+  }
+
+  .selected-topic {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #dce8f4;
+    background: #edf4fa;
+    color: #28415e;
+    border-radius: 999px;
+    padding: 5px 9px;
+    font-size: .75rem;
+    font-weight: 700;
+  }
+
+  .selected-topic button {
+    border: 0;
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    cursor: pointer;
+    font-size: .9rem;
+    line-height: 1;
+  }
+
+  .browse-areas {
+    margin: 8px 0 30px;
+    padding: 22px 0 24px;
+    border-top: 1px solid #e7eef6;
+    border-bottom: 1px solid #e7eef6;
+  }
+
+  .browse-areas .eyebrow {
+    margin-bottom: 5px;
+  }
+
+  .browse-areas h2 {
+    color: var(--navy);
+    font-size: 1.35rem;
+    margin: 0 0 16px;
+  }
+
+  .area-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  .area-option {
+    border: 1px solid #d8e4f0;
+    background: #fff;
+    color: #334a66;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: .82rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .area-option:hover {
+    border-color: #a9c4df;
+  }
+
+  .area-option.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #fff;
+  }
+
+  .area-option .count {
+    opacity: .66;
+    margin-left: 4px;
+  }
+
+  .catalog-meta.single {
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 720px) {
+    .publication-controls {
+      grid-template-columns: 1fr;
+    }
+
+    .topic-filter-panel {
+      left: 0;
+      right: auto;
+      width: min(100%, 92vw);
+    }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="/nexus-lab/" aria-label="NEXUS Lab home">
+<img src="/nexus-lab/assets/img/nexus-logo.png" alt="NEXUS Lab — Secure, Trustworthy, and Intelligent Software Engineering">
+</a>
+<button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+<nav class="nav" aria-label="Primary navigation">
+<a class="" href="/nexus-lab/">Home</a>
+<a class="" href="/nexus-lab/research/">Research</a>
+<a class="" href="/nexus-lab/people/">People</a>
+<a class="active" href="/nexus-lab/publications/">Publications</a>
+<a class="" href="/nexus-lab/artifacts/">Research Artifacts</a>
+<a class="" href="/nexus-lab/news/">News</a>
+<a class="" href="/nexus-lab/contact/">Contact</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="/nexus-lab/">NEXUS Lab</a> / Publications</div>
+<h1>Publications</h1>
+<p>Selected publications reflecting the research of NEXUS Lab.</p>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div>
+<p class="eyebrow">Selected work</p>
+<h2>Browse publications</h2>
+</div>
+</div>
+<div class="publication-tools">
+<div class="publication-controls">
+<input
+          id="pub-search"
+          class="search-input"
+          type="search"
+          placeholder="Search title, author, venue, or topic…"
+          aria-label="Search publications"
+        >
+<div class="topic-filter">
+<button
+            id="topic-filter-button"
+            class="topic-filter-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="topic-filter-panel"
+          >
+<span class="topic-button-label">Topics</span>
+<span id="topic-button-count" class="topic-button-count">All topics</span>
+</button>
+<div id="topic-filter-panel" class="topic-filter-panel" hidden>
+<div class="topic-filter-head">
+<div>
+<strong>Filter by topic</strong>
+<span id="topic-summary">
+</span>
+</div>
+<button id="topic-close" class="topic-close" type="button" aria-label="Close topic filter">×</button>
+</div>
+<input
+              id="topic-search"
+              class="topic-search"
+              type="search"
+              placeholder="Find a topic…"
+              aria-label="Find a topic"
+            >
+<div id="topic-options" class="topic-options">
+</div>
+<div class="topic-filter-actions">
+<button id="clear-topics" class="topic-action" type="button">Clear topics</button>
+<button id="topic-done" class="topic-done" type="button">Done</button>
+</div>
+</div>
+</div>
+</div>
+<div id="selected-topics" class="selected-topics" aria-live="polite">
+</div>
+<div class="browse-areas">
+<p class="eyebrow">Browse by</p>
+<h2>Research areas</h2>
+<div id="area-options" class="area-options">
+</div>
+</div>
+</div>
+<div class="catalog-meta single">
+<span id="pub-count">
+</span>
+</div>
+<div id="pub-list" class="pub-list">
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<img src="/nexus-lab/assets/img/nexus-logo.png" alt="NEXUS Lab">
+<p>Secure, Trustworthy, and Intelligent Software Engineering at Florida Polytechnic University.</p>
+</div>
+<div class="footer-col">
+<h3>Explore</h3>
+<a href="/nexus-lab/research/">Research</a>
+<a href="/nexus-lab/people/">People</a>
+<a href="/nexus-lab/publications/">Publications</a>
+<a href="/nexus-lab/artifacts/">Research Artifacts</a>
+</div>
+<div class="footer-col">
+<h3>Connect</h3>
+<a href="https://karim-elish.github.io/" target="_blank" rel="noopener">Karim Elish</a>
+<a href="https://floridapoly.edu/" target="_blank" rel="noopener">Florida Polytechnic University</a>
+<a href="mailto:kelish@floridapoly.edu">Email the lab</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© <span data-year>
+</span> NEXUS Lab. Florida Polytechnic University.</span>
+</div>
+</div>
+</footer>
+<script src="/nexus-lab/assets/js/site.js">
+</script>
+<script src="/nexus-lab/assets/js/data.js">
+</script>
+<script>
+  (function () {
+    const list = document.getElementById("pub-list");
+    if (!list || !window.NEXUS_DATA || !NEXUS_DATA.publications) return;
+
+    const search = document.getElementById("pub-search");
+    const count = document.getElementById("pub-count");
+
+    const topicButton = document.getElementById("topic-filter-button");
+    const topicButtonCount = document.getElementById("topic-button-count");
+    const topicPanel = document.getElementById("topic-filter-panel");
+    const topicSearch = document.getElementById("topic-search");
+    const topicOptions = document.getElementById("topic-options");
+    const topicSummary = document.getElementById("topic-summary");
+    const clearTopics = document.getElementById("clear-topics");
+    const topicDone = document.getElementById("topic-done");
+    const topicClose = document.getElementById("topic-close");
+    const selectedTopicsBox = document.getElementById("selected-topics");
+    const areaOptions = document.getElementById("area-options");
+
+    const publicationMeta = {
+      "Large Language Models for Malware Detection: A Systematic Review, Taxonomy, and Open Challenges": {
+        venueFull: "IEEE Access, vol. 14, pp. 52734–52752",
+        area: "Malware & Vulnerability Analysis",
+        topics: ["Large Language Models", "Malware Detection", "Systematic Review", "AI for Security"]
+      },
+      "STALKER: Composed Quasi-Identifiers and LLM-Amplified Behavioral Leakage in Anonymized Marketplace Data": {
+        venueFull: "Proceedings of the 12th ACM International Workshop on Security and Privacy Analytics (IWSPA), co-located with the 16th ACM Conference on Data and Application Security and Privacy (CODASPY)",
+        area: "Software Security & Privacy",
+        topics: ["Privacy", "Anonymization", "Large Language Models", "Behavioral Leakage", "Marketplace Data"]
+      },
+      "Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications": {
+        venueFull: "Proceedings of the 23rd IEEE International Conference on Software Architecture (ICSA), New and Emerging Ideas Track",
+        area: "Software Security & Privacy",
+        topics: ["Android Security", "Software Architecture", "MVC", "Architectural Smells", "Software Assurance"]
+      },
+      "Automated Reproduction of Android Application Bugs with LLMs: Are We There Yet?": {
+        venueFull: "Proceedings of the 19th IEEE International Conference on Software Testing, Verification and Validation (ICST), Short Papers, Vision and Emerging Results Track",
+        area: "AI-Assisted Software Engineering",
+        topics: ["Large Language Models", "Bug Reproduction", "Android", "Software Testing", "AI-Assisted SE"]
+      },
+      "AndroMetric: Bridging Multi-Dimensional Software Metrics and Mobile Application Security": {
+        venueFull: "Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track",
+        area: "Software Quality & Metrics",
+        topics: ["Software Metrics", "Android", "Mobile Security", "Software Quality", "Empirical Study"]
+      },
+      "SMELLDroid: A Dataset for Code Smells in Android Apps": {
+        venueFull: "Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track",
+        area: "Software Quality & Metrics",
+        topics: ["Code Smells", "Android", "Software Quality", "Dataset", "Maintainability"]
+      },
+      "MIRROR: A Dataset of Structural Metrics for Repackaged Android Apps": {
+        venueFull: "Proceedings of the 3rd IEEE/ACM International Conference on AI Foundation Models and Software Engineering (FORGE), Data and Benchmarking Track",
+        area: "Software Analysis & Analytics",
+        topics: ["Repackaging", "Android", "Structural Metrics", "Dataset", "Software Analytics"]
+      },
+      "RepackDroid: An Efficient Detection Model for Repackaged Android Applications": {
+        venueFull: "Information, vol. 16, no. 12, Article 1075",
+        area: "Mobile & Android Security",
+        topics: ["Repackaged Apps", "Android", "Mobile Security", "Machine Learning"]
+      },
+      "High-Accuracy Android Ransomware Detection Using SMALI Code-Based Analysis": {
+        venueFull: "Proceedings of the IEEE International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA)",
+        area: "Malware & Vulnerability Analysis",
+        topics: ["Android Malware", "Ransomware", "SMALI", "Malware Detection"]
+      },
+      "Stealthy No More: An Effective Ensemble Learning Approach for Detecting Android RATs": {
+        venueFull: "Proceedings of the IEEE/ACIS 23rd International Conference on Software Engineering Research, Management and Applications (SERA)",
+        area: "Malware & Vulnerability Analysis",
+        topics: ["Android Malware", "RATs", "Ensemble Learning", "Malware Detection"]
+      },
+      "FSProtoTransfer: Synergizing Few-Shot, Prototypical Networks, and Transfer Learning for Intrusion Detection in VANETs": {
+        venueFull: "Proceedings of the 38th International FLAIRS Conference, Florida Artificial Intelligence Research Society (FLAIRS)",
+        area: "Trustworthy AI",
+        topics: ["Intrusion Detection", "VANETs", "Few-Shot Learning", "Transfer Learning", "AI for Security"]
+      },
+      "Lightweight, Effective Detection and Characterization of Mobile Malware Families": {
+        venueFull: "IEEE Transactions on Computers (TC), vol. 71, no. 11",
+        area: "Malware & Vulnerability Analysis",
+        topics: ["Mobile Malware", "Malware Families", "Malware Detection", "Code Metrics"]
+      },
+      "Identifying Mobile Inter-App Communication Risks": {
+        venueFull: "IEEE Transactions on Mobile Computing (TMC), vol. 19, no. 1",
+        area: "Mobile & Android Security",
+        topics: ["Android", "Inter-App Communication", "Mobile Security", "Program Analysis"]
+      },
+      "Identifying Android Malware Families Using Android-Oriented Metrics": {
+        venueFull: "Proceedings of the IEEE International Conference on Big Data (Big Data)",
+        area: "Malware & Vulnerability Analysis",
+        topics: ["Android Malware", "Malware Families", "Software Metrics", "Malware Detection"]
+      }
+    };
+
+    const topicFallbackArea = {
+      "AI & Security": "Trustworthy AI",
+      "Privacy": "Software Security & Privacy",
+      "Software Security": "Software Security & Privacy",
+      "AI-Assisted SE": "AI-Assisted Software Engineering",
+      "Software Analytics": "Software Analysis & Analytics",
+      "Software Quality": "Software Quality & Metrics",
+      "Mobile Security": "Mobile & Android Security",
+      "Malware": "Malware & Vulnerability Analysis"
+    };
+
+    const all = NEXUS_DATA.publications.map((publication) => {
+      const meta = publicationMeta[publication.title] || {};
+      const topics = publication.topics || meta.topics || [publication.topic].filter(Boolean);
+      const area = publication.area || meta.area || topicFallbackArea[publication.topic] || "Other";
+
+      return {
+        ...publication,
+        topics,
+        area,
+        venueFull: meta.venueFull || publication.venue
+      };
+    });
+
+    let selectedTopics = new Set();
+    let selectedArea = "All research areas";
+
+    const normalize = (value) => String(value || "").toLowerCase();
+
+    const topicCounts = () => {
+      const counts = new Map();
+      all.forEach((publication) => {
+        publication.topics.forEach((topic) => {
+          counts.set(topic, (counts.get(topic) || 0) + 1);
+        });
+      });
+      return counts;
+    };
+
+    const areaCounts = () => {
+      const counts = new Map();
+      all.forEach((publication) => {
+        counts.set(publication.area, (counts.get(publication.area) || 0) + 1);
+      });
+      return counts;
+    };
+
+    function renderTopicOptions() {
+      const needle = normalize(topicSearch.value);
+      const counts = topicCounts();
+      const topics = [...counts.keys()]
+        .filter((topic) => normalize(topic).includes(needle))
+        .sort((a, b) => a.localeCompare(b));
+
+      topicOptions.innerHTML = topics.length
+        ? topics.map((topic) => `
+            <button
+              class="topic-option ${selectedTopics.has(topic) ? "active" : ""}"
+              type="button"
+              data-topic="${topic.replace(/"/g, "&quot;")}"
+            >
+              ${topic}
+              <span class="count">${counts.get(topic)}</span>
+</button>
+          `).join("")
+        : '<span class="note">No matching topics.</span>';
+
+      topicSummary.textContent =
+        `${counts.size} topics · match any selected topic`;
+
+      topicOptions.querySelectorAll("[data-topic]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const topic = button.dataset.topic;
+
+          if (selectedTopics.has(topic)) {
+            selectedTopics.delete(topic);
+          } else {
+            selectedTopics.add(topic);
+          }
+
+          renderTopicOptions();
+          renderSelectedTopics();
+          render();
+        });
+      });
+    }
+
+    function renderSelectedTopics() {
+      selectedTopicsBox.innerHTML = [...selectedTopics]
+        .sort((a, b) => a.localeCompare(b))
+        .map((topic) => `
+          <span class="selected-topic">
+            ${topic}
+            <button
+              type="button"
+              data-remove-topic="${topic.replace(/"/g, "&quot;")}"
+              aria-label="Remove ${topic}"
+            >×</button>
+</span>
+        `)
+        .join("");
+
+      selectedTopicsBox.querySelectorAll("[data-remove-topic]").forEach((button) => {
+        button.addEventListener("click", () => {
+          selectedTopics.delete(button.dataset.removeTopic);
+          renderTopicOptions();
+          renderSelectedTopics();
+          render();
+        });
+      });
+
+      topicButtonCount.textContent = selectedTopics.size
+        ? `${selectedTopics.size} selected`
+        : "All topics";
+    }
+
+    function renderAreas() {
+      const counts = areaCounts();
+      const areas = [...counts.keys()].sort((a, b) => a.localeCompare(b));
+
+      const buttons = [
+        ["All research areas", all.length],
+        ...areas.map((area) => [area, counts.get(area)])
+      ];
+
+      areaOptions.innerHTML = buttons.map(([area, areaCount]) => `
+        <button
+          class="area-option ${selectedArea === area ? "active" : ""}"
+          type="button"
+          data-area="${area.replace(/"/g, "&quot;")}"
+        >
+          ${area}
+          <span class="count">${areaCount}</span>
+</button>
+      `).join("");
+
+      areaOptions.querySelectorAll("[data-area]").forEach((button) => {
+        button.addEventListener("click", () => {
+          selectedArea = button.dataset.area;
+          renderAreas();
+          render();
+        });
+      });
+    }
+
+    function render() {
+      const needle = normalize(search.value);
+
+      const items = all.filter((publication) => {
+        const searchable = [
+          publication.title,
+          publication.authors,
+          publication.venue,
+          publication.venueFull,
+          publication.topic,
+          publication.area,
+          ...publication.topics
+        ].join(" ").toLowerCase();
+
+        const matchesSearch = !needle || searchable.includes(needle);
+        const matchesArea =
+          selectedArea === "All research areas" ||
+          publication.area === selectedArea;
+        const matchesTopics =
+          selectedTopics.size === 0 ||
+          publication.topics.some((topic) => selectedTopics.has(topic));
+
+        return matchesSearch && matchesArea && matchesTopics;
+      });
+
+      count.textContent =
+        `${items.length} publication${items.length === 1 ? "" : "s"}`;
+
+      list.innerHTML = items.length
+        ? items.map((publication) => `
+            <article class="pub">
+<div class="pub-year">${publication.year}</div>
+<div>
+<h2>${publication.title}</h2>
+<p class="authors">${publication.authors}</p>
+<p class="venue">${publication.venueFull}</p>
+<div class="tags">
+<span class="tag">${publication.area}</span>
+                  ${publication.topics.slice(0, 4).map((topic) => `<span class="tag">${topic}</span>`).join("")}
+                </div>
+                ${publication.award ? `<span class="award">${publication.award}</span>` : ""}
+              </div>
+</article>
+          `).join("")
+        : '<div class="empty">No publications match the current filters.</div>';
+    }
+
+    function openTopicPanel() {
+      topicPanel.hidden = false;
+      topicButton.setAttribute("aria-expanded", "true");
+      topicSearch.focus();
+    }
+
+    function closeTopicPanel() {
+      topicPanel.hidden = true;
+      topicButton.setAttribute("aria-expanded", "false");
+    }
+
+    topicButton.addEventListener("click", () => {
+      topicPanel.hidden ? openTopicPanel() : closeTopicPanel();
+    });
+
+    topicClose.addEventListener("click", closeTopicPanel);
+    topicDone.addEventListener("click", closeTopicPanel);
+
+    clearTopics.addEventListener("click", () => {
+      selectedTopics.clear();
+      renderTopicOptions();
+      renderSelectedTopics();
+      render();
+    });
+
+    topicSearch.addEventListener("input", renderTopicOptions);
+    search.addEventListener("input", render);
+
+    document.addEventListener("click", (event) => {
+      if (
+        !topicPanel.hidden &&
+        !topicPanel.contains(event.target) &&
+        !topicButton.contains(event.target)
+      ) {
+        closeTopicPanel();
+      }
+    });
+
+    renderTopicOptions();
+    renderSelectedTopics();
+    renderAreas();
+    render();
+  })();
+</script>
+</body>
+</html>
