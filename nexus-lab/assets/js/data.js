@@ -25,19 +25,19 @@ window.NEXUS_DATA = {
   ],
   people: {
     current: [
-      {name:"Sebastian Siedler",role:"Master's Student · Fulbright Graduate Fellow"},
-      {name:"Mohamed Sylla",role:"Master's Student · Fulbright Graduate Fellow"},
-      {name:"Nicholas Carracino",role:"Master's Student"},
-      {name:"Dennis Carey",role:"Undergraduate Researcher"}
+      {name:"Sebastian Siedler",role:"Master's Student · Fulbright Graduate Fellow", photo: "/nexus-lab/assets/img/people/student-name.jpg"},
+      {name:"Mohamed Sylla",role:"Master's Student · Fulbright Graduate Fellow", photo: "/nexus-lab/assets/img/people/student-name.jpg"},
+      {name:"Nicholas Carracino",role:"Master's Student", photo: "/nexus-lab/assets/img/people/student-name.jpg"},
+      {name:"Dennis Carey",role:"Undergraduate Researcher", photo: "/nexus-lab/assets/img/people/student-name.jpg"}
     ],
     alumni: [
-      {name:"Joyce Champie",role:"Master's Student",year:"2026"},
-      {name:"Gurjas Chalana",role:"Undergraduate · Killam Fellowships / Fulbright",year:"2026"},
-      {name:"Nesreen Dalhy",role:"Master's Student",year:"2025"},
-      {name:"Vinicius Seixas",role:"Master's Student",year:"2022"},
-      {name:"Tito Leadon",role:"Master's Student",year:"2022"},
-      {name:"William Blanc",role:"Undergraduate Researcher",year:"2021"},
-      {name:"Vikranth Meka",role:"Master's Student",year:"2018"}
+      {name:"Joyce Champie",role:"Master's Student",year:"2026", photo: "/nexus-lab/assets/img/people/student-name.jpg"},
+      {name:"Gurjas Chalana",role:"Undergraduate · Killam Fellowships / Fulbright",year:"2026", photo: "/nexus-lab/assets/img/people/student-name.jpg"},
+      {name:"Nesreen Dalhy",role:"Master's Student",year:"2025", photo: "/nexus-lab/assets/img/people/student-name.jpg"},
+      {name:"Vinicius Seixas",role:"Master's Student",year:"2022", photo: "/nexus-lab/assets/img/people/student-name.jpg"},
+      {name:"Tito Leadon",role:"Master's Student",year:"2022", photo: "/nexus-lab/assets/img/people/student-name.jpg"},
+      {name:"William Blanc",role:"Undergraduate Researcher",year:"2021", photo: "/nexus-lab/assets/img/people/student-name.jpg"},
+      {name:"Vikranth Meka",role:"Master's Student",year:"2018", photo: "/nexus-lab/assets/img/people/student-name.jpg"}
     ]
   }
 };
