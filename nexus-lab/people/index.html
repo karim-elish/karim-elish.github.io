@@ -14,25 +14,29 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/nexus-lab/assets/img/favicon.png">
 <link rel="apple-touch-icon" href="/nexus-lab/assets/img/favicon.png">
 
+
 <style>
   /* Current student headshots */
   .person-photo {
-    width: 118px;
-    height: 118px;
-    border-radius: 14px;
+    width: 150px;
+    height: 150px;
+    border-radius: 16px;
     overflow: hidden;
     background: linear-gradient(145deg, #edf4ff, #eaf8f7);
     border: 1px solid var(--line);
-    margin: 0 auto 16px;
+    margin: 0 auto 18px;
+    position: relative;
   }
 
-  .person-photo img {
+  .person-photo img,
+  .alumni-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .person-photo-placeholder {
+  .person-photo-placeholder,
+  .alumni-photo-placeholder {
     width: 100%;
     height: 100%;
     display: grid;
@@ -41,8 +45,8 @@
   }
 
   .person-photo-placeholder svg {
-    width: 55%;
-    height: 55%;
+    width: 52%;
+    height: 52%;
     opacity: .55;
   }
 
@@ -58,29 +62,28 @@
   .alumni-main {
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 16px;
     min-width: 0;
   }
 
-.alumni-photo {
-  width: 46px;
-  height: 46px;
-  flex: 0 0 46px;
-  border-radius: 12px;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(145deg, #edf4ff, #eaf8f7);
-  border: 1px solid var(--line);
-  color: var(--navy);
-  font-size: .78rem;
-  font-weight: 800;
-}
+  .alumni-photo {
+    width: 64px;
+    height: 64px;
+    flex: 0 0 64px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(145deg, #edf4ff, #eaf8f7);
+    border: 1px solid var(--line);
+    color: var(--navy);
+    position: relative;
+  }
 
-  .alumni-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .alumni-photo-placeholder svg {
+    width: 50%;
+    height: 50%;
+    opacity: .50;
   }
 
   .alumni-info {
@@ -89,17 +92,18 @@
 
   @media (max-width: 720px) {
     .person-photo {
-      width: 105px;
-      height: 105px;
+      width: 130px;
+      height: 130px;
     }
 
     .alumni-photo {
-      width: 42px;
-      height: 42px;
-      flex-basis: 42px;
+      width: 56px;
+      height: 56px;
+      flex-basis: 56px;
     }
   }
 </style>
+
 
 </head>
 <body>
@@ -211,15 +215,8 @@
   (function () {
     const d = NEXUS_DATA.people;
 
-    const initials = (name) =>
-      name
-        .split(/\s+/)
-        .map((part) => part[0])
-        .slice(0, 2)
-        .join("");
-
-    const currentPhotoPlaceholder = `
-      <div class="person-photo-placeholder" aria-hidden="true">
+    const silhouette = (className) => `
+      <div class="${className}" aria-hidden="true">
         <svg viewBox="0 0 64 64">
           <circle
             cx="32"
@@ -240,15 +237,91 @@
       </div>
     `;
 
+    const currentPhoto = (p) => {
+      if (!p.photo) {
+        return silhouette("person-photo-placeholder");
+      }
+
+      return `
+        <img
+          src="${p.photo}"
+          alt="${p.name}"
+          onerror="
+            this.style.display='none';
+            this.nextElementSibling.style.display='grid';
+          "
+        >
+        <div
+          class="person-photo-placeholder"
+          aria-hidden="true"
+          style="display:none"
+        >
+          <svg viewBox="0 0 64 64">
+            <circle
+              cx="32"
+              cy="22"
+              r="12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+            />
+            <path
+              d="M12 56c2-12 10-19 20-19s18 7 20 19"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+      `;
+    };
+
+    const alumniPhoto = (p) => {
+      if (!p.photo) {
+        return silhouette("alumni-photo-placeholder");
+      }
+
+      return `
+        <img
+          src="${p.photo}"
+          alt="${p.name}"
+          onerror="
+            this.style.display='none';
+            this.nextElementSibling.style.display='grid';
+          "
+        >
+        <div
+          class="alumni-photo-placeholder"
+          aria-hidden="true"
+          style="display:none"
+        >
+          <svg viewBox="0 0 64 64">
+            <circle
+              cx="32"
+              cy="22"
+              r="12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+            />
+            <path
+              d="M12 56c2-12 10-19 20-19s18 7 20 19"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+      `;
+    };
+
     document.getElementById("current-people").innerHTML = d.current
       .map((p) => `
         <article class="person">
           <div class="person-photo">
-            ${
-              p.photo
-                ? `<img src="${p.photo}" alt="${p.name}">`
-                : currentPhotoPlaceholder
-            }
+            ${currentPhoto(p)}
           </div>
           <h3>${p.name}</h3>
           <p>${p.role}</p>
@@ -261,11 +334,7 @@
         <div class="alumni-item">
           <div class="alumni-main">
             <div class="alumni-photo">
-              ${
-                p.photo
-                  ? `<img src="${p.photo}" alt="${p.name}">`
-                  : `<span aria-hidden="true">${initials(p.name)}</span>`
-              }
+              ${alumniPhoto(p)}
             </div>
 
             <div class="alumni-info">
