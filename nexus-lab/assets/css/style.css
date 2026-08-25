@@ -489,16 +489,17 @@ button,input,select {
   color:var(--teal)
 }
 .people-director {
-  display:grid;
-  grid-template-columns:260px 1fr;
-  gap:40px;
-  align-items:start
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 36px;
+  align-items: start;
 }
 .portrait {
-  border-radius:22px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:#f7f9fb
+  max-width: 210px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #f7f9fb;
 }
 .portrait img {
   aspect-ratio:1/1;
@@ -1031,6 +1032,11 @@ button,input,select {
 }
 
 
+}
+@media (max-width: 720px) {
+  .portrait {
+    max-width: 200px;
+  }
 }
 
 @media(max-width:720px) {
