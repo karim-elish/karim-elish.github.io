@@ -10,7 +10,8 @@ window.NEXUS_DATA = {
       areas:["Software Security & Privacy","Trustworthy AI","AI-Assisted Software Engineering","Software Analysis & Analytics","Empirical Software Engineering"],
       topics:["AI Agents","Agent-Authored Pull Requests","AI-Assisted Software Engineering","Security Assurance","False Assurance","Code Review","Software Security","Empirical Study"],
       demo:"https://agent-pr-dashboard.vercel.app/",
-      repo:"https://github.com/GurjasChalana/Agent-PR-Dashboard"
+      repo:"https://github.com/GurjasChalana/Agent-PR-Dashboard",
+      image:"/images/SecAIDev.png"
     },
     {
       id:"andrometric",
