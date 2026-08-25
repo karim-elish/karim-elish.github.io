@@ -1,11 +1,94 @@
 window.NEXUS_DATA = {
   artifacts: [
-    {id:"droidmalvet",title:"DroidMalVet",type:"Dataset",year:2022,authors:"Karim Elish, Mahmoud Elish, and Hussain Almohri",description:"Android malware family dataset with compact code-level metrics for malware family detection, characterization, and analysis.",topics:["Android","Malware","Code Metrics","Malware Families"],area:"Malware & Vulnerability Analysis",paper:"https://ieeexplore.ieee.org/document/9682574",data:"https://zenodo.org/records/18315281"},
-    {id:"andrometric",title:"AndroMetric",type:"Dataset",year:2026,authors:"Sebastian Siedler and Karim Elish",description:"Large-scale Android app metrics dataset connecting multi-dimensional software metrics with malware-risk analysis and security-aware software quality assessment.",topics:["Android","Software Metrics","Malware","Security"],area:"Software Quality & Metrics",paper:"https://dl.acm.org/doi/10.1145/3793302.3793329",data:"https://zenodo.org/records/17559667"},
-    {id:"wearappsec",title:"WearAppSec",type:"Dataset",year:2026,authors:"Sebastian Siedler, Mohamed Sylla, and Karim Elish",description:"Security dataset for wearable companion mobile applications supporting systematic assessment of mobile and wearable-app security.",topics:["Wearables","Mobile Security","OWASP MASVS","Privacy"],area:"Mobile & Android Security",paper:"",data:"https://ieee-dataport.org/documents/wearappsec-wearable-mobile-app-security-dataset"},
-    {id:"smelldroid",title:"SMELLDroid",type:"Dataset",year:2026,authors:"Joyce Champie, Karim Elish, and Mahmoud Elish",description:"Large-scale Android code smell dataset supporting empirical research on software quality, maintainability, and comparative app analysis.",topics:["Code Smells","Maintainability","Android","Software Quality"],area:"Software Quality & Metrics",paper:"https://dl.acm.org/doi/10.1145/3793302.3793330",data:"https://zenodo.org/records/17559693"},
-    {id:"mirror",title:"MIRROR",type:"Dataset",year:2026,authors:"Sebastian Siedler and Karim Elish",description:"Structural metrics dataset for original and repackaged Android applications supporting reuse, repackaging, and structural similarity analysis.",topics:["Repackaging","Structural Metrics","Software Reuse","Android"],area:"Software Analysis & Analytics",paper:"",data:"https://zenodo.org/records/17666395"},
-    {id:"mvcdroid",title:"MVCDroid",type:"Dataset",year:2026,authors:"Mohamed Sylla and Karim Elish",description:"Architectural MVC-separation dataset for Android security studies, structural analysis, and architecture-level empirical research.",topics:["Architecture","MVC","Android Security","Software Design"],area:"Software Security & Privacy",paper:"",data:"https://zenodo.org/records/18633276"}
+    {
+      id:"secaidev",
+      title:"SecAIDev",
+      type:"Tool",
+      year:2026,
+      authors:"Gurjas Chalana and Karim Elish",
+      description:"Interactive security workbench for analyzing agent-authored pull requests through evidence-oriented security exposure, potential risk, mitigation, review-quality, and false-assurance signals.",
+      areas:["Software Security & Privacy","Trustworthy AI","AI-Assisted Software Engineering","Software Analysis & Analytics","Empirical Software Engineering"],
+      topics:["AI Agents","Agent-Authored Pull Requests","AI-Assisted Software Engineering","Security Assurance","False Assurance","Code Review","Software Security","Empirical Study"],
+      demo:"https://agent-pr-dashboard.vercel.app/",
+      repo:"https://github.com/GurjasChalana/Agent-PR-Dashboard"
+    },
+    {
+      id:"andrometric",
+      title:"AndroMetric",
+      type:"Dataset",
+      year:2026,
+      authors:"Sebastian Siedler and Karim Elish",
+      description:"Large-scale Android app metrics dataset connecting multi-dimensional software metrics with malware-risk analysis and security-aware software quality assessment.",
+      areas:["Software Quality & Metrics","Software Security & Privacy","Mobile & Android Security","Software Analysis & Analytics","Empirical Software Engineering"],
+      topics:["Software Metrics","Software Quality","Mobile Security","Android","Malware Risk","Software Analytics","Empirical Study","Dataset"],
+      paper:"https://dl.acm.org/doi/10.1145/3793302.3793329",
+      data:"https://zenodo.org/records/17559667",
+      image:"/images/AndroMetric.png"
+    },
+    {
+      id:"wearappsec",
+      title:"WearAppSec",
+      type:"Dataset",
+      year:2026,
+      authors:"Sebastian Siedler, Mohamed Sylla, and Karim Elish",
+      description:"Security dataset for wearable companion mobile applications supporting systematic assessment of mobile and wearable-app security.",
+      areas:["Software Security & Privacy","Mobile & Android Security","Empirical Software Engineering"],
+      topics:["Wearables","Mobile Security","Android","OWASP MASVS","Privacy","Software Security","Dataset"],
+      data:"https://ieee-dataport.org/documents/wearappsec-wearable-mobile-app-security-dataset",
+      image:"/images/WearAppSec.png"
+    },
+    {
+      id:"smelldroid",
+      title:"SMELLDroid",
+      type:"Dataset",
+      year:2026,
+      authors:"Joyce Champie, Karim Elish, and Mahmoud Elish",
+      description:"Large-scale Android code smell dataset supporting empirical research on software quality, maintainability, and comparative app analysis.",
+      areas:["Software Quality & Metrics","Software Analysis & Analytics","Mobile & Android Security","Empirical Software Engineering"],
+      topics:["Code Smells","Software Quality","Maintainability","Android","Software Analytics","Empirical Study","Dataset"],
+      paper:"https://dl.acm.org/doi/10.1145/3793302.3793330",
+      data:"https://zenodo.org/records/17559693",
+      image:"/images/SMELLDroid.png"
+    },
+    {
+      id:"mirror",
+      title:"MIRROR",
+      type:"Dataset",
+      year:2026,
+      authors:"Sebastian Siedler and Karim Elish",
+      description:"Structural metrics dataset for original and repackaged Android applications supporting reuse, repackaging, and structural similarity analysis.",
+      areas:["Software Analysis & Analytics","Software Quality & Metrics","Mobile & Android Security","Empirical Software Engineering"],
+      topics:["Repackaging","Structural Metrics","Software Metrics","Android","Software Analytics","Software Reuse","Dataset"],
+      paper:"https://dl.acm.org/doi/10.1145/3793655.3793713",
+      data:"https://zenodo.org/records/17666395",
+      image:"/images/MIRROR.png"
+    },
+    {
+      id:"mvcdroid",
+      title:"MVCDroid",
+      type:"Dataset",
+      year:2026,
+      authors:"Mohamed Sylla and Karim Elish",
+      description:"Architectural MVC-separation dataset for Android security studies, structural analysis, and architecture-level empirical research.",
+      areas:["Software Security & Privacy","Mobile & Android Security","Software Analysis & Analytics","Empirical Software Engineering"],
+      topics:["Android Security","Software Architecture","MVC","Architectural Smells","Software Assurance","Empirical Study","Dataset"],
+      paper:"https://conf.researchr.org/details/icsa-2026/icsa-2026-new-and-emerging-ideas/5/Rethinking-MVC-Violations-as-Security-Aware-Architectural-Smells-in-Android-Applicati",
+      data:"https://zenodo.org/records/18633276",
+      image:"/images/MVCDroid.png"
+    },
+    {
+      id:"droidmalvet",
+      title:"DroidMalVet",
+      type:"Dataset",
+      year:2022,
+      authors:"Karim Elish, Mahmoud Elish, and Hussain Almohri",
+      description:"Android malware family dataset with compact code-level metrics for malware family detection, characterization, and analysis.",
+      areas:["Malware & Vulnerability Analysis","Mobile & Android Security","Software Quality & Metrics","Empirical Software Engineering"],
+      topics:["Android Malware","Malware Families","Malware Detection","Software Metrics","Code Metrics","Android","Dataset"],
+      paper:"https://ieeexplore.ieee.org/document/9682574",
+      data:"https://zenodo.org/records/18315281",
+      image:"/images/DroidMalVet.png"
+    }
   ],
   publications: [
     {year:2026,title:"Large Language Models for Malware Detection: A Systematic Review, Taxonomy, and Open Challenges",authors:"Joyce Champie and Karim Elish",venue:"IEEE Access, vol. 14, pp. 52734–52752",areas:["Malware & Vulnerability Analysis", "Trustworthy AI"],topics:["Large Language Models", "Malware Detection", "Malware Analysis", "AI for Security", "Systematic Review"]},
