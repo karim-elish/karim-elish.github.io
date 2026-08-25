@@ -2,7 +2,41 @@
   const grid = document.getElementById("artifact-grid");
   if (!grid || !window.NEXUS_DATA || !Array.isArray(NEXUS_DATA.artifacts)) return;
 
-  const all = [...NEXUS_DATA.artifacts].sort(
+  const sourceArtifacts = [...NEXUS_DATA.artifacts];
+
+  // Fallback: keep SecAIDev visible even if an older cached data.js is served.
+  if (!sourceArtifacts.some((item) => item.id === "secaidev")) {
+    sourceArtifacts.unshift({
+      id: "secaidev",
+      title: "SecAIDev",
+      type: "Tool",
+      year: 2026,
+      authors: "Gurjas Chalana and Karim Elish",
+      description:
+        "Security-assurance workbench for screening agent-authored pull requests across security exposure, potential security risk, mitigation evidence, and potential false assurance.",
+      areas: [
+        "Software Security & Privacy",
+        "Trustworthy AI",
+        "AI-Assisted Software Engineering",
+        "Software Analysis & Analytics",
+        "Empirical Software Engineering"
+      ],
+      topics: [
+        "AI Agents",
+        "Agent-Authored Pull Requests",
+        "AI-Assisted Software Engineering",
+        "Security Assurance",
+        "False Assurance",
+        "Code Review",
+        "Software Security",
+        "Empirical Study"
+      ],
+      demo: "https://agent-pr-dashboard.vercel.app/",
+      repo: "https://github.com/GurjasChalana/Agent-PR-Dashboard"
+    });
+  }
+
+  const all = sourceArtifacts.sort(
     (a, b) => (b.year - a.year) || a.title.localeCompare(b.title)
   );
 
