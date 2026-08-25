@@ -236,6 +236,12 @@ button,input,select {
   border-color:var(--blue);
   background:#f8fbff
 }
+.btn-primary,
+.btn-secondary {
+  padding: 9px 15px;
+  font-size: 0.86rem;
+}
+
 .hero-mark {
   background:#fff;
   border:1px solid #e4edf6;
