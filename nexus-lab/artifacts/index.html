@@ -270,24 +270,24 @@
     align-items: flex-start;
   }
 
-  .artifact-visual {
-    width: 82px;
-    height: 82px;
-    flex: 0 0 82px;
-    border: 1px solid #e0e9f2;
-    border-radius: 15px;
-    background: #f8fbfe;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-  }
+.artifact-visual {
+  width: 104px;
+  height: 104px;
+  flex: 0 0 104px;
+  border: 1px solid #e0e9f2;
+  border-radius: 15px;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
 
-  .artifact-visual img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 7px;
-  }
+.artifact-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
 
   .artifact-fallback-icon {
     width: 48px;
@@ -313,10 +313,13 @@
     }
   }
 
-  @media (max-width: 760px) {
-    .artifact-filter-row {
-      grid-template-columns: 1fr;
-    }
+@media (max-width: 760px) {
+  .artifact-visual {
+    width: 88px;
+    height: 88px;
+    flex-basis: 88px;
+  }
+
 
     .artifact-filter-panel {
       left: 0;
@@ -499,8 +502,7 @@
     <div id="artifact-grid" class="artifact-grid"></div>
 
     <p class="note artifact-note">
-      When a corresponding paper is available, please cite it when using the associated dataset or tool.
-    </p>
+These artifacts are provided for academic and research purposes. Please cite the corresponding paper when using these resources.</p>
   </div>
 </section>
 </main><footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="/nexus-lab/assets/img/nexus-logo.png" alt="NEXUS Lab"><p>Secure, Trustworthy, and Intelligent Software Engineering at Florida Polytechnic University.</p></div><div class="footer-col"><h3>Explore</h3><a href="/nexus-lab/research/">Research</a><a href="/nexus-lab/people/">People</a><a href="/nexus-lab/publications/">Publications</a><a href="/nexus-lab/artifacts/">Research Artifacts</a></div><div class="footer-col"><h3>Connect</h3><a href="https://karim-elish.github.io/" target="_blank" rel="noopener">Karim Elish</a><a href="https://floridapoly.edu/" target="_blank" rel="noopener">Florida Polytechnic University</a><a href="mailto:kelish@floridapoly.edu">Email the lab</a></div></div><div class="footer-bottom"><span>© <span data-year></span> NEXUS Lab. Florida Polytechnic University.</span></div></div></footer><script src="/nexus-lab/assets/js/site.js"></script><script src="/nexus-lab/assets/js/data.js?v=20260824-2"></script><script src="/nexus-lab/assets/js/artifacts.js?v=20260824-2"></script></body></html>
