@@ -1053,6 +1053,11 @@ button,input,select {
     width:100%
   }
 
+  .cta .btn {
+  min-width: 170px;
+  text-align: center;
+  }
+  
   .cta-actions .btn {
     width:100%
   }
