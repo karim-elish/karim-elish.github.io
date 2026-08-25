@@ -41,6 +41,14 @@ button,input,select {
   font:inherit
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(13,85,196,.35);
+  outline-offset: 3px;
+}
+
 .container {
   width: min(1180px, 100%);
   margin-inline: auto;
