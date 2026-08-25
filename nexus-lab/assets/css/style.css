@@ -811,7 +811,9 @@ button,input,select {
 }
 .cta-box .btn {
   background:#fff;
-  color:var(--navy)
+  color:var(--navy);
+  min-width:170px;
+  text-align:center;
 }
 .cta-actions {
   display: flex;
