@@ -1050,8 +1050,6 @@ select:focus-visible {
   }
 }
 
-
-}
 @media (max-width: 720px) {
   .portrait {
     max-width: 200px;
