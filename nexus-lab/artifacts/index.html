@@ -1,4 +1,5 @@
 
+
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Research Artifacts | NEXUS Lab</title><meta name="description" content="Research artifacts from NEXUS Lab: datasets and reusable resources for software security, Android security, software analytics, and software engineering research."><meta name="theme-color" content="#071d5e"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/nexus-lab/assets/css/style.css"><link rel="icon" type="image/png" sizes="32x32" href="/nexus-lab/assets/img/favicon.png"><link rel="apple-touch-icon" href="/nexus-lab/assets/img/favicon.png">
 <style>
   .artifact-tools {
@@ -305,26 +306,61 @@
 
   @media (max-width: 1180px) {
     .artifact-filter-row {
-      grid-template-columns: minmax(260px, 1fr) 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .artifact-filter-row .search-input {
+      grid-column: 1 / -1;
     }
 
     .artifact-reset-filters {
-      width: 100%;
+      grid-column: 1 / -1;
+      justify-self: start;
+      width: auto;
     }
   }
 
-@media (max-width: 760px) {
-  .artifact-visual {
-    width: 88px;
-    height: 88px;
-    flex-basis: 88px;
-  }
+  @media (max-width: 760px) {
+    .artifact-filter-row {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
 
+    .artifact-filter-row .search-input,
+    .artifact-filter-dropdown,
+    .artifact-reset-filters {
+      grid-column: auto;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .artifact-filter-trigger {
+      min-height: 46px;
+    }
 
     .artifact-filter-panel {
       left: 0;
       right: auto;
-      width: min(100%, 92vw);
+      width: 100%;
+      max-width: none;
+      max-height: 72vh;
+      overflow-y: auto;
+    }
+
+    .artifact-filter-list {
+      max-height: 38vh;
+    }
+
+    .artifact-reset-filters:disabled {
+      display: none;
+    }
+
+    .artifact-active-filter:empty {
+      display: none;
+    }
+
+    .artifact-active-filter {
+      margin-bottom: 14px;
     }
 
     .artifact-visual {
