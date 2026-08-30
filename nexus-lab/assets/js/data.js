@@ -120,7 +120,7 @@ window.NEXUS_DATA = {
       {name:"Sebastian Siedler",role:"Master's Student · Fulbright Graduate Fellow", year:"2026", photo: "/nexus-lab/assets/img/people/Sebastian.png"},
       {name:"Joyce Champie",role:"Master's Student",year:"2026", photo: "/nexus-lab/assets/img/people/Joyce.png"},
       {name:"Gurjas Chalana",role:"Undergraduate · Killam Fellowships / Fulbright",year:"2026", photo: "/nexus-lab/assets/img/people/Gurjas.png"},
-      {name:"Dennis Carey",role:"Undergraduate Researcher", photo: "/nexus-lab/assets/img/people/student-name.png"},
+      {name:"Dennis Carey",role:"Undergraduate Researcher", year:"2026", photo: "/nexus-lab/assets/img/people/student-name.png"},
       {name:"Nesreen Dalhy",role:"Master's Student",year:"2025", photo: "/nexus-lab/assets/img/people/Nesreen.png"},
       {name:"Vinicius Seixas",role:"Master's Student",year:"2022", photo: "/nexus-lab/assets/img/people/Vin.png"},
       {name:"Tito Leadon",role:"Master's Student",year:"2022", photo: "/nexus-lab/assets/img/people/student-name.png"},
