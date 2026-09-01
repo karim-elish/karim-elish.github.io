@@ -479,8 +479,8 @@ tr:nth-child(even) {
     justify-content: center;
     gap: 0.45rem;
     min-height: 40px;
-    margin-left: 0;
-    margin-right: auto;
+    margin-left: auto;
+    margin-right: 0;
     padding: 0.45rem 0.72rem;
     color: var(--heading);
     background: var(--surface);
