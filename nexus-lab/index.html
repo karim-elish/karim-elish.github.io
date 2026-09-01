@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -156,25 +157,48 @@
 
         <div class="hero-visual" aria-hidden="true">
           <div class="hero-emblem">
-            <div class="logo-overlay" aria-hidden="true">
-              <div class="logo-hub">
-                <span class="code code-1">&lt;</span>
-                <span class="code code-2">&lt;/</span>
-                <span class="code code-3">&lt;/&gt;</span>
-              </div>
-
-              <span class="signal s1"></span>
-              <span class="signal s2"></span>
-              <span class="signal s3"></span>
-              <span class="signal s4"></span>
-              <span class="signal s5"></span>
-              <span class="signal s6"></span>
-              <span class="signal s7"></span>
-            </div>
             <img
+              class="hero-emblem-base"
               src="/nexus-lab/assets/img/favicon.png"
               alt=""
             >
+
+            <!-- Existing </> elements only, highlighted in place with clipped duplicates. -->
+            <img
+              class="code-highlight code-left"
+              src="/nexus-lab/assets/img/favicon.png"
+              alt=""
+              aria-hidden="true"
+            >
+            <img
+              class="code-highlight code-slash"
+              src="/nexus-lab/assets/img/favicon.png"
+              alt=""
+              aria-hidden="true"
+            >
+            <img
+              class="code-highlight code-right"
+              src="/nexus-lab/assets/img/favicon.png"
+              alt=""
+              aria-hidden="true"
+            >
+
+            <!-- Line animation = moving brightness over the existing circuit lines. -->
+            <svg
+              class="hero-circuit-overlay"
+              viewBox="0 0 100 100"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path pathLength="100" class="circuit-glow blue g1" d="M50 48 L50 8"/>
+              <path pathLength="100" class="circuit-glow teal g2" d="M50 48 L76 25"/>
+              <path pathLength="100" class="circuit-glow blue g3" d="M50 48 L92 48"/>
+              <path pathLength="100" class="circuit-glow teal g4" d="M50 48 L78 69"/>
+              <path pathLength="100" class="circuit-glow blue g5" d="M50 48 L50 91"/>
+              <path pathLength="100" class="circuit-glow teal g6" d="M50 48 L22 69"/>
+              <path pathLength="100" class="circuit-glow blue g7" d="M50 48 L8 48"/>
+              <path pathLength="100" class="circuit-glow teal g8" d="M50 48 L24 25"/>
+            </svg>
           </div>
         </div>
       </div>
