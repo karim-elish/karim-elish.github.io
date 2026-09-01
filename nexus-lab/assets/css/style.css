@@ -222,161 +222,58 @@ select:focus-visible {
   z-index:1
 }
 
-/* Use the existing </> pixels only; no new center box or replacement symbol. */
-.code-highlight {
+.hero-code-animation {
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none
+}
+
+.hero-code-animation img {
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
   object-fit:contain;
-  mix-blend-mode:screen;
-  filter:brightness(1.45) saturate(1.15);
+  display:block;
   opacity:0;
-  z-index:2;
   pointer-events:none
 }
 
-/* Approximate clip regions for <, /, and > within the original hub. */
-.code-left {
-  clip-path:polygon(41% 41%, 47% 41%, 44% 48%, 47% 55%, 41% 55%, 37% 48%);
-  animation:code-left-pulse 4.8s ease-in-out infinite
+/* Exact existing < / > pixels only. No extra center box, no line animation. */
+.code-glow {
+  mix-blend-mode:screen;
+  filter:drop-shadow(0 0 3px rgba(255,255,255,.85));
+  animation-duration:4.8s;
+  animation-timing-function:ease-in-out;
+  animation-iteration-count:infinite
 }
 
-.code-slash {
-  clip-path:polygon(46% 40%, 51% 40%, 55% 56%, 50% 56%);
-  animation:code-slash-pulse 4.8s ease-in-out infinite
+.code-left  { animation-name:nexus-code-left }
+.code-slash { animation-name:nexus-code-slash }
+.code-right { animation-name:nexus-code-right }
+
+@keyframes nexus-code-left {
+  0%, 7%, 100% { opacity:0 }
+  10%, 18% { opacity:1 }
+  23%, 100% { opacity:0 }
 }
 
-.code-right {
-  clip-path:polygon(53% 41%, 59% 41%, 63% 48%, 59% 55%, 53% 55%, 56% 48%);
-  animation:code-right-pulse 4.8s ease-in-out infinite
+@keyframes nexus-code-slash {
+  0%, 18%, 100% { opacity:0 }
+  21%, 29% { opacity:1 }
+  34%, 100% { opacity:0 }
 }
 
-/* Animated brightness traveling over the existing circuit lines. */
-.hero-circuit-overlay {
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  z-index:3;
-  pointer-events:none;
-  overflow:visible
-}
-
-.circuit-glow {
-  fill:none;
-  stroke-width:2.2;
-  stroke-linecap:round;
-  stroke-dasharray:24 76;
-  stroke-dashoffset:100;
-  opacity:0;
-  animation:line-brightness-travel 5.4s linear infinite
-}
-
-.circuit-glow.blue {
-  stroke:#0d55c4;
-  filter:drop-shadow(0 0 2px rgba(13,85,196,.34)) drop-shadow(0 0 6px rgba(13,85,196,.20))
-}
-
-.circuit-glow.teal {
-  stroke:#0aa8a4;
-  filter:drop-shadow(0 0 2px rgba(10,168,164,.34)) drop-shadow(0 0 6px rgba(10,168,164,.20))
-}
-
-.g1 { animation-delay:0s }
-.g2 { animation-delay:-4.725s }
-.g3 { animation-delay:-4.05s }
-.g4 { animation-delay:-3.375s }
-.g5 { animation-delay:-2.70s }
-.g6 { animation-delay:-2.025s }
-.g7 { animation-delay:-1.35s }
-.g8 { animation-delay:-0.675s }
-
-@keyframes line-brightness-travel {
-  0%, 6% {
-    opacity:0;
-    stroke-dashoffset:100
-  }
-
-  10% {
-    opacity:.18
-  }
-
-  16% {
-    opacity:.95
-  }
-
-  25% {
-    opacity:.80
-  }
-
-  32% {
-    opacity:0;
-    stroke-dashoffset:0
-  }
-
-  100% {
-    opacity:0;
-    stroke-dashoffset:0
-  }
-}
-
-@keyframes code-left-pulse {
-  0%, 7%, 100% {
-    opacity:0
-  }
-
-  10%, 18% {
-    opacity:.75
-  }
-
-  23%, 100% {
-    opacity:0
-  }
-}
-
-@keyframes code-slash-pulse {
-  0%, 18%, 100% {
-    opacity:0
-  }
-
-  21%, 29% {
-    opacity:.82
-  }
-
-  34%, 100% {
-    opacity:0
-  }
-}
-
-@keyframes code-right-pulse {
-  0%, 29%, 100% {
-    opacity:0
-  }
-
-  32%, 42% {
-    opacity:.75
-  }
-
-  47%, 100% {
-    opacity:0
-  }
-}
-
-@media (hover:hover) {
-  .hero-emblem:hover .circuit-glow {
-    animation-duration:4.5s
-  }
+@keyframes nexus-code-right {
+  0%, 29%, 100% { opacity:0 }
+  32%, 42% { opacity:1 }
+  47%, 100% { opacity:0 }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .code-highlight,
-  .circuit-glow {
-    animation:none !important
-  }
-
-  .code-highlight,
-  .hero-circuit-overlay {
+  .code-glow {
+    animation:none !important;
     display:none
   }
 }
