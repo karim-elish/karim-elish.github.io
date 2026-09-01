@@ -229,96 +229,53 @@ select:focus-visible {
   pointer-events:none
 }
 
-.hero-code-sequence .code-part {
+.hero-code-sequence img {
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
   object-fit:contain;
   display:block;
+  pointer-events:none
+}
+
+.code-erase {
+  opacity:1
+}
+
+.code-part {
   opacity:0;
-  pointer-events:none;
   will-change:opacity,filter
 }
 
-/*
-  Preview-G style code reveal:
-  blank -> < -> </ -> </> -> hold -> fade/reset
+.code-left  { animation:nexus-code-left 4.8s ease-in-out infinite }
+.code-slash { animation:nexus-code-slash 4.8s ease-in-out infinite }
+.code-right { animation:nexus-code-right 4.8s ease-in-out infinite }
 
-  Each image is made from the exact existing pixels of the original logo.
-  The hexagon, border, and every network line remain completely static.
-*/
-.code-left {
-  animation:nexus-code-left 4.8s ease-in-out infinite
-}
-
-.code-slash {
-  animation:nexus-code-slash 4.8s ease-in-out infinite
-}
-
-.code-right {
-  animation:nexus-code-right 4.8s ease-in-out infinite
-}
-
+/* blank -> < -> </ -> </> -> hold -> reset */
 @keyframes nexus-code-left {
-  0%, 7% {
-    opacity:0;
-    filter:brightness(1) drop-shadow(0 0 0 rgba(255,255,255,0))
-  }
-  10% {
-    opacity:1;
-    filter:brightness(1.35) drop-shadow(0 0 5px rgba(255,255,255,.85))
-  }
-  15%, 72% {
-    opacity:1;
-    filter:brightness(1) drop-shadow(0 0 0 rgba(255,255,255,0))
-  }
-  84%, 100% {
-    opacity:0;
-    filter:brightness(1)
-  }
+  0%,7% { opacity:0; filter:none }
+  10% { opacity:1; filter:brightness(1.35) drop-shadow(0 0 5px rgba(255,255,255,.85)) }
+  15%,74% { opacity:1; filter:none }
+  85%,100% { opacity:0; filter:none }
 }
 
 @keyframes nexus-code-slash {
-  0%, 17% {
-    opacity:0;
-    filter:brightness(1) drop-shadow(0 0 0 rgba(255,255,255,0))
-  }
-  20% {
-    opacity:1;
-    filter:brightness(1.35) drop-shadow(0 0 5px rgba(255,255,255,.85))
-  }
-  25%, 72% {
-    opacity:1;
-    filter:brightness(1) drop-shadow(0 0 0 rgba(255,255,255,0))
-  }
-  84%, 100% {
-    opacity:0;
-    filter:brightness(1)
-  }
+  0%,17% { opacity:0; filter:none }
+  20% { opacity:1; filter:brightness(1.35) drop-shadow(0 0 5px rgba(255,255,255,.85)) }
+  25%,74% { opacity:1; filter:none }
+  85%,100% { opacity:0; filter:none }
 }
 
 @keyframes nexus-code-right {
-  0%, 27% {
-    opacity:0;
-    filter:brightness(1) drop-shadow(0 0 0 rgba(255,255,255,0))
-  }
-  30% {
-    opacity:1;
-    filter:brightness(1.35) drop-shadow(0 0 5px rgba(255,255,255,.85))
-  }
-  35%, 72% {
-    opacity:1;
-    filter:brightness(1) drop-shadow(0 0 0 rgba(255,255,255,0))
-  }
-  84%, 100% {
-    opacity:0;
-    filter:brightness(1)
-  }
+  0%,27% { opacity:0; filter:none }
+  30% { opacity:1; filter:brightness(1.35) drop-shadow(0 0 5px rgba(255,255,255,.85)) }
+  35%,74% { opacity:1; filter:none }
+  85%,100% { opacity:0; filter:none }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-code-sequence .code-part {
+  .code-part {
     animation:none !important;
     opacity:1 !important;
     filter:none !important
