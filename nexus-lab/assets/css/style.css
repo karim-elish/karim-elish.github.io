@@ -248,9 +248,9 @@ select:focus-visible {
   will-change:opacity,filter
 }
 
-.code-left  { animation:nexus-code-left 4.8s ease-in-out infinite }
-.code-slash { animation:nexus-code-slash 4.8s ease-in-out infinite }
-.code-right { animation:nexus-code-right 4.8s ease-in-out infinite }
+.code-left  { animation:nexus-code-left 3s ease-in-out infinite }
+.code-slash { animation:nexus-code-slash 3s ease-in-out infinite }
+.code-right { animation:nexus-code-right 3s ease-in-out infinite }
 
 /* blank -> < -> </ -> </> -> hold -> reset */
 @keyframes nexus-code-left {
