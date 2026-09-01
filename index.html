@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en-us">
  <head>
@@ -557,7 +558,18 @@
  </head>
  <body>
 <nav>
-  <ul class="menu">
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="site-menu"
+    aria-label="Open navigation menu"
+  >
+    <span class="menu-toggle-icon" aria-hidden="true">☰</span>
+    <span class="menu-toggle-text">Menu</span>
+  </button>
+
+  <ul class="menu" id="site-menu">
     <li>
       <a href="/">Home</a>
     </li>
@@ -1151,5 +1163,6 @@
    <a href="https://karim-elish.github.io/nexus-lab/" rel="noopener" target="_blank">
     NEXUS Research Lab</a>
   </footer>
+   <script src="/js/navigation.js"></script>
  </body>
 </html>
