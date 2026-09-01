@@ -1,12 +1,13 @@
 
 
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Research | NEXUS Lab</title>
-    <meta name="description" content="Research areas and themes of NEXUS Lab: software security, trustworthy AI, AI-assisted software engineering, software analytics, and empirical software engineering.">
+    <meta name="description" content="Research areas and themes of NEXUS Lab: software security and privacy, mobile security and malware analysis, trustworthy AI, AI for software engineering, software analysis and quality, and empirical software engineering.">
     <meta name="theme-color" content="#071d5e">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,7 @@
     <link rel="apple-touch-icon" href="/nexus-lab/assets/img/favicon.png">
   
 <style>
-  /* Research page: editorial, icon-free research area layout */
+  /* Research page: editorial research area layout with simple icons */
   .research-area-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -42,7 +43,7 @@
     box-shadow: 0 10px 28px rgba(15, 35, 60, .06);
   }
 
-  .research-area-num {
+  .research-area-icon {
     width: 42px;
     height: 42px;
     display: grid;
@@ -50,9 +51,16 @@
     border-radius: 12px;
     background: #f1f7fb;
     color: var(--blue);
-    font-size: .78rem;
-    font-weight: 800;
-    letter-spacing: .04em;
+  }
+
+  .research-area-icon svg {
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   .research-area-copy h3 {
@@ -105,10 +113,15 @@
       padding: 19px;
     }
 
-    .research-area-num {
+    .research-area-icon {
       width: 36px;
       height: 36px;
       border-radius: 10px;
+    }
+
+    .research-area-icon svg {
+      width: 20px;
+      height: 20px;
     }
   }
 </style>
@@ -138,7 +151,7 @@
           <div class="breadcrumb">
             <a href="/nexus-lab/">NEXUS Lab</a> / Research</div>
               <h1>Research</h1>
-              <p>We study secure and trustworthy software through interconnected research in software security, AI, software analysis, and empirical studies.</p>
+              <p>We study secure and trustworthy software through interconnected research in software security and privacy, AI, software analysis and quality, and empirical studies.</p>
             </div>
           </section>
 
@@ -158,66 +171,62 @@
 
     <div class="research-area-list">
       <article class="research-area-item">
-        <div class="research-area-num">01</div>
+        <div class="research-area-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.7 2.8 8.1 7 10 4.2-1.9 7-5.3 7-10V6l-7-3Z"/><path d="m9.5 12 1.7 1.7 3.6-3.9"/></svg>
+        </div>
         <div class="research-area-copy">
           <h3>Software Security &amp; Privacy</h3>
-          <p>Secure software design, privacy risks, data protection, security testing, and evidence-based assurance.</p>
+          <p>Secure software design, vulnerability and privacy analysis, data protection, security testing, and evidence-based assurance.</p>
         </div>
       </article>
 
       <article class="research-area-item">
-        <div class="research-area-num">02</div>
+        <div class="research-area-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.8" width="10" height="18.4" rx="2"/><path d="M10 5h4M11 18h2"/><path d="m4.5 9.5 1-1 1 1 1-1 1 1"/></svg>
+        </div>
         <div class="research-area-copy">
-          <h3>Malware &amp; Vulnerability Analysis</h3>
-          <p>Malware detection and characterization, vulnerability analysis, weakness discovery, and security-focused program analysis.</p>
+          <h3>Mobile Security &amp; Malware Analysis</h3>
+          <p>Security and privacy of mobile ecosystems, including Android, malware detection and characterization, app repackaging, inter-app communication, and vulnerability analysis.</p>
         </div>
       </article>
 
       <article class="research-area-item">
-        <div class="research-area-num">03</div>
-        <div class="research-area-copy">
-          <h3>Mobile &amp; Android Security</h3>
-          <p>Security and privacy of Android and mobile ecosystems, including inter-app communication, repackaging, and wearable companion apps.</p>
+        <div class="research-area-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4a3 3 0 0 0-3 3v1a3 3 0 0 0-2 2.8A3.2 3.2 0 0 0 6.7 14v1A3 3 0 0 0 10 18"/><path d="M15 4a3 3 0 0 1 3 3v1a3 3 0 0 1 2 2.8A3.2 3.2 0 0 1 17.3 14v1A3 3 0 0 1 14 18"/><path d="M12 3v18"/><path d="m8.8 12 2 2 4.4-4.7"/></svg>
         </div>
-      </article>
-
-      <article class="research-area-item">
-        <div class="research-area-num">04</div>
         <div class="research-area-copy">
           <h3>Trustworthy AI</h3>
-          <p>Reliability, security, evidence grounding, and responsible evaluation of AI used in software and security tasks.</p>
+          <p>Security, reliability, evidence grounding, and responsible evaluation of AI systems used in software and security contexts.</p>
         </div>
       </article>
 
       <article class="research-area-item">
-        <div class="research-area-num">05</div>
+        <div class="research-area-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-4 5 4 5M16 7l4 5-4 5M14 4l-4 16"/><path d="M18.5 3.5v3M17 5h3"/></svg>
+        </div>
         <div class="research-area-copy">
-          <h3>AI-Assisted Software Engineering</h3>
-          <p>LLMs and coding agents for generation, testing, debugging, analysis, and secure software development workflows.</p>
+          <h3>AI for Software Engineering</h3>
+          <p>LLMs, coding agents, and intelligent automation for software generation, testing, debugging, analysis, repair, and secure development.</p>
         </div>
       </article>
 
       <article class="research-area-item">
-        <div class="research-area-num">06</div>
+        <div class="research-area-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"/><path d="m14.5 14.5 5 5M8 11l1.7 1.7L13 9.5"/></svg>
+        </div>
         <div class="research-area-copy">
-          <h3>Software Analysis &amp; Analytics</h3>
-          <p>Static and empirical analysis of software artifacts, repositories, behaviors, and large-scale software datasets.</p>
+          <h3>Software Analysis &amp; Quality</h3>
+          <p>Program and repository analysis, software metrics, maintainability, architecture, code smells, analytics, and security-aware quality assessment.</p>
         </div>
       </article>
 
       <article class="research-area-item">
-        <div class="research-area-num">07</div>
-        <div class="research-area-copy">
-          <h3>Software Quality &amp; Metrics</h3>
-          <p>Software metrics, maintainability, code smells, architectural quality, and security-aware quality assessment.</p>
+        <div class="research-area-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/><circle cx="4" cy="6" r="1"/><circle cx="10" cy="2.5" r="1"/><circle cx="16" cy="9" r="1"/></svg>
         </div>
-      </article>
-
-      <article class="research-area-item">
-        <div class="research-area-num">08</div>
         <div class="research-area-copy">
           <h3>Empirical Software Engineering</h3>
-          <p>Evidence-driven studies of software systems, developers, tools, datasets, and engineering practices.</p>
+          <p>Evidence-driven studies of software systems, developers, tools, datasets, and engineering practices using reproducible empirical methods.</p>
         </div>
       </article>
     </div>
@@ -247,13 +256,13 @@
         <h3>Software Security &amp; Privacy</h3>
         <p>
           We investigate software security and privacy risks at code, architecture,
-          application, and ecosystem levels. Current interests include malware and
-          vulnerability analysis, Android and mobile security, privacy risks, secure
-          code analysis, and software assurance.
+          application, and ecosystem levels. Current interests include mobile security,
+          malware and vulnerability analysis, privacy risks, secure code analysis,
+          and software assurance.
         </p>
         <div class="theme-connects">
           <strong>Connects:</strong>
-          Software Security &amp; Privacy · Malware &amp; Vulnerability Analysis · Mobile &amp; Android Security
+          Software Security &amp; Privacy · Mobile Security &amp; Malware Analysis
         </div>
       </article>
 
@@ -267,7 +276,7 @@
         </p>
         <div class="theme-connects">
           <strong>Connects:</strong>
-          Trustworthy AI · AI-Assisted Software Engineering
+          Trustworthy AI · AI for Software Engineering
         </div>
       </article>
 
@@ -281,7 +290,7 @@
         </p>
         <div class="theme-connects">
           <strong>Connects:</strong>
-          Software Analysis &amp; Analytics · Software Quality &amp; Metrics · Empirical Software Engineering
+          Software Analysis &amp; Quality · Empirical Software Engineering
         </div>
       </article>
     </div>
