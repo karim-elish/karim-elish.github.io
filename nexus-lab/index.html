@@ -161,12 +161,22 @@
 
         <div class="hero-visual" aria-hidden="true">
           <div class="hero-emblem">
-            <img class="hero-emblem-base" src="/nexus-lab/assets/img/favicon.png" alt="">
-            <div class="hero-code-animation" aria-hidden="true">
-              <img class="code-glow code-left" src="/nexus-lab/assets/img/hero-animation/code-left.png" alt="">
-              <img class="code-glow code-slash" src="/nexus-lab/assets/img/hero-animation/code-slash.png" alt="">
-              <img class="code-glow code-right" src="/nexus-lab/assets/img/hero-animation/code-right.png" alt="">
-            </div>
+            <picture>
+              <source
+                media="(prefers-reduced-motion: reduce)"
+                srcset="/nexus-lab/assets/img/hero-emblem-static.png"
+              >
+              <source
+                type="image/webp"
+                srcset="/nexus-lab/assets/img/hero-emblem-animated.webp"
+              >
+              <img
+                src="/nexus-lab/assets/img/hero-emblem-static.png"
+                alt=""
+                width="644"
+                height="720"
+              >
+            </picture>
           </div>
         </div>
       </div>
