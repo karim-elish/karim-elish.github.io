@@ -113,6 +113,7 @@ window.NEXUS_DATA = {
       {name:"Johannes Bohme",role:"Fulbright Graduate Fellow", photo: "/nexus-lab/assets/img/people/Johannes.png"},
       {name:"Mohamed Sylla",role:"Master's Student · Fulbright", photo: "/nexus-lab/assets/img/people/Sylla.png"},
       {name:"Nicholas Carracino",role:"Master's Student", photo: "/nexus-lab/assets/img/people/Nicholas.png"},
+      {name:"Shane Califano",role:"Master's Student", photo: "/nexus-lab/assets/img/people/student-name.png"}, 
       {name:"William Blaine",role:"Undergraduate · Killam Fellowships / Fulbright", photo: "/nexus-lab/assets/img/people/Will.png"},
       {name:"Justine Bailey",role:"Undergraduate Researcher", photo: "/nexus-lab/assets/img/people/Justine.png"}
     ],
