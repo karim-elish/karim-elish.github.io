@@ -138,6 +138,12 @@ body > nav > hr {
 }
 
 
+/* Mobile navigation toggle; hidden on desktop */
+body > nav .menu-toggle {
+  display: none;
+}
+
+
 /* =========================================================
    Headings, links, and footer
    ========================================================= */
@@ -462,15 +468,77 @@ tr:nth-child(even) {
     --page-gutter: 0.75rem;
   }
 
+  body > nav {
+    padding: 0.5rem var(--page-gutter);
+  }
+
+  body > nav .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 40px;
+    margin-left: auto;
+    padding: 0.45rem 0.72rem;
+    color: var(--heading);
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  body > nav .menu-toggle:hover {
+    color: #2b6cb0;
+    background: var(--nav-hover);
+  }
+
+  body > nav .menu-toggle:focus-visible {
+    outline: 2px solid #2b6cb0;
+    outline-offset: 2px;
+  }
+
+  body > nav .menu-toggle-icon {
+    min-width: 1rem;
+    font-size: 1.2rem;
+    line-height: 1;
+    text-align: center;
+  }
+
   body > nav .menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.35rem);
+    left: var(--page-gutter);
+    right: var(--page-gutter);
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0.4rem;
+    flex-direction: column;
+    align-items: stretch;
     gap: 0.1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  }
+
+  body > nav .menu.is-open {
+    display: flex;
+  }
+
+  body > nav .menu li {
+    width: 100%;
   }
 
   body > nav .menu a {
-    padding: 0.42rem 0.58rem;
-    font-size: 0.92rem;
+    width: 100%;
+    padding: 0.68rem 0.78rem;
+    font-size: 0.94rem;
   }
 
   .dataset-item {
