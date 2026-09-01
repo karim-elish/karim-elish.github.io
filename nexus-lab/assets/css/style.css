@@ -207,20 +207,122 @@ select:focus-visible {
   width:min(100%,310px);
   display:flex;
   align-items:center;
-  justify-content:center
+  justify-content:center;
+  position:relative;
+  isolation:isolate
 }
 
-.hero-emblem picture {
-  display:block;
-  width:100%
-}
-
-.hero-emblem img {
+.hero-emblem-base {
   width:100%;
   height:auto;
   object-fit:contain;
   mix-blend-mode:multiply;
-  display:block
+  display:block;
+  position:relative;
+  z-index:1
+}
+
+.hero-code-sequence {
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none
+}
+
+.hero-code-sequence .code-part {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  opacity:0;
+  pointer-events:none;
+  will-change:opacity,filter
+}
+
+/*
+  Preview-G style code reveal:
+  blank -> < -> </ -> </> -> hold -> fade/reset
+
+  Each image is made from the exact existing pixels of the original logo.
+  The hexagon, border, and every network line remain completely static.
+*/
+.code-left {
+  animation:nexus-code-left 4.8s ease-in-out infinite
+}
+
+.code-slash {
+  animation:nexus-code-slash 4.8s ease-in-out infinite
+}
+
+.code-right {
+  animation:nexus-code-right 4.8s ease-in-out infinite
+}
+
+@keyframes nexus-code-left {
+  0%, 7% {
+    opacity:0;
+    filter:brightness(1) drop-shadow(0 0 0 rgba(255,255,255,0))
+  }
+  10% {
+    opacity:1;
+    filter:brightness(1.35) drop-shadow(0 0 5px rgba(255,255,255,.85))
+  }
+  15%, 72% {
+    opacity:1;
+    filter:brightness(1) drop-shadow(0 0 0 rgba(255,255,255,0))
+  }
+  84%, 100% {
+    opacity:0;
+    filter:brightness(1)
+  }
+}
+
+@keyframes nexus-code-slash {
+  0%, 17% {
+    opacity:0;
+    filter:brightness(1) drop-shadow(0 0 0 rgba(255,255,255,0))
+  }
+  20% {
+    opacity:1;
+    filter:brightness(1.35) drop-shadow(0 0 5px rgba(255,255,255,.85))
+  }
+  25%, 72% {
+    opacity:1;
+    filter:brightness(1) drop-shadow(0 0 0 rgba(255,255,255,0))
+  }
+  84%, 100% {
+    opacity:0;
+    filter:brightness(1)
+  }
+}
+
+@keyframes nexus-code-right {
+  0%, 27% {
+    opacity:0;
+    filter:brightness(1) drop-shadow(0 0 0 rgba(255,255,255,0))
+  }
+  30% {
+    opacity:1;
+    filter:brightness(1.35) drop-shadow(0 0 5px rgba(255,255,255,.85))
+  }
+  35%, 72% {
+    opacity:1;
+    filter:brightness(1) drop-shadow(0 0 0 rgba(255,255,255,0))
+  }
+  84%, 100% {
+    opacity:0;
+    filter:brightness(1)
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-code-sequence .code-part {
+    animation:none !important;
+    opacity:1 !important;
+    filter:none !important
+  }
 }
 .btn {
   display:inline-flex;
