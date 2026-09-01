@@ -470,15 +470,17 @@ tr:nth-child(even) {
 
   body > nav {
     padding: 0.5rem var(--page-gutter);
+   text-align: left;
   }
-
+   
   body > nav .menu-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.45rem;
     min-height: 40px;
-    margin-left: auto;
+    margin-left: 0;
+    margin-right: auto;
     padding: 0.45rem 0.72rem;
     color: var(--heading);
     background: var(--surface);
