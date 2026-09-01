@@ -170,7 +170,7 @@ select:focus-visible {
   margin:0 0 14px
 }
 .hero h1 {
-  font-size: clamp(2.1rem, 3.6vw, 3.2rem);
+  font-size: clamp(2.1rem, 3.6vw, 3.4rem);
   line-height:1.03;
   letter-spacing:-.045em;
   color:var(--navy);
