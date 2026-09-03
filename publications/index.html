@@ -51,17 +51,17 @@
 .publication-list li {
   position: relative;
   margin: 0 0 1rem 0;
-  padding: 1rem 1.15rem 1rem 1.35rem;
+  padding: 1rem 1.15rem;
   background: #ffffff;
   border: 1px solid #e2e8f0;
- <!-- border-left: 5px solid #2b6cb0; -->
-  border-radius: 8px;
+ /* border-left: 5px solid #2b6cb0; */
+  border-radius: 12px;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
   line-height: 1.55;
 }
 
 .publication-list li:hover {
- <!-- border-left-color: #1a365d; -->
+ /* border-left-color: #1a365d; */
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.10);
   transform: translateY(-1px);
   transition: box-shadow 0.18s ease, transform 0.18s ease, border-left-color 0.18s ease;
@@ -104,10 +104,10 @@
   padding: 0.75rem;
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-left: 5px solid #2b6cb0;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
 }
+   
 
 .impact-header {
   display: flex;
@@ -256,14 +256,16 @@
 /* Compact Topic, Venue, and Year publication filters */
 .publication-overview-grid.with-year {
   display: grid;
-  grid-template-columns: minmax(0, 1.30fr) minmax(0, 1.30fr) minmax(0, 0.58fr);
+  grid-template-columns:
+    minmax(0, 1.30fr)
+    minmax(0, 1.30fr)
+    minmax(0, 0.58fr);
   gap: 0.55rem;
   margin: 0 0 1.1rem 0;
   padding: 0.65rem;
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-left: 5px solid #2b6cb0;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
 }
 
