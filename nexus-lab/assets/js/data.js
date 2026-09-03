@@ -35,6 +35,7 @@ window.NEXUS_DATA = {
       description:"Security dataset for wearable companion mobile applications supporting systematic assessment of mobile and wearable-app security.",
       areas:["Software Security & Privacy","Mobile & Android Security","Empirical Software Engineering"],
       topics:["Wearables","Mobile Security","Android","OWASP MASVS","Privacy","Software Security","Dataset"],
+      paper:"https://karim-elish.github.io/nexus-lab/artifacts/",
       data:"https://ieee-dataport.org/documents/wearappsec-wearable-mobile-app-security-dataset",
       image:"/images/WearAppSec.png"
     },
@@ -73,7 +74,7 @@ window.NEXUS_DATA = {
       description:"Architectural MVC-separation dataset for Android security studies, structural analysis, and architecture-level empirical research.",
       areas:["Software Security & Privacy","Mobile & Android Security","Software Analysis & Analytics","Empirical Software Engineering"],
       topics:["Android Security","Software Architecture","MVC","Architectural Smells","Software Assurance","Empirical Study","Dataset"],
-      paper:"https://conf.researchr.org/details/icsa-2026/icsa-2026-new-and-emerging-ideas/5/Rethinking-MVC-Violations-as-Security-Aware-Architectural-Smells-in-Android-Applicati",
+      paper:"https://ieeexplore.ieee.org/document/11641174",
       data:"https://zenodo.org/records/18633276",
       image:"/images/MVCDroid.png"
     },
