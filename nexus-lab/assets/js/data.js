@@ -93,6 +93,25 @@ window.NEXUS_DATA = {
     }
   ],
   publications: [
+{
+  year:2026,
+  title:"Security Risks in Wearable Mobile Applications",
+  authors:"Sebastian Siedler, Mohamed Sylla, and Karim Elish",
+  venue:"IEEE Internet Computing, Accepted for publication, September 2026. To appear",
+  areas:[
+    "Software Security & Privacy",
+    "Mobile & Android Security",
+    "Empirical Software Engineering"
+  ],
+  topics:[
+    "Wearables",
+    "Mobile Security",
+    "Android",
+    "Software Security",
+    "OWASP MASVS",
+    "Empirical Study"
+  ]
+},
     {year:2026,title:"Large Language Models for Malware Detection: A Systematic Review, Taxonomy, and Open Challenges",authors:"Joyce Champie and Karim Elish",venue:"IEEE Access, vol. 14, pp. 52734–52752",areas:["Malware & Vulnerability Analysis", "Trustworthy AI"],topics:["Large Language Models", "Malware Detection", "Malware Analysis", "AI for Security", "Systematic Review"]},
     {year:2026,title:"STALKER: Composed Quasi-Identifiers and LLM-Amplified Behavioral Leakage in Anonymized Marketplace Data",authors:"Anastasiya Dmytryk, Sami El-Yaagoubi, Lucas Batista, Philipp Kouterguine, Samuel Gerken, Abdulaziz Alhamadani, and Karim Elish",venue:"Proceedings of the 12th ACM International Workshop on Security and Privacy Analytics (IWSPA), co-located with the 16th ACM Conference on Data and Application Security and Privacy (CODASPY)",areas:["Software Security & Privacy", "Trustworthy AI"],topics:["Privacy", "Anonymization", "Large Language Models", "Behavioral Leakage", "Quasi-Identifiers", "Marketplace Data"]},
     {year:2026,title:"Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications",authors:"Mohamed Sylla and Karim Elish",venue:"Proceedings of the 23rd IEEE International Conference on Software Architecture (ICSA), New and Emerging Ideas Track",areas:["Software Security & Privacy", "Mobile & Android Security", "Software Analysis & Analytics"],topics:["Android Security", "Software Architecture", "MVC", "Architectural Smells", "Code Smells", "Software Assurance"],award:"Distinguished Paper Award Candidate"},
