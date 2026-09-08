@@ -145,7 +145,7 @@ window.NEXUS_DATA = {
       {name:"Nesreen Dalhy",role:"Master's Student",year:"2025", photo: "/nexus-lab/assets/img/people/Nesreen.png"},
       {name:"Vinicius Seixas",role:"Master's Student",year:"2022", photo: "/nexus-lab/assets/img/people/Vin.png"},
       {name:"Tito Leadon",role:"Master's Student",year:"2022", photo: "/nexus-lab/assets/img/people/student-name.png"},
-      {name:"William Blanc",role:"Undergraduate Researcher",year:"2021", photo: "/nexus-lab/assets/img/people/student-name.png"}
+      {name:"William Blanc",role:"Undergraduate Researcher",year:"2021", photo: "/nexus-lab/assets/img/people/William.png"}
     ]
   }
 };
