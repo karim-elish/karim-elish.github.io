@@ -1133,12 +1133,13 @@ select:focus-visible {
 
 
 
+
 /* =========================================================
    Home hero: one-line NEXUS analysis trace
    ========================================================= */
 .nexus-trace {
   width: min(100%, 760px);
-  margin: 1.15rem 0 1.95rem;
+  margin: 1.15rem 0 2.15rem;
   display: flex;
   align-items: center;
   gap: .58rem;
@@ -1160,15 +1161,16 @@ select:focus-visible {
 .trace-code {
   color: #52667d;
   font-weight: 650;
+  animation: nexus-source-pulse 5.4s ease-in-out infinite;
 }
 
 .trace-core {
-  padding: .28rem .42rem;
+  padding: .3rem .46rem;
   color: var(--navy);
   font-weight: 800;
   letter-spacing: -.02em;
   border-radius: 6px;
-  animation: nexus-core-activate 6.2s ease-in-out infinite;
+  animation: nexus-core-activate 5.4s ease-in-out infinite;
 }
 
 .trace-core span {
@@ -1177,9 +1179,9 @@ select:focus-visible {
 
 .trace-rail {
   position: relative;
-  flex: 1 1 70px;
-  min-width: 34px;
-  height: 10px;
+  flex: 1 1 82px;
+  min-width: 42px;
+  height: 12px;
   overflow: hidden;
 }
 
@@ -1189,38 +1191,63 @@ select:focus-visible {
   left: 0;
   right: 0;
   top: 50%;
-  height: 1px;
+  height: 2px;
+  background: #d7e3ed;
+  border-radius: 999px;
+  transform: translateY(-50%);
+}
+
+.trace-rail::after {
+  content: "";
+  position: absolute;
+  left: -55%;
+  top: 50%;
+  width: 55%;
+  height: 2px;
+  border-radius: 999px;
   background: linear-gradient(
     90deg,
-    rgba(125, 153, 177, .18),
-    rgba(125, 153, 177, .78),
-    rgba(125, 153, 177, .18)
+    rgba(0,125,125,0),
+    rgba(0,125,125,.35) 28%,
+    rgba(0,125,125,1) 78%,
+    rgba(0,125,125,0)
   );
+  box-shadow: 0 0 9px rgba(0,125,125,.38);
   transform: translateY(-50%);
+  opacity: 0;
+}
+
+.trace-rail-in::after {
+  animation: nexus-beam-in 5.4s ease-in-out infinite;
+}
+
+.trace-rail-out::after {
+  animation: nexus-beam-out 5.4s ease-in-out infinite;
 }
 
 .trace-pulse {
   position: absolute;
+  z-index: 2;
   top: 50%;
-  width: 7px;
-  height: 7px;
+  left: 0;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background: var(--teal);
+  background: #08a6a2;
+  border: 2px solid #fff;
   box-shadow:
-    0 0 0 3px rgba(0, 125, 125, .08),
-    0 0 10px rgba(0, 125, 125, .42);
+    0 0 0 3px rgba(8,166,162,.14),
+    0 0 12px rgba(8,166,162,.7);
   opacity: 0;
   transform: translate(-50%, -50%);
 }
 
 .trace-pulse-in {
-  left: 0;
-  animation: nexus-trace-in 6.2s ease-in-out infinite;
+  animation: nexus-dot-in 5.4s ease-in-out infinite;
 }
 
 .trace-pulse-out {
-  left: 0;
-  animation: nexus-trace-out 6.2s ease-in-out infinite;
+  animation: nexus-dot-out 5.4s ease-in-out infinite;
 }
 
 .trace-result {
@@ -1229,144 +1256,162 @@ select:focus-visible {
   gap: .35rem;
   color: var(--navy);
   font-weight: 800;
-  opacity: .58;
-  animation: nexus-result-resolve 6.2s ease-in-out infinite;
+  opacity: .28;
+  transform: translateX(-2px);
+  animation: nexus-result-resolve 5.4s ease-in-out infinite;
 }
 
 .trace-check {
   display: inline-grid;
   place-items: center;
-  width: 1.28rem;
-  height: 1.28rem;
+  width: 1.3rem;
+  height: 1.3rem;
   border-radius: 50%;
   color: #fff;
   background: var(--teal);
   font-family: Inter, system-ui, sans-serif;
   font-size: .72rem;
   font-weight: 800;
-  transform: scale(.78);
-  box-shadow: 0 0 0 0 rgba(0, 125, 125, 0);
-  animation: nexus-check-resolve 6.2s ease-in-out infinite;
+  transform: scale(.62);
+  box-shadow: 0 0 0 0 rgba(0,125,125,0);
+  animation: nexus-check-resolve 5.4s ease-in-out infinite;
 }
 
-@keyframes nexus-trace-in {
-  0%, 8% {
-    left: 0;
-    opacity: 0;
-  }
-  12% {
-    opacity: 1;
-  }
-  38% {
-    left: 100%;
-    opacity: 1;
-  }
-  43%, 100% {
-    left: 100%;
-    opacity: 0;
-  }
+/* 1) source wakes up */
+@keyframes nexus-source-pulse {
+  0%, 7%, 100% { color:#52667d; }
+  10%, 18% { color:var(--teal); }
+  24% { color:#52667d; }
 }
 
+/* 2) bright tracer crosses the first rail */
+@keyframes nexus-beam-in {
+  0%, 10% { left:-55%; opacity:0; }
+  14% { opacity:1; }
+  36% { left:100%; opacity:1; }
+  40%, 100% { left:100%; opacity:0; }
+}
+
+@keyframes nexus-dot-in {
+  0%, 10% { left:0; opacity:0; }
+  14% { opacity:1; }
+  36% { left:100%; opacity:1; }
+  40%, 100% { left:100%; opacity:0; }
+}
+
+/* 3) NEXUS analysis activates */
 @keyframes nexus-core-activate {
-  0%, 34%, 100% {
-    background: transparent;
-    box-shadow: none;
-    transform: translateY(0);
+  0%, 32%, 100% {
+    background:transparent;
+    box-shadow:none;
+    transform:translateY(0) scale(1);
   }
-  40%, 54% {
-    background: rgba(0, 125, 125, .065);
-    box-shadow: 0 0 0 1px rgba(0, 125, 125, .09);
-    transform: translateY(-1px);
+  39% {
+    background:rgba(0,125,125,.08);
+    box-shadow:
+      0 0 0 1px rgba(0,125,125,.14),
+      0 0 18px rgba(0,125,125,.12);
+    transform:translateY(-1px) scale(1.03);
   }
-}
-
-@keyframes nexus-trace-out {
-  0%, 46% {
-    left: 0;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  73% {
-    left: 100%;
-    opacity: 1;
-  }
-  78%, 100% {
-    left: 100%;
-    opacity: 0;
+  48%, 54% {
+    background:rgba(0,125,125,.055);
+    box-shadow:0 0 0 1px rgba(0,125,125,.10);
+    transform:translateY(0) scale(1);
   }
 }
 
+/* 4) tracer exits NEXUS toward assurance */
+@keyframes nexus-beam-out {
+  0%, 47% { left:-55%; opacity:0; }
+  51% { opacity:1; }
+  72% { left:100%; opacity:1; }
+  76%, 100% { left:100%; opacity:0; }
+}
+
+@keyframes nexus-dot-out {
+  0%, 47% { left:0; opacity:0; }
+  51% { opacity:1; }
+  72% { left:100%; opacity:1; }
+  76%, 100% { left:100%; opacity:0; }
+}
+
+/* 5) result resolves clearly */
 @keyframes nexus-result-resolve {
-  0%, 66% {
-    opacity: .58;
+  0%, 67% {
+    opacity:.28;
+    transform:translateX(-2px);
   }
   76%, 90% {
-    opacity: 1;
+    opacity:1;
+    transform:translateX(0);
   }
   100% {
-    opacity: .58;
+    opacity:.28;
+    transform:translateX(-2px);
   }
 }
 
 @keyframes nexus-check-resolve {
   0%, 68% {
-    transform: scale(.78);
-    box-shadow: 0 0 0 0 rgba(0, 125, 125, 0);
+    transform:scale(.62);
+    box-shadow:0 0 0 0 rgba(0,125,125,0);
   }
   76% {
-    transform: scale(1.08);
-    box-shadow: 0 0 0 5px rgba(0, 125, 125, .10);
+    transform:scale(1.18);
+    box-shadow:0 0 0 7px rgba(0,125,125,.12);
   }
-  84%, 92% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(0, 125, 125, 0);
+  83%, 91% {
+    transform:scale(1);
+    box-shadow:0 0 0 0 rgba(0,125,125,0);
   }
   100% {
-    transform: scale(.82);
+    transform:scale(.62);
   }
 }
 
 @media (max-width: 620px) {
   .nexus-trace {
-    gap: .36rem;
-    margin: 1.05rem 0 1.8rem;
-    font-size: clamp(.64rem, 2.75vw, .73rem);
+    gap:.34rem;
+    margin:1.05rem 0 1.95rem;
+    font-size:clamp(.63rem,2.7vw,.72rem);
   }
 
   .trace-core {
-    padding: .24rem .28rem;
+    padding:.24rem .28rem;
   }
 
   .trace-rail {
-    min-width: 18px;
+    min-width:22px;
   }
 
   .trace-check {
-    width: 1.08rem;
-    height: 1.08rem;
-    font-size: .63rem;
+    width:1.08rem;
+    height:1.08rem;
+    font-size:.62rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .trace-code,
+  .trace-rail::after,
   .trace-pulse,
   .trace-core,
   .trace-result,
   .trace-check {
-    animation: none !important;
+    animation:none !important;
   }
 
-  .trace-pulse {
-    display: none;
+  .trace-pulse,
+  .trace-rail::after {
+    display:none;
   }
 
   .trace-result {
-    opacity: 1;
+    opacity:1;
+    transform:none;
   }
 
   .trace-check {
-    transform: none;
+    transform:none;
   }
 }
