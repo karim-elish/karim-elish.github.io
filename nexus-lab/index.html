@@ -154,10 +154,22 @@
             to understand, evaluate, and improve them.
           </p>
 
-          <div class="nexus-terminal" aria-label="NEXUS Lab research areas">
-            <span class="terminal-prompt">$ nexus --research</span>
-            <span id="nexus-typed" class="terminal-text">Software Security &amp; Privacy</span>
-            <span class="terminal-cursor" aria-hidden="true"></span>
+          <div class="nexus-flow" aria-label="Code analyzed by NEXUS becomes secure, trustworthy software">
+            <div class="flow-code" aria-hidden="true">
+              <span class="flow-token token-1">&lt;/&gt;</span>
+              <span class="flow-token token-2">{ }</span>
+              <span class="flow-token token-3">if</span>
+              <span class="flow-token token-4">fn()</span>
+            </div>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <span class="flow-shield" aria-hidden="true">
+              <img src="/nexus-lab/assets/img/favicon.png" alt="">
+            </span>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <span class="flow-result">
+              <span class="flow-check" aria-hidden="true">✓</span>
+              <span>secure, trustworthy software</span>
+            </span>
           </div>
 
           <div class="hero-actions">
@@ -177,12 +189,6 @@
               src="/nexus-lab/assets/img/favicon.png"
               alt=""
             >
-            <span class="hero-code-sequence" aria-hidden="true">
-              <img class="code-erase" src="/nexus-lab/assets/img/hero-animation/code-erase.png" alt="">
-              <img class="code-part code-left" src="/nexus-lab/assets/img/hero-animation/code-left.png" alt="">
-              <img class="code-part code-slash" src="/nexus-lab/assets/img/hero-animation/code-slash.png" alt="">
-              <img class="code-part code-right" src="/nexus-lab/assets/img/hero-animation/code-right.png" alt="">
-            </span>
           </div>
         </div>
       </div>
@@ -502,72 +508,6 @@
       </div>
     </div>
   </footer>
-
-
-  <script>
-    (() => {
-      const researchAreas = [
-        "Software Security & Privacy",
-        "Mobile Security & Malware Analysis",
-        "Trustworthy AI",
-        "AI for Software Engineering",
-        "Software Analysis & Quality",
-        "Empirical Software Engineering"
-      ];
-
-      const typed = document.getElementById("nexus-typed");
-      if (!typed) return;
-
-      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduceMotion) {
-        typed.textContent = researchAreas[0];
-        return;
-      }
-
-      let areaIndex = 0;
-      let charIndex = researchAreas[0].length;
-
-      const TYPE_DELAY = 48;
-      const HOLD_DELAY = 2300;
-      const FADE_DELAY = 300;
-
-      function typeArea() {
-        const text = researchAreas[areaIndex];
-
-        if (charIndex < text.length) {
-          charIndex += 1;
-          typed.textContent = text.slice(0, charIndex);
-          window.setTimeout(typeArea, TYPE_DELAY);
-          return;
-        }
-
-        window.setTimeout(() => {
-          typed.classList.add("is-fading");
-
-          window.setTimeout(() => {
-            areaIndex = (areaIndex + 1) % researchAreas.length;
-            charIndex = 0;
-            typed.textContent = "";
-            typed.classList.remove("is-fading");
-            window.setTimeout(typeArea, 120);
-          }, FADE_DELAY);
-        }, HOLD_DELAY);
-      }
-
-      window.setTimeout(() => {
-        typed.classList.add("is-fading");
-
-        window.setTimeout(() => {
-          areaIndex = 1;
-          charIndex = 0;
-          typed.textContent = "";
-          typed.classList.remove("is-fading");
-          window.setTimeout(typeArea, 120);
-        }, FADE_DELAY);
-      }, HOLD_DELAY);
-    })();
-  </script>
-
   <script src="/nexus-lab/assets/js/site.js"></script>
 </body>
 </html>
