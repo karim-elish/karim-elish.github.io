@@ -154,6 +154,12 @@
             to understand, evaluate, and improve them.
           </p>
 
+          <div class="nexus-terminal" aria-label="NEXUS Lab research areas">
+            <span class="terminal-prompt">$ nexus --research</span>
+            <span id="nexus-typed" class="terminal-text">Software Security &amp; Privacy</span>
+            <span class="terminal-cursor" aria-hidden="true"></span>
+          </div>
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="/nexus-lab/research/">
               Explore our research
@@ -496,6 +502,71 @@
       </div>
     </div>
   </footer>
+
+
+  <script>
+    (() => {
+      const researchAreas = [
+        "Software Security & Privacy",
+        "Mobile Security & Malware Analysis",
+        "Trustworthy AI",
+        "AI for Software Engineering",
+        "Software Analysis & Quality",
+        "Empirical Software Engineering"
+      ];
+
+      const typed = document.getElementById("nexus-typed");
+      if (!typed) return;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion) {
+        typed.textContent = researchAreas[0];
+        return;
+      }
+
+      let areaIndex = 0;
+      let charIndex = researchAreas[0].length;
+
+      const TYPE_DELAY = 48;
+      const HOLD_DELAY = 2300;
+      const FADE_DELAY = 300;
+
+      function typeArea() {
+        const text = researchAreas[areaIndex];
+
+        if (charIndex < text.length) {
+          charIndex += 1;
+          typed.textContent = text.slice(0, charIndex);
+          window.setTimeout(typeArea, TYPE_DELAY);
+          return;
+        }
+
+        window.setTimeout(() => {
+          typed.classList.add("is-fading");
+
+          window.setTimeout(() => {
+            areaIndex = (areaIndex + 1) % researchAreas.length;
+            charIndex = 0;
+            typed.textContent = "";
+            typed.classList.remove("is-fading");
+            window.setTimeout(typeArea, 120);
+          }, FADE_DELAY);
+        }, HOLD_DELAY);
+      }
+
+      window.setTimeout(() => {
+        typed.classList.add("is-fading");
+
+        window.setTimeout(() => {
+          areaIndex = 1;
+          charIndex = 0;
+          typed.textContent = "";
+          typed.classList.remove("is-fading");
+          window.setTimeout(typeArea, 120);
+        }, FADE_DELAY);
+      }, HOLD_DELAY);
+    })();
+  </script>
 
   <script src="/nexus-lab/assets/js/site.js"></script>
 </body>
