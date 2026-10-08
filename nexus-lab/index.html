@@ -154,6 +154,69 @@
             to understand, evaluate, and improve them.
           </p>
 
+          
+          <div class="nexus-pipeline" aria-label="Code is analyzed by NEXUS and becomes secure, trustworthy software">
+            <div class="pipeline-stage code-stage">
+              <span class="pipeline-label">Code</span>
+              <div class="pipeline-window" aria-hidden="true">
+                <div class="pipeline-window-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="pipeline-code">
+                  <div class="scan-line"></div>
+
+                  <div class="code-row row-1">
+                    <span class="line line-short"></span>
+                  </div>
+
+                  <div class="code-row row-2">
+                    <span class="line line-medium"></span>
+                  </div>
+
+                  <div class="code-row row-3 risky">
+                    <span class="line line-risk"></span>
+                    <span class="row-state state-warn">!</span>
+                    <span class="row-state state-ok">✓</span>
+                  </div>
+
+                  <div class="code-row row-4">
+                    <span class="line line-long"></span>
+                  </div>
+
+                  <div class="code-row row-5">
+                    <span class="line line-medium"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">→</div>
+
+            <div class="pipeline-stage analysis-stage">
+              <span class="pipeline-label">Analysis</span>
+              <div class="analysis-chip" aria-hidden="true">
+                <span class="analysis-icon">
+                  <span class="analysis-lens"></span>
+                  <span class="analysis-handle"></span>
+                  <span class="analysis-spark spark-1"></span>
+                  <span class="analysis-spark spark-2"></span>
+                </span>
+                <span class="analysis-copy">empirical + AI-driven</span>
+              </div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">→</div>
+
+            <div class="pipeline-stage secure-stage">
+              <span class="pipeline-label">Secure</span>
+              <div class="secure-chip" aria-hidden="true">
+                <span class="secure-icon">✓</span>
+                <span class="secure-copy">security assurance</span>
+              </div>
+            </div>
+          </div>
+
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="/nexus-lab/research/">
               Explore our research
@@ -171,12 +234,6 @@
               src="/nexus-lab/assets/img/favicon.png"
               alt=""
             >
-            <span class="hero-code-sequence" aria-hidden="true">
-              <img class="code-erase" src="/nexus-lab/assets/img/hero-animation/code-erase.png" alt="">
-              <img class="code-part code-left" src="/nexus-lab/assets/img/hero-animation/code-left.png" alt="">
-              <img class="code-part code-slash" src="/nexus-lab/assets/img/hero-animation/code-slash.png" alt="">
-              <img class="code-part code-right" src="/nexus-lab/assets/img/hero-animation/code-right.png" alt="">
-            </span>
           </div>
         </div>
       </div>
@@ -496,7 +553,6 @@
       </div>
     </div>
   </footer>
-
   <script src="/nexus-lab/assets/js/site.js"></script>
 </body>
 </html>
