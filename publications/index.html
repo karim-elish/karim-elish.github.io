@@ -583,6 +583,170 @@ button.filter-unavailable {
   max-height: none;
   overflow: visible;
 }
+
+
+/* Topic card: show about six rows, scroll for the remainder */
+.topic-bar-chart {
+  max-height: 12.55rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+}
+
+.topic-bar-chart::-webkit-scrollbar {
+  width: 6px;
+}
+
+.topic-bar-chart::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 6px;
+}
+
+.topic-bar-row {
+  min-height: 2.05rem;
+}
+
+/* Hide native select UI; custom dropdowns below provide the visible control */
+.native-filter-select {
+  display: none !important;
+}
+
+.publication-select-wrap {
+  position: relative;
+  padding: 0.5rem;
+  background: #ffffff;
+}
+
+.publication-venue-card,
+.publication-year-chart {
+  overflow: visible;
+}
+
+.custom-filter-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.custom-filter-trigger {
+  width: 100%;
+  min-height: 2.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.42rem 0.55rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  color: #1a365d;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 650;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.custom-filter-trigger:hover,
+.custom-filter-trigger[aria-expanded="true"] {
+  border-color: #8fb5d8;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.08);
+}
+
+.custom-filter-trigger:focus-visible {
+  outline: none;
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.12);
+}
+
+.custom-filter-trigger-label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.custom-filter-chevron {
+  display: inline-flex;
+  flex: 0 0 auto;
+  color: #64748b;
+  transition: transform 0.16s ease;
+}
+
+.custom-filter-trigger[aria-expanded="true"] .custom-filter-chevron {
+  transform: rotate(180deg);
+}
+
+.custom-filter-menu {
+  position: absolute;
+  z-index: 50;
+  top: calc(100% + 0.32rem);
+  left: 0;
+  right: 0;
+  max-height: 16.5rem;
+  overflow-y: auto;
+  padding: 0.3rem;
+  background: #ffffff;
+  border: 1px solid #d6e0ea;
+  border-radius: 7px;
+  box-shadow:
+    0 10px 28px rgba(15, 23, 42, 0.14),
+    0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+.custom-filter-menu[hidden] {
+  display: none;
+}
+
+.custom-filter-option {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1rem;
+  gap: 0.45rem;
+  align-items: center;
+  padding: 0.42rem 0.46rem;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: #334155;
+  font: inherit;
+  font-size: 0.69rem;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+}
+
+.custom-filter-option:hover,
+.custom-filter-option:focus-visible {
+  outline: none;
+  background: #edf6ff;
+  color: #1a365d;
+}
+
+.custom-filter-option[aria-selected="true"] {
+  background: #f2f7fc;
+  color: #1a365d;
+  font-weight: 700;
+}
+
+.custom-filter-option:disabled {
+  opacity: 0.36;
+  cursor: not-allowed;
+}
+
+.custom-filter-option-text {
+  min-width: 0;
+}
+
+.custom-filter-check {
+  color: #2b6cb0;
+  font-weight: 800;
+  text-align: right;
+}
 </style>
 </head>
 <body>
@@ -1170,170 +1334,140 @@ button.filter-unavailable {
 <span class="topic-bar-fill" style="width: 100.0%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        24
-       </span>
+<span class="topic-bar-count">26</span>
 </button><button aria-label="Filter by Empirical Study" class="topic-bar-row" data-filter-topic="empirical-study" type="button">
 <span class="topic-bar-label">
         Empirical Study
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 79.17%;">
+<span class="topic-bar-fill" style="width: 76.92%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        19
-       </span>
+<span class="topic-bar-count">20</span>
 </button><button aria-label="Filter by Android Malware" class="topic-bar-row" data-filter-topic="android-malware" type="button">
 <span class="topic-bar-label">
         Android Malware
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 70.83%;">
+<span class="topic-bar-fill" style="width: 69.23%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        17
-       </span>
-</button><button aria-label="Filter by Software Metrics / Quality" class="topic-bar-row" data-filter-topic="software-metrics" type="button">
-<span class="topic-bar-label">
-        Software Metrics / Quality
-       </span>
-<span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 29.17%;">
-</span>
-</span>
-<span class="topic-bar-count">
-        7
-       </span>
+<span class="topic-bar-count">18</span>
 </button><button aria-label="Filter by Software Security" class="topic-bar-row" data-filter-topic="software-security" type="button">
 <span class="topic-bar-label">
         Software Security
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 29.17%;">
+<span class="topic-bar-fill" style="width: 38.46%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        7
-       </span>
-</button><button aria-label="Filter by Privacy / Data Security" class="topic-bar-row" data-filter-topic="privacy" type="button">
+<span class="topic-bar-count">10</span>
+</button><button aria-label="Filter by Software Metrics / Quality" class="topic-bar-row" data-filter-topic="software-metrics" type="button">
 <span class="topic-bar-label">
-        Privacy / Data Security
+        Software Metrics / Quality
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 25.0%;">
+<span class="topic-bar-fill" style="width: 26.92%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        6
-       </span>
+<span class="topic-bar-count">7</span>
 </button><button aria-label="Filter by LLMs / AI for Security &amp; SE" class="topic-bar-row" data-filter-topic="llms-ai" type="button">
 <span class="topic-bar-label">
         LLMs / AI for Security &amp; SE
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 20.83%;">
+<span class="topic-bar-fill" style="width: 23.08%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        5
+<span class="topic-bar-count">6</span>
+</button><button aria-label="Filter by Privacy / Data Security" class="topic-bar-row" data-filter-topic="privacy" type="button">
+<span class="topic-bar-label">
+        Privacy / Data Security
        </span>
+<span class="topic-bar-track">
+<span class="topic-bar-fill" style="width: 23.08%;">
+</span>
+</span>
+<span class="topic-bar-count">6</span>
 </button><button aria-label="Filter by Software Maintainability" class="topic-bar-row" data-filter-topic="maintainability" type="button">
 <span class="topic-bar-label">
         Software Maintainability
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 20.83%;">
+<span class="topic-bar-fill" style="width: 19.23%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        5
-       </span>
+<span class="topic-bar-count">5</span>
 </button><button aria-label="Filter by Systems Security" class="topic-bar-row" data-filter-topic="systems-security" type="button">
 <span class="topic-bar-label">
         Systems Security
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 20.83%;">
+<span class="topic-bar-fill" style="width: 19.23%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        5
-       </span>
+<span class="topic-bar-count">5</span>
 </button><button aria-label="Filter by Datasets / Benchmarks" class="topic-bar-row" data-filter-topic="datasets" type="button">
 <span class="topic-bar-label">
         Datasets / Benchmarks
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 16.67%;">
+<span class="topic-bar-fill" style="width: 11.54%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        4
-       </span>
+<span class="topic-bar-count">3</span>
 </button><button aria-label="Filter by Software Refactoring" class="topic-bar-row" data-filter-topic="refactoring" type="button">
 <span class="topic-bar-label">
         Software Refactoring
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 12.5%;">
+<span class="topic-bar-fill" style="width: 11.54%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        3
-       </span>
+<span class="topic-bar-count">3</span>
 </button><button aria-label="Filter by Applied AI / Data Science" class="topic-bar-row" data-filter-topic="applied-ai" type="button">
 <span class="topic-bar-label">
         Applied AI / Data Science
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 8.33%;">
+<span class="topic-bar-fill" style="width: 7.69%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        2
-       </span>
+<span class="topic-bar-count">2</span>
 </button><button aria-label="Filter by Defect Prediction" class="topic-bar-row" data-filter-topic="defect-prediction" type="button">
 <span class="topic-bar-label">
         Defect Prediction
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 8.33%;">
+<span class="topic-bar-fill" style="width: 7.69%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        2
-       </span>
+<span class="topic-bar-count">2</span>
 </button><button aria-label="Filter by Software Bugs / Testing" class="topic-bar-row" data-filter-topic="software-bugs" type="button">
 <span class="topic-bar-label">
         Software Bugs / Testing
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 8.33%;">
+<span class="topic-bar-fill" style="width: 7.69%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        2
-       </span>
+<span class="topic-bar-count">2</span>
 </button><button aria-label="Filter by Computing Education" class="topic-bar-row" data-filter-topic="education" type="button">
 <span class="topic-bar-label">
         Computing Education
        </span>
 <span class="topic-bar-track">
-<span class="topic-bar-fill" style="width: 4.17%;">
+<span class="topic-bar-fill" style="width: 3.85%;">
 </span>
 </span>
-<span class="topic-bar-count">
-        1
-       </span>
+<span class="topic-bar-count">1</span>
 </button></div>
 </div>
 <div class="publication-venue-card">
 <h3>
       Venue
      </h3>
-<div class="publication-select-wrap"><select aria-label="Filter publications by venue" class="publication-select" id="publication-venue-select"><option value="all">All venues</option><option value="acm-codaspy">[Conference] ACM CODASPY</option><option value="asee">[Conference] ASEE Annual Conference</option><option value="flairs">[Conference] FLAIRS</option><option value="ieee-acdsa">[Conference] IEEE ACDSA</option><option value="apsec">[Conference] IEEE APSEC</option><option value="ieee-bigdata">[Conference] IEEE Big Data</option><option value="ieee-csmr">[Conference] IEEE CSMR</option><option value="ieee-iccc">[Conference] IEEE ICCC</option><option value="ieee-iccia">[Conference] IEEE ICCIA</option><option value="ieee-icmla">[Conference] IEEE ICMLA</option><option value="ieee-icsa">[Conference] IEEE ICSA</option><option value="ieee-icst">[Conference] IEEE ICST</option><option value="ieee-acis-sera">[Conference] IEEE/ACIS SERA</option><option value="ieee-acm-forge">[Conference] IEEE/ACM FORGE</option><option value="ieee-acm-icse">[Conference] IEEE/ACM ICSE</option><option value="ieee-acm-msr">[Conference] IEEE/ACM MSR</option><option value="isc">[Conference] ISC</option><option value="iupt-procedia">[Conference] IUPT / Procedia Computer Science</option><option value="ajse">[Journal] Arabian Journal for Science and Engineering</option><option value="computers-security">[Journal] Computers &amp; Security</option><option value="ieee-access">[Journal] IEEE Access</option><option value="ieee-internet-computing">[Journal] IEEE Internet Computing</option><option value="ieee-tc">[Journal] IEEE Transactions on Computers</option><option value="ieee-tmc">[Journal] IEEE Transactions on Mobile Computing</option><option value="ijisae">[Journal] IJISAE</option><option value="information">[Journal] Information</option><option value="journal-software">[Journal] Journal of Software</option><option value="jss">[Journal] Journal of Systems and Software</option><option value="scn">[Journal] Security and Communication Networks</option><option value="ieom">[Poster] IEOM</option><option value="s2erc">[Poster] S2ERC</option><option value="usenix-security">[Poster] USENIX Security Symposium</option><option value="vt-poster-showcase">[Poster] Virginia Tech Graduate  Showcase</option><option value="acm-iwspa-codaspy">[Workshop] ACM IWSPA / CODASPY</option><option value="ieee-spw-most">[Workshop] IEEE SPW / MoST</option></select></div><div class="publication-filter-scroll filter-source-controls">
+<div class="publication-select-wrap"><select aria-label="Filter publications by venue" class="publication-select native-filter-select" id="publication-venue-select"><option value="all">All venues</option><option value="acm-codaspy">[Conference] ACM CODASPY</option><option value="asee">[Conference] ASEE Annual Conference</option><option value="flairs">[Conference] FLAIRS</option><option value="ieee-acdsa">[Conference] IEEE ACDSA</option><option value="apsec">[Conference] IEEE APSEC</option><option value="ieee-bigdata">[Conference] IEEE Big Data</option><option value="ieee-csmr">[Conference] IEEE CSMR</option><option value="ieee-iccc">[Conference] IEEE ICCC</option><option value="ieee-iccia">[Conference] IEEE ICCIA</option><option value="ieee-icmla">[Conference] IEEE ICMLA</option><option value="ieee-icsa">[Conference] IEEE ICSA</option><option value="ieee-icst">[Conference] IEEE ICST</option><option value="ieee-acis-sera">[Conference] IEEE/ACIS SERA</option><option value="ieee-acm-forge">[Conference] IEEE/ACM FORGE</option><option value="ieee-acm-icse">[Conference] IEEE/ACM ICSE</option><option value="ieee-acm-msr">[Conference] IEEE/ACM MSR</option><option value="isc">[Conference] ISC</option><option value="iupt-procedia">[Conference] IUPT / Procedia Computer Science</option><option value="ajse">[Journal] Arabian Journal for Science and Engineering</option><option value="computers-security">[Journal] Computers &amp; Security</option><option value="ieee-access">[Journal] IEEE Access</option><option value="ieee-internet-computing">[Journal] IEEE Internet Computing</option><option value="ieee-tc">[Journal] IEEE Transactions on Computers</option><option value="ieee-tmc">[Journal] IEEE Transactions on Mobile Computing</option><option value="ijisae">[Journal] IJISAE</option><option value="information">[Journal] Information</option><option value="journal-software">[Journal] Journal of Software</option><option value="jss">[Journal] Journal of Systems and Software</option><option value="scn">[Journal] Security and Communication Networks</option><option value="ieom">[Poster] IEOM</option><option value="s2erc">[Poster] S2ERC</option><option value="usenix-security">[Poster] USENIX Security Symposium</option><option value="vt-poster-showcase">[Poster] Virginia Tech Graduate  Showcase</option><option value="acm-iwspa-codaspy">[Workshop] ACM IWSPA / CODASPY</option><option value="ieee-spw-most">[Workshop] IEEE SPW / MoST</option></select><div class="custom-filter-dropdown" id="publication-venue-dropdown"><button aria-controls="publication-venue-menu" aria-expanded="false" aria-haspopup="listbox" class="custom-filter-trigger" id="publication-venue-trigger" type="button"><span class="custom-filter-trigger-label">All venues</span><span aria-hidden="true" class="custom-filter-chevron"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 20 20" width="14"><path d="m6 8 4 4 4-4"></path></svg></span></button><div class="custom-filter-menu" hidden="" id="publication-venue-menu" role="listbox"><button aria-selected="true" class="custom-filter-option" data-value="all" role="option" type="button"><span class="custom-filter-option-text">All venues</span><span aria-hidden="true" class="custom-filter-check">✓</span></button><button aria-selected="false" class="custom-filter-option" data-value="acm-codaspy" role="option" type="button"><span class="custom-filter-option-text">[Conference] ACM CODASPY</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="asee" role="option" type="button"><span class="custom-filter-option-text">[Conference] ASEE Annual Conference</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="flairs" role="option" type="button"><span class="custom-filter-option-text">[Conference] FLAIRS</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-acdsa" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE ACDSA</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="apsec" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE APSEC</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-bigdata" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE Big Data</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-csmr" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE CSMR</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-iccc" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE ICCC</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-iccia" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE ICCIA</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-icmla" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE ICMLA</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-icsa" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE ICSA</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-icst" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE ICST</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-acis-sera" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE/ACIS SERA</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-acm-forge" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE/ACM FORGE</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-acm-icse" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE/ACM ICSE</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-acm-msr" role="option" type="button"><span class="custom-filter-option-text">[Conference] IEEE/ACM MSR</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="isc" role="option" type="button"><span class="custom-filter-option-text">[Conference] ISC</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="iupt-procedia" role="option" type="button"><span class="custom-filter-option-text">[Conference] IUPT / Procedia Computer Science</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ajse" role="option" type="button"><span class="custom-filter-option-text">[Journal] Arabian Journal for Science and Engineering</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="computers-security" role="option" type="button"><span class="custom-filter-option-text">[Journal] Computers &amp; Security</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-access" role="option" type="button"><span class="custom-filter-option-text">[Journal] IEEE Access</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-internet-computing" role="option" type="button"><span class="custom-filter-option-text">[Journal] IEEE Internet Computing</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-tc" role="option" type="button"><span class="custom-filter-option-text">[Journal] IEEE Transactions on Computers</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-tmc" role="option" type="button"><span class="custom-filter-option-text">[Journal] IEEE Transactions on Mobile Computing</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ijisae" role="option" type="button"><span class="custom-filter-option-text">[Journal] IJISAE</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="information" role="option" type="button"><span class="custom-filter-option-text">[Journal] Information</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="journal-software" role="option" type="button"><span class="custom-filter-option-text">[Journal] Journal of Software</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="jss" role="option" type="button"><span class="custom-filter-option-text">[Journal] Journal of Systems and Software</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="scn" role="option" type="button"><span class="custom-filter-option-text">[Journal] Security and Communication Networks</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieom" role="option" type="button"><span class="custom-filter-option-text">[Poster] IEOM</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="s2erc" role="option" type="button"><span class="custom-filter-option-text">[Poster] S2ERC</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="usenix-security" role="option" type="button"><span class="custom-filter-option-text">[Poster] USENIX Security Symposium</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="vt-poster-showcase" role="option" type="button"><span class="custom-filter-option-text">[Poster] Virginia Tech Graduate  Showcase</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="acm-iwspa-codaspy" role="option" type="button"><span class="custom-filter-option-text">[Workshop] ACM IWSPA / CODASPY</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="ieee-spw-most" role="option" type="button"><span class="custom-filter-option-text">[Workshop] IEEE SPW / MoST</span><span aria-hidden="true" class="custom-filter-check"></span></button></div></div></div><div class="publication-filter-scroll filter-source-controls">
 <table>
 <tbody>
 <tr>
@@ -1694,7 +1828,7 @@ button.filter-unavailable {
 <h3>
       Year
      </h3>
-<div class="publication-select-wrap"><select aria-label="Filter publications by year" class="publication-select" id="publication-year-select"><option value="all">All years</option><option value="2027">2027</option><option value="2026">2026</option><option value="2025">2025</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2009">2009</option><option value="2008">2008</option></select></div><div class="year-bar-chart filter-source-controls">
+<div class="publication-select-wrap"><select aria-label="Filter publications by year" class="publication-select native-filter-select" id="publication-year-select"><option value="all">All years</option><option value="2027">2027</option><option value="2026">2026</option><option value="2025">2025</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2009">2009</option><option value="2008">2008</option></select><div class="custom-filter-dropdown" id="publication-year-dropdown"><button aria-controls="publication-year-menu" aria-expanded="false" aria-haspopup="listbox" class="custom-filter-trigger" id="publication-year-trigger" type="button"><span class="custom-filter-trigger-label">All years</span><span aria-hidden="true" class="custom-filter-chevron"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 20 20" width="14"><path d="m6 8 4 4 4-4"></path></svg></span></button><div class="custom-filter-menu" hidden="" id="publication-year-menu" role="listbox"><button aria-selected="true" class="custom-filter-option" data-value="all" role="option" type="button"><span class="custom-filter-option-text">All years</span><span aria-hidden="true" class="custom-filter-check">✓</span></button><button aria-selected="false" class="custom-filter-option" data-value="2027" role="option" type="button"><span class="custom-filter-option-text">2027</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2026" role="option" type="button"><span class="custom-filter-option-text">2026</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2025" role="option" type="button"><span class="custom-filter-option-text">2025</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2022" role="option" type="button"><span class="custom-filter-option-text">2022</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2021" role="option" type="button"><span class="custom-filter-option-text">2021</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2020" role="option" type="button"><span class="custom-filter-option-text">2020</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2019" role="option" type="button"><span class="custom-filter-option-text">2019</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2018" role="option" type="button"><span class="custom-filter-option-text">2018</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2017" role="option" type="button"><span class="custom-filter-option-text">2017</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2015" role="option" type="button"><span class="custom-filter-option-text">2015</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2014" role="option" type="button"><span class="custom-filter-option-text">2014</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2013" role="option" type="button"><span class="custom-filter-option-text">2013</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2012" role="option" type="button"><span class="custom-filter-option-text">2012</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2011" role="option" type="button"><span class="custom-filter-option-text">2011</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2009" role="option" type="button"><span class="custom-filter-option-text">2009</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2008" role="option" type="button"><span class="custom-filter-option-text">2008</span><span aria-hidden="true" class="custom-filter-check"></span></button></div></div></div><div class="year-bar-chart filter-source-controls">
 <button aria-label="Filter by 2027" class="year-bar-row" data-filter-year="2027" type="button">
 <span class="year-bar-label">
         2027
@@ -1919,6 +2053,12 @@ button.filter-unavailable {
 
   const venueSelect = document.getElementById('publication-venue-select');
   const yearSelect = document.getElementById('publication-year-select');
+  const venueDropdown = document.getElementById('publication-venue-dropdown');
+  const venueTrigger = document.getElementById('publication-venue-trigger');
+  const venueMenu = document.getElementById('publication-venue-menu');
+  const yearDropdown = document.getElementById('publication-year-dropdown');
+  const yearTrigger = document.getElementById('publication-year-trigger');
+  const yearMenu = document.getElementById('publication-year-menu');
   const clearAllButton = document.getElementById('publication-clear-filters');
   const clearTopicButton = document.getElementById('publication-clear-topic');
   const clearVenueButton = document.getElementById('publication-clear-venue');
@@ -1983,6 +2123,53 @@ button.filter-unavailable {
   }
 
 
+
+  function setCustomDropdownState(dropdown, trigger, menu, selectedValue, sourceButtons, sourceAttr) {
+    if (!dropdown || !trigger || !menu) return;
+
+    const options = Array.from(menu.querySelectorAll('.custom-filter-option'));
+    options.forEach(option => {
+      const value = option.dataset.value;
+      const selected = value === selectedValue;
+      option.setAttribute('aria-selected', selected ? 'true' : 'false');
+      const check = option.querySelector('.custom-filter-check');
+      if (check) check.textContent = selected ? '✓' : '';
+
+      if (value === 'all') {
+        option.disabled = false;
+      } else {
+        const source = sourceButtons.find(btn => btn.dataset[sourceAttr] === value);
+        option.disabled = !!source?.disabled;
+      }
+    });
+
+    const selectedOption = options.find(option => option.dataset.value === selectedValue)
+      || options.find(option => option.dataset.value === 'all');
+    const selectedText = selectedOption?.querySelector('.custom-filter-option-text')?.textContent.trim() || '';
+    const label = trigger.querySelector('.custom-filter-trigger-label');
+    if (label) label.textContent = selectedText;
+  }
+
+  function closeCustomDropdown(dropdown, trigger, menu) {
+    if (!dropdown || !trigger || !menu) return;
+    trigger.setAttribute('aria-expanded', 'false');
+    menu.hidden = true;
+  }
+
+  function toggleCustomDropdown(dropdown, trigger, menu) {
+    if (!dropdown || !trigger || !menu) return;
+    const willOpen = menu.hidden;
+
+    [venueDropdown, yearDropdown].forEach((otherDropdown, index) => {
+      const otherTrigger = index === 0 ? venueTrigger : yearTrigger;
+      const otherMenu = index === 0 ? venueMenu : yearMenu;
+      if (otherDropdown !== dropdown) closeCustomDropdown(otherDropdown, otherTrigger, otherMenu);
+    });
+
+    trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    menu.hidden = !willOpen;
+  }
+
   function syncDropdownOptions() {
     if (venueSelect) {
       venueSelect.value = selectedVenue;
@@ -2007,6 +2194,15 @@ button.filter-unavailable {
         option.disabled = !!button?.disabled;
       });
     }
+
+    setCustomDropdownState(
+      venueDropdown, venueTrigger, venueMenu,
+      selectedVenue, venueButtons, 'filterVenue'
+    );
+    setCustomDropdownState(
+      yearDropdown, yearTrigger, yearMenu,
+      selectedYear, yearButtons, 'filterYear'
+    );
   }
 
   function sortTopicsByOriginalCount() {
@@ -2171,6 +2367,53 @@ button.filter-unavailable {
     });
   });
 
+
+
+  if (venueTrigger && venueMenu) {
+    venueTrigger.addEventListener('click', function () {
+      toggleCustomDropdown(venueDropdown, venueTrigger, venueMenu);
+    });
+
+    venueMenu.querySelectorAll('.custom-filter-option').forEach(option => {
+      option.addEventListener('click', function () {
+        if (option.disabled) return;
+        selectedVenue = option.dataset.value;
+        closeCustomDropdown(venueDropdown, venueTrigger, venueMenu);
+        applyFilters();
+      });
+    });
+  }
+
+  if (yearTrigger && yearMenu) {
+    yearTrigger.addEventListener('click', function () {
+      toggleCustomDropdown(yearDropdown, yearTrigger, yearMenu);
+    });
+
+    yearMenu.querySelectorAll('.custom-filter-option').forEach(option => {
+      option.addEventListener('click', function () {
+        if (option.disabled) return;
+        selectedYear = option.dataset.value;
+        closeCustomDropdown(yearDropdown, yearTrigger, yearMenu);
+        applyFilters();
+      });
+    });
+  }
+
+  document.addEventListener('click', function (event) {
+    if (venueDropdown && !venueDropdown.contains(event.target)) {
+      closeCustomDropdown(venueDropdown, venueTrigger, venueMenu);
+    }
+    if (yearDropdown && !yearDropdown.contains(event.target)) {
+      closeCustomDropdown(yearDropdown, yearTrigger, yearMenu);
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeCustomDropdown(venueDropdown, venueTrigger, venueMenu);
+      closeCustomDropdown(yearDropdown, yearTrigger, yearMenu);
+    }
+  });
 
   if (venueSelect) {
     venueSelect.addEventListener('change', function () {
