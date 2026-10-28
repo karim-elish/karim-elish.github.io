@@ -1741,6 +1741,286 @@ main.publications-page {
     padding: 0.78rem;
   }
 }
+
+
+/* =========================================================
+   FINAL RESPONSIVE BREAKPOINTS
+   Desktop > 1100px
+   Tablet / narrow laptop: 821px–1100px
+   Phone / landscape phone: <= 820px
+   ========================================================= */
+
+/* Narrow laptops and tablets: stop squeezing the publication column.
+   Put statistics above publications, but keep Topic + Venue side by side. */
+@media (max-width: 1100px) and (min-width: 821px) {
+  main.publications-page {
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .publication-content-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .publication-stats-sidebar,
+  .publications-main {
+    width: 100%;
+    min-width: 0 !important;
+  }
+
+  .publication-stats-sidebar {
+    grid-column: 1;
+    grid-row: 1;
+    position: static;
+  }
+
+  .publications-main {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .publication-overview-grid.with-year {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.7rem;
+    align-items: start;
+  }
+
+  .publication-filter-summary {
+    grid-column: 1 / -1 !important;
+  }
+
+  .publication-topic-chart.compact,
+  .publication-venue-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .publication-year-chart {
+    grid-column: 1 / -1;
+    width: min(100%, 360px);
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* Topic chart remains SAIL-like but becomes fluid. */
+  .publication-topic-chart.compact .topic-axis {
+    grid-template-columns: minmax(118px, 42%) 1.4rem minmax(0, 1fr) !important;
+    column-gap: 0.08rem;
+    box-sizing: border-box;
+  }
+
+  .publication-topic-chart.compact .topic-bar-row {
+    grid-template-columns: minmax(118px, 42%) minmax(0, 1fr) !important;
+    column-gap: 0.2rem;
+    box-sizing: border-box;
+  }
+
+  .publication-topic-chart.compact .topic-bar-label {
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .publication-topic-chart.compact .topic-value-bar {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .publication-topic-chart.compact .topic-bar-track {
+    width: auto !important;
+    min-width: 0 !important;
+    flex: 1 1 auto;
+  }
+
+  /* Venue must fit its half of the row cleanly. */
+  .publication-venue-card .publication-filter-scroll {
+    width: 100%;
+    max-width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .publication-venue-card table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
+  }
+
+  .publication-venue-card td:first-child {
+    width: auto !important;
+    min-width: 0;
+    white-space: normal !important;
+  }
+
+  .publication-filter-row {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: anywhere;
+  }
+
+  .publication-venue-card td:last-child {
+    width: 1.45rem !important;
+    min-width: 1.45rem !important;
+    text-align: right !important;
+    white-space: nowrap;
+  }
+
+  .publications-layout footer {
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Landscape phones and smaller tablets: use one statistics column.
+   This replaces the old awkward 3-column state between 701px and 900px. */
+@media (max-width: 820px) {
+  main.publications-page {
+    width: calc(100% - 1rem) !important;
+    max-width: none !important;
+    box-sizing: border-box;
+  }
+
+  .publication-content-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0.9rem;
+  }
+
+  .publication-stats-sidebar,
+  .publications-main {
+    width: 100%;
+    min-width: 0 !important;
+  }
+
+  .publication-stats-sidebar {
+    grid-column: 1;
+    grid-row: 1;
+    position: static;
+  }
+
+  .publications-main {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .publication-overview-grid.with-year {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .publication-filter-summary {
+    width: 100%;
+  }
+
+  .publication-topic-chart.compact,
+  .publication-venue-card,
+  .publication-year-chart {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .publication-year-chart {
+    grid-column: auto !important;
+  }
+
+  /* Fluid SAIL chart geometry. */
+  .publication-topic-chart.compact .topic-axis {
+    grid-template-columns: minmax(110px, 40%) 1.35rem minmax(0, 1fr) !important;
+    column-gap: 0.08rem;
+    box-sizing: border-box;
+  }
+
+  .publication-topic-chart.compact .topic-bar-row {
+    grid-template-columns: minmax(110px, 40%) minmax(0, 1fr) !important;
+    column-gap: 0.18rem;
+    box-sizing: border-box;
+  }
+
+  .publication-topic-chart.compact .topic-bar-label {
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .publication-topic-chart.compact .topic-value-bar {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .publication-topic-chart.compact .topic-bar-track {
+    width: auto !important;
+    min-width: 0 !important;
+  }
+
+  /* Venue wraps only when necessary; count stays aligned. */
+  .publication-venue-card table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
+  }
+
+  .publication-venue-card td:first-child {
+    width: auto !important;
+    min-width: 0;
+    white-space: normal !important;
+  }
+
+  .publication-filter-row {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  .publication-venue-card td:last-child {
+    width: 1.45rem !important;
+    min-width: 1.45rem !important;
+    text-align: right !important;
+    white-space: nowrap;
+  }
+
+  .publications-layout footer {
+    width: calc(100% - 1rem) !important;
+    max-width: none !important;
+  }
+}
+
+/* Very narrow phones: give labels slightly less width so bars remain useful. */
+@media (max-width: 460px) {
+  .publication-topic-chart.compact .topic-axis {
+    grid-template-columns: minmax(96px, 38%) 1.3rem minmax(0, 1fr) !important;
+  }
+
+  .publication-topic-chart.compact .topic-bar-row {
+    grid-template-columns: minmax(96px, 38%) minmax(0, 1fr) !important;
+  }
+}
 </style>
 </head>
 <body class="publications-layout">
