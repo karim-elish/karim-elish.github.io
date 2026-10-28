@@ -1,632 +1,527 @@
 
-
 <!DOCTYPE html>
+
 <html lang="en-us">
- <head>
-  <!-- Google tag (gtag.js) -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KJ3V3NVGX8">
-  </script>
-  <script>
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KJ3V3NVGX8">
+</script>
+<script>
    window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-KJ3V3NVGX8');
   </script>
-  <meta content="Hugo 0.31.1" name="generator"/>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
+<meta content="Hugo 0.31.1" name="generator"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
    Prof. Karim Elish | Florida Polytechnic University
   </title>
-  <meta content="Karim Elish is a Full Professor of Computer Science at Florida Polytechnic University and director of the NEXUS Lab. His research focuses on mobile and Android security, malware detection, software analytics, and AI/ML for secure software engineering." name="description"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet"/>
-  <link href="css/fonts.css" rel="stylesheet"/>
-  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-  <style>
-
-
-      .profile-hero {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 190px;
-        gap: 1.5rem;
-        align-items: start;
-        padding: 1.35rem 1.45rem;
-        margin: 1.4rem 0 1.35rem;
-        border: 1px solid #d9e2ec;
-        border-radius: 14px;
-        background: #ffffff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.045);
-      }
-
-      .profile-hero h2 {
-        margin-top: 0;
-        margin-bottom: 0.35rem;
-        font-size: 1.7rem;
-        line-height: 1.2;
-      }
-
-      .profile-title {
-        margin: 0.25rem 0 0.9rem;
-        color: #364152;
-        line-height: 1.55;
-      }
-
-      .profile-affiliation-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.42rem;
-        width: fit-content;
-        margin-top: 0.34rem;
-        padding: 0.22rem 0.58rem;
-        background: #f8fafc;
-        border: 1px solid #c8d3df;
-        border-radius: 999px;
-        color: #1a365d;
-        font-size: 0.92rem;
-        font-weight: 650;
-        line-height: 1.2;
-        white-space: nowrap;
-        text-decoration: none;
-      }
-
-      .profile-affiliation-pill img {
-        display: inline-block;
-        width: 1.05rem;
-        height: 1.05rem;
-        object-fit: contain;
-        flex: 0 0 auto;
-      }
-
-      .profile-affiliation-pill:hover {
-        background: #edf6ff;
-        border-color: #2b6cb0;
-      }
-
-
-
-
-
-
-      .profile-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.45rem;
-        margin: 0.7rem 0 0.95rem;
-      }
-
-      .profile-links a {
-       display: inline-flex;
-       align-items: center;
-       gap: 0.38rem;
-       width: fit-content;
-       padding: 0.22rem 0.55rem;
-       background: #edf6ff;
-       border: 1px solid #b7d7f0;
-       border-radius: 999px;
-       color: #1a365d;
-       font-size: 0.92rem;
-       font-weight: 550;
-       white-space: nowrap;
-       text-decoration: none;
-      }
-
-      .profile-links a i {
-       font-size: 1rem;
-       line-height: 1;
-      }
-
-      .profile-links a:hover {
-       background: #dbeeff;
-       border-color: #2b6cb0;
-      }
-
-      .research-pill-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.45rem;
-        margin-top: 0.8rem;
-      }
-
-      .research-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.38rem;
-        width: fit-content;
-        padding: 0.24rem 0.6rem;
-        background: #edf6ff;
-        border: 1px solid #b7d7f0;
-        border-radius: 999px;
-        color: #1a365d;
-        font-size: 0.8rem;
-        font-weight: 650;
-        white-space: nowrap;
-        line-height: 1.2;
-      }
-
-      .research-pill i {
-        font-size: 0.8rem;
-        line-height: 1;
-      }
-
-
-      .profile-contact {
-        margin: 0.9rem 0 0;
-        color: #3f4a5a;
-        line-height: 1.55;
-      }
-
-      .profile-photo {
-        margin: 0;
-        justify-self: end;
-      }
-
-      .profile-photo img {
-        width: 100%;
-        max-width: 190px;
-        aspect-ratio: 2.25 / 3;
-        object-fit: cover;
-        border-radius: 12px;
-        border: 1px solid #d9e2ec;
-        display: block;
-      }
-
-      .home-card {
-        border: 1px solid #d9e2ec;
-        border-radius: 14px;
-        background: #ffffff;
-        padding: 1.15rem 1.3rem;
-        margin: 1rem 0;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.035);
-      }
-
-      .home-card h3 {
-        margin-top: 0;
-        margin-bottom: 0.75rem;
-        padding-bottom: 0.42rem;
-        border-bottom: 2px solid #e2e8f0;
-        color: #1a365d;
-        font-size: 1.22rem;
-        letter-spacing: 0.01em;
-      }
-
-      .home-card p {
-        margin-top: 0.35rem;
-      }
-
-      .home-card ul {
-        margin-top: 0.45rem;
-        margin-bottom: 0;
-        padding-left: 1.25rem;
-      }
-
-      .home-card li {
-        margin-bottom: 0.38rem;
-        line-height: 1.5;
-      }
-
-      .home-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-        align-items: start;
-      }
-
-      .subheading {
-        display: inline-block;
-        margin: 0.65rem 0 0.45rem;
-        padding: 0.28rem 0.65rem;
-        border: 1px solid #c8d3df;
-        border-radius: 999px;
-        background: #f8fafc;
-        color: #1a365d;
-        font-size: 0.92rem;
-        font-weight: 700;
-        line-height: 1.2;
-      }
-
-      .compact-list li {
-        margin-bottom: 0.28rem;
-      }
-
-      .education-list {
-        list-style: none;
-        padding-left: 0 !important;
-      }
-
-
-
-       .education-list li {
-        display: flex;
-        align-items: center;
-        gap: 0.55rem;
-        margin-bottom: 0.45rem;
-        padding: 0.38rem 0.5rem;
-        background: #f8fafc;
-        border-radius: 8px;
-      }
-      .school-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        flex: 0 0 auto;
-        min-width: 2.15rem;
-        height: 1.45rem;
-        padding: 0 0.42rem;
-        margin-top: 0.02rem;
-        border: 1px solid #b7d7f0;
-        border-radius: 999px;
-        background: #edf6ff;
-        color: #1a365d;
-        font-size: 0.72rem;
-        font-weight: 800;
-        letter-spacing: 0.02em;
-        line-height: 1;
-        white-space: nowrap;
-      }
-
-      .school-badge.vt {
-        background: #fff5f5;
-        border-color: #e7b3b3;
-        color: #861f41;
-      }
-
-      .school-badge.kfupm {
-        background: #f0fff4;
-        border-color: #b7dfc2;
-        color: #1f6f43;
-      }
-
-      .education-text {
-        display: inline-block;
-        line-height: 1.5;
-      }
-
-
-      .service-list {
-        margin-bottom: 0.8rem;
-      }
-
-      .advising-status {
-        display: inline-block;
-        margin-left: 0.4rem;
-        padding: 0.12rem 0.45rem;
-        border-radius: 999px;
-        border: 1px solid #c8d3df;
-        background: #f8fafc;
-        color: #1a365d;
-        font-size: 0.78rem;
-        font-weight: 700;
-        white-space: nowrap;
-      }
-
-      .advising-status.in-progress {
-        border-color: #b7d7f0;
-        background: #edf6ff;
-        color: #1a365d;
-      }
-
-      .advising-status.completed {
-        border-color: #d9e2ec;
-        background: #f7fafc;
-        color: #4a5568;
-      }
-
-
-      @media (max-width: 760px) {
-
-        .profile-affiliation-pill {
-          font-size: 0.86rem;
-          white-space: normal;
-        }
-
-        .profile-affiliation-pill img {
-          width: 1rem;
-          height: 1rem;
-        }
-
-
-
-
-        .bio-highlight-list {
-          gap: 0.38rem;
-        }
-
-        .bio-highlight-pill {
-          font-size: 0.78rem;
-        }
-
-        .profile-hero {
-          grid-template-columns: 1fr;
-        }
-
-        .profile-photo {
-          justify-self: start;
-          order: -1;
-        }
-
-        .profile-photo img {
-          max-width: 170px;
-        }
-
-        .home-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      /* Icon pill refinements */
-
-
-      .profile-pill i,
-      .subheading i,
-      .research-pill i {
-        line-height: 1;
-      }
-
-
-      .subheading {
-        font-size: 0.9rem;
-      }
-
-      .subheading i {
-        font-size: 0.85rem;
-      }
-
-      .research-pill {
-        font-size: 0.8rem;
-      }
-
-      .research-pill i {
-        font-size: 0.8rem;
-      }
-
-      .school-badge {
-        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.35);
-      }
-
-      @media (max-width: 760px) {
-
-        .profile-affiliation-pill {
-          font-size: 0.86rem;
-          white-space: normal;
-        }
-
-        .profile-affiliation-pill img {
-          width: 1rem;
-          height: 1rem;
-        }
-
-
-
-
-        .bio-highlight-list {
-          gap: 0.38rem;
-        }
-
-        .bio-highlight-pill {
-          font-size: 0.78rem;
-        }
-
-        .profile-pill-list,
-        .profile-links,
-        .research-pill-list {
-          gap: 0.38rem;
-        }
-
-        .profile-pill,
-        .profile-links a,
-        .research-pill,
-        .subheading {
-          font-size: 0.8rem;
-        }
-
-        .education-list li {
-          gap: 0.45rem;
-        }
-      }
-
-      .bio-highlight-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.45rem;
-        margin-top: 0.8rem;
-      }
-
-      .bio-highlight-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.38rem;
-        width: fit-content;
-        padding: 0.22rem 0.58rem;
-        background: #edf6ff;
-        border: 1px solid #b7d7f0;
-        border-radius: 999px;
-        color: #1a365d;
-        font-size: 0.82rem;
-        font-weight: 650;
-        line-height: 1.2;
-        white-space: nowrap;
-        text-decoration: none;
-      }
-
-      .bio-highlight-pill:hover {
-        background: #dbeeff;
-        border-color: #2b6cb0;
-      }
-
-      .bio-highlight-pill i {
-        font-size: 0.82rem;
-        line-height: 1;
-      }
-
-      .school-logo-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        flex: 0 0 2.8rem;
-        width: 2.8rem;
-        height: 1.55rem;
-        padding: 0 0.35rem;
-        margin-top: 0.02rem;
-        border: 1px solid #d9e2ec;
-        border-radius: 999px;
-        background: #ffffff;
-        overflow: hidden;
-      }
-
-      .school-logo-badge img {
-        display: block;
-        max-width: 2.15rem;
-        max-height: 1.05rem;
-        object-fit: contain;
-      }
-
-      .school-logo-badge.kfupm img {
-        max-width: 2.25rem;
-      }
-
-      .school-logo-fallback {
-        display: none;
-        align-items: center;
-        justify-content: center;
-        color: #1a365d;
-        font-size: 0.68rem;
-        font-weight: 800;
-        letter-spacing: 0.02em;
-        line-height: 1;
-        white-space: nowrap;
-      }
-
-      .school-logo-badge.vt .school-logo-fallback {
-        color: #861f41;
-      }
-
-      .school-logo-badge.kfupm .school-logo-fallback {
-        color: #1f6f43;
-      }
-      /* Final official logo sizing overrides */
-      .school-logo-badge {
-        flex: 0 0 3rem;
-        width: 4.2rem;
-        height: 1.65rem;
-      }
-
-      .school-logo-badge img {
-        max-width: 2.35rem;
-        max-height: 1.12rem;
-        object-fit: contain;
-      }
-
-      .school-logo-badge.kfupm img {
-        max-width: 2.45rem;
-      }
-
-      /* Larger education logos with tighter badge spacing */
-      .school-logo-badge {
-         display: inline-flex;
-         align-items: center;
-         justify-content: center;
-     
-         flex: 0 0 3.8rem;
-         width: 4rem;
-         height: 1.8rem;
-     
-         padding: 0 0.25rem;
-         margin-top: 0;
-     
-         border-radius: 999px;
-     }
-     
-     .school-logo-badge img {
-         max-width: 3.35rem;
-         max-height: 1.5rem;
-         object-fit: contain;
-     }
-     
-     .school-logo-badge.kfupm img {
-         max-width: 3.45rem;
-         max-height: 1.5rem;
-     }
-
-      .education-list li {
-        gap: 0.42rem;
-        margin-bottom: 0.42rem;
-      }
-   
-  </style>
- </head>
- <body>
+<meta content="Karim Elish is a Full Professor of Computer Science at Florida Polytechnic University and director of the NEXUS Lab. His research focuses on mobile and Android security, malware detection, software analytics, and AI/ML for secure software engineering." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/fonts.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<style>
+/* =========================================================
+   Home page theme
+   Consolidated from earlier iterations; scoped to .home-page
+   where practical so other pages retain the shared site CSS.
+   ========================================================= */
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Arial, sans-serif;
+}
+
+/* Profile hero */
+.profile-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 1.5rem;
+  align-items: start;
+  margin: 1.4rem 0 1.35rem;
+  padding: 1.35rem 1.45rem;
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.045);
+}
+
+.profile-hero h2 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  color: #1a365d;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.profile-title {
+  margin: 0.25rem 0 0.9rem;
+  color: #364152;
+  line-height: 1.55;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.7rem 0 0.95rem;
+}
+
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  width: fit-content;
+  padding: 0.22rem 0.55rem;
+  background: #edf6ff;
+  border: 1px solid #b7d7f0;
+  border-radius: 999px;
+  color: #1a365d;
+  font-size: 0.92rem;
+  font-weight: 550;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.profile-links a i {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.profile-links a:hover {
+  background: #dbeeff;
+  border-color: #2b6cb0;
+}
+
+.profile-contact {
+  margin: 0.9rem 0 0;
+  color: #3f4a5a;
+  line-height: 1.55;
+}
+
+.profile-photo {
+  margin: 0;
+  justify-self: end;
+}
+
+.profile-photo img {
+  display: block;
+  width: 100%;
+  max-width: 190px;
+  aspect-ratio: 2.25 / 3;
+  object-fit: cover;
+  border: 1px solid #d9e2ec;
+  border-radius: 12px;
+}
+
+/* Main content cards */
+.home-card {
+  margin: 1rem 0;
+  padding: 1.15rem 1.3rem;
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.035);
+}
+
+.home-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.42rem;
+  border-bottom: 2px solid #e2e8f0;
+  color: #1a365d;
+  font-size: 1.22rem;
+  letter-spacing: 0.01em;
+}
+
+.home-card p {
+  margin-top: 0.35rem;
+}
+
+.home-card ul {
+  margin-top: 0.45rem;
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.home-card li {
+  margin-bottom: 0.38rem;
+  line-height: 1.5;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Highlight / interest pills */
+.bio-highlight-list,
+.research-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+}
+
+.bio-highlight-pill,
+.research-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  width: fit-content;
+  background: #edf6ff;
+  border: 1px solid #b7d7f0;
+  border-radius: 999px;
+  color: #1a365d;
+  font-weight: 650;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.bio-highlight-pill {
+  padding: 0.22rem 0.58rem;
+  font-size: 0.82rem;
+}
+
+.research-pill {
+  padding: 0.24rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.bio-highlight-pill:hover {
+  background: #dbeeff;
+  border-color: #2b6cb0;
+}
+
+.bio-highlight-pill i,
+.research-pill i {
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.research-pill i {
+  font-size: 0.8rem;
+}
+
+/* Subheadings used in Teaching and Service */
+.subheading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  width: fit-content;
+  margin: 0.65rem 0 0.45rem;
+  padding: 0.28rem 0.65rem;
+  background: #f8fafc;
+  border: 1px solid #c8d3df;
+  border-radius: 999px;
+  color: #1a365d;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.subheading i {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+/* Education */
+.compact-list li {
+  margin-bottom: 0.28rem;
+}
+
+.education-list {
+  list-style: none;
+  padding-left: 0 !important;
+}
+
+.education-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.42rem;
+  margin-bottom: 0.42rem;
+  padding: 0.38rem 0.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.school-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 3.8rem;
+  width: 4rem;
+  height: 1.8rem;
+  margin-top: 0;
+  padding: 0 0.25rem;
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.school-logo-badge img {
+  display: block;
+  max-width: 3.35rem;
+  max-height: 1.5rem;
+  object-fit: contain;
+}
+
+.school-logo-badge.kfupm img {
+  max-width: 3.45rem;
+  max-height: 1.5rem;
+}
+
+.school-logo-fallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #1a365d;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.school-logo-badge.vt .school-logo-fallback {
+  color: #861f41;
+}
+
+.school-logo-badge.kfupm .school-logo-fallback {
+  color: #1f6f43;
+}
+
+.education-text {
+  display: inline-block;
+  line-height: 1.5;
+}
+
+/* Combined Research & Publications card */
+.quick-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+.quick-info-item {
+  min-width: 0;
+  padding: 0.1rem 1.15rem 0.15rem 0;
+}
+
+.quick-info-item + .quick-info-item {
+  padding-left: 1.15rem;
+  padding-right: 0;
+  border-left: 1px solid #e2e8f0;
+}
+
+.quick-info-item h4 {
+  margin: 0 0 0.3rem;
+  color: #1a365d;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.quick-info-item p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Service */
+.service-list {
+  margin-bottom: 0.8rem;
+}
+
+/* -----------------------------------------
+   Tablet / narrow laptop
+   ----------------------------------------- */
+@media (max-width: 900px) {
+  .profile-hero {
+    grid-template-columns: minmax(0, 1fr) 165px;
+    gap: 1.2rem;
+    padding: 1.2rem 1.25rem;
+  }
+
+  .profile-photo img {
+    max-width: 165px;
+  }
+
+  .home-card {
+    padding: 1.05rem 1.15rem;
+  }
+}
+
+/* -----------------------------------------
+   Mobile / landscape phone
+   ----------------------------------------- */
+@media (max-width: 760px) {
+  .profile-hero {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding: 1rem;
+  }
+
+  .profile-photo {
+    justify-self: start;
+    order: -1;
+  }
+
+  .profile-photo img {
+    max-width: 165px;
+  }
+
+  .profile-links,
+  .bio-highlight-list,
+  .research-pill-list {
+    gap: 0.38rem;
+  }
+
+  .profile-links a,
+  .bio-highlight-pill,
+  .research-pill,
+  .subheading {
+    font-size: 0.8rem;
+  }
+
+  .home-grid,
+  .quick-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-info-item,
+  .quick-info-item + .quick-info-item {
+    padding: 0.1rem 0;
+    border-left: none;
+  }
+
+  .quick-info-item + .quick-info-item {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .education-list li {
+    gap: 0.4rem;
+  }
+}
+
+/* -----------------------------------------
+   Small phones
+   ----------------------------------------- */
+@media (max-width: 520px) {
+  .profile-hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-card {
+    margin: 0.8rem 0;
+    padding: 0.95rem;
+    border-radius: 11px;
+  }
+
+  .home-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .profile-photo img {
+    max-width: 145px;
+  }
+
+  .education-list li {
+    align-items: flex-start;
+    padding: 0.42rem;
+  }
+
+  .school-logo-badge {
+    flex-basis: 3.5rem;
+    width: 3.5rem;
+    height: 1.7rem;
+  }
+
+  .school-logo-badge img {
+    max-width: 2.95rem;
+    max-height: 1.35rem;
+  }
+
+  .school-logo-badge.kfupm img {
+    max-width: 3.05rem;
+  }
+
+  .profile-contact {
+    overflow-wrap: anywhere;
+  }
+}
+</style>
+</link></link></link></head>
+<body>
 <nav>
-  <button
-    class="menu-toggle"
-    type="button"
-    aria-expanded="false"
-    aria-controls="site-menu"
-    aria-label="Open navigation menu"
-  >
-    <span class="menu-toggle-icon" aria-hidden="true">☰</span>
-  </button>
-
-  <ul class="menu" id="site-menu">
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="/publications/">Publications</a>
-    </li>
-    <li>
-      <a href="/awards/">Honors &amp; Awards</a>
-    </li>
-    <li>
-      <a href="https://nexus-software-lab.github.io" target="_blank" rel="noopener">NEXUS Research Lab</a>
-    </li>
-  </ul>
-  <hr>
+<button aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
+<span aria-hidden="true" class="menu-toggle-icon">☰</span>
+</button>
+<ul class="menu" id="site-menu">
+<li>
+<a href="/">Home</a>
+</li>
+<li>
+<a href="/publications/">Publications</a>
+</li>
+<li>
+<a href="/awards/">Honors &amp; Awards</a>
+</li>
+<li>
+<a href="https://nexus-software-lab.github.io" rel="noopener" target="_blank">NEXUS Research Lab</a>
+</li>
+</ul>
+<hr/>
 </nav>
-  <main class="home-page">
-   <section class="profile-hero">
-    <div>
-     <h2 id="karim-elish">
+<main class="home-page">
+<section class="profile-hero">
+<div>
+<h2 id="karim-elish">
       Dr. Karim Elish
      </h2>
-     <p class="profile-title">
+<p class="profile-title">
 
       Full Professor | Fulbright Specialist
        <br/>
       Department of Computer Science
       
       <br/>
-
-     <a href="https://floridapoly.edu/" rel="noopener" target="_blank">Florida Polytechnic University</a>
-      
-     </p>
-     <div class="profile-links">
-      <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" rel="noopener" target="_blank">
-       <i aria-hidden="true" class="ai ai-google-scholar">
-       </i>
-       <span>
+<a href="https://floridapoly.edu/" rel="noopener" target="_blank">Florida Polytechnic University</a>
+</p>
+<div class="profile-links">
+<a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" rel="noopener" target="_blank">
+<i aria-hidden="true" class="ai ai-google-scholar">
+</i>
+<span>
         Google Scholar
        </span>
-      </a>
-      <a href="https://www.linkedin.com/in/karimelish" rel="noopener" target="_blank">
-       <i aria-hidden="true" class="fa-brands fa-linkedin-in">
-       </i>
-       <span>
+</a>
+<a href="https://www.linkedin.com/in/karimelish" rel="noopener" target="_blank">
+<i aria-hidden="true" class="fa-brands fa-linkedin-in">
+</i>
+<span>
         LinkedIn
        </span>
-      </a>
-      <!--<a href="https://orcid.org/0000-0001-6060-4090" target="_blank" rel="noopener">ORCID</a>-->
-     </div>
-     <p class="profile-contact">
-      <strong>
+</a>
+<!--<a href="https://orcid.org/0000-0001-6060-4090" target="_blank" rel="noopener">ORCID</a>-->
+</div>
+<p class="profile-contact">
+<strong>
        Contact
       </strong>
-      <br/>
+<br/>
       BARC-2227, 4700 Research Way
       <br/>
       Lakeland, FL 33805
@@ -635,442 +530,330 @@
       <br/>
       Email: kelish at floridapoly.edu
      </p>
-    </div>
-    <figure class="profile-photo">
-     <img alt="Karim Elish" src="images/karim.png"/>
-    </figure>
-   </section>
-   <section class="home-card">
-    <h3>
+</div>
+<figure class="profile-photo">
+<img alt="Karim Elish" src="images/karim.png"/>
+</figure>
+</section>
+<section class="home-card">
+<h3>
      Short Bio
     </h3>
-    <p>
+<p>
      I am a Full Professor in the
      <a href="https://floridapoly.edu/academics/programs/computer-science/" rel="noopener" target="_blank">
       Department of Computer Science</a> at <a href="https://floridapoly.edu/" rel="noopener" target="_blank">Florida Polytechnic University</a>
      and Director of the <a href="https://nexus-software-lab.github.io" rel="noopener" target="_blank">NEXUS Research Lab</a>, which focuses on secure, trustworthy, and intelligent software engineering through empirical and AI-driven research. At NEXUS, I have been fortunate to collaborate with and mentor students, including Fulbright scholars and graduate fellows.
     </p>
-    <p>
+<p>
 
      Before joining Florida Poly, I held a faculty appointment as an Assistant Professor of Computer Science at <a href="https://www.pfw.edu/" rel="noopener" target="_blank">Purdue University Fort Wayne</a>. I am also a
      <a href="https://fulbrightspecialist.worldlearning.org/" rel="noopener" target="_blank">
       Fulbright Specialist</a>, selected to the U.S. Department of State’s Fulbright Specialist Roster (2025–present). In 2018, I received the Florida Poly
      <a href="https://floridapoly.edu/news/florida-polytechnic-university-employees-honored-with-inaugural-faculty-and-staff-awards/" rel="noopener" target="_blank">
-      ABLAZE Award for Excellence in Teaching</a>, recognizing exemplary pedagogical practices, teaching effectiveness, contributions to course and program development, and sustained efforts to foster students&rsquo; intellectual growth and critical thinking. I am a Senior Member of ACM and IEEE.
+      ABLAZE Award for Excellence in Teaching</a>, recognizing exemplary pedagogical practices, teaching effectiveness, contributions to course and program development, and sustained efforts to foster students’ intellectual growth and critical thinking. I am a Senior Member of ACM and IEEE.
     </p>
-    <div aria-label="Profile highlights" class="bio-highlight-list">
-     <span class="bio-highlight-pill">
-      <i aria-hidden="true" class="fa-solid fa-diagram-project">
-      </i>
-      <span>
+<div aria-label="Profile highlights" class="bio-highlight-list">
+<span class="bio-highlight-pill">
+<i aria-hidden="true" class="fa-solid fa-diagram-project">
+</i>
+<span>
        Director, NEXUS Lab
       </span>
-     </span>
-     <a class="bio-highlight-pill" href="https://fulbrightspecialist.worldlearning.org/" rel="noopener" target="_blank">
-      <i aria-hidden="true" class="fa-solid fa-globe">
-      </i>
-      <span>
+</span>
+<a class="bio-highlight-pill" href="https://fulbrightspecialist.worldlearning.org/" rel="noopener" target="_blank">
+<i aria-hidden="true" class="fa-solid fa-globe">
+</i>
+<span>
        Fulbright Specialist
       </span>
-     </a>
-     <a class="bio-highlight-pill" href="https://floridapoly.edu/news/florida-polytechnic-university-employees-honored-with-inaugural-faculty-and-staff-awards/" rel="noopener" target="_blank">
-      <i aria-hidden="true" class="fa-solid fa-award">
-      </i>
-      <span>
+</a>
+<a class="bio-highlight-pill" href="https://floridapoly.edu/news/florida-polytechnic-university-employees-honored-with-inaugural-faculty-and-staff-awards/" rel="noopener" target="_blank">
+<i aria-hidden="true" class="fa-solid fa-award">
+</i>
+<span>
        ABLAZE Award for Excellence in Teaching
       </span>
-     </a>
-     <span class="bio-highlight-pill">
-      <i aria-hidden="true" class="fa-solid fa-certificate">
-      </i>
-      <span>
+</a>
+<span class="bio-highlight-pill">
+<i aria-hidden="true" class="fa-solid fa-certificate">
+</i>
+<span>
        Senior Member ACM / IEEE
       </span>
-     </span>
-    </div>
-   </section>
-   <section class="home-card">
-    <h3>
+</span>
+</div>
+</section>
+<section class="home-card">
+<h3>
      Education
     </h3>
-    <ul class="compact-list education-list">
-     <li>
-      <a aria-label="Virginia Tech" class="school-logo-badge vt" href="https://www.vt.edu/" rel="noopener" target="_blank" title="Virginia Tech">
-       <img alt="Virginia Tech logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/virginia-tech.svg"/>
-       <span aria-hidden="true" class="school-logo-fallback">
+<ul class="compact-list education-list">
+<li>
+<a aria-label="Virginia Tech" class="school-logo-badge vt" href="https://www.vt.edu/" rel="noopener" target="_blank" title="Virginia Tech">
+<img alt="Virginia Tech logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/virginia-tech.svg"/>
+<span aria-hidden="true" class="school-logo-fallback">
         VT
        </span>
-      </a>
-      <span class="education-text">
+</a>
+<span class="education-text">
        Ph.D. in Computer Science, Virginia Tech, Blacksburg, VA, USA, 2015
       </span>
-     </li>
-     <li>
-      <a aria-label="Virginia Tech" class="school-logo-badge vt" href="https://www.vt.edu/" rel="noopener" target="_blank" title="Virginia Tech">
-       <img alt="Virginia Tech logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/virginia-tech.svg"/>
-       <span aria-hidden="true" class="school-logo-fallback">
+</li>
+<li>
+<a aria-label="Virginia Tech" class="school-logo-badge vt" href="https://www.vt.edu/" rel="noopener" target="_blank" title="Virginia Tech">
+<img alt="Virginia Tech logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/virginia-tech.svg"/>
+<span aria-hidden="true" class="school-logo-fallback">
         VT
        </span>
-      </a>
-      <span class="education-text">
+</a>
+<span class="education-text">
        M.S. in Computer Science, Virginia Tech, Blacksburg, VA, USA, 2011
       </span>
-     </li>
-     <li>
-      <a aria-label="King Fahd University of Petroleum and Minerals" class="school-logo-badge kfupm" href="https://www.kfupm.edu.sa/" rel="noopener" target="_blank" title="King Fahd University of Petroleum and Minerals">
-       <img alt="KFUPM logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/kfupm.svg"/>
-       <span aria-hidden="true" class="school-logo-fallback">
+</li>
+<li>
+<a aria-label="King Fahd University of Petroleum and Minerals" class="school-logo-badge kfupm" href="https://www.kfupm.edu.sa/" rel="noopener" target="_blank" title="King Fahd University of Petroleum and Minerals">
+<img alt="KFUPM logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/kfupm.svg"/>
+<span aria-hidden="true" class="school-logo-fallback">
         KFUPM
        </span>
-      </a>
-      <span class="education-text">
+</a>
+<span class="education-text">
        M.S. in Computer Science, King Fahd University of Petroleum and Minerals, Saudi Arabia, 2008
       </span>
-     </li>
-     <li>
-      <a aria-label="King Fahd University of Petroleum and Minerals" class="school-logo-badge kfupm" href="https://www.kfupm.edu.sa/" rel="noopener" target="_blank" title="King Fahd University of Petroleum and Minerals">
-       <img alt="KFUPM logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/kfupm.svg"/>
-       <span aria-hidden="true" class="school-logo-fallback">
+</li>
+<li>
+<a aria-label="King Fahd University of Petroleum and Minerals" class="school-logo-badge kfupm" href="https://www.kfupm.edu.sa/" rel="noopener" target="_blank" title="King Fahd University of Petroleum and Minerals">
+<img alt="KFUPM logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" src="images/logos/kfupm.svg"/>
+<span aria-hidden="true" class="school-logo-fallback">
         KFUPM
        </span>
-      </a>
-      <span class="education-text">
+</a>
+<span class="education-text">
        B.S. in Computer Science, King Fahd University of Petroleum and Minerals, Saudi Arabia, 2006
       </span>
-     </li>
-    </ul>
-   </section>
-   <section class="home-card">
-    <h3>
+</li>
+</ul>
+</section>
+<section class="home-card">
+<h3>
      Research Interests
     </h3>
-    <ul>
-
- 
-     <li>
+<ul>
+<li>
       AI/ML for security and software engineering;
      </li>
-     <li>
+<li>
       Software security and privacy, with a focus on mobile application security, malware and vulnerability analysis, secure
     code analysis, and automated security assurance; and
      </li>
-     <li>
+<li>
       Empirical software engineering, software analytics, and quality, including software metrics, code smells, bug
       localization, program analysis, and software testing.
      </li>
-     
-    </ul>
-    <div aria-label="Research interest areas" class="research-pill-list">
-     <span class="research-pill">
-      <i aria-hidden="true" class="fa-solid fa-mobile-screen-button">
-      </i>
-      <span>
+</ul>
+<div aria-label="Research interest areas" class="research-pill-list">
+<span class="research-pill">
+<i aria-hidden="true" class="fa-solid fa-mobile-screen-button">
+</i>
+<span>
        Mobile Security
       </span>
-     </span>
-     <span class="research-pill">
-      <i aria-hidden="true" class="fa-solid fa-shield-virus">
-      </i>
-      <span>
+</span>
+<span class="research-pill">
+<i aria-hidden="true" class="fa-solid fa-shield-virus">
+</i>
+<span>
        Android Malware Detection
       </span>
-     </span>
-     <span class="research-pill">
-      <i aria-hidden="true" class="fa-solid fa-lock">
-      </i>
-      <span>
+</span>
+<span class="research-pill">
+<i aria-hidden="true" class="fa-solid fa-lock">
+</i>
+<span>
        Software Security
       </span>
-     </span>
-     <span class="research-pill">
-      <i aria-hidden="true" class="fa-solid fa-code">
-      </i>
-      <span>
+</span>
+<span class="research-pill">
+<i aria-hidden="true" class="fa-solid fa-code">
+</i>
+<span>
        Secure Code Analysis
       </span>
-     </span>
-     <span class="research-pill">
-      <i aria-hidden="true" class="fa-solid fa-chart-line">
-      </i>
-      <span>
+</span>
+<span class="research-pill">
+<i aria-hidden="true" class="fa-solid fa-chart-line">
+</i>
+<span>
        Software Analytics
       </span>
-     </span>
-     <span class="research-pill">
-      <i aria-hidden="true" class="fa-solid fa-gauge-high">
-      </i>
-      <span>
+</span>
+<span class="research-pill">
+<i aria-hidden="true" class="fa-solid fa-gauge-high">
+</i>
+<span>
        Software Metrics / Quality
       </span>
-     </span>
-     <span class="research-pill">
-      <i aria-hidden="true" class="fa-solid fa-brain">
-      </i>
-      <span>
+</span>
+<span class="research-pill">
+<i aria-hidden="true" class="fa-solid fa-brain">
+</i>
+<span>
        AI/ML for Security &amp; Software Engineering
       </span>
-     </span>
-    </div>
-   </section>
-   <section class="home-card">
-    <h3>
-     Publications
-    </h3>
-    <p>
-     All my publications are available on my
-     <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" rel="noopener" target="_blank">
-      Google Scholar</a>.
-
-          Selected publications can be found
-     <a href="https://karim-elish.github.io/publications/">
-      here</a>.
-    </p>
-   </section>
-
-   <section class="home-card">
-  <h3>Research Group</h3>
-  <p>
-    I mentor student researchers through the
-    <a href="https://nexus-software-lab.github.io" target="_blank" rel="noopener">NEXUS Research Lab</a>.
-    <a href="https://nexus-software-lab.github.io/people/" target="_blank" rel="noopener">Meet our team →</a>
-  </p>
-   </section>
-   
-   <!-- <section class="home-card">
-    <h3>
-     Advising
-    </h3>
-    <p class="subheading">
-     <i aria-hidden="true" class="fa-solid fa-user-graduate">
-     </i>
-     <span>
-      Graduate Students
-     </span>
-    </p>
-    <ul>
-     <li>
-      Sebastian Siedler (Fulbright Graduate Fellow), Master's Student
-      <span class="advising-status in-progress">
-       In progress
-      </span>
-     </li>
-     <li>
-      Mohamed Sylla (Fulbright Graduate Fellow), Master's Student
-      <span class="advising-status in-progress">
-       In progress
-      </span>
-     </li>
-     <li>
-      Nicholas Carracino, Master's Student
-      <span class="advising-status in-progress">
-       In progress
-      </span>
-     </li>
-     <li>
-      Joyce Champie, Master's Student, 2026
-      <span class="advising-status completed">
-       Completed
-      </span>
-     </li>
-     <li>
-      Nesreen Dalhy, Master's Student, 2025
-      <span class="advising-status completed">
-       Completed
-      </span>
-     </li>
-     <li>
-      Vinicius Seixas, Master's Student, 2022
-      <span class="advising-status completed">
-       Completed
-      </span>
-     </li>
-     <li>
-      Tito Leadon, Master's Student, 2022
-      <span class="advising-status completed">
-       Completed
-      </span>
-     </li>
-     <li>
-      Vikranth Meka, Master's Student, 2018
-      <span class="advising-status completed">
-       Completed
-      </span>
-     </li>
-    </ul>
-    <p class="subheading">
-     <i aria-hidden="true" class="fa-solid fa-user">
-     </i>
-     <span>
-      Undergraduate Students
-     </span>
-    </p>
-    <ul>
-     <li>
-      Dennis Carey
-      <span class="advising-status in-progress">
-       In progress
-      </span>
-     </li>
-     <li>
-      Gurjas Chalana (Killam Fellowships, Fulbright), 2026
-      <span class="advising-status completed">
-       Completed
-      </span>
-     </li>
-     <li>
-      William Blanc, 2021
-      <span class="advising-status completed">
-       Completed
-      </span>
-     </li>
-    </ul>
-   </section> -->
+</span>
+</div>
+</section>
+<section class="home-card research-publications-card">
+<h3>Research &amp; Publications</h3>
+<div class="quick-info-grid">
+<div class="quick-info-item">
+<h4>Publications</h4>
+<p>
+            All my publications are available on my
+            <a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" rel="noopener" target="_blank">Google Scholar</a>.
+            Selected publications can be found
+            <a href="https://karim-elish.github.io/publications/">here</a>.
+          </p>
+</div>
+<div class="quick-info-item">
+<h4>Research Group</h4>
+<p>
+            I mentor student researchers through the
+            <a href="https://nexus-software-lab.github.io" rel="noopener" target="_blank">NEXUS Research Lab</a>.
+            <a href="https://nexus-software-lab.github.io/people/" rel="noopener" target="_blank">Meet our team →</a>
+</p>
+</div>
+</div>
+</section>
 
 
-   
-   <section class="home-card"> 
-   
-    <h3>
+<section class="home-card">
+<h3>
      Teaching
     </h3>
-    <p>
+<p>
      At Florida Polytechnic University, I teach a broad range of undergraduate and graduate courses spanning software engineering and cybersecurity. Over the years, I have designed and delivered courses that integrate hands-on practice, current technologies, and effective teaching methods. My teaching portfolio includes:
     </p>
-    <div class="home-grid">
-     <div>
-      <p class="subheading">
-       <i aria-hidden="true" class="fa-solid fa-book-open">
-       </i>
-       <span>
+<div class="home-grid">
+<div>
+<p class="subheading">
+<i aria-hidden="true" class="fa-solid fa-book-open">
+</i>
+<span>
         Undergraduate Courses
        </span>
-      </p>
-      <ul>
-       <li>
+</p>
+<ul>
+<li>
         CEN 4033 Secure Software Engineering
        </li>
-       <li>
+<li>
         CEN 4088 Software Security Testing
        </li>
-       <li>
+<li>
         CIS 4369 Web Application Security
        </li>
-       <li>
+<li>
         CEN 4010 Software Engineering
        </li>
-       <li>
+<li>
         CEN 4065 Software Design and Architecture
        </li>
-       <li>
+<li>
         COP 4656 Mobile Device Applications
        </li>
-       <li>
+<li>
         CEN 3820 Systems Analysis and Design
        </li>
-       <li>
+<li>
         COP 3710 Database I
        </li>
-       <li>
+<li>
         COP 3330C Computer Programming 2
        </li>
-       <li>
+<li>
         COP 4934 Senior Design 1 (Capstone I)
        </li>
-       <li>
+<li>
         COP 4935 Senior Design 2 (Capstone II)
        </li>
-      </ul>
-     </div>
-     <div>
-      <p class="subheading">
-       <i aria-hidden="true" class="fa-solid fa-graduation-cap">
-       </i>
-       <span>
+</ul>
+</div>
+<div>
+<p class="subheading">
+<i aria-hidden="true" class="fa-solid fa-graduation-cap">
+</i>
+<span>
         Graduate Courses and Thesis
        </span>
-      </p>
-      <ul>
-       <li>
+</p>
+<ul>
+<li>
         CEN 5035 Advanced Software Engineering
        </li>
-       <li>
+<li>
         COP 5727 Advanced Database Systems Design
        </li>
-       <li>
+<li>
         CEN 5088 Advanced Software Security Testing
        </li>
-       <li>
+<li>
         IDS 5970 Thesis 1
        </li>
-       <li>
+<li>
         IDS 5975 Thesis 2
        </li>
-      </ul>
-     </div>
-    </div>
-   </section>
-
-
-  <section class="home-card">
-
-  <h3>Selected Service</h3>
-
-  <!-- Professional Service -->
-  <p class="subheading">
-    <i aria-hidden="true" class="fa-solid fa-users-gear"></i>
-    <span>Professional Service</span>
-  </p>
-
-  <ul class="service-list">
-
-    <li>
+</ul>
+</div>
+</div>
+</section>
+<section class="home-card">
+<h3>Selected Service</h3>
+<!-- Professional Service -->
+<p class="subheading">
+<i aria-hidden="true" class="fa-solid fa-users-gear"></i>
+<span>Professional Service</span>
+</p>
+<ul class="service-list">
+<li>
       Founder and Organizing Chair,
-      <a href="https://assure-workshop.github.io/"
-         rel="noopener"
-         target="_blank">ASSURE-AI Workshop</a>,
+      <a href="https://assure-workshop.github.io/" rel="noopener" target="_blank">ASSURE-AI Workshop</a>,
       co-located with
-      <a href="https://conf.researchr.org/home/saner-2027"
-         rel="noopener"
-         target="_blank">IEEE SANER</a>, 2027.
+      <a href="https://conf.researchr.org/home/saner-2027" rel="noopener" target="_blank">IEEE SANER</a>, 2027.
     </li>
-
-    <li>
+<li>
       Guest Editor, <i>Applied Sciences</i>, Special Issue on
-      &ldquo;Cybersecurity: Novel Technologies and Applications,&rdquo;
-      2025&ndash;2026.
+      “Cybersecurity: Novel Technologies and Applications,”
+      2025–2026.
     </li>
-
-
-    <li>
+<li>
       Program Committee Member:
       IEEE/ACM ICPC'27,
       AI-SSS'26 Workshop,
       ACM KDD'26 AgenticSE Workshop,
       ACM SecDev'26,
-      SecureComm'19&ndash;'20,
+      SecureComm'19–'20,
       IEEE ICPADS'19 Security &amp; Dependable Computing Track,
       MIST'19,
-      ICCIA'17&ndash;'18,
+      ICCIA'17–'18,
       ICBCI'18,
       ICCC'18,
-      and MCS'15&ndash;'17.
+      and MCS'15–'17.
     </li>
-
-    <li>
+<li>
       Conference Reviewer:
       NeurIPS'26.
     </li>
-
-    <li>
+<li>
       Session Chair, IEEE/ACIS SERA, 2025.
     </li>
-
-    <li>
+<li>
       External Conference Reviewer:
-      CCS'14&ndash;'15,
-      ASIACCS'13&ndash;'15,
+      CCS'14–'15,
+      ASIACCS'13–'15,
       CODASPY'13 and '15,
-      ACSAC'14&ndash;'15,
+      ACSAC'14–'15,
       Inscrypt'14,
       ISC'13,
       CNS'13,
@@ -1078,14 +861,12 @@
       ACNS'12,
       and GLOBECOM'11.
     </li>
-
-   <li>
+<li>
       Editorial Board Member,
       <i>EAI Transactions on Security and Safety</i>,
-      2019&ndash;2021.
+      2019–2021.
     </li>
-   
-    <li>
+<li>
       Journal Reviewer:
       <i>IEEE Transactions on Software Engineering (TSE)</i>,
       <i>ACM Transactions on Software Engineering and Methodology (TOSEM)</i>,
@@ -1098,155 +879,117 @@
       <i>IEEE Transactions on Intelligent Transportation Systems</i>,
       and <i>Computers &amp; Security</i>.
     </li>
-
-    <li>
+<li>
       Panel Reviewer, National Science Foundation (NSF),
       Cybersecurity Education Program, 2016.
     </li>
-
-  </ul>
-
-
-  <!-- University Service -->
-  <p class="subheading">
-    <i aria-hidden="true" class="fa-solid fa-building-columns"></i>
-    <span>University Service &mdash; Florida Polytechnic University</span>
-  </p>
-
-  <ul class="service-list">
-
-    <li>
-      2026&ndash;present: Member, CS Assessment Committee
+</ul>
+<!-- University Service -->
+<p class="subheading">
+<i aria-hidden="true" class="fa-solid fa-building-columns"></i>
+<span>University Service — Florida Polytechnic University</span>
+</p>
+<ul class="service-list">
+<li>
+      2026–present: Member, CS Assessment Committee
     </li>
-
-    <li>
+<li>
       2026: Member, University Curriculum Committee
     </li>
-
-    <li>
+<li>
       2025: CS Capstone Coordinator
     </li>
-
-    <li>
+<li>
       2025: CS Graduate Academic Advisor/Coordinator
     </li>
-
-    <li>
+<li>
       2025: Member, Technology Transfer Steering Committee
     </li>
-
-    <li>
-      2022&ndash;2025: CS Graduate Council Representative
+<li>
+      2022–2025: CS Graduate Council Representative
     </li>
-
-    <li>
-      2022&ndash;2025: Member, CS Search Committee
+<li>
+      2022–2025: Member, CS Search Committee
     </li>
-
-    <li>
-      2024&ndash;2025: Member, CS Department Evaluation Panel for
+<li>
+      2024–2025: Member, CS Department Evaluation Panel for
       Reappointment and Promotion
     </li>
-
-    <li>
+<li>
       2025: Member, ECE Department Evaluation Panel for
       Reappointment and Promotion
     </li>
-
-    <li>
-      2024&ndash;2025: Member, Physics Department Evaluation Panel for
+<li>
+      2024–2025: Member, Physics Department Evaluation Panel for
       Reappointment and Promotion
     </li>
-
-    <li>
+<li>
       2024: Member, DSBA Department Evaluation Panel for
       Reappointment and Promotion
     </li>
-
-    <li>
-      2018&ndash;2025: Member, CS Department Curriculum Committee
+<li>
+      2018–2025: Member, CS Department Curriculum Committee
     </li>
-
-    <li>
-      2022&ndash;2024: Chair, CS/DSBA Thesis and Graduate Project
+<li>
+      2022–2024: Chair, CS/DSBA Thesis and Graduate Project
       Review and Approval Committee
     </li>
-
-    <li>
-      2023&ndash;2024: Member, Data Science &amp; Business Analytics
+<li>
+      2023–2024: Member, Data Science &amp; Business Analytics
       Search Committee
     </li>
-
-    <li>
-      2023&ndash;2024: Member, Readmission Committee
+<li>
+      2023–2024: Member, Readmission Committee
     </li>
-
-    <li>
+<li>
       2024: Member, Faculty Evaluation Committee
     </li>
-
-    <li>
-      2023&ndash;2024: Member, Cybersecurity Engineering Search Committee
+<li>
+      2023–2024: Member, Cybersecurity Engineering Search Committee
     </li>
-
-    <li>
+<li>
       2023: Member, ECE Search Committee
     </li>
-
-    <li>
+<li>
       2023: Member, Academic Hearing Panel
     </li>
-
-    <li>
-      2020, 2022&ndash;2023: Member, ABLAZE Excellence in Teaching Award
+<li>
+      2020, 2022–2023: Member, ABLAZE Excellence in Teaching Award
       Selection Committee
     </li>
-
-    <li>
+<li>
       2023: Member, University Appeal Committee
     </li>
-
-    <li>
+<li>
       2023: Member, Institutional Effectiveness Committee
     </li>
-
-    <li>
+<li>
       2022: Judge, Senior Capstone Projects Showcase
     </li>
-
-    <li>
-      2021&ndash;2022: Member, CS Curriculum and Assessment Committee
+<li>
+      2021–2022: Member, CS Curriculum and Assessment Committee
     </li>
-
-    <li>
+<li>
       2022: Member, Cybersecurity Engineering Program Committee
     </li>
-
-    <li>
-      2019&ndash;2021: Member, CS Academic Excellence and Teaching Quality Committee
+<li>
+      2019–2021: Member, CS Academic Excellence and Teaching Quality Committee
     </li>
-
-    <li>
-      2019&ndash;2020: Member, CS Publications Committee
+<li>
+      2019–2020: Member, CS Publications Committee
     </li>
-
-    <li>
+<li>
       2017: Member, Instructor Search Committee
     </li>
-
-    <li>
-      2016&ndash;2017: Member, Faculty Professional Interest Committee
+<li>
+      2016–2017: Member, Faculty Professional Interest Committee
     </li>
-
-  </ul>
-
+</ul>
 </section>
-
-   
-  </main>
-  <footer>
-   <hr/>
-   &copy;
+</main>
+<footer>
+<hr>
+   ©
    <a href="https://karim-elish.github.io">
     Karim Elish</a>
    2026 |
@@ -1255,7 +998,7 @@
    |
    <a href="https://nexus-software-lab.github.io" rel="noopener" target="_blank">
     NEXUS Research Lab</a>
-  </footer>
-   <script src="/js/navigation.js"></script>
- </body>
+</hr></footer>
+<script src="/js/navigation.js"></script>
+</body>
 </html>
