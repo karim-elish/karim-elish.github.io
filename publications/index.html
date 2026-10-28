@@ -981,6 +981,174 @@ main.publications-page {
   padding: 0;
 }
 
+
+/* Restore previous Topic-card layout while keeping Venue unchanged */
+.publication-topic-chart.compact .topic-bar-chart {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.publication-topic-chart.compact .topic-bar-row {
+  grid-template-columns: max-content 62px 1.35rem;
+  justify-content: start;
+  column-gap: 0.24rem;
+  padding-left: 0.34rem;
+  padding-right: 0.34rem;
+}
+
+.publication-topic-chart.compact .topic-bar-label {
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  width: 62px;
+  min-width: 62px;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  width: 1.35rem;
+  min-width: 1.35rem;
+  justify-self: end;
+  text-align: right;
+  padding: 0;
+}
+
+
+/* Restore Topic card proportions from the earlier preferred version.
+   Keep the current sidebar width, corrected counts, and ~8 visible rows. */
+.publication-topic-chart.compact .topic-bar-chart {
+  max-height: 16.45rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+}
+
+.publication-topic-chart.compact .topic-bar-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 30px 1.2rem;
+  align-items: center;
+  justify-content: stretch;
+  gap: 0.28rem;
+  column-gap: 0.28rem;
+  min-height: 2.05rem;
+  padding: 0.31rem 0.4rem;
+}
+
+.publication-topic-chart.compact .topic-bar-label {
+  min-width: 0;
+  width: auto;
+  max-width: none;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: clip;
+  font-size: 0.65rem;
+  line-height: 1.16;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  width: 30px;
+  min-width: 30px;
+  height: 0.58rem;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  width: auto;
+  min-width: 0;
+  justify-self: stretch;
+  text-align: right;
+  padding: 0;
+  font-size: 0.68rem;
+}
+
+
+/* Topic card: bar fills the middle space; scrollbar stays clear of counts */
+.publication-topic-chart.compact .topic-bar-chart {
+  max-height: 16.45rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  padding-right: 0.18rem;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+  scrollbar-gutter: stable;
+}
+
+.publication-topic-chart.compact .topic-bar-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content minmax(56px, 1fr) 1.35rem;
+  align-items: center;
+  gap: 0.28rem;
+  column-gap: 0.28rem;
+  min-height: 2.05rem;
+  padding: 0.31rem 0.34rem;
+}
+
+.publication-topic-chart.compact .topic-bar-label {
+  width: auto;
+  max-width: 13.5rem;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  width: 100%;
+  min-width: 56px;
+  height: 0.58rem;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  width: 1.35rem;
+  min-width: 1.35rem;
+  justify-self: end;
+  text-align: right;
+  padding: 0;
+}
+
+/* Match the Venue card's scrollbar clearance */
+.publication-topic-chart.compact .topic-bar-chart::-webkit-scrollbar {
+  width: 6px;
+}
+
+.publication-topic-chart.compact .topic-bar-chart::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 6px;
+}
+
+
+/* Align all Topic bars to the same starting position, SAIL-style */
+.publication-topic-chart.compact .topic-bar-row {
+  grid-template-columns: 142px minmax(58px, 1fr) 1.35rem;
+  align-items: center;
+  column-gap: 0.28rem;
+}
+
+.publication-topic-chart.compact .topic-bar-label {
+  width: 142px;
+  max-width: 142px;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  width: 100%;
+  min-width: 58px;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  width: 1.35rem;
+  min-width: 1.35rem;
+  text-align: right;
+  justify-self: end;
+}
+
 </style>
 </head>
 <body>
