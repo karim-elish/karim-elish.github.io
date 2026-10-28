@@ -193,7 +193,7 @@
 /* Main publications + right statistics sidebar */
 .publication-content-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(255px, 280px);
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 365px);
   gap: 1.25rem;
   align-items: start;
 }
@@ -584,10 +584,9 @@ button.filter-unavailable {
   overflow: visible;
 }
 
-
-/* Topic card: show about six rows, scroll for the remainder */
+/* Topic card: show about eight rows, scroll for the remainder */
 .topic-bar-chart {
-  max-height: 12.55rem;
+  max-height: 16.45rem;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
@@ -765,26 +764,34 @@ main.publications-page {
 
 /* Balanced width refinements for statistics cards */
 .publication-stats-sidebar {
-  min-width: 255px;
+  min-width: 340px;
 }
 
-.topic-bar-label,
-.publication-filter-row {
+/* Topic labels stay compact; Venue names must remain fully visible. */
+.topic-bar-label {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.publication-venue-card td:first-child {
+.publication-filter-row {
   white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 .publication-venue-card table {
-  table-layout: fixed;
+  table-layout: auto;
+}
+
+.publication-venue-card td:first-child {
+  white-space: nowrap;
+  width: auto;
 }
 
 .publication-venue-card td:last-child {
-  width: 1.7rem;
+  width: 1.8rem;
+  min-width: 1.8rem;
 }
 
 @media (max-width: 900px) {
