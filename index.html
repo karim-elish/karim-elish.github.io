@@ -70,35 +70,29 @@ body {
 .profile-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  align-items: center;
+  gap: 0.42rem;
   margin: 0.7rem 0 0.95rem;
 }
 
 .profile-links a {
   display: inline-flex;
-  align-items: center;
-  gap: 0.38rem;
-  width: fit-content;
-  padding: 0.22rem 0.55rem;
-  background: #edf6ff;
-  border: 1px solid #b7d7f0;
-  border-radius: 999px;
-  color: #1a365d;
+  align-items: baseline;
+  gap: 0.2rem;
+  color: #2b6cb0;
   font-size: 0.92rem;
-  font-weight: 550;
-  white-space: nowrap;
+  font-weight: 600;
   text-decoration: none;
 }
 
-.profile-links a i {
-  font-size: 1rem;
-  line-height: 1;
+.profile-links a:hover {
+  color: #1a365d;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
 }
 
-.profile-links a:hover {
-  background: #dbeeff;
-  border-color: #2b6cb0;
-}
+.profile-link-separator { color: #94a3b8; }
+.external-mark { font-size: 0.78em; line-height: 1; }
 
 .profile-contact {
   margin: 0.9rem 0 0;
@@ -213,27 +207,36 @@ body {
   font-size: 0.8rem;
 }
 
-/* Subheadings used in Teaching and Service */
-.subheading {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.38rem;
-  width: fit-content;
-  margin: 0.65rem 0 0.45rem;
-  padding: 0.28rem 0.65rem;
-  background: #f8fafc;
-  border: 1px solid #c8d3df;
-  border-radius: 999px;
+/* Teaching */
+.teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.7rem;
+  margin-top: 0.85rem;
+}
+.teaching-group { min-width: 0; }
+.teaching-group h4 {
+  margin: 0 0 0.4rem;
+  padding-bottom: 0.38rem;
+  border-bottom: 1px solid #dbe4ed;
   color: #1a365d;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
 }
-
-.subheading i {
-  font-size: 0.85rem;
-  line-height: 1;
+.home-card .teaching-course-list { list-style: none; margin: 0; padding: 0; }
+.home-card .teaching-course-list li {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.34rem 0;
+  border-bottom: 1px solid #edf1f5;
+  line-height: 1.45;
 }
+.home-card .teaching-course-list li:last-child { border-bottom: 0; }
+.course-code { color: #64748b; font-size: 0.86rem; font-weight: 650; white-space: nowrap; }
+.course-name { color: #2d3748; font-size: 0.95rem; }
 
 /* Education */
 .compact-list li {
@@ -371,7 +374,7 @@ body {
 .service-group h4 {
   margin: 0 0 0.38rem;
   color: #2b6cb0;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 750;
   letter-spacing: 0.015em;
   line-height: 1.3;
@@ -396,7 +399,7 @@ body {
 
 .service-date {
   color: #64748b;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 650;
   line-height: 1.5;
   white-space: nowrap;
@@ -405,13 +408,37 @@ body {
 .service-text {
   min-width: 0;
   color: #2d3748;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.5;
 }
 
 .service-text strong {
   color: #1a365d;
   font-weight: 700;
+}
+
+.journal-review-entry { padding-bottom: 0.5rem; }
+.home-card .journal-review-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.18rem 1.4rem;
+  margin: 0.38rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.home-card .journal-review-list li {
+  position: relative;
+  margin: 0;
+  padding: 0.16rem 0 0.16rem 0.8rem;
+  color: #2d3748;
+  font-size: 0.92rem;
+  line-height: 1.42;
+}
+.home-card .journal-review-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #94a3b8;
 }
 
 /* -----------------------------------------
@@ -458,15 +485,18 @@ body {
     gap: 0.38rem;
   }
 
-  .profile-links a,
   .bio-highlight-pill,
-  .research-pill,
-  .subheading {
+  .research-pill {
     font-size: 0.8rem;
   }
 
+  .profile-links a {
+    font-size: 0.88rem;
+  }
+
   .home-grid,
-  .quick-info-grid {
+  .quick-info-grid,
+  .teaching-grid {
     grid-template-columns: 1fr;
   }
 
@@ -541,18 +571,12 @@ body {
     gap: 0.08rem;
     padding: 0.42rem 0;
   }
-
-  .service-date {
-    font-size: 0.74rem;
-  }
-
-  .service-text {
-    font-size: 0.88rem;
-  }
-
-  .service-group h4 {
-    font-size: 0.8rem;
-  }
+  .service-date { font-size: 0.8rem; }
+  .service-text { font-size: 0.95rem; }
+  .service-group h4 { font-size: 0.88rem; }
+  .home-card .journal-review-list { grid-template-columns: 1fr; }
+  .home-card .teaching-course-list li { grid-template-columns: 86px minmax(0, 1fr); }
+  .course-name { font-size: 0.93rem; }
 }
 </style>
 </head>
@@ -592,23 +616,7 @@ body {
       <br/>
 <a href="https://floridapoly.edu/" rel="noopener" target="_blank">Florida Polytechnic University</a>
 </p>
-<div class="profile-links">
-<a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" rel="noopener" target="_blank">
-<i aria-hidden="true" class="ai ai-google-scholar">
-</i>
-<span>
-        Google Scholar
-       </span>
-</a>
-<a href="https://www.linkedin.com/in/karimelish" rel="noopener" target="_blank">
-<i aria-hidden="true" class="fa-brands fa-linkedin-in">
-</i>
-<span>
-        LinkedIn
-       </span>
-</a>
-<!--<a href="https://orcid.org/0000-0001-6060-4090" target="_blank" rel="noopener">ORCID</a>-->
-</div>
+<div class="profile-links"><a href="https://scholar.google.com/citations?user=DW96hOsAAAAJ&amp;hl=en" rel="noopener" target="_blank">Google Scholar<span aria-hidden="true" class="external-mark">↗</span></a><span aria-hidden="true" class="profile-link-separator">·</span><a href="https://www.linkedin.com/in/karimelish" rel="noopener" target="_blank">LinkedIn<span aria-hidden="true" class="external-mark">↗</span></a></div>
 <p class="profile-contact">
 <strong>
        Contact
@@ -818,86 +826,31 @@ body {
 </div>
 </div>
 </section>
-<section class="home-card">
-<h3>
+<section class="home-card"><h3>
      Teaching
-    </h3>
-<p>
+    </h3><p>
      At Florida Polytechnic University, I teach a broad range of undergraduate and graduate courses spanning software engineering and cybersecurity. Over the years, I have designed and delivered courses that integrate hands-on practice, current technologies, and effective teaching methods. My teaching portfolio includes:
-    </p>
-<div class="home-grid">
-<div>
-<p class="subheading">
-<i aria-hidden="true" class="fa-solid fa-book-open">
-</i>
-<span>
-        Undergraduate Courses
-       </span>
-</p>
-<ul>
-<li>
-        CEN 4033 Secure Software Engineering
-       </li>
-<li>
-        CEN 4088 Software Security Testing
-       </li>
-<li>
-        CIS 4369 Web Application Security
-       </li>
-<li>
-        CEN 4010 Software Engineering
-       </li>
-<li>
-        CEN 4065 Software Design and Architecture
-       </li>
-<li>
-        COP 4656 Mobile Device Applications
-       </li>
-<li>
-        CEN 3820 Systems Analysis and Design
-       </li>
-<li>
-        COP 3710 Database I
-       </li>
-<li>
-        COP 3330C Computer Programming 2
-       </li>
-<li>
-        COP 4934 Senior Design 1 (Capstone I)
-       </li>
-<li>
-        COP 4935 Senior Design 2 (Capstone II)
-       </li>
-</ul>
-</div>
-<div>
-<p class="subheading">
-<i aria-hidden="true" class="fa-solid fa-graduation-cap">
-</i>
-<span>
-        Graduate Courses and Thesis
-       </span>
-</p>
-<ul>
-<li>
-        CEN 5035 Advanced Software Engineering
-       </li>
-<li>
-        COP 5727 Advanced Database Systems Design
-       </li>
-<li>
-        CEN 5088 Advanced Software Security Testing
-       </li>
-<li>
-        IDS 5970 Thesis 1
-       </li>
-<li>
-        IDS 5975 Thesis 2
-       </li>
-</ul>
-</div>
-</div>
-</section>
+    </p><div class="teaching-grid">
+<section aria-labelledby="undergraduate-courses" class="teaching-group"><h4 id="undergraduate-courses">Undergraduate Courses</h4><ul class="teaching-course-list">
+<li><span class="course-code">CEN 4033</span><span class="course-name">Secure Software Engineering</span></li>
+<li><span class="course-code">CEN 4088</span><span class="course-name">Software Security Testing</span></li>
+<li><span class="course-code">CIS 4369</span><span class="course-name">Web Application Security</span></li>
+<li><span class="course-code">CEN 4010</span><span class="course-name">Software Engineering</span></li>
+<li><span class="course-code">CEN 4065</span><span class="course-name">Software Design and Architecture</span></li>
+<li><span class="course-code">COP 4656</span><span class="course-name">Mobile Device Applications</span></li>
+<li><span class="course-code">CEN 3820</span><span class="course-name">Systems Analysis and Design</span></li>
+<li><span class="course-code">COP 3710</span><span class="course-name">Database I</span></li>
+<li><span class="course-code">COP 3330C</span><span class="course-name">Computer Programming 2</span></li>
+<li><span class="course-code">COP 4934</span><span class="course-name">Senior Design 1 (Capstone I)</span></li>
+<li><span class="course-code">COP 4935</span><span class="course-name">Senior Design 2 (Capstone II)</span></li>
+</ul></section>
+<section aria-labelledby="graduate-courses" class="teaching-group"><h4 id="graduate-courses">Graduate Courses &amp; Thesis</h4><ul class="teaching-course-list">
+<li><span class="course-code">CEN 5035</span><span class="course-name">Advanced Software Engineering</span></li>
+<li><span class="course-code">COP 5727</span><span class="course-name">Advanced Database Systems Design</span></li>
+<li><span class="course-code">CEN 5088</span><span class="course-name">Advanced Software Security Testing</span></li>
+<li><span class="course-code">IDS 5970</span><span class="course-name">Thesis 1</span></li>
+<li><span class="course-code">IDS 5975</span><span class="course-name">Thesis 2</span></li>
+</ul></section></div></section>
 <section class="home-card"><h3>Selected Service</h3>
 <div class="service-block">
 <div class="service-section-title">
@@ -950,8 +903,8 @@ body {
         and MCS'15–'17.
       </div>
 </div>
-<div class="service-entry">
-<div class="service-date">2026</div>
+<div class="service-entry service-entry-no-date">
+
 <div class="service-text">
 <strong>Conference Reviewer:</strong> NeurIPS'26.
       </div>
@@ -972,30 +925,21 @@ body {
       </div>
 </div>
 </div>
-<div class="service-group">
-<h4>Journal &amp; Panel Reviewing</h4>
-<div class="service-entry service-entry-no-date">
-<div class="service-text">
-<strong>Journal Reviewer:</strong>
-<i>IEEE Transactions on Software Engineering (TSE)</i>,
-        <i>ACM Transactions on Software Engineering and Methodology (TOSEM)</i>,
-        <i>IEEE Transactions on Information Forensics and Security (TIFS)</i>,
-        <i>IEEE Transactions on Dependable and Secure Computing (TDSC)</i>,
-        <i>International Journal of Information Security</i>,
-        <i>IEEE Transactions on Mobile Computing (TMC)</i>,
-        <i>IEEE Systems Journal</i>,
-        <i>Journal of Information Security and Applications</i>,
-        <i>IEEE Transactions on Intelligent Transportation Systems</i>,
-        and <i>Computers &amp; Security</i>.
-      </div>
-</div>
-<div class="service-entry">
-<div class="service-date">2016</div>
-<div class="service-text">
-        Panel Reviewer, National Science Foundation (NSF), Cybersecurity Education Program.
-      </div>
-</div>
-</div>
+<div class="service-group"><h4>Journal &amp; Grant Reviewing</h4>
+<div class="service-entry service-entry-no-date journal-review-entry"><div class="service-text"><strong>Journal Reviewer</strong>
+<ul class="journal-review-list">
+<li><i>IEEE Transactions on Software Engineering (TSE)</i></li>
+<li><i>ACM Transactions on Software Engineering and Methodology (TOSEM)</i></li>
+<li><i>IEEE Transactions on Information Forensics and Security (TIFS)</i></li>
+<li><i>IEEE Transactions on Dependable and Secure Computing (TDSC)</i></li>
+<li><i>International Journal of Information Security</i></li>
+<li><i>IEEE Transactions on Mobile Computing (TMC)</i></li>
+<li><i>IEEE Systems Journal</i></li>
+<li><i>Journal of Information Security and Applications</i></li>
+<li><i>IEEE Transactions on Intelligent Transportation Systems</i></li>
+<li><i>Computers &amp; Security</i></li>
+</ul></div></div>
+<div class="service-entry"><div class="service-date">2016</div><div class="service-text"><strong>NSF Panel Reviewer</strong><br/>Cybersecurity Education Program, National Science Foundation (NSF)</div></div></div>
 </div>
 <div class="service-block university-service-block">
 <div class="service-section-title">
