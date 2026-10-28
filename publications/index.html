@@ -1418,9 +1418,55 @@ main.publications-page {
 .publication-topic-chart.compact .topic-gridlines {
   inset: -0.28rem 0 -0.28rem 0;
 }
+
+
+/* Match footer separator width to the Publications page */
+.publications-layout footer {
+  width: min(1320px, calc(100% - 3rem));
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.publications-layout footer hr {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+/* Topic chart colors aligned with the site's Venue-card theme */
+.publication-topic-chart.compact .topic-bar-label {
+  color: #2b6cb0;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  color: #1a365d;
+}
+
+.publication-topic-chart.compact .topic-bar-fill {
+  background: #2b6cb0;
+}
+
+.publication-topic-chart.compact .topic-axis {
+  color: #4a5568;
+}
+
+.publication-topic-chart.compact .topic-axis-tick {
+  color: #4a5568;
+}
+
+.publication-topic-chart.compact .topic-gridline {
+  border-left-color: #cbd5e0;
+}
+
+.publication-topic-chart.compact .topic-axis {
+  border-bottom-color: #cbd5e0;
+}
 </style>
 </head>
-<body>
+<body class="publications-layout">
 <nav>
 <button aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
 <span aria-hidden="true" class="menu-toggle-icon">☰</span>
@@ -2001,8 +2047,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Mobile Security
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">26</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:86.67%;">
 </span>
@@ -2010,8 +2054,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Empirical Study
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">20</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:66.67%;">
 </span>
@@ -2019,8 +2061,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Android Malware
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">18</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:60.00%;">
 </span>
@@ -2028,8 +2068,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Software Security
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">10</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:33.33%;">
 </span>
@@ -2037,8 +2075,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Software Metrics / Quality
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">7</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:23.33%;">
 </span>
@@ -2046,8 +2082,6 @@ main.publications-page {
 <span class="topic-bar-label">
         LLMs / AI for Security &amp; SE
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">6</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:20.00%;">
 </span>
@@ -2055,8 +2089,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Privacy / Data Security
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">6</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:20.00%;">
 </span>
@@ -2064,8 +2096,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Software Maintainability
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">5</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:16.67%;">
 </span>
@@ -2073,8 +2103,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Systems Security
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">5</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:16.67%;">
 </span>
@@ -2082,8 +2110,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Datasets / Benchmarks
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">3</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:10.00%;">
 </span>
@@ -2091,8 +2117,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Software Refactoring
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">3</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:10.00%;">
 </span>
@@ -2100,8 +2124,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Applied AI / Data Science
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">2</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:6.67%;">
 </span>
@@ -2109,8 +2131,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Defect Prediction
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">2</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:6.67%;">
 </span>
@@ -2118,8 +2138,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Software Bugs / Testing
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">2</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:6.67%;">
 </span>
@@ -2127,8 +2145,6 @@ main.publications-page {
 <span class="topic-bar-label">
         Computing Education
        </span>
-
-
 <span class="topic-value-bar"><span class="topic-bar-count">1</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
 <span class="topic-bar-fill" style="width:3.33%;">
 </span>
