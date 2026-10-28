@@ -193,7 +193,7 @@
 /* Main publications + right statistics sidebar */
 .publication-content-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(235px, 255px);
+  grid-template-columns: minmax(0, 1fr) minmax(215px, 230px);
   gap: 1.25rem;
   align-items: start;
 }
@@ -279,7 +279,7 @@
 }
 
 .topic-bar-row {
-  grid-template-columns: minmax(0, 1.25fr) minmax(48px, 0.72fr) 1.45rem;
+  grid-template-columns: minmax(0, 1fr) 30px 1.2rem;
 }
 
 .year-bar-row {
@@ -310,7 +310,7 @@
 .year-bar-label {
   min-width: 0;
   color: #2b6cb0;
-  font-size: 0.69rem;
+  font-size: 0.65rem;
   font-weight: 650;
   line-height: 1.16;
 }
@@ -579,15 +579,14 @@ button.filter-unavailable {
 }
 
 /* Topic is a visible statistical list, not a scroll box. */
-.topic-bar-chart {
-  max-height: none;
+L.45rem;
   overflow: visible;
 }
 
 
 /* Topic card: show about six rows, scroll for the remainder */
 .topic-bar-chart {
-  max-height: 12.55rem;
+  max-height: 14.45rem;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
@@ -666,7 +665,7 @@ button.filter-unavailable {
 .custom-filter-trigger-label {
   min-width: 0;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: clip;
   white-space: nowrap;
 }
 
@@ -746,6 +745,23 @@ button.filter-unavailable {
   color: #2b6cb0;
   font-weight: 800;
   text-align: right;
+}
+
+
+/* Topic-card refinements */
+.topic-bar-label {
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.topic-bar-row {
+  gap: 0.28rem;
+}
+
+.topic-bar-track {
+  width: 30px;
+  min-width: 30px;
 }
 </style>
 </head>
