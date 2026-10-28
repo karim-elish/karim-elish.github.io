@@ -161,10 +161,39 @@
   color: #1a365d;
 }
 
+
+.impact-metrics {
+  display: flex;
+  gap: 0.55rem;
+  margin-top: 0.55rem;
+}
+
+.impact-metric {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.32rem;
+  padding: 0.28rem 0.42rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+.impact-metric-value {
+  color: #1a365d;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.impact-metric-label {
+  color: #64748b;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
 /* Main publications + right statistics sidebar */
 .publication-content-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(270px, 300px);
+  grid-template-columns: minmax(0, 1fr) minmax(235px, 255px);
   gap: 1.25rem;
   align-items: start;
 }
@@ -207,7 +236,7 @@
 .publication-venue-card h3,
 .publication-year-chart h3 {
   margin: 0;
-  padding: 0.46rem 0.55rem;
+  padding: 0.42rem 0.48rem;
   background: #f7f9fc;
   border: none;
   border-bottom: 1px solid #d9e2ec;
@@ -239,7 +268,7 @@
   display: grid;
   align-items: center;
   gap: 0.34rem;
-  padding: 0.34rem 0.45rem;
+  padding: 0.31rem 0.4rem;
   background: #ffffff;
   border: none;
   border-bottom: 1px solid #edf1f5;
@@ -325,7 +354,7 @@
 }
 
 .publication-venue-card td {
-  padding: 0.34rem 0.45rem;
+  padding: 0.31rem 0.4rem;
   border-bottom: 1px solid #edf1f5;
   vertical-align: middle;
 }
@@ -367,12 +396,15 @@
 
 /* Filter summary under the stacked cards */
 .publication-filter-summary {
+  order: -1;
   display: block;
-  margin-top: 0.02rem;
-  padding: 0.1rem 0.05rem 0;
+  margin: 0 0 0.05rem 0;
+  padding: 0.05rem 0.02rem 0.12rem;
   color: #64748b;
   font-size: 0.71rem;
   line-height: 1.35;
+  border: none;
+  background: transparent;
 }
 
 .publication-active-filter-tags {
@@ -533,7 +565,7 @@ button.filter-unavailable {
      </span>
 </h2>
 </div>
-<section aria-label="Research impact summary" class="research-impact-card"><div class="impact-header"><div><h3>Research Impact</h3><p>Google Scholar citation profile</p></div><a class="impact-profile-link" href="https://scholar.google.com/citations?hl=en&amp;user=DW96hOsAAAAJ" rel="noopener" target="_blank">Google Scholar</a></div></section>
+<section aria-label="Research impact summary" class="research-impact-card"><div class="impact-header"><div><h3>Research Impact</h3><p>Google Scholar citation summary</p></div><a class="impact-profile-link" href="https://scholar.google.com/citations?hl=en&amp;user=DW96hOsAAAAJ" rel="noopener" target="_blank">Google Scholar</a></div><div class="impact-metrics"><div class="impact-metric"><span class="impact-metric-value">1,790</span><span class="impact-metric-label">Total citations</span></div><div class="impact-metric"><span class="impact-metric-value">687</span><span class="impact-metric-label">Since 2021</span></div></div></section>
 <div class="publication-content-layout"><div class="publications-main"><p class="publication-no-results" hidden="" id="publication-no-results">
     No publications match the selected topic, venue, and year.
    </p><h3>
@@ -1049,11 +1081,53 @@ button.filter-unavailable {
      Iowa, November 2011.
     </li>
 </ul></div><aside aria-label="Publication statistics and filters" class="publication-stats-sidebar"><section aria-label="Publication topic, venue, and year filters" class="publication-overview-grid with-year">
-<div class="publication-topic-chart compact">
+<div class="publication-filter-summary">
+<span id="publication-active-filter">
+      Showing all selected publications.
+     </span>
+<div aria-label="Active filters" class="publication-active-filter-tags">
+<button class="publication-filter-tag" hidden="" id="publication-clear-topic" type="button">
+       Topic
+       <span aria-hidden="true">
+        ×
+       </span>
+</button>
+<button class="publication-filter-tag" hidden="" id="publication-clear-venue" type="button">
+       Venue
+       <span aria-hidden="true">
+        ×
+       </span>
+</button>
+<button class="publication-filter-tag" hidden="" id="publication-clear-year" type="button">
+       Year
+       <span aria-hidden="true">
+        ×
+       </span>
+</button>
+<button id="publication-clear-filters" type="button">
+       Clear all
+      </button>
+</div>
+</div><div class="publication-topic-chart compact">
 <h3>
       Topic
      </h3>
 <div class="topic-bar-chart">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <button aria-label="Filter by Mobile Security" class="topic-bar-row" data-filter-topic="mobile-security" type="button">
 <span class="topic-bar-label">
         Mobile Security
@@ -1065,8 +1139,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         24
        </span>
-</button>
-<button aria-label="Filter by Empirical Study" class="topic-bar-row" data-filter-topic="empirical-study" type="button">
+</button><button aria-label="Filter by Empirical Study" class="topic-bar-row" data-filter-topic="empirical-study" type="button">
 <span class="topic-bar-label">
         Empirical Study
        </span>
@@ -1077,8 +1150,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         19
        </span>
-</button>
-<button aria-label="Filter by Android Malware" class="topic-bar-row" data-filter-topic="android-malware" type="button">
+</button><button aria-label="Filter by Android Malware" class="topic-bar-row" data-filter-topic="android-malware" type="button">
 <span class="topic-bar-label">
         Android Malware
        </span>
@@ -1089,8 +1161,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         17
        </span>
-</button>
-<button aria-label="Filter by Software Metrics / Quality" class="topic-bar-row" data-filter-topic="software-metrics" type="button">
+</button><button aria-label="Filter by Software Metrics / Quality" class="topic-bar-row" data-filter-topic="software-metrics" type="button">
 <span class="topic-bar-label">
         Software Metrics / Quality
        </span>
@@ -1101,8 +1172,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         7
        </span>
-</button>
-<button aria-label="Filter by Software Security" class="topic-bar-row" data-filter-topic="software-security" type="button">
+</button><button aria-label="Filter by Software Security" class="topic-bar-row" data-filter-topic="software-security" type="button">
 <span class="topic-bar-label">
         Software Security
        </span>
@@ -1113,8 +1183,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         7
        </span>
-</button>
-<button aria-label="Filter by Privacy / Data Security" class="topic-bar-row" data-filter-topic="privacy" type="button">
+</button><button aria-label="Filter by Privacy / Data Security" class="topic-bar-row" data-filter-topic="privacy" type="button">
 <span class="topic-bar-label">
         Privacy / Data Security
        </span>
@@ -1125,8 +1194,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         6
        </span>
-</button>
-<button aria-label="Filter by LLMs / AI for Security &amp; SE" class="topic-bar-row" data-filter-topic="llms-ai" type="button">
+</button><button aria-label="Filter by LLMs / AI for Security &amp; SE" class="topic-bar-row" data-filter-topic="llms-ai" type="button">
 <span class="topic-bar-label">
         LLMs / AI for Security &amp; SE
        </span>
@@ -1137,8 +1205,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         5
        </span>
-</button>
-<button aria-label="Filter by Software Maintainability" class="topic-bar-row" data-filter-topic="maintainability" type="button">
+</button><button aria-label="Filter by Software Maintainability" class="topic-bar-row" data-filter-topic="maintainability" type="button">
 <span class="topic-bar-label">
         Software Maintainability
        </span>
@@ -1149,8 +1216,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         5
        </span>
-</button>
-<button aria-label="Filter by Systems Security" class="topic-bar-row" data-filter-topic="systems-security" type="button">
+</button><button aria-label="Filter by Systems Security" class="topic-bar-row" data-filter-topic="systems-security" type="button">
 <span class="topic-bar-label">
         Systems Security
        </span>
@@ -1161,8 +1227,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         5
        </span>
-</button>
-<button aria-label="Filter by Datasets / Benchmarks" class="topic-bar-row" data-filter-topic="datasets" type="button">
+</button><button aria-label="Filter by Datasets / Benchmarks" class="topic-bar-row" data-filter-topic="datasets" type="button">
 <span class="topic-bar-label">
         Datasets / Benchmarks
        </span>
@@ -1173,8 +1238,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         4
        </span>
-</button>
-<button aria-label="Filter by Software Refactoring" class="topic-bar-row" data-filter-topic="refactoring" type="button">
+</button><button aria-label="Filter by Software Refactoring" class="topic-bar-row" data-filter-topic="refactoring" type="button">
 <span class="topic-bar-label">
         Software Refactoring
        </span>
@@ -1185,8 +1249,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         3
        </span>
-</button>
-<button aria-label="Filter by Applied AI / Data Science" class="topic-bar-row" data-filter-topic="applied-ai" type="button">
+</button><button aria-label="Filter by Applied AI / Data Science" class="topic-bar-row" data-filter-topic="applied-ai" type="button">
 <span class="topic-bar-label">
         Applied AI / Data Science
        </span>
@@ -1197,8 +1260,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         2
        </span>
-</button>
-<button aria-label="Filter by Defect Prediction" class="topic-bar-row" data-filter-topic="defect-prediction" type="button">
+</button><button aria-label="Filter by Defect Prediction" class="topic-bar-row" data-filter-topic="defect-prediction" type="button">
 <span class="topic-bar-label">
         Defect Prediction
        </span>
@@ -1209,8 +1271,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         2
        </span>
-</button>
-<button aria-label="Filter by Software Bugs / Testing" class="topic-bar-row" data-filter-topic="software-bugs" type="button">
+</button><button aria-label="Filter by Software Bugs / Testing" class="topic-bar-row" data-filter-topic="software-bugs" type="button">
 <span class="topic-bar-label">
         Software Bugs / Testing
        </span>
@@ -1221,8 +1282,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         2
        </span>
-</button>
-<button aria-label="Filter by Computing Education" class="topic-bar-row" data-filter-topic="education" type="button">
+</button><button aria-label="Filter by Computing Education" class="topic-bar-row" data-filter-topic="education" type="button">
 <span class="topic-bar-label">
         Computing Education
        </span>
@@ -1233,8 +1293,7 @@ button.filter-unavailable {
 <span class="topic-bar-count">
         1
        </span>
-</button>
-</div>
+</button></div>
 </div>
 <div class="publication-venue-card">
 <h3>
@@ -1796,42 +1855,8 @@ button.filter-unavailable {
 </button>
 </div>
 </div>
-<div class="publication-filter-summary">
-<span id="publication-active-filter">
-      Showing all selected publications.
-     </span>
-<div aria-label="Active filters" class="publication-active-filter-tags">
-<button class="publication-filter-tag" hidden="" id="publication-clear-topic" type="button">
-       Topic
-       <span aria-hidden="true">
-        ×
-       </span>
-</button>
-<button class="publication-filter-tag" hidden="" id="publication-clear-venue" type="button">
-       Venue
-       <span aria-hidden="true">
-        ×
-       </span>
-</button>
-<button class="publication-filter-tag" hidden="" id="publication-clear-year" type="button">
-       Year
-       <span aria-hidden="true">
-        ×
-       </span>
-</button>
-<button id="publication-clear-filters" type="button">
-       Clear all
-      </button>
-</div>
-</div>
+
 </section></aside></div>
-
-
-
-
-
-
-
 </main>
 <footer>
 <hr/>
