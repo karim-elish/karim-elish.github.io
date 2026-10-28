@@ -193,7 +193,7 @@
 /* Main publications + right statistics sidebar */
 .publication-content-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 365px);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 315px);
   gap: 1.25rem;
   align-items: start;
 }
@@ -764,7 +764,7 @@ main.publications-page {
 
 /* Balanced width refinements for statistics cards */
 .publication-stats-sidebar {
-  min-width: 340px;
+  min-width: 300px;
 }
 
 /* Topic labels stay compact; Venue names must remain fully visible. */
@@ -804,6 +804,181 @@ main.publications-page {
   .publication-venue-card td:first-child {
     white-space: normal;
   }
+}
+
+
+/* Tight statistics-card sizing */
+.publication-venue-card td {
+  padding: 0.28rem 0.34rem;
+}
+
+.publication-venue-card table {
+  font-size: 0.66rem;
+  line-height: 1.12;
+}
+
+.publication-filter-row {
+  font-size: 0.66rem;
+  letter-spacing: -0.005em;
+}
+
+.publication-venue-card td:last-child {
+  width: 1.45rem;
+  min-width: 1.45rem;
+  padding-left: 0.2rem;
+}
+
+.publication-topic-chart.compact h3,
+.publication-venue-card h3,
+.publication-year-chart h3 {
+  padding-left: 0.42rem;
+  padding-right: 0.42rem;
+}
+
+.topic-bar-row {
+  padding-left: 0.34rem;
+  padding-right: 0.34rem;
+}
+
+
+/* Reduce empty space inside statistics rows */
+.topic-bar-row {
+  grid-template-columns: minmax(0, auto) minmax(38px, 70px) 1.25rem;
+  column-gap: 0.22rem;
+}
+
+.topic-bar-label {
+  width: max-content;
+  max-width: 13.5rem;
+}
+
+.publication-venue-card td:first-child {
+  width: 1%;
+  white-space: nowrap;
+  padding-right: 0.28rem;
+}
+
+.publication-venue-card td:last-child {
+  width: auto;
+  min-width: 1.3rem;
+  padding-left: 0.12rem;
+  padding-right: 0.28rem;
+  text-align: left;
+}
+
+
+/* Keep labels close to their bars/counts */
+.topic-bar-row {
+  grid-template-columns: max-content 68px max-content;
+  justify-content: start;
+  column-gap: 0.28rem;
+}
+
+.topic-bar-label {
+  width: auto;
+  max-width: none;
+}
+
+.publication-venue-card table {
+  width: auto;
+  max-width: 100%;
+}
+
+.publication-venue-card td:first-child {
+  width: auto;
+  white-space: nowrap;
+  padding-right: 0.32rem;
+}
+
+.publication-venue-card td:last-child {
+  width: auto;
+  min-width: 0;
+  padding-left: 0;
+  padding-right: 0.2rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+
+/* Final compact alignment: tight rows, right-aligned counts */
+.publication-content-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(285px, 300px);
+}
+
+.publication-stats-sidebar {
+  min-width: 285px;
+}
+
+.topic-bar-row {
+  grid-template-columns: max-content 62px 1.35rem;
+  justify-content: start;
+  column-gap: 0.24rem;
+}
+
+.topic-bar-count {
+  text-align: right;
+  justify-self: end;
+  width: 1.35rem;
+}
+
+.publication-venue-card table {
+  width: auto;
+  max-width: 100%;
+}
+
+.publication-venue-card td:first-child {
+  width: auto;
+  white-space: nowrap;
+  padding-right: 0.28rem;
+}
+
+.publication-venue-card td:last-child {
+  width: 1.35rem;
+  min-width: 1.35rem;
+  padding-left: 0.08rem;
+  padding-right: 0.08rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .publication-stats-sidebar {
+    min-width: 0;
+  }
+}
+
+
+/* Match Topic card spacing/alignment to Venue card */
+.publication-topic-chart.compact .topic-bar-chart {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.publication-topic-chart.compact .topic-bar-row {
+  grid-template-columns: max-content 54px 1.3rem;
+  justify-content: start;
+  column-gap: 0.2rem;
+  padding-left: 0.12rem;
+  padding-right: 0.12rem;
+}
+
+.publication-topic-chart.compact .topic-bar-label {
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  width: 54px;
+  min-width: 54px;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  width: 1.3rem;
+  min-width: 1.3rem;
+  justify-self: end;
+  text-align: right;
+  padding: 0;
 }
 
 </style>
