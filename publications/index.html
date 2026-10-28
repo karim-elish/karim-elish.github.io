@@ -193,7 +193,7 @@
 /* Main publications + right statistics sidebar */
 .publication-content-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(235px, 255px);
+  grid-template-columns: minmax(0, 1fr) minmax(255px, 280px);
   gap: 1.25rem;
   align-items: start;
 }
@@ -751,8 +751,8 @@ button.filter-unavailable {
 
 /* Wider layout only for the Publications page */
 main.publications-page {
-  width: min(1380px, calc(100% - 3rem));
-  max-width: 1380px;
+  width: min(1320px, calc(100% - 3rem));
+  max-width: 1320px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -762,6 +762,43 @@ main.publications-page {
     width: calc(100% - 1.5rem);
   }
 }
+
+/* Balanced width refinements for statistics cards */
+.publication-stats-sidebar {
+  min-width: 255px;
+}
+
+.topic-bar-label,
+.publication-filter-row {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.publication-venue-card td:first-child {
+  white-space: nowrap;
+}
+
+.publication-venue-card table {
+  table-layout: fixed;
+}
+
+.publication-venue-card td:last-child {
+  width: 1.7rem;
+}
+
+@media (max-width: 900px) {
+  .publication-stats-sidebar {
+    min-width: 0;
+  }
+
+  .topic-bar-label,
+  .publication-filter-row,
+  .publication-venue-card td:first-child {
+    white-space: normal;
+  }
+}
+
 </style>
 </head>
 <body>
