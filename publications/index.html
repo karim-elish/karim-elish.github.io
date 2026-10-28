@@ -1464,6 +1464,283 @@ main.publications-page {
 .publication-topic-chart.compact .topic-axis {
   border-bottom-color: #cbd5e0;
 }
+
+
+/* =========================================================
+   FINAL MOBILE OVERRIDES
+   Keep desktop unchanged; prevent accumulated desktop rules
+   from forcing fixed widths / no-wrap behavior on phones.
+   ========================================================= */
+@media (max-width: 700px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  main.publications-page {
+    width: calc(100% - 1rem) !important;
+    max-width: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .publication-content-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0.9rem;
+    width: 100%;
+  }
+
+  .publication-stats-sidebar,
+  .publications-main {
+    min-width: 0 !important;
+    width: 100%;
+  }
+
+  .publication-stats-sidebar {
+    position: static;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .publications-main {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .publication-overview-grid.with-year {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .publication-topic-chart.compact,
+  .publication-venue-card,
+  .publication-year-chart {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* Research impact */
+  .impact-header {
+    gap: 0.5rem;
+  }
+
+  .impact-metrics {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .impact-metric {
+    min-width: 0;
+  }
+
+  /* Topic chart: responsive label/count/bar geometry */
+  .publication-topic-chart.compact .topic-axis {
+    display: grid;
+    grid-template-columns: minmax(108px, 42%) 1.35rem minmax(0, 1fr) !important;
+    column-gap: 0.08rem;
+    padding: 0.14rem 0.38rem 0.14rem 0.3rem;
+    box-sizing: border-box;
+  }
+
+  .publication-topic-chart.compact .topic-bar-chart {
+    width: 100%;
+    max-width: 100%;
+    max-height: 9.7rem;
+    padding-right: 7px;
+    box-sizing: border-box;
+    scrollbar-gutter: stable;
+  }
+
+  .publication-topic-chart.compact .topic-bar-row {
+    width: 100%;
+    grid-template-columns: minmax(108px, 42%) minmax(0, 1fr) !important;
+    column-gap: 0.18rem;
+    min-height: 1.55rem;
+    padding: 0.12rem 0.3rem;
+    box-sizing: border-box;
+  }
+
+  .publication-topic-chart.compact .topic-bar-label {
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.64rem;
+  }
+
+  .publication-topic-chart.compact .topic-value-bar {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.08rem;
+  }
+
+  .publication-topic-chart.compact .topic-bar-count {
+    flex: 0 0 1.35rem;
+    width: 1.35rem;
+    min-width: 1.35rem;
+    text-align: right;
+  }
+
+  .publication-topic-chart.compact .topic-bar-track {
+    flex: 1 1 auto;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+
+  .publication-topic-chart.compact .topic-axis-scale {
+    min-width: 0;
+  }
+
+  .publication-topic-chart.compact .topic-axis-tick {
+    font-size: 0.58rem;
+  }
+
+  /* Venue: allow full names to wrap on phones instead of overflowing */
+  .publication-venue-card .publication-filter-scroll {
+    width: 100%;
+    max-width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .publication-venue-card table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
+  }
+
+  .publication-venue-card td {
+    box-sizing: border-box;
+  }
+
+  .publication-venue-card td:first-child {
+    width: auto !important;
+    min-width: 0;
+    white-space: normal !important;
+    padding-right: 0.3rem;
+  }
+
+  .publication-filter-row {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: anywhere;
+    line-height: 1.25;
+  }
+
+  .publication-venue-card td:last-child {
+    width: 1.45rem !important;
+    min-width: 1.45rem !important;
+    padding-left: 0.1rem;
+    padding-right: 0.15rem;
+    text-align: right !important;
+    white-space: nowrap;
+  }
+
+  /* Year custom dropdown */
+  .publication-year-chart {
+    overflow: visible;
+  }
+
+  .publication-select-wrap,
+  .custom-filter-dropdown,
+  .custom-filter-trigger {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .custom-filter-menu {
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .custom-filter-option-text {
+    overflow-wrap: anywhere;
+  }
+
+  /* Publication cards */
+  .publication-list li {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0.85rem 0.85rem;
+    overflow-wrap: break-word;
+  }
+
+  .publication-list li strong,
+  .publication-list li em,
+  .publication-list li span {
+    max-width: 100%;
+  }
+
+  .publication-list .note {
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+
+  /* Footer follows the mobile page width */
+  .publications-layout footer {
+    width: calc(100% - 1rem) !important;
+    max-width: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .publications-layout footer hr {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .impact-header {
+    display: block;
+  }
+
+  .impact-profile-link {
+    margin-top: 0.45rem;
+  }
+
+  .publication-topic-chart.compact .topic-axis {
+    grid-template-columns: minmax(96px, 40%) 1.3rem minmax(0, 1fr) !important;
+  }
+
+  .publication-topic-chart.compact .topic-bar-row {
+    grid-template-columns: minmax(96px, 40%) minmax(0, 1fr) !important;
+  }
+
+  .publication-topic-chart.compact .topic-bar-label {
+    font-size: 0.62rem;
+  }
+
+  .publication-topic-chart.compact .topic-axis-tick {
+    font-size: 0.54rem;
+  }
+
+  .publication-list li {
+    padding: 0.78rem;
+  }
+}
 </style>
 </head>
 <body class="publications-layout">
