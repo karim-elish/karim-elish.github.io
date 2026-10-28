@@ -2021,6 +2021,153 @@ main.publications-page {
     grid-template-columns: minmax(96px, 38%) minmax(0, 1fr) !important;
   }
 }
+
+
+/* =========================================================
+   POLISHED INTERMEDIATE LAYOUT
+   Narrow laptops / tablets:
+   status + compact Year filter on top, Topic | Venue below.
+   ========================================================= */
+@media (max-width: 1100px) and (min-width: 821px) {
+
+  .publication-overview-grid.with-year {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 270px) !important;
+    grid-template-areas:
+      "summary year"
+      "topic   venue";
+    gap: 0.62rem 0.72rem;
+    align-items: start;
+  }
+
+  /* Status line */
+  .publication-filter-summary {
+    grid-area: summary !important;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.55rem;
+    min-width: 0;
+    min-height: 2.1rem;
+    margin: 0;
+    padding: 0.08rem 0.02rem;
+  }
+
+  .publication-active-filter-tags {
+    margin-top: 0;
+  }
+
+  /* Turn the Year card into a compact inline filter */
+  .publication-year-chart {
+    grid-area: year !important;
+    justify-self: end;
+    align-self: center;
+    display: grid;
+    grid-template-columns: auto minmax(150px, 210px);
+    align-items: center;
+    gap: 0.42rem;
+    width: auto !important;
+    max-width: 270px;
+    min-width: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .publication-year-chart h3 {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: #1a365d;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .publication-year-chart .publication-select-wrap {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  .publication-year-chart .custom-filter-dropdown,
+  .publication-year-chart .custom-filter-trigger {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .publication-year-chart .custom-filter-trigger {
+    min-height: 2.05rem;
+    padding: 0.36rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+  }
+
+  .publication-year-chart .custom-filter-menu {
+    left: auto;
+    right: 0;
+    width: 210px;
+    max-width: min(210px, 80vw);
+  }
+
+  /* Matched statistics row */
+  .publication-topic-chart.compact {
+    grid-area: topic;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .publication-venue-card {
+    grid-area: venue;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Keep both cards visually balanced without changing Topic's compact 6-row feel. */
+  .publication-venue-card .publication-filter-scroll {
+    max-height: 176px;
+  }
+
+  .publication-topic-chart.compact,
+  .publication-venue-card {
+    align-self: start;
+  }
+
+  /* Slightly tighten the transition into the publication list. */
+  .publication-content-layout {
+    row-gap: 0.78rem;
+  }
+
+  .publications-main > h3:first-of-type {
+    margin-top: 0.18rem;
+  }
+}
+
+/* At the upper edge of the intermediate layout, give the two charts
+   a little more room while keeping the compact Year filter. */
+@media (max-width: 1100px) and (min-width: 980px) {
+  .publication-overview-grid.with-year {
+    grid-template-columns: minmax(0, 1fr) minmax(235px, 285px) !important;
+  }
+
+  .publication-year-chart {
+    max-width: 285px;
+    grid-template-columns: auto minmax(165px, 220px);
+  }
+
+  .publication-year-chart .custom-filter-menu {
+    width: 220px;
+    max-width: min(220px, 80vw);
+  }
+}
 </style>
 </head>
 <body class="publications-layout">
