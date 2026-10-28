@@ -2168,6 +2168,119 @@ main.publications-page {
     max-width: min(220px, 80vw);
   }
 }
+
+/* =========================================================
+   TYPOGRAPHY CONSISTENCY PASS
+   Keep the compact publications analytics UI visually secondary,
+   but align it more closely with the Home and Awards page scale.
+   Layout, filtering behavior, chart geometry, and publication cards
+   are intentionally unchanged.
+   ========================================================= */
+
+/* Research impact */
+.impact-header p {
+  font-size: 0.80rem;
+}
+
+.impact-profile-link {
+  font-size: 0.76rem;
+}
+
+.impact-metric-value {
+  font-size: 0.95rem;
+}
+
+.impact-metric-label {
+  font-size: 0.76rem;
+}
+
+/* Statistics card headings */
+.publication-topic-chart.compact h3,
+.publication-venue-card h3,
+.publication-year-chart h3 {
+  font-size: 0.85rem;
+}
+
+/* Topic chart */
+.publication-topic-chart.compact .topic-bar-label {
+  font-size: 0.74rem;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  font-size: 0.72rem;
+}
+
+.publication-topic-chart.compact .topic-axis {
+  font-size: 0.69rem;
+}
+
+/* Venue list */
+.publication-venue-card table,
+.publication-filter-row {
+  font-size: 0.74rem;
+}
+
+/* Filter status and controls */
+.publication-filter-summary {
+  font-size: 0.78rem;
+}
+
+.publication-filter-tag,
+#publication-clear-filters {
+  font-size: 0.72rem;
+}
+
+.publication-select,
+.custom-filter-trigger {
+  font-size: 0.76rem;
+}
+
+.custom-filter-option {
+  font-size: 0.76rem;
+}
+
+/* The intermediate layout uses an inline Year label; keep it compact,
+   but no longer noticeably smaller than the surrounding controls. */
+@media (max-width: 1100px) and (min-width: 821px) {
+  .publication-year-chart h3 {
+    font-size: 0.80rem;
+  }
+
+  .publication-year-chart .custom-filter-trigger {
+    font-size: 0.76rem;
+  }
+}
+
+/* Keep compact UI readable on phones without changing its geometry. */
+@media (max-width: 700px) {
+  .publication-topic-chart.compact .topic-bar-label {
+    font-size: 0.72rem;
+  }
+
+  .publication-topic-chart.compact .topic-bar-count {
+    font-size: 0.70rem;
+  }
+
+  .publication-topic-chart.compact .topic-axis,
+  .publication-topic-chart.compact .topic-axis-tick {
+    font-size: 0.64rem;
+  }
+
+  .publication-venue-card table,
+  .publication-filter-row {
+    font-size: 0.72rem;
+  }
+
+  .publication-filter-summary {
+    font-size: 0.76rem;
+  }
+
+  .custom-filter-trigger,
+  .custom-filter-option {
+    font-size: 0.74rem;
+  }
+}
+
 </style>
 </head>
 <body class="publications-layout">
