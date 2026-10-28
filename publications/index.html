@@ -2389,6 +2389,125 @@ main.publications-page {
   }
 }
 
+
+/* =========================================================
+   FINAL FILTER-CARD COMPACTION
+   Keep venue names complete on one line, bring counts closer
+   to labels, and reserve clear space for the vertical scrollbar.
+   ========================================================= */
+
+/* Slightly narrower desktop statistics column. */
+@media (min-width: 1101px) {
+  .publication-content-layout {
+    grid-template-columns: minmax(0, 1fr) 315px;
+  }
+
+  .publication-stats-sidebar {
+    min-width: 315px;
+  }
+}
+
+/* Venue scroll area: reserve a permanent scrollbar gutter so
+   the scrollbar never sits on top of the count column. */
+.publication-venue-card .publication-filter-scroll {
+  overflow-y: auto;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  padding-right: 8px;
+  box-sizing: border-box;
+}
+
+/* Let the table hug its content instead of stretching the venue
+   name and count to opposite sides of the card. */
+.publication-venue-card table {
+  width: max-content !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  table-layout: auto !important;
+  margin: 0;
+}
+
+/* Keep every venue name complete and on one line. */
+.publication-venue-card td:first-child {
+  width: auto !important;
+  min-width: 0 !important;
+  padding-right: 0.42rem !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+.publication-venue-card .publication-filter-row {
+  display: inline-block;
+  width: auto !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+/* Keep counts compact and immediately after the venue name. */
+.publication-venue-card td:last-child {
+  width: 1.55rem !important;
+  min-width: 1.55rem !important;
+  padding-left: 0.16rem !important;
+  padding-right: 0.12rem !important;
+  text-align: right !important;
+  white-space: nowrap !important;
+}
+
+/* WebKit scrollbar clearance/appearance. */
+.publication-venue-card .publication-filter-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.publication-venue-card .publication-filter-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.publication-venue-card .publication-filter-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 6px;
+}
+
+/* Intermediate widths: retain the compact content-hugging table. */
+@media (max-width: 1100px) and (min-width: 701px) {
+  .publication-venue-card table {
+    width: max-content !important;
+    min-width: 0 !important;
+  }
+
+  .publication-venue-card .publication-filter-scroll {
+    padding-right: 8px;
+    scrollbar-gutter: stable;
+  }
+}
+
+/* Phones: still show full venue names; horizontal scrolling is used
+   only when a full venue name is wider than the card. */
+@media (max-width: 700px) {
+  .publication-venue-card .publication-filter-scroll {
+    overflow-x: auto !important;
+    padding-right: 8px;
+    scrollbar-gutter: stable;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .publication-venue-card table {
+    width: max-content !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  .publication-venue-card td:last-child {
+    width: 1.55rem !important;
+    min-width: 1.55rem !important;
+  }
+}
+
 </style>
 </head>
 <body class="publications-layout">
