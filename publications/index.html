@@ -540,6 +540,49 @@ button.filter-unavailable {
     margin-top: 0.45rem;
   }
 }
+
+
+/* Compact dropdown filters for Venue and Year */
+.publication-select-wrap {
+  padding: 0.52rem;
+  background: #ffffff;
+}
+
+.publication-select {
+  width: 100%;
+  min-width: 0;
+  padding: 0.42rem 1.8rem 0.42rem 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #1a365d;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.publication-select:focus {
+  outline: 2px solid rgba(43, 108, 176, 0.16);
+  outline-offset: 1px;
+  border-color: #2b6cb0;
+}
+
+.publication-select option {
+  color: #1a365d;
+  background: #ffffff;
+}
+
+.filter-source-controls {
+  display: none !important;
+}
+
+/* Topic is a visible statistical list, not a scroll box. */
+.topic-bar-chart {
+  max-height: none;
+  overflow: visible;
+}
 </style>
 </head>
 <body>
@@ -1290,7 +1333,7 @@ button.filter-unavailable {
 <h3>
       Venue
      </h3>
-<div class="publication-filter-scroll">
+<div class="publication-select-wrap"><select aria-label="Filter publications by venue" class="publication-select" id="publication-venue-select"><option value="all">All venues</option><option value="acm-codaspy">[Conference] ACM CODASPY</option><option value="asee">[Conference] ASEE Annual Conference</option><option value="flairs">[Conference] FLAIRS</option><option value="ieee-acdsa">[Conference] IEEE ACDSA</option><option value="apsec">[Conference] IEEE APSEC</option><option value="ieee-bigdata">[Conference] IEEE Big Data</option><option value="ieee-csmr">[Conference] IEEE CSMR</option><option value="ieee-iccc">[Conference] IEEE ICCC</option><option value="ieee-iccia">[Conference] IEEE ICCIA</option><option value="ieee-icmla">[Conference] IEEE ICMLA</option><option value="ieee-icsa">[Conference] IEEE ICSA</option><option value="ieee-icst">[Conference] IEEE ICST</option><option value="ieee-acis-sera">[Conference] IEEE/ACIS SERA</option><option value="ieee-acm-forge">[Conference] IEEE/ACM FORGE</option><option value="ieee-acm-icse">[Conference] IEEE/ACM ICSE</option><option value="ieee-acm-msr">[Conference] IEEE/ACM MSR</option><option value="isc">[Conference] ISC</option><option value="iupt-procedia">[Conference] IUPT / Procedia Computer Science</option><option value="ajse">[Journal] Arabian Journal for Science and Engineering</option><option value="computers-security">[Journal] Computers &amp; Security</option><option value="ieee-access">[Journal] IEEE Access</option><option value="ieee-internet-computing">[Journal] IEEE Internet Computing</option><option value="ieee-tc">[Journal] IEEE Transactions on Computers</option><option value="ieee-tmc">[Journal] IEEE Transactions on Mobile Computing</option><option value="ijisae">[Journal] IJISAE</option><option value="information">[Journal] Information</option><option value="journal-software">[Journal] Journal of Software</option><option value="jss">[Journal] Journal of Systems and Software</option><option value="scn">[Journal] Security and Communication Networks</option><option value="ieom">[Poster] IEOM</option><option value="s2erc">[Poster] S2ERC</option><option value="usenix-security">[Poster] USENIX Security Symposium</option><option value="vt-poster-showcase">[Poster] Virginia Tech Graduate  Showcase</option><option value="acm-iwspa-codaspy">[Workshop] ACM IWSPA / CODASPY</option><option value="ieee-spw-most">[Workshop] IEEE SPW / MoST</option></select></div><div class="publication-filter-scroll filter-source-controls">
 <table>
 <tbody>
 <tr>
@@ -1651,7 +1694,7 @@ button.filter-unavailable {
 <h3>
       Year
      </h3>
-<div class="year-bar-chart">
+<div class="publication-select-wrap"><select aria-label="Filter publications by year" class="publication-select" id="publication-year-select"><option value="all">All years</option><option value="2027">2027</option><option value="2026">2026</option><option value="2025">2025</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2009">2009</option><option value="2008">2008</option></select></div><div class="year-bar-chart filter-source-controls">
 <button aria-label="Filter by 2027" class="year-bar-row" data-filter-year="2027" type="button">
 <span class="year-bar-label">
         2027
@@ -1866,6 +1909,16 @@ button.filter-unavailable {
   const topicButtons = Array.from(document.querySelectorAll('.topic-bar-row[data-filter-topic]'));
   const venueButtons = Array.from(document.querySelectorAll('.publication-filter-row[data-filter-venue]'));
   const yearButtons = Array.from(document.querySelectorAll('.year-bar-row[data-filter-year]'));
+
+  const originalTopicCounts = new Map(
+    topicButtons.map(button => [
+      button.dataset.filterTopic,
+      Number(button.querySelector('.topic-bar-count')?.textContent || 0)
+    ])
+  );
+
+  const venueSelect = document.getElementById('publication-venue-select');
+  const yearSelect = document.getElementById('publication-year-select');
   const clearAllButton = document.getElementById('publication-clear-filters');
   const clearTopicButton = document.getElementById('publication-clear-topic');
   const clearVenueButton = document.getElementById('publication-clear-venue');
@@ -1929,6 +1982,51 @@ button.filter-unavailable {
     button.setAttribute('aria-disabled', disabled ? 'true' : 'false');
   }
 
+
+  function syncDropdownOptions() {
+    if (venueSelect) {
+      venueSelect.value = selectedVenue;
+      Array.from(venueSelect.options).forEach(option => {
+        if (option.value === 'all') {
+          option.disabled = false;
+          return;
+        }
+        const button = venueButtons.find(btn => btn.dataset.filterVenue === option.value);
+        option.disabled = !!button?.disabled;
+      });
+    }
+
+    if (yearSelect) {
+      yearSelect.value = selectedYear;
+      Array.from(yearSelect.options).forEach(option => {
+        if (option.value === 'all') {
+          option.disabled = false;
+          return;
+        }
+        const button = yearButtons.find(btn => btn.dataset.filterYear === option.value);
+        option.disabled = !!button?.disabled;
+      });
+    }
+  }
+
+  function sortTopicsByOriginalCount() {
+    const chart = document.querySelector('.topic-bar-chart');
+    if (!chart) return;
+
+    const sorted = topicButtons.slice().sort((a, b) => {
+      const aCount = originalTopicCounts.get(a.dataset.filterTopic) || 0;
+      const bCount = originalTopicCounts.get(b.dataset.filterTopic) || 0;
+
+      if (bCount !== aCount) return bCount - aCount;
+
+      const aLabel = a.querySelector('.topic-bar-label')?.textContent.trim() || '';
+      const bLabel = b.querySelector('.topic-bar-label')?.textContent.trim() || '';
+      return aLabel.localeCompare(bLabel);
+    });
+
+    sorted.forEach(button => chart.appendChild(button));
+  }
+
   function updateDynamicFilterCounts() {
     const topicCounts = topicButtons.map(button => countForTopic(button.dataset.filterTopic));
     const yearCounts = yearButtons.map(button => countForYear(button.dataset.filterYear));
@@ -1936,17 +2034,23 @@ button.filter-unavailable {
     const maxTopic = maxCount(topicCounts);
     const maxYear = maxCount(yearCounts);
 
+    const originalTopicValues = topicButtons.map(
+      button => originalTopicCounts.get(button.dataset.filterTopic) || 0
+    );
+    const maxOriginalTopic = maxCount(originalTopicValues);
+
     topicButtons.forEach((button, index) => {
       const value = button.dataset.filterTopic;
-      const count = topicCounts[index];
+      const contextualCount = topicCounts[index];
+      const totalCount = originalTopicCounts.get(value) || 0;
       const isSelected = selectedTopic === value;
       const fill = button.querySelector('.topic-bar-fill');
       const countEl = button.querySelector('.topic-bar-count');
 
-      if (fill) fill.style.width = `${Math.round((count / maxTopic) * 10000) / 100}%`;
-      if (countEl) countEl.textContent = count;
+      if (fill) fill.style.width = `${Math.round((totalCount / maxOriginalTopic) * 10000) / 100}%`;
+      if (countEl) countEl.textContent = totalCount;
 
-      setAvailability(button, count, isSelected);
+      setAvailability(button, contextualCount, isSelected);
     });
 
     venueButtons.forEach(button => {
@@ -1972,6 +2076,9 @@ button.filter-unavailable {
 
       setAvailability(button, count, isSelected);
     });
+
+    sortTopicsByOriginalCount();
+    syncDropdownOptions();
   }
 
   function updateSectionVisibility() {
@@ -2063,6 +2170,21 @@ button.filter-unavailable {
       applyFilters();
     });
   });
+
+
+  if (venueSelect) {
+    venueSelect.addEventListener('change', function () {
+      selectedVenue = venueSelect.value;
+      applyFilters();
+    });
+  }
+
+  if (yearSelect) {
+    yearSelect.addEventListener('change', function () {
+      selectedYear = yearSelect.value;
+      applyFilters();
+    });
+  }
 
   clearTopicButton.addEventListener('click', function () {
     selectedTopic = 'all';
