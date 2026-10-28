@@ -2281,6 +2281,114 @@ main.publications-page {
   }
 }
 
+
+/* =========================================================
+   VENUE CARD: preserve full one-line venue names + visible counts
+   ========================================================= */
+
+/* Give the desktop statistics column a little more room so the
+   larger typography does not squeeze the venue-count column. */
+@media (min-width: 1101px) {
+  .publication-content-layout {
+    grid-template-columns: minmax(0, 1fr) 340px;
+  }
+
+  .publication-stats-sidebar {
+    min-width: 340px;
+  }
+}
+
+/* Venue names must always remain complete on one line. */
+.publication-venue-card .publication-filter-scroll {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.publication-venue-card table {
+  width: 100%;
+  min-width: max-content;
+  max-width: none;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+.publication-venue-card td:first-child {
+  width: auto;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  padding-right: 0.55rem;
+}
+
+.publication-venue-card .publication-filter-row {
+  display: inline;
+  width: auto;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+/* Reserve a stable, clearly visible count column. */
+.publication-venue-card td:last-child {
+  width: 2rem !important;
+  min-width: 2rem !important;
+  padding-left: 0.35rem !important;
+  padding-right: 0.35rem !important;
+  text-align: right !important;
+  white-space: nowrap !important;
+  color: #1a365d;
+  font-weight: 750;
+}
+
+/* At intermediate widths the statistics area is already full-width,
+   so keep venue names on one line there as well. */
+@media (max-width: 1100px) and (min-width: 701px) {
+  .publication-venue-card .publication-filter-scroll {
+    overflow-x: auto !important;
+  }
+
+  .publication-venue-card table {
+    width: 100% !important;
+    min-width: max-content !important;
+  }
+
+  .publication-venue-card td:first-child,
+  .publication-filter-row {
+    white-space: nowrap !important;
+  }
+}
+
+/* On phones, preserve the full venue text rather than wrapping or
+   truncating it; horizontal scrolling is preferable to ellipsis. */
+@media (max-width: 700px) {
+  .publication-venue-card .publication-filter-scroll {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .publication-venue-card table {
+    width: max-content !important;
+    min-width: 100% !important;
+    max-width: none !important;
+  }
+
+  .publication-venue-card td:first-child,
+  .publication-filter-row {
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .publication-venue-card td:last-child {
+    width: 2rem !important;
+    min-width: 2rem !important;
+  }
+}
+
 </style>
 </head>
 <body class="publications-layout">
