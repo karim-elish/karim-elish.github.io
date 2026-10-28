@@ -2508,6 +2508,439 @@ main.publications-page {
   }
 }
 
+
+
+/* =========================================================
+   FINAL FILTER DESIGN
+   Topic = counts + bars
+   Venue = names only
+   Year  = counts + bars
+   ========================================================= */
+
+/* Keep the compact desktop sidebar. */
+@media (min-width: 1101px) {
+  .publication-content-layout {
+    grid-template-columns: minmax(0, 1fr) 305px;
+  }
+
+  .publication-stats-sidebar {
+    min-width: 305px;
+  }
+}
+
+/* ---------------------------------------------------------
+   Venue: filter names only, with full one-line labels.
+   --------------------------------------------------------- */
+.publication-venue-card .publication-filter-scroll {
+  max-height: 190px;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding-right: 8px;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+  scrollbar-gutter: stable;
+}
+
+.publication-venue-card table {
+  width: max-content !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  table-layout: auto !important;
+  margin: 0;
+}
+
+.publication-venue-card td,
+.publication-venue-card td:first-child {
+  width: auto !important;
+  min-width: 0 !important;
+  padding: 0.30rem 0.42rem !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+.publication-venue-card .publication-filter-row {
+  display: inline-block;
+  width: auto !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  font-size: 0.74rem;
+}
+
+.publication-venue-card .publication-filter-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.publication-venue-card .publication-filter-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.publication-venue-card .publication-filter-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------------------
+   Year: replace visible dropdown with interactive count bars.
+   Keep dropdown DOM hidden as a JS/accessibility fallback.
+   --------------------------------------------------------- */
+.publication-year-chart .year-select-fallback {
+  display: none !important;
+}
+
+.publication-year-chart .year-bar-chart.filter-source-controls {
+  display: block !important;
+}
+
+.publication-year-chart .year-bar-chart {
+  max-height: 190px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+  scrollbar-gutter: stable;
+}
+
+.publication-year-chart .year-bar-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2.8rem minmax(72px, 1fr) 1.45rem;
+  align-items: center;
+  column-gap: 0.38rem;
+  min-height: 1.75rem;
+  padding: 0.20rem 0.38rem;
+  background: #ffffff;
+  border: 0;
+  border-bottom: 1px solid #edf1f5;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.publication-year-chart .year-bar-row:last-child {
+  border-bottom: 0;
+}
+
+.publication-year-chart .year-bar-row:hover,
+.publication-year-chart .year-bar-row.active {
+  background: #f8fafc;
+}
+
+.publication-year-chart .year-bar-label {
+  color: #2b6cb0;
+  font-size: 0.74rem;
+  font-weight: 650;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.publication-year-chart .year-bar-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 72px;
+  height: 0.66rem;
+  padding: 0;
+  background: transparent;
+  border-left: 0;
+  overflow: visible;
+}
+
+.publication-year-chart .year-bar-fill {
+  display: block;
+  height: 0.66rem;
+  min-width: 2px;
+  background: #2b6cb0;
+  border-radius: 0;
+}
+
+.publication-year-chart .year-bar-count {
+  width: 1.45rem;
+  min-width: 1.45rem;
+  color: #1a365d;
+  font-size: 0.72rem;
+  font-weight: 750;
+  line-height: 1;
+  text-align: right;
+  justify-self: end;
+}
+
+.publication-year-chart .year-bar-chart::-webkit-scrollbar {
+  width: 6px;
+}
+
+.publication-year-chart .year-bar-chart::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.publication-year-chart .year-bar-chart::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 6px;
+}
+
+/* Make unavailable rows visually secondary while preserving the
+   currently selected row if a cross-filter temporarily returns zero. */
+.publication-year-chart .year-bar-row.filter-unavailable,
+.publication-year-chart .filter-unavailable.year-bar-row {
+  opacity: 0.30;
+}
+
+/* Intermediate screens: Topic and Venue remain side-by-side, while
+   Year keeps a compact full-width bar card below them. */
+@media (max-width: 1100px) and (min-width: 821px) {
+  .publication-year-chart {
+    width: min(100%, 420px);
+  }
+
+  .publication-year-chart .year-bar-row {
+    grid-template-columns: 2.8rem minmax(100px, 1fr) 1.45rem;
+  }
+}
+
+/* Phones: retain bars and counts; do not fall back to the dropdown. */
+@media (max-width: 820px) {
+  .publication-year-chart .year-select-fallback {
+    display: none !important;
+  }
+
+  .publication-year-chart .year-bar-chart.filter-source-controls {
+    display: block !important;
+  }
+
+  .publication-year-chart .year-bar-row {
+    grid-template-columns: 2.7rem minmax(0, 1fr) 1.4rem;
+    column-gap: 0.30rem;
+  }
+
+  .publication-year-chart .year-bar-label {
+    font-size: 0.72rem;
+  }
+
+  .publication-year-chart .year-bar-count {
+    font-size: 0.70rem;
+  }
+
+  .publication-venue-card .publication-filter-scroll {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+
+/* =========================================================
+   FINAL ALIGNMENT + YEAR CHART MATCH
+   Venue labels align with Topic labels.
+   Year mirrors Topic with count, shared axis and dashed gridlines.
+   ========================================================= */
+
+.publication-venue-card table {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.publication-venue-card td,
+.publication-venue-card td:first-child {
+  padding-left: 0.34rem !important;
+  padding-right: 0.34rem !important;
+  text-align: left !important;
+}
+
+.publication-venue-card .publication-filter-row {
+  display: block;
+  text-align: left !important;
+}
+
+.publication-year-chart {
+  overflow: hidden;
+}
+
+.publication-year-chart .year-axis {
+  display: grid;
+  grid-template-columns: 3rem 1.4rem minmax(72px, 1fr);
+  column-gap: 0.10rem;
+  align-items: center;
+  padding: 0.14rem 0.48rem 0.14rem 0.34rem;
+  border-bottom: 1px dotted #cbd5e0;
+  color: #4a5568;
+  font-size: 0.69rem;
+  line-height: 1;
+  background: #ffffff;
+}
+
+.publication-year-chart .year-axis-count-space {
+  width: 1.4rem;
+}
+
+.publication-year-chart .year-axis-scale {
+  position: relative;
+  display: block;
+  height: 0.9rem;
+}
+
+.publication-year-chart .year-axis-tick {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: #4a5568;
+}
+
+.publication-year-chart .year-bar-chart {
+  max-height: 9.7rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  padding-right: 8px;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+  scrollbar-gutter: stable;
+}
+
+.publication-year-chart .year-bar-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  column-gap: 0.24rem;
+  align-items: center;
+  min-height: 1.55rem;
+  padding: 0.12rem 0.34rem;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid #edf1f5;
+  background: #ffffff;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.publication-year-chart .year-bar-row:last-child {
+  border-bottom: 0;
+}
+
+.publication-year-chart .year-bar-row:hover,
+.publication-year-chart .year-bar-row.active {
+  background: #f8fafc;
+}
+
+.publication-year-chart .year-bar-label {
+  width: 3rem;
+  max-width: 3rem;
+  color: #2b6cb0;
+  font-size: 0.74rem;
+  font-weight: 650;
+  line-height: 1.08;
+  white-space: nowrap;
+}
+
+.publication-year-chart .year-value-bar {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.10rem;
+}
+
+.publication-year-chart .year-bar-count {
+  flex: 0 0 1.4rem;
+  width: 1.4rem;
+  min-width: 1.4rem;
+  margin: 0;
+  padding: 0;
+  color: #1a365d;
+  font-size: 0.72rem;
+  font-weight: 750;
+  line-height: 1;
+  text-align: right;
+}
+
+.publication-year-chart .year-bar-track {
+  position: relative;
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 72px;
+  height: 0.66rem;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-left: 0;
+  overflow: visible;
+}
+
+.publication-year-chart .year-gridlines {
+  position: absolute;
+  inset: -0.28rem 0 -0.28rem 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.publication-year-chart .year-gridline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 1px dotted #cbd5e0;
+  transform: translateX(-0.5px);
+}
+
+.publication-year-chart .year-bar-fill {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 0.66rem;
+  min-width: 2px;
+  background: #2b6cb0;
+  border-radius: 0;
+}
+
+.publication-year-chart .year-bar-chart::-webkit-scrollbar {
+  width: 6px;
+}
+
+.publication-year-chart .year-bar-chart::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.publication-year-chart .year-bar-chart::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 6px;
+}
+
+@media (max-width: 820px) {
+  .publication-year-chart .year-axis {
+    grid-template-columns: 2.8rem 1.35rem minmax(0, 1fr);
+    padding-left: 0.30rem;
+    padding-right: 0.38rem;
+    font-size: 0.64rem;
+  }
+
+  .publication-year-chart .year-bar-row {
+    grid-template-columns: 2.8rem minmax(0, 1fr);
+    padding-left: 0.30rem;
+    padding-right: 0.30rem;
+  }
+
+  .publication-year-chart .year-bar-label {
+    width: 2.8rem;
+    max-width: 2.8rem;
+    font-size: 0.72rem;
+  }
+
+  .publication-year-chart .year-bar-count {
+    flex-basis: 1.35rem;
+    width: 1.35rem;
+    min-width: 1.35rem;
+    font-size: 0.70rem;
+  }
+}
 </style>
 </head>
 <body class="publications-layout">
@@ -3193,8 +3626,77 @@ main.publications-page {
 <span class="topic-bar-fill" style="width:3.33%;">
 </span>
 </span></span></button></div>
+</div><div class="publication-year-chart">
+<h3>
+      Year
+     </h3>
+<div class="publication-select-wrap year-select-fallback"><select aria-label="Filter publications by year" class="publication-select native-filter-select" id="publication-year-select"><option value="all">All years</option><option value="2027">2027</option><option value="2026">2026</option><option value="2025">2025</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2009">2009</option><option value="2008">2008</option></select><div class="custom-filter-dropdown" id="publication-year-dropdown"><button aria-controls="publication-year-menu" aria-expanded="false" aria-haspopup="listbox" class="custom-filter-trigger" id="publication-year-trigger" type="button"><span class="custom-filter-trigger-label">All years</span><span aria-hidden="true" class="custom-filter-chevron"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 20 20" width="14"><path d="m6 8 4 4 4-4"></path></svg></span></button><div class="custom-filter-menu" hidden="" id="publication-year-menu" role="listbox"><button aria-selected="true" class="custom-filter-option" data-value="all" role="option" type="button"><span class="custom-filter-option-text">All years</span><span aria-hidden="true" class="custom-filter-check">✓</span></button><button aria-selected="false" class="custom-filter-option" data-value="2027" role="option" type="button"><span class="custom-filter-option-text">2027</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2026" role="option" type="button"><span class="custom-filter-option-text">2026</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2025" role="option" type="button"><span class="custom-filter-option-text">2025</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2022" role="option" type="button"><span class="custom-filter-option-text">2022</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2021" role="option" type="button"><span class="custom-filter-option-text">2021</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2020" role="option" type="button"><span class="custom-filter-option-text">2020</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2019" role="option" type="button"><span class="custom-filter-option-text">2019</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2018" role="option" type="button"><span class="custom-filter-option-text">2018</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2017" role="option" type="button"><span class="custom-filter-option-text">2017</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2015" role="option" type="button"><span class="custom-filter-option-text">2015</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2014" role="option" type="button"><span class="custom-filter-option-text">2014</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2013" role="option" type="button"><span class="custom-filter-option-text">2013</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2012" role="option" type="button"><span class="custom-filter-option-text">2012</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2011" role="option" type="button"><span class="custom-filter-option-text">2011</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2009" role="option" type="button"><span class="custom-filter-option-text">2009</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2008" role="option" type="button"><span class="custom-filter-option-text">2008</span><span aria-hidden="true" class="custom-filter-check"></span></button></div></div></div><div aria-hidden="true" class="year-axis"><span class="year-axis-label-space"></span><span class="year-axis-count-space"></span><span class="year-axis-scale"><span class="year-axis-tick" style="left:25.0000%;">2</span><span class="year-axis-tick" style="left:50.0000%;">4</span><span class="year-axis-tick" style="left:75.0000%;">6</span><span class="year-axis-tick" style="left:100.0000%;">8</span></span></div><div class="year-bar-chart filter-source-controls">
+<button aria-label="Filter by 2027" class="year-bar-row" data-filter-year="2027" type="button"><span class="year-bar-label">
+        2027
+       </span><span class="year-value-bar"><span class="year-bar-count">1</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:12.50%;">
+</span></span></span></button>
+<button aria-label="Filter by 2026" class="year-bar-row" data-filter-year="2026" type="button"><span class="year-bar-label">
+        2026
+       </span><span class="year-value-bar"><span class="year-bar-count">7</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:87.50%;">
+</span></span></span></button>
+<button aria-label="Filter by 2025" class="year-bar-row" data-filter-year="2025" type="button"><span class="year-bar-label">
+        2025
+       </span><span class="year-value-bar"><span class="year-bar-count">7</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:87.50%;">
+</span></span></span></button>
+<button aria-label="Filter by 2022" class="year-bar-row" data-filter-year="2022" type="button"><span class="year-bar-label">
+        2022
+       </span><span class="year-value-bar"><span class="year-bar-count">1</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:12.50%;">
+</span></span></span></button>
+<button aria-label="Filter by 2021" class="year-bar-row" data-filter-year="2021" type="button"><span class="year-bar-label">
+        2021
+       </span><span class="year-value-bar"><span class="year-bar-count">1</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:12.50%;">
+</span></span></span></button>
+<button aria-label="Filter by 2020" class="year-bar-row" data-filter-year="2020" type="button"><span class="year-bar-label">
+        2020
+       </span><span class="year-value-bar"><span class="year-bar-count">2</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:25.00%;">
+</span></span></span></button>
+<button aria-label="Filter by 2019" class="year-bar-row" data-filter-year="2019" type="button"><span class="year-bar-label">
+        2019
+       </span><span class="year-value-bar"><span class="year-bar-count">1</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:12.50%;">
+</span></span></span></button>
+<button aria-label="Filter by 2018" class="year-bar-row" data-filter-year="2018" type="button"><span class="year-bar-label">
+        2018
+       </span><span class="year-value-bar"><span class="year-bar-count">2</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:25.00%;">
+</span></span></span></button>
+<button aria-label="Filter by 2017" class="year-bar-row" data-filter-year="2017" type="button"><span class="year-bar-label">
+        2017
+       </span><span class="year-value-bar"><span class="year-bar-count">3</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:37.50%;">
+</span></span></span></button>
+<button aria-label="Filter by 2015" class="year-bar-row" data-filter-year="2015" type="button"><span class="year-bar-label">
+        2015
+       </span><span class="year-value-bar"><span class="year-bar-count">2</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:25.00%;">
+</span></span></span></button>
+<button aria-label="Filter by 2014" class="year-bar-row" data-filter-year="2014" type="button"><span class="year-bar-label">
+        2014
+       </span><span class="year-value-bar"><span class="year-bar-count">4</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:50.00%;">
+</span></span></span></button>
+<button aria-label="Filter by 2013" class="year-bar-row" data-filter-year="2013" type="button"><span class="year-bar-label">
+        2013
+       </span><span class="year-value-bar"><span class="year-bar-count">2</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:25.00%;">
+</span></span></span></button>
+<button aria-label="Filter by 2012" class="year-bar-row" data-filter-year="2012" type="button"><span class="year-bar-label">
+        2012
+       </span><span class="year-value-bar"><span class="year-bar-count">3</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:37.50%;">
+</span></span></span></button>
+<button aria-label="Filter by 2011" class="year-bar-row" data-filter-year="2011" type="button"><span class="year-bar-label">
+        2011
+       </span><span class="year-value-bar"><span class="year-bar-count">2</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:25.00%;">
+</span></span></span></button>
+<button aria-label="Filter by 2009" class="year-bar-row" data-filter-year="2009" type="button"><span class="year-bar-label">
+        2009
+       </span><span class="year-value-bar"><span class="year-bar-count">2</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:25.00%;">
+</span></span></span></button>
+<button aria-label="Filter by 2008" class="year-bar-row" data-filter-year="2008" type="button"><span class="year-bar-label">
+        2008
+       </span><span class="year-value-bar"><span class="year-bar-count">1</span><span class="year-bar-track" data-axis-max="8"><span aria-hidden="true" class="year-gridlines"><span class="year-gridline" style="left:25.0000%;"></span><span class="year-gridline" style="left:50.0000%;"></span><span class="year-gridline" style="left:75.0000%;"></span><span class="year-gridline" style="left:100.0000%;"></span></span><span class="year-bar-fill" style="width:12.50%;">
+</span></span></span></button>
 </div>
-<div class="publication-venue-card">
+</div><div class="publication-venue-card">
 <h3>
       Venue
      </h3>
@@ -3207,9 +3709,6 @@ main.publications-page {
            [Journal] Computers &amp; Security
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3217,9 +3716,6 @@ main.publications-page {
            [Journal] IEEE Access
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3227,9 +3723,6 @@ main.publications-page {
            [Journal] IEEE Internet Computing
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3237,9 +3730,6 @@ main.publications-page {
            [Journal] IEEE Transactions on Computers
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3247,9 +3737,6 @@ main.publications-page {
            [Journal] IEEE Transactions on Mobile Computing
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3257,9 +3744,6 @@ main.publications-page {
            [Journal] IJISAE
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3267,9 +3751,6 @@ main.publications-page {
            [Journal] Information
           </button>
 </td>
-<td>
-          3
-         </td>
 </tr>
 <tr>
 <td>
@@ -3277,9 +3758,6 @@ main.publications-page {
            [Journal] Journal of Software
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3287,9 +3765,6 @@ main.publications-page {
            [Journal] Journal of Systems and Software
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3297,9 +3772,6 @@ main.publications-page {
            [Journal] Arabian Journal for Science and Engineering
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3307,9 +3779,6 @@ main.publications-page {
            [Journal] Security and Communication Networks
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3317,9 +3786,6 @@ main.publications-page {
            [Conference] ACM CODASPY
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3327,9 +3793,6 @@ main.publications-page {
            [Conference] ASEE Annual Conference
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3337,9 +3800,6 @@ main.publications-page {
            [Conference] FLAIRS
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3347,9 +3807,6 @@ main.publications-page {
            [Conference] IEEE ACDSA
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3357,9 +3814,6 @@ main.publications-page {
            [Conference] IEEE APSEC
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3367,9 +3821,6 @@ main.publications-page {
            [Conference] IEEE Big Data
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3377,9 +3828,6 @@ main.publications-page {
            [Conference] IEEE CSMR
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3387,9 +3835,6 @@ main.publications-page {
            [Conference] IEEE ICCC
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3397,9 +3842,6 @@ main.publications-page {
            [Conference] IEEE ICCIA
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3407,9 +3849,6 @@ main.publications-page {
            [Conference] IEEE ICMLA
           </button>
 </td>
-<td>
-          2
-         </td>
 </tr>
 <tr>
 <td>
@@ -3417,9 +3856,6 @@ main.publications-page {
            [Conference] IEEE ICSA
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3427,9 +3863,6 @@ main.publications-page {
            [Conference] IEEE ICST
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3437,9 +3870,6 @@ main.publications-page {
            [Conference] IEEE/ACIS SERA
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3447,9 +3877,6 @@ main.publications-page {
            [Conference] IEEE/ACM FORGE
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3457,9 +3884,6 @@ main.publications-page {
            [Conference] IEEE/ACM ICSE
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3467,9 +3891,6 @@ main.publications-page {
            [Conference] IEEE/ACM MSR
           </button>
 </td>
-<td>
-          2
-         </td>
 </tr>
 <tr>
 <td>
@@ -3477,9 +3898,6 @@ main.publications-page {
            [Conference] ISC
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3487,9 +3905,6 @@ main.publications-page {
            [Conference] IUPT / Procedia Computer Science
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3497,9 +3912,6 @@ main.publications-page {
            [Workshop] ACM IWSPA / CODASPY
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3507,9 +3919,6 @@ main.publications-page {
            [Workshop] IEEE SPW / MoST
           </button>
 </td>
-<td>
-          3
-         </td>
 </tr>
 <tr>
 <td>
@@ -3517,9 +3926,6 @@ main.publications-page {
            [Poster] IEOM
           </button>
 </td>
-<td>
-          2
-         </td>
 </tr>
 <tr>
 <td>
@@ -3527,9 +3933,6 @@ main.publications-page {
            [Poster] S2ERC
           </button>
 </td>
-<td>
-          2
-         </td>
 </tr>
 <tr>
 <td>
@@ -3537,9 +3940,6 @@ main.publications-page {
            [Poster] USENIX Security Symposium
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 <tr>
 <td>
@@ -3547,213 +3947,13 @@ main.publications-page {
            [Poster] Virginia Tech Graduate  Showcase
           </button>
 </td>
-<td>
-          1
-         </td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<div class="publication-year-chart">
-<h3>
-      Year
-     </h3>
-<div class="publication-select-wrap"><select aria-label="Filter publications by year" class="publication-select native-filter-select" id="publication-year-select"><option value="all">All years</option><option value="2027">2027</option><option value="2026">2026</option><option value="2025">2025</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2009">2009</option><option value="2008">2008</option></select><div class="custom-filter-dropdown" id="publication-year-dropdown"><button aria-controls="publication-year-menu" aria-expanded="false" aria-haspopup="listbox" class="custom-filter-trigger" id="publication-year-trigger" type="button"><span class="custom-filter-trigger-label">All years</span><span aria-hidden="true" class="custom-filter-chevron"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 20 20" width="14"><path d="m6 8 4 4 4-4"></path></svg></span></button><div class="custom-filter-menu" hidden="" id="publication-year-menu" role="listbox"><button aria-selected="true" class="custom-filter-option" data-value="all" role="option" type="button"><span class="custom-filter-option-text">All years</span><span aria-hidden="true" class="custom-filter-check">✓</span></button><button aria-selected="false" class="custom-filter-option" data-value="2027" role="option" type="button"><span class="custom-filter-option-text">2027</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2026" role="option" type="button"><span class="custom-filter-option-text">2026</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2025" role="option" type="button"><span class="custom-filter-option-text">2025</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2022" role="option" type="button"><span class="custom-filter-option-text">2022</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2021" role="option" type="button"><span class="custom-filter-option-text">2021</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2020" role="option" type="button"><span class="custom-filter-option-text">2020</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2019" role="option" type="button"><span class="custom-filter-option-text">2019</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2018" role="option" type="button"><span class="custom-filter-option-text">2018</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2017" role="option" type="button"><span class="custom-filter-option-text">2017</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2015" role="option" type="button"><span class="custom-filter-option-text">2015</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2014" role="option" type="button"><span class="custom-filter-option-text">2014</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2013" role="option" type="button"><span class="custom-filter-option-text">2013</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2012" role="option" type="button"><span class="custom-filter-option-text">2012</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2011" role="option" type="button"><span class="custom-filter-option-text">2011</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2009" role="option" type="button"><span class="custom-filter-option-text">2009</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2008" role="option" type="button"><span class="custom-filter-option-text">2008</span><span aria-hidden="true" class="custom-filter-check"></span></button></div></div></div><div class="year-bar-chart filter-source-controls">
-<button aria-label="Filter by 2027" class="year-bar-row" data-filter-year="2027" type="button">
-<span class="year-bar-label">
-        2027
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 100.0%;">
-</span>
-</span>
-<span class="year-bar-count">
-        1
-       </span>
-</button>
-<button aria-label="Filter by 2026" class="year-bar-row" data-filter-year="2026" type="button">
-<span class="year-bar-label">
-        2026
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 100.0%;">
-</span>
-</span>
-<span class="year-bar-count">
-        7
-       </span>
-</button>
-<button aria-label="Filter by 2025" class="year-bar-row" data-filter-year="2025" type="button">
-<span class="year-bar-label">
-        2025
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 100.0%;">
-</span>
-</span>
-<span class="year-bar-count">
-        7
-       </span>
-</button>
-<button aria-label="Filter by 2022" class="year-bar-row" data-filter-year="2022" type="button">
-<span class="year-bar-label">
-        2022
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 14.29%;">
-</span>
-</span>
-<span class="year-bar-count">
-        1
-       </span>
-</button>
-<button aria-label="Filter by 2021" class="year-bar-row" data-filter-year="2021" type="button">
-<span class="year-bar-label">
-        2021
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 14.29%;">
-</span>
-</span>
-<span class="year-bar-count">
-        1
-       </span>
-</button>
-<button aria-label="Filter by 2020" class="year-bar-row" data-filter-year="2020" type="button">
-<span class="year-bar-label">
-        2020
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 28.57%;">
-</span>
-</span>
-<span class="year-bar-count">
-        2
-       </span>
-</button>
-<button aria-label="Filter by 2019" class="year-bar-row" data-filter-year="2019" type="button">
-<span class="year-bar-label">
-        2019
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 14.29%;">
-</span>
-</span>
-<span class="year-bar-count">
-        1
-       </span>
-</button>
-<button aria-label="Filter by 2018" class="year-bar-row" data-filter-year="2018" type="button">
-<span class="year-bar-label">
-        2018
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 28.57%;">
-</span>
-</span>
-<span class="year-bar-count">
-        2
-       </span>
-</button>
-<button aria-label="Filter by 2017" class="year-bar-row" data-filter-year="2017" type="button">
-<span class="year-bar-label">
-        2017
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 42.86%;">
-</span>
-</span>
-<span class="year-bar-count">
-        3
-       </span>
-</button>
-<button aria-label="Filter by 2015" class="year-bar-row" data-filter-year="2015" type="button">
-<span class="year-bar-label">
-        2015
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 28.57%;">
-</span>
-</span>
-<span class="year-bar-count">
-        2
-       </span>
-</button>
-<button aria-label="Filter by 2014" class="year-bar-row" data-filter-year="2014" type="button">
-<span class="year-bar-label">
-        2014
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 57.14%;">
-</span>
-</span>
-<span class="year-bar-count">
-        4
-       </span>
-</button>
-<button aria-label="Filter by 2013" class="year-bar-row" data-filter-year="2013" type="button">
-<span class="year-bar-label">
-        2013
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 28.57%;">
-</span>
-</span>
-<span class="year-bar-count">
-        2
-       </span>
-</button>
-<button aria-label="Filter by 2012" class="year-bar-row" data-filter-year="2012" type="button">
-<span class="year-bar-label">
-        2012
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 42.86%;">
-</span>
-</span>
-<span class="year-bar-count">
-        3
-       </span>
-</button>
-<button aria-label="Filter by 2011" class="year-bar-row" data-filter-year="2011" type="button">
-<span class="year-bar-label">
-        2011
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 28.57%;">
-</span>
-</span>
-<span class="year-bar-count">
-        2
-       </span>
-</button>
-<button aria-label="Filter by 2009" class="year-bar-row" data-filter-year="2009" type="button">
-<span class="year-bar-label">
-        2009
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 28.57%;">
-</span>
-</span>
-<span class="year-bar-count">
-        2
-       </span>
-</button>
-<button aria-label="Filter by 2008" class="year-bar-row" data-filter-year="2008" type="button">
-<span class="year-bar-label">
-        2008
-       </span>
-<span class="year-bar-track">
-<span class="year-bar-fill" style="width: 14.29%;">
-</span>
-</span>
-<span class="year-bar-count">
-        1
-       </span>
-</button>
-</div>
-</div>
+
+
 </section></aside></div>
 </main>
 <footer>
@@ -3926,12 +4126,70 @@ main.publications-page {
     sorted.forEach(button => chart.appendChild(button));
   }
 
+
+  function niceYearAxisMax(value) {
+    const v = Math.max(1, Number(value) || 1);
+    if (v <= 4) return 4;
+    if (v <= 8) return 8;
+    if (v <= 10) return 10;
+    return Math.ceil(v / 5) * 5;
+  }
+
+  function yearAxisTicks(axisMax) {
+    if (axisMax === 4) return [1, 2, 3, 4];
+    if (axisMax === 8) return [2, 4, 6, 8];
+    if (axisMax === 10) return [2, 4, 6, 8, 10];
+    const ticks = [];
+    for (let value = 5; value <= axisMax; value += 5) ticks.push(value);
+    return ticks;
+  }
+
+  function updateYearAxis(axisMax) {
+    const axisScale = document.querySelector('.publication-year-chart .year-axis-scale');
+    const ticks = yearAxisTicks(axisMax);
+
+    if (axisScale) {
+      axisScale.innerHTML = '';
+      ticks.forEach(value => {
+        const tick = document.createElement('span');
+        tick.className = 'year-axis-tick';
+        tick.style.left = `${(value / axisMax) * 100}%`;
+        tick.textContent = value;
+        axisScale.appendChild(tick);
+      });
+    }
+
+    yearButtons.forEach(button => {
+      const track = button.querySelector('.year-bar-track');
+      if (!track) return;
+      track.dataset.axisMax = axisMax;
+
+      let gridlines = track.querySelector('.year-gridlines');
+      if (!gridlines) {
+        gridlines = document.createElement('span');
+        gridlines.className = 'year-gridlines';
+        gridlines.setAttribute('aria-hidden', 'true');
+        track.prepend(gridlines);
+      }
+
+      gridlines.innerHTML = '';
+      ticks.forEach(value => {
+        const line = document.createElement('span');
+        line.className = 'year-gridline';
+        line.style.left = `${(value / axisMax) * 100}%`;
+        gridlines.appendChild(line);
+      });
+    });
+  }
+
   function updateDynamicFilterCounts() {
     const topicCounts = topicButtons.map(button => countForTopic(button.dataset.filterTopic));
     const yearCounts = yearButtons.map(button => countForYear(button.dataset.filterYear));
 
     const maxTopic = maxCount(topicCounts);
     const maxYear = maxCount(yearCounts);
+    const yearAxisMax = niceYearAxisMax(maxYear);
+    updateYearAxis(yearAxisMax);
 
     const originalTopicValues = topicButtons.map(
       button => originalTopicCounts.get(button.dataset.filterTopic) || 0
@@ -3957,9 +4215,6 @@ main.publications-page {
       const value = button.dataset.filterVenue;
       const count = countForVenue(value);
       const isSelected = selectedVenue === value;
-      const countCell = button.closest('tr')?.querySelector('td:last-child');
-
-      if (countCell) countCell.textContent = count;
 
       setAvailability(button, count, isSelected);
     });
@@ -3971,7 +4226,7 @@ main.publications-page {
       const fill = button.querySelector('.year-bar-fill');
       const countEl = button.querySelector('.year-bar-count');
 
-      if (fill) fill.style.width = `${Math.round((count / maxYear) * 10000) / 100}%`;
+      if (fill) fill.style.width = `${Math.round((count / yearAxisMax) * 10000) / 100}%`;
       if (countEl) countEl.textContent = count;
 
       setAvailability(button, count, isSelected);
