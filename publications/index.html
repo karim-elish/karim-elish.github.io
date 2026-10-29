@@ -2353,7 +2353,332 @@ main.publications-page {
   }
 }
 </style>
-</head>
+<style id="publication-scanability-pass">
+/* =========================================================
+   Final scanability pass — Kevin Moran-inspired hierarchy
+   Keeps existing filters and section organization intact.
+   ========================================================= */
+body.publications-layout {
+  background: #fff;
+}
+
+main.publications-page {
+  width: min(1260px, calc(100% - 3rem)) !important;
+  max-width: 1260px !important;
+}
+
+.publications-page .article-meta {
+  margin: 0 0 0.2rem;
+}
+
+.publications-page .article-meta h2 {
+  margin: 0;
+  color: #183153;
+  font-size: 1.65rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.publication-intro-scan {
+  max-width: 760px;
+  margin: 0.35rem 0 1rem;
+  color: #64748b;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+/* Research impact becomes a quiet utility strip, not a competing card. */
+.research-impact-card {
+  margin: 0 0 1.25rem;
+  padding: 0.58rem 0.72rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: none;
+  background: #fbfcfe;
+}
+
+.impact-header h3 {
+  font-size: 0.85rem;
+}
+
+.impact-header p {
+  font-size: 0.72rem;
+}
+
+.impact-profile-link {
+  padding: 0.2rem 0.42rem;
+  font-size: 0.68rem;
+}
+
+.impact-metrics {
+  gap: 0.42rem;
+  margin-top: 0.42rem;
+}
+
+.impact-metric {
+  padding: 0.2rem 0.36rem;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.impact-metric-value {
+  font-size: 0.82rem;
+}
+
+.impact-metric-label {
+  font-size: 0.67rem;
+}
+
+/* Give the publication list more room; sidebar remains compact and sticky. */
+.publication-content-layout {
+  grid-template-columns: minmax(0, 1fr) 274px !important;
+  gap: 1.55rem !important;
+}
+
+.publication-stats-sidebar {
+  min-width: 274px !important;
+}
+
+/* Section headings remain visible anchors without oversized vertical gaps. */
+.publications-main > h3 {
+  margin: 1.75rem 0 0.72rem !important;
+  padding: 0 0 0.38rem !important;
+  border-bottom: 1px solid #cbd5e1 !important;
+  color: #183153 !important;
+  font-size: 1.08rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+.publications-main > h3:first-of-type {
+  margin-top: 0 !important;
+}
+
+.publication-list {
+  margin: 0 0 1.45rem !important;
+}
+
+/* Flat rows: fewer visual containers, stronger reading hierarchy. */
+.publication-list > li {
+  margin: 0 !important;
+  padding: 0.82rem 0.1rem 0.88rem !important;
+  border: 0 !important;
+  border-bottom: 1px solid #e5eaf0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #475569;
+  font-size: 0.89rem;
+  line-height: 1.42;
+  transform: none !important;
+}
+
+.publication-list > li:first-child {
+  padding-top: 0.18rem !important;
+}
+
+.publication-list > li:hover {
+  background: #fbfdff !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.pub-title-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.pub-title {
+  min-width: 0;
+  color: #16395f;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.32;
+}
+
+.pub-title strong {
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+}
+
+.pub-year {
+  min-width: 2.9rem;
+  margin-top: 0.05rem;
+  padding: 0.12rem 0.34rem;
+  border: 1px solid #d8e2ec;
+  border-radius: 4px;
+  background: #f8fafc;
+  color: #607087;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pub-authors {
+  margin-top: 0.28rem;
+  color: #46566b;
+  font-size: 0.87rem;
+  line-height: 1.38;
+}
+
+.publication-list .my-name {
+  color: #183153 !important;
+  font-weight: 650 !important;
+}
+
+.pub-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 0.24rem;
+  color: #6b7788;
+  font-size: 0.82rem;
+  line-height: 1.38;
+}
+
+.pub-meta-part {
+  display: inline;
+}
+
+.pub-meta-part + .pub-meta-part::before {
+  content: " · ";
+  color: #a0aaba;
+  padding: 0 0.18rem;
+}
+
+.pub-meta em {
+  color: #556579 !important;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.pub-note-row {
+  margin-top: 0.38rem;
+}
+
+.publication-list .note {
+  margin: 0 !important;
+  padding: 0.14rem 0.38rem !important;
+  border: 1px solid #d8e2ec !important;
+  border-radius: 4px !important;
+  background: #f8fafc !important;
+  color: #536174 !important;
+  font-size: 0.72rem !important;
+  line-height: 1.3;
+}
+
+/* Sidebar: retain the chosen Year → Topic → Venue flow, but quiet the chrome. */
+.publication-overview-grid.with-year {
+  gap: 0.62rem !important;
+}
+
+.publication-topic-chart.compact,
+.publication-venue-card,
+.publication-year-chart {
+  border-color: #dfe6ee !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+}
+
+.publication-topic-chart.compact h3,
+.publication-venue-card h3,
+.publication-year-chart h3 {
+  padding: 0.4rem 0.48rem !important;
+  background: #fafbfd !important;
+  border-bottom-color: #e4eaf0 !important;
+  color: #334e68 !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.publication-filter-summary {
+  color: #718096 !important;
+  font-size: 0.69rem !important;
+}
+
+.topic-bar-label,
+.publication-filter-row,
+.custom-filter-trigger,
+.custom-filter-option {
+  font-size: 0.69rem !important;
+}
+
+.topic-bar-row {
+  min-height: 1.9rem !important;
+}
+
+.publication-filter-scroll {
+  max-height: 15rem !important;
+}
+
+/* Tablet: keep filters above the list, but avoid three cramped columns. */
+@media (max-width: 1100px) {
+  main.publications-page {
+    width: calc(100% - 2rem) !important;
+  }
+
+  .publication-content-layout {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .publication-stats-sidebar {
+    min-width: 0 !important;
+    position: static !important;
+    grid-row: 1 !important;
+  }
+
+  .publications-main {
+    grid-row: 2 !important;
+  }
+}
+
+@media (max-width: 700px) {
+  main.publications-page {
+    width: calc(100% - 1.25rem) !important;
+  }
+
+  .publications-page .article-meta h2 {
+    font-size: 1.45rem;
+  }
+
+  .publication-intro-scan {
+    font-size: 0.84rem;
+  }
+
+  .publication-list > li {
+    padding: 0.76rem 0 0.82rem !important;
+  }
+
+  .pub-title-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.55rem;
+  }
+
+  .pub-title {
+    font-size: 0.96rem;
+  }
+
+  .pub-authors {
+    font-size: 0.84rem;
+  }
+
+  .pub-meta {
+    font-size: 0.79rem;
+  }
+
+  .publication-overview-grid.with-year {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+</style></head>
 <body class="publications-layout">
 <nav>
 <button aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
@@ -2382,522 +2707,522 @@ main.publications-page {
       Publications
      </span>
 </h2>
-</div>
-<section aria-label="Research impact summary" class="research-impact-card"><div class="impact-header"><div><h3>Research Impact</h3><p>Google Scholar citation summary</p></div><a class="impact-profile-link" href="https://scholar.google.com/citations?hl=en&amp;user=DW96hOsAAAAJ" rel="noopener" target="_blank">Google Scholar</a></div><div class="impact-metrics"><div class="impact-metric"><span class="impact-metric-value">1,790</span><span class="impact-metric-label">Total citations</span></div><div class="impact-metric"><span class="impact-metric-value">690</span><span class="impact-metric-label">Since 2021</span></div></div></section>
+</div><p class="publication-intro-scan">Selected refereed publications, organized by publication type. Use the filters to narrow by year, topic, or venue.</p>
+<section aria-label="Research impact summary" class="research-impact-card"><div class="impact-header"><div><h3>Research Impact</h3><p>Citation summary from Google Scholar</p></div><a class="impact-profile-link" href="https://scholar.google.com/citations?hl=en&amp;user=DW96hOsAAAAJ" rel="noopener" target="_blank">Google Scholar</a></div><div class="impact-metrics"><div class="impact-metric"><span class="impact-metric-value">1,790</span><span class="impact-metric-label">Total citations</span></div><div class="impact-metric"><span class="impact-metric-value">690</span><span class="impact-metric-label">Since 2021</span></div></div></section>
 <div class="publication-content-layout"><div class="publications-main"><p class="publication-no-results" hidden="" id="publication-no-results">
     No publications match the selected topic, venue, and year.
    </p><h3>
     Refereed Journal Publications
    </h3><ul class="publication-list">
-<li data-topic-labels="Mobile Security; Software Security; Empirical Study" data-topics="mobile-security software-security empirical-study" data-venue="ieee-internet-computing" data-venue-label="[Journal] IEEE Internet Computing" data-year="2026">
+<li data-topic-labels="Mobile Security; Software Security; Empirical Study" data-topics="mobile-security software-security empirical-study" data-venue="ieee-internet-computing" data-venue-label="[Journal] IEEE Internet Computing" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Security Risks in Wearable Mobile Applications
      </strong>
-<br/>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
      Sebastian Siedler, Mohamed Sylla, and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
      IEEE Internet Computing</em>, accepted, September 2026. To appear.
-    </li>
-<li data-topic-labels="LLMs / AI for Security &amp; SE; Android Malware; Empirical Study" data-topics="llms-ai android-malware empirical-study" data-venue="ieee-access" data-venue-label="[Journal] IEEE Access" data-year="2026">
+    </span></div></li>
+<li data-topic-labels="LLMs / AI for Security &amp; SE; Android Malware; Empirical Study" data-topics="llms-ai android-malware empirical-study" data-venue="ieee-access" data-venue-label="[Journal] IEEE Access" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Large Language Models for Malware Detection: A Systematic Review, Taxonomy, and Open Challenges
      </strong>
-<br/>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
      Joyce Champie and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
      IEEE Access</em>, vol. 14, pp. 52734-52752, April 2026.
-    </li>
-<li data-topic-labels="Mobile Security; Datasets / Benchmarks" data-topics="mobile-security android-malware software-security" data-venue="information" data-venue-label="[Journal] Information" data-year="2025">
+    </span></div></li>
+<li data-topic-labels="Mobile Security; Datasets / Benchmarks" data-topics="mobile-security android-malware software-security" data-venue="information" data-venue-label="[Journal] Information" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       RepackDroid: An Efficient Detection Model for Repackaged Android Applications
      </strong>
-<br/>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
      Tito Leadon and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
      Information</em>, vol. 16, no. 12, Article 1075, December 2025.
-    </li>
-<li data-topic-labels="Android Malware; Empirical Study" data-topics="android-malware empirical-study" data-venue="ieee-tc" data-venue-label="[Journal] IEEE Transactions on Computers" data-year="2022">
+    </span></div></li>
+<li data-topic-labels="Android Malware; Empirical Study" data-topics="android-malware empirical-study" data-venue="ieee-tc" data-venue-label="[Journal] IEEE Transactions on Computers" data-year="2022"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Lightweight, Effective Detection and Characterization of Mobile Malware Families
      </strong>
-<br/>
+</div><span aria-label="Publication year 2022" class="pub-year">2022</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span>, Mahmoud Elish, and Hussain Almohri
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
      IEEE Transactions on Computers (TC)</em>, vol. 71, no. 11, November 2022.
-    </li>
-<li data-topic-labels="Defect Prediction; Empirical Study; Systems Security" data-topics="defect-prediction empirical-study systems-security" data-venue="ijisae" data-venue-label="[Journal] IJISAE" data-year="2021">
+    </span></div></li>
+<li data-topic-labels="Defect Prediction; Empirical Study; Systems Security" data-topics="defect-prediction empirical-study systems-security" data-venue="ijisae" data-venue-label="[Journal] IJISAE" data-year="2021"><div class="pub-title-row"><div class="pub-title">
 <strong>
       An Empirical Comparison of Resampling Ensemble Methods of Deep Learning Neural Networks for Cross-Project Software Defect Prediction
      </strong>
-<br/>
+</div><span aria-label="Publication year 2021" class="pub-year">2021</span></div><div class="pub-authors">
      Mahmoud Elish and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
      International Journal of Intelligent Engineering and Systems (IJISAE)</em>, vol. 14, no. 3, 2021.
-    </li>
-<li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="scn" data-venue-label="[Journal] Security and Communication Networks" data-year="2020">
+    </span></div></li>
+<li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="scn" data-venue-label="[Journal] Security and Communication Networks" data-year="2020"><div class="pub-title-row"><div class="pub-title">
 <strong>
       A Client Bootstrapping Protocol for DoS Attack Mitigation on Entry Point Services in the Cloud
      </strong>
-<br/>
+</div><span aria-label="Publication year 2020" class="pub-year">2020</span></div><div class="pub-authors">
      Hussain Almohri, M. Almutawa, M. Alawadh, and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Security and Communication Networks (SCN)</em>, 2020.
-    </li>
-<li data-topic-labels="Mobile Security; Empirical Study" data-topics="mobile-security empirical-study" data-venue="ieee-tmc" data-venue-label="[Journal] IEEE Transactions on Mobile Computing" data-year="2020">
+    </span></div></li>
+<li data-topic-labels="Mobile Security; Empirical Study" data-topics="mobile-security empirical-study" data-venue="ieee-tmc" data-venue-label="[Journal] IEEE Transactions on Mobile Computing" data-year="2020"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Identifying Mobile Inter-App Communication Risks
      </strong>
-<br/>
+</div><span aria-label="Publication year 2020" class="pub-year">2020</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span>, Haipeng Cai, Daniel Barton, Danfeng Yao, and Barbara Ryder
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       IEEE Transactions on Mobile Computing (TMC)</em>, vol. 19, no. 1, January 2020.
-    </li>
-<li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="computers-security" data-venue-label="[Journal] Computers &amp; Security" data-year="2015">
+    </span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="computers-security" data-venue-label="[Journal] Computers &amp; Security" data-year="2015"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Profiling User-Trigger Dependence for Android Malware Detection
      </strong>
-<br/>
+</div><span aria-label="Publication year 2015" class="pub-year">2015</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span>, Xiaokui Shu, Danfeng Yao, Barbara Ryder, and Xuxian Jiang
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Computers &amp; Security</em>, vol. 49, pp. 255–273, March 2015.
-    </li>
-<li data-topic-labels="Software Metrics / Quality; Software Maintainability; Software Refactoring" data-topics="software-metrics maintainability refactoring" data-venue="journal-software" data-venue-label="[Journal] Journal of Software" data-year="2012">
+    </span></div></li>
+<li data-topic-labels="Software Metrics / Quality; Software Maintainability; Software Refactoring" data-topics="software-metrics maintainability refactoring" data-venue="journal-software" data-venue-label="[Journal] Journal of Software" data-year="2012"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Using Software Quality Attributes to Classify Refactoring to Patterns
      </strong>
-<br/>
+</div><span aria-label="Publication year 2012" class="pub-year">2012</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span> and Mohammed Alshayeb
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Journal of Software (JSW)</em>, vol. 7, no. 2, February 2012.
-    </li>
-<li data-topic-labels="Software Metrics / Quality; Software Maintainability; Software Refactoring; Empirical Study" data-topics="software-metrics maintainability refactoring empirical-study" data-venue="ajse" data-venue-label="[Journal] Arabian Journal for Science and Engineering" data-year="2011">
+    </span></div></li>
+<li data-topic-labels="Software Metrics / Quality; Software Maintainability; Software Refactoring; Empirical Study" data-topics="software-metrics maintainability refactoring empirical-study" data-venue="ajse" data-venue-label="[Journal] Arabian Journal for Science and Engineering" data-year="2011"><div class="pub-title-row"><div class="pub-title">
 <strong>
       A Classification of Refactoring Methods Based on Software Quality Attributes
      </strong>
-<br/>
+</div><span aria-label="Publication year 2011" class="pub-year">2011</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span> and Mohammed Alshayeb
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Arabian Journal for Science and Engineering (AJSE)</em>, vol. 36, no. 7, November 2011.
-    </li>
-<li data-topic-labels="Defect Prediction" data-topics="defect-prediction" data-venue="jss" data-venue-label="[Journal] Journal of Systems and Software" data-year="2008">
+    </span></div></li>
+<li data-topic-labels="Defect Prediction" data-topics="defect-prediction" data-venue="jss" data-venue-label="[Journal] Journal of Systems and Software" data-year="2008"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Predicting Defect-Prone Software Modules Using Support Vector Machines
      </strong>
-<br/>
+</div><span aria-label="Publication year 2008" class="pub-year">2008</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span> and Mahmoud Elish
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Journal of Systems and Software (JSS)</em>, vol. 81, no. 5, May 2008.
-     <br/>
+     </span></div><div class="pub-note-row">
 <span class="note">
 <strong>
        Among Top 10 Most Cited Papers Published by JSS
       </strong>
 </span>
-</li>
+</div></li>
 </ul><h3>
     Refereed Conference and Workshop Publications
    </h3><ul class="publication-list">
-<li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Security" data-topics="llms-ai mobile-security software-security" data-venue="ieee-acm-icse" data-venue-label="[Conference] IEEE/ACM ICSE" data-year="2027">
+<li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Security" data-topics="llms-ai mobile-security software-security" data-venue="ieee-acm-icse" data-venue-label="[Conference] IEEE/ACM ICSE" data-year="2027"><div class="pub-title-row"><div class="pub-title">
 <strong>
     When LLMs Say Secure: An Empirical Study of False Assurance in Android Vulnerability Detection
   </strong>
-<br/>
+</div><span aria-label="Publication year 2027" class="pub-year">2027</span></div><div class="pub-authors">
   Joyce Champie and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
     Proceedings of the 49th IEEE/ACM International Conference on Software Engineering (ICSE)
   </em>
-<br/>Dublin, Ireland · April 2027.<br/>
+</span><span class="pub-meta-part">Dublin, Ireland · April 2027.</span></div><div class="pub-note-row">
 <span class="note">
 <strong>
        Direct Acceptance Rate: 5.0% (119/2,375)
       </strong>
 </span>
-</li>
-<li data-topic-labels="LLMs / AI for Security &amp; SE; Privacy / Data Security; Software Security" data-topics="llms-ai privacy software-security" data-venue="acm-iwspa-codaspy" data-venue-label="[Workshop] ACM IWSPA / CODASPY" data-year="2026">
+</div></li>
+<li data-topic-labels="LLMs / AI for Security &amp; SE; Privacy / Data Security; Software Security" data-topics="llms-ai privacy software-security" data-venue="acm-iwspa-codaspy" data-venue-label="[Workshop] ACM IWSPA / CODASPY" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       STALKER: Composed Quasi-Identifiers and LLM-Amplified Behavioral Leakage in Anonymized Marketplace Data
      </strong>
-<br/>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
      A. Dmytryk, S. El-Yaagoubi, L. Batista, P. Kouterguine, S. Gerken, A. Alhamadani, and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 12th ACM International Workshop on Security and Privacy Analytics (IWSPA)</em>, co-located with the
      <em>16th ACM Conference on Data and Application Security and Privacy (CODASPY)</em>
-<br/>Frankfurt am Main, Germany · June 2026.</li>
-<li data-topic-labels="Mobile Security; Software Metrics / Quality; Software Maintainability; Software Security" data-topics="mobile-security software-metrics maintainability software-security" data-venue="ieee-icsa" data-venue-label="[Conference] IEEE ICSA" data-year="2026">
+</span><span class="pub-meta-part">Frankfurt am Main, Germany · June 2026.</span></div></li>
+<li data-topic-labels="Mobile Security; Software Metrics / Quality; Software Maintainability; Software Security" data-topics="mobile-security software-metrics maintainability software-security" data-venue="ieee-icsa" data-venue-label="[Conference] IEEE ICSA" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications
      </strong>
-<br/>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
      Mohamed Sylla and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 23rd IEEE International Conference on Software Architecture (ICSA-Companion)</em>
-<br/>Amsterdam, Netherlands · June 2026.<br/>
+</span><span class="pub-meta-part">Amsterdam, Netherlands · June 2026.</span></div><div class="pub-note-row">
 <span class="note">
 <strong>
        Distinguished Paper Award Candidate
       </strong>
 </span>
-</li>
-<li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Bugs / Testing" data-topics="llms-ai mobile-security software-bugs" data-venue="ieee-icst" data-venue-label="[Conference] IEEE ICST" data-year="2026">
+</div></li>
+<li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Bugs / Testing" data-topics="llms-ai mobile-security software-bugs" data-venue="ieee-icst" data-venue-label="[Conference] IEEE ICST" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Automated Reproduction of Android Application Bugs with LLMs: Are We There Yet?
      </strong>
-<br/>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
      Dennis Carey, <span class="my-name">Karim Elish</span>, and Paniz Abedin
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 19th IEEE International Conference on Software Testing, Verification and Validation (ICST)</em>
-<br/>Daejeon, South Korea · May 2026.</li>
-<li data-topic-labels="Mobile Security; Software Metrics / Quality; Datasets / Benchmarks" data-topics="mobile-security software-metrics datasets" data-venue="ieee-acm-msr" data-venue-label="[Conference] IEEE/ACM MSR" data-year="2026">
+</span><span class="pub-meta-part">Daejeon, South Korea · May 2026.</span></div></li>
+<li data-topic-labels="Mobile Security; Software Metrics / Quality; Datasets / Benchmarks" data-topics="mobile-security software-metrics datasets" data-venue="ieee-acm-msr" data-venue-label="[Conference] IEEE/ACM MSR" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       AndroMetric: Bridging Multi-Dimensional Software Metrics and Mobile Application Security
      </strong>
-<br/>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
      Sebastian Siedler and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track
      </em>
-<br/>Rio de Janeiro, Brazil · April 2026.</li>
-<li data-topic-labels="Mobile Security; Software Metrics / Quality; Software Maintainability; Datasets / Benchmarks" data-topics="mobile-security software-metrics maintainability datasets" data-venue="ieee-acm-msr" data-venue-label="[Conference] IEEE/ACM MSR" data-year="2026">
+</span><span class="pub-meta-part">Rio de Janeiro, Brazil · April 2026.</span></div></li>
+<li data-topic-labels="Mobile Security; Software Metrics / Quality; Software Maintainability; Datasets / Benchmarks" data-topics="mobile-security software-metrics maintainability datasets" data-venue="ieee-acm-msr" data-venue-label="[Conference] IEEE/ACM MSR" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       SMELLDroid: A Dataset for Code Smells in Android Apps
      </strong>
-<br/>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
      Joyce Champie, <span class="my-name">Karim Elish</span>, and Mahmoud Elish
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track
      </em>
-<br/>Rio de Janeiro, Brazil · April 2026.</li>
-<li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Metrics / Quality; Datasets / Benchmarks" data-topics="llms-ai mobile-security software-metrics datasets" data-venue="ieee-acm-forge" data-venue-label="[Conference] IEEE/ACM FORGE" data-year="2026">
+</span><span class="pub-meta-part">Rio de Janeiro, Brazil · April 2026.</span></div></li>
+<li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Metrics / Quality; Datasets / Benchmarks" data-topics="llms-ai mobile-security software-metrics datasets" data-venue="ieee-acm-forge" data-venue-label="[Conference] IEEE/ACM FORGE" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       MIRROR: A Dataset of Structural Metrics for Repackaged Android Apps
      </strong>
-<br/>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
      Sebastian Siedler and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 3rd IEEE/ACM International Conference on AI Foundation Models and Software Engineering (FORGE)</em>
-<br/>Rio de Janeiro, Brazil · April 2026.</li>
-<li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="ieee-acdsa" data-venue-label="[Conference] IEEE ACDSA" data-year="2025">
+</span><span class="pub-meta-part">Rio de Janeiro, Brazil · April 2026.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="ieee-acdsa" data-venue-label="[Conference] IEEE ACDSA" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       High-Accuracy Android Ransomware Detection Using SMALI Code-Based Analysis
      </strong>
-<br/>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
      Vinicius Seixas and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the IEEE International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA)
      </em>
-<br/>Antalya, Turkey · August 2025.</li>
-<li data-topic-labels="Android Malware; Computing Education" data-topics="android-malware education" data-venue="asee" data-venue-label="[Conference] ASEE Annual Conference" data-year="2025">
+</span><span class="pub-meta-part">Antalya, Turkey · August 2025.</span></div></li>
+<li data-topic-labels="Android Malware; Computing Education" data-topics="android-malware education" data-venue="asee" data-venue-label="[Conference] ASEE Annual Conference" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       A New Collaborative Approach to Multidisciplinary Capstone Design at Florida Polytechnic University
      </strong>
-<br/>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
      M. Bohm, J. Dewey, <span class="my-name">Karim Elish</span>, E. Kames, A. Murphy, O. Toker, and D. Ulybyshev
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the ASEE Annual Conference and Exposition, American Society for Engineering Education
      </em>
-<br/>Montreal, Canada · June 2025.</li>
-<li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieee-acis-sera" data-venue-label="[Conference] IEEE/ACIS SERA" data-year="2025">
+</span><span class="pub-meta-part">Montreal, Canada · June 2025.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieee-acis-sera" data-venue-label="[Conference] IEEE/ACIS SERA" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Stealthy No More: An Effective Ensemble Learning Approach for Detecting Android RATs
      </strong>
-<br/>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
      Nesreen Dalhy and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the IEEE/ACIS 23rd International Conference on Software Engineering Research, Management and Applications (SERA)
      </em>
-<br/>Las Vegas, NV · May 2025.</li>
-<li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="flairs" data-venue-label="[Conference] FLAIRS" data-year="2025">
+</span><span class="pub-meta-part">Las Vegas, NV · May 2025.</span></div></li>
+<li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="flairs" data-venue-label="[Conference] FLAIRS" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       FSProtoTransfer: Synergizing Few-Shot, Prototypical Networks, and Transfer Learning for Intrusion Detection in VANETs
      </strong>
-<br/>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
      Ayesha Dina, Colby Edell, <span class="my-name">Karim Elish</span>, and Arijet Sarker
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 38th International FLAIRS Conference, Florida Artificial Intelligence Research Society (FLAIRS)
      </em>
-<br/>Daytona Beach, FL · May 2025.</li>
-<li data-topic-labels="Android Malware; Mobile Security; Software Metrics / Quality; Empirical Study" data-topics="android-malware mobile-security software-metrics empirical-study" data-venue="ieee-bigdata" data-venue-label="[Conference] IEEE Big Data" data-year="2019">
+</span><span class="pub-meta-part">Daytona Beach, FL · May 2025.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Software Metrics / Quality; Empirical Study" data-topics="android-malware mobile-security software-metrics empirical-study" data-venue="ieee-bigdata" data-venue-label="[Conference] IEEE Big Data" data-year="2019"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Identifying Android Malware Families Using Android-Oriented Metrics
      </strong>
-<br/>
+</div><span aria-label="Publication year 2019" class="pub-year">2019</span></div><div class="pub-authors">
      William Blanc, Lina Hashem, <span class="my-name">Karim Elish</span>, and Hussain Almohri
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the IEEE International Conference on Big Data (Big Data)
      </em>
-<br/>Los Angeles, CA · December 2019.</li>
-<li data-topic-labels="Applied AI / Data Science" data-topics="applied-ai" data-venue="ieee-icmla" data-venue-label="[Conference] IEEE ICMLA" data-year="2018">
+</span><span class="pub-meta-part">Los Angeles, CA · December 2019.</span></div></li>
+<li data-topic-labels="Applied AI / Data Science" data-topics="applied-ai" data-venue="ieee-icmla" data-venue-label="[Conference] IEEE ICMLA" data-year="2018"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Machine Learning-based Prediction of Prolonged Length of Stay in Newborns
      </strong>
-<br/>
+</div><span aria-label="Publication year 2018" class="pub-year">2018</span></div><div class="pub-authors">
      Brandon Thompson, <span class="my-name">Karim Elish</span>, and Robert Steele
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 17th IEEE International Conference on Machine Learning and Applications (ICMLA)
      </em>
-<br/>Orlando, FL · December 2018.</li>
-<li data-topic-labels="Mobile Security; Systems Security" data-topics="mobile-security systems-security" data-venue="ieee-iccc" data-venue-label="[Conference] IEEE ICCC" data-year="2018">
+</span><span class="pub-meta-part">Orlando, FL · December 2018.</span></div></li>
+<li data-topic-labels="Mobile Security; Systems Security" data-topics="mobile-security systems-security" data-venue="ieee-iccc" data-venue-label="[Conference] IEEE ICCC" data-year="2018"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Enabling Smart Cities Through V2X Communication
      </strong>
-<br/>
+</div><span aria-label="Publication year 2018" class="pub-year">2018</span></div><div class="pub-authors">
      Mert Aydin, Mohammad Samarah, and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the IEEE International Conference on Computer and Communications (ICCC)
      </em>
-<br/>Chengdu, China · December 2018.</li>
-<li data-topic-labels="Mobile Security; Applied AI / Data Science" data-topics="mobile-security applied-ai" data-venue="ieee-iccia" data-venue-label="[Conference] IEEE ICCIA" data-year="2017">
+</span><span class="pub-meta-part">Chengdu, China · December 2018.</span></div></li>
+<li data-topic-labels="Mobile Security; Applied AI / Data Science" data-topics="mobile-security applied-ai" data-venue="ieee-iccia" data-venue-label="[Conference] IEEE ICCIA" data-year="2017"><div class="pub-title-row"><div class="pub-title">
 <strong>
       BetterChoice: A Migraine Drug Recommendation System Based on Neo4J
      </strong>
-<br/>
+</div><span aria-label="Publication year 2017" class="pub-year">2017</span></div><div class="pub-authors">
      Benjamin Stark, Constanze Knahl, Mert Aydin, Mohammad Samarah, and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the IEEE International Conference on Computational Intelligence and Applications (ICCIA)
      </em>
-<br/>Beijing, China · September 2017.</li>
-<li data-topic-labels="Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="mobile-security empirical-study privacy software-security" data-venue="acm-codaspy" data-venue-label="[Conference] ACM CODASPY" data-year="2017">
+</span><span class="pub-meta-part">Beijing, China · September 2017.</span></div></li>
+<li data-topic-labels="Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="mobile-security empirical-study privacy software-security" data-venue="acm-codaspy" data-venue-label="[Conference] ACM CODASPY" data-year="2017"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Prioritized Analysis of Inter-App Communication Risks
      </strong>
-<br/>
+</div><span aria-label="Publication year 2017" class="pub-year">2017</span></div><div class="pub-authors">
      Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, <span class="my-name">Karim Elish</span>, and Barbara Ryder
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the ACM Conference on Data and Application Security and Privacy (CODASPY)
      </em>
-<br/>
+</span><span class="pub-meta-part">
      Scottsdale, AZ, March 2017 (poster paper).
-    </li>
-<li data-topic-labels="Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2017">
+    </span></div></li>
+<li data-topic-labels="Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2017"><div class="pub-title-row"><div class="pub-title">
 <strong>
       MR-Droid: A Scalable and Prioritized Analysis of Inter-App Communication Risks
      </strong>
-<br/>
+</div><span aria-label="Publication year 2017" class="pub-year">2017</span></div><div class="pub-authors">
      Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, <span class="my-name">Karim Elish</span>, and Barbara Ryder
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)</em>, in conjunction with the
      <em>
       IEEE Symposium on Security and Privacy (IEEE S&amp;P)
      </em>
-<br/>San Jose, CA · May 2017.</li>
-<li data-topic-labels="Android Malware; Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2015">
+</span><span class="pub-meta-part">San Jose, CA · May 2017.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2015"><div class="pub-title-row"><div class="pub-title">
 <strong>
       On the Need of Precise Inter-App ICC Classification for Detecting Android Malware Collusions
      </strong>
-<br/>
+</div><span aria-label="Publication year 2015" class="pub-year">2015</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span>, Danfeng Yao, and Barbara Ryder
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)</em>, in conjunction with the
      <em>
       IEEE Symposium on Security and Privacy (IEEE S&amp;P)
      </em>
-<br/>San Jose, CA · May 2015.</li>
-<li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieee-icmla" data-venue-label="[Conference] IEEE ICMLA" data-year="2014">
+</span><span class="pub-meta-part">San Jose, CA · May 2015.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieee-icmla" data-venue-label="[Conference] IEEE ICMLA" data-year="2014"><div class="pub-title-row"><div class="pub-title">
 <strong>
       High Precision Screening for Android Malware using Dimensionality Reduction
      </strong>
-<br/>
+</div><span aria-label="Publication year 2014" class="pub-year">2014</span></div><div class="pub-authors">
      Britton Wolfe, <span class="my-name">Karim Elish</span>, and Danfeng Yao
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 13th IEEE International Conference on Machine Learning and Applications (ICMLA)
      </em>
-<br/>Detroit, MI · December 2014.</li>
-<li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="isc" data-venue-label="[Conference] ISC" data-year="2014">
+</span><span class="pub-meta-part">Detroit, MI · December 2014.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="isc" data-venue-label="[Conference] ISC" data-year="2014"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Comprehensive Behavior Profiling for Proactive Android Malware Detection
      </strong>
-<br/>
+</div><span aria-label="Publication year 2014" class="pub-year">2014</span></div><div class="pub-authors">
      Britton Wolfe, <span class="my-name">Karim Elish</span>, and Danfeng Yao
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 17th International Information Security Conference (ISC)
      </em>
-<br/>
+</span><span class="pub-meta-part">
      Hong Kong, October 2014.
-    </li>
-<li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="iupt-procedia" data-venue-label="[Conference] IUPT / Procedia Computer Science" data-year="2013">
+    </span></div></li>
+<li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="iupt-procedia" data-venue-label="[Conference] IUPT / Procedia Computer Science" data-year="2013"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Device-Based Isolation for Securing Cryptographic Keys
      </strong>
-<br/>
+</div><span aria-label="Publication year 2013" class="pub-year">2013</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span>, Yipan Deng, Danfeng Yao, and Dennis Kafura
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>Proceedings of the 3rd International Symposium on Internet of Ubiquitous and Pervasive Things (IUPT)</em>,
      <em>
       Procedia Computer Science (Elsevier)
      </em>
-<br/>Halifax, Canada · June 2013.</li>
-<li data-topic-labels="Android Malware; Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2012">
+</span><span class="pub-meta-part">Halifax, Canada · June 2013.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2012"><div class="pub-title-row"><div class="pub-title">
 <strong>
       User-Centric Dependence Analysis for Identifying Malicious Mobile Apps
      </strong>
-<br/>
+</div><span aria-label="Publication year 2012" class="pub-year">2012</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span>, Danfeng Yao, and Barbara Ryder
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)</em>, in conjunction with the
      <em>
       IEEE Symposium on Security and Privacy (IEEE S&amp;P)
      </em>
-<br/>San Jose, CA · May 2012.</li>
-<li data-topic-labels="Software Refactoring; Software Bugs / Testing; Empirical Study" data-topics="refactoring software-bugs empirical-study" data-venue="apsec" data-venue-label="[Conference] APSEC" data-year="2009">
+</span><span class="pub-meta-part">San Jose, CA · May 2012.</span></div></li>
+<li data-topic-labels="Software Refactoring; Software Bugs / Testing; Empirical Study" data-topics="refactoring software-bugs empirical-study" data-venue="apsec" data-venue-label="[Conference] APSEC" data-year="2009"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Investigating the Effect of Refactoring on Software Testing Effort
      </strong>
-<br/>
+</div><span aria-label="Publication year 2009" class="pub-year">2009</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span> and Mohammad Alshayeb
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 16th IEEE Asia-Pacific Software Engineering Conference (APSEC)
      </em>
-<br/>Penang, Malaysia · December 2009.</li>
-<li data-topic-labels="Android Malware; Software Maintainability; Empirical Study" data-topics="android-malware maintainability empirical-study" data-venue="ieee-csmr" data-venue-label="[Conference] IEEE CSMR" data-year="2009">
+</span><span class="pub-meta-part">Penang, Malaysia · December 2009.</span></div></li>
+<li data-topic-labels="Android Malware; Software Maintainability; Empirical Study" data-topics="android-malware maintainability empirical-study" data-venue="ieee-csmr" data-venue-label="[Conference] IEEE CSMR" data-year="2009"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Application of TreeNet in Predicting Object-Oriented Software Maintainability: A Comparative Study
      </strong>
-<br/>
+</div><span aria-label="Publication year 2009" class="pub-year">2009</span></div><div class="pub-authors">
      Mahmoud Elish and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 13th IEEE European Conference on Software Maintenance and Reengineering (CSMR)
      </em>
-<br/>Kaiserslautern, Germany · March 2009.</li>
+</span><span class="pub-meta-part">Kaiserslautern, Germany · March 2009.</span></div></li>
 </ul><h3>
     Refereed Posters and Abstracts
    </h3><ul class="publication-list">
-<li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieom" data-venue-label="[Conference] IEOM" data-year="2025">
+<li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieom" data-venue-label="[Conference] IEOM" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Towards Intelligent Detection of Android Remote Access Trojans (RATs)
      </strong>
-<br/>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
      Nesreen Dalhy and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       10th North American IEOM Conference on Industrial Engineering and Operations Management</em>, Computer Science Track
-     <br/>Orlando, FL · June 2025.<br/>
+     </span><span class="pub-meta-part">Orlando, FL · June 2025.</span></div><div class="pub-note-row">
 <span class="note">
 <strong>
        Nesreen Dalhy: 2nd Place in Master’s Thesis Competition
       </strong>
 </span>
-</li>
-<li data-topic-labels="LLMs / AI for Security &amp; SE; Android Malware; Mobile Security; Empirical Study; Software Security" data-topics="llms-ai android-malware mobile-security empirical-study software-security" data-venue="ieom" data-venue-label="[Conference] IEOM" data-year="2025">
+</div></li>
+<li data-topic-labels="LLMs / AI for Security &amp; SE; Android Malware; Mobile Security; Empirical Study; Software Security" data-topics="llms-ai android-malware mobile-security empirical-study software-security" data-venue="ieom" data-venue-label="[Conference] IEOM" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Evaluating the Capabilities of LLMs in Security Analysis for Mobile Applications
      </strong>
-<br/>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
      Joyce Champie and <span class="my-name">Karim Elish</span>
-<br/>
+</div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       10th North American IEOM Conference on Industrial Engineering and Operations Management</em>, Computer Science Track
-     <br/>Orlando, FL · June 2025.<br/>
+     </span><span class="pub-meta-part">Orlando, FL · June 2025.</span></div><div class="pub-note-row">
 <span class="note">
 <strong>
        Joyce Champie: 1st Place in Poster Competition
       </strong>
 </span>
-</li>
-<li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="s2erc" data-venue-label="[Conference] S2ERC" data-year="2014">
+</div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="s2erc" data-venue-label="[Conference] S2ERC" data-year="2014"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Inter-Component and Inter-App Communication Analysis in Android for Malware Detection
      </strong>
-<br/>
+</div><span aria-label="Publication year 2014" class="pub-year">2014</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span>, Danfeng Yao, and Barbara Ryder
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       9th Showcase of the Security and Software Engineering Research Center (S2ERC)
      </em>
-<br/>Washington, DC · May 2014.</li>
-<li data-topic-labels="Mobile Security; Empirical Study" data-topics="mobile-security empirical-study" data-venue="vt-poster-showcase" data-venue-label="[Poster] Virginia Tech Graduate Showcase" data-year="2014">
+</span><span class="pub-meta-part">Washington, DC · May 2014.</span></div></li>
+<li data-topic-labels="Mobile Security; Empirical Study" data-topics="mobile-security empirical-study" data-venue="vt-poster-showcase" data-venue-label="[Poster] Virginia Tech Graduate Showcase" data-year="2014"><div class="pub-title-row"><div class="pub-title">
 <strong>
       User-Intention Based Program Analysis for Android Security
      </strong>
-<br/>
+</div><span aria-label="Publication year 2014" class="pub-year">2014</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span>, Danfeng Yao, and Barbara Ryder
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       2nd Annual Graduate Student Poster Showcase</em>, Computer Science Department, Virginia Tech
-     <br/>
+     </span><span class="pub-meta-part">
      April 2014.
-     <br/>
+     </span></div><div class="pub-note-row">
 <span class="note">
 <strong>
        Best Poster Award
       </strong>
 </span>
-</li>
-<li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="usenix-security" data-venue-label="[Poster] USENIX Security Symposium" data-year="2013">
+</div></li>
+<li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="usenix-security" data-venue-label="[Poster] USENIX Security Symposium" data-year="2013"><div class="pub-title-row"><div class="pub-title">
 <strong>
       User-Intention Based Android Malware Detection
      </strong>
-<br/>
+</div><span aria-label="Publication year 2013" class="pub-year">2013</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span>, Danfeng Yao, Barbara Ryder, and Xuxian Jiang
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       22nd USENIX Security Symposium
      </em>
-<br/>Washington, DC · August 2013.</li>
-<li data-topic-labels="Privacy / Data Security" data-topics="privacy" data-venue="vt-poster-showcase" data-venue-label="[Poster] Virginia Tech Graduate Showcase" data-year="2012">
+</span><span class="pub-meta-part">Washington, DC · August 2013.</span></div></li>
+<li data-topic-labels="Privacy / Data Security" data-topics="privacy" data-venue="vt-poster-showcase" data-venue-label="[Poster] Virginia Tech Graduate Showcase" data-year="2012"><div class="pub-title-row"><div class="pub-title">
 <strong>
       DataGuard: A Mobile System for Securing Ultra-Sensitive Information
      </strong>
-<br/>
+</div><span aria-label="Publication year 2012" class="pub-year">2012</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span>, Yipan Deng, Danfeng Yao, and Dennis Kafura
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       28th Annual Graduate Research Symposium</em>, Virginia Tech
-     <br/>
+     </span><span class="pub-meta-part">
      March 2012.
-     <br/>
+     </span></div><div class="pub-note-row">
 <span class="note">
 <strong>
        1st Place Poster Award
       </strong>
 </span>
-</li>
-<li data-topic-labels="Android Malware; Empirical Study" data-topics="android-malware empirical-study" data-venue="s2erc" data-venue-label="[Conference] S2ERC" data-year="2011">
+</div></li>
+<li data-topic-labels="Android Malware; Empirical Study" data-topics="android-malware empirical-study" data-venue="s2erc" data-venue-label="[Conference] S2ERC" data-year="2011"><div class="pub-title-row"><div class="pub-title">
 <strong>
       User-Centric Dependence Analysis in Programs for Identifying Malware
      </strong>
-<br/>
+</div><span aria-label="Publication year 2011" class="pub-year">2011</span></div><div class="pub-authors">
 <span class="my-name">Karim Elish</span>, Danfeng Yao, and Barbara Ryder
-     <br/>
+     </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       4th Showcase of the Security and Software Engineering Research Center (S2ERC)
      </em>
-<br/>
+</span><span class="pub-meta-part">
      Iowa, November 2011.
-    </li>
+    </span></div></li>
 </ul></div><aside aria-label="Publication statistics and filters" class="publication-stats-sidebar"><section aria-label="Publication topic, venue, and year filters" class="publication-overview-grid with-year">
 <div class="publication-filter-summary">
 <span id="publication-active-filter">
@@ -3248,7 +3573,6 @@ main.publications-page {
            [Journal] Computers &amp; Security
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3256,7 +3580,6 @@ main.publications-page {
            [Journal] IEEE Access
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3264,7 +3587,6 @@ main.publications-page {
            [Journal] IEEE Internet Computing
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3272,7 +3594,6 @@ main.publications-page {
            [Journal] IEEE Transactions on Computers
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3280,7 +3601,6 @@ main.publications-page {
            [Journal] IEEE Transactions on Mobile Computing
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3288,7 +3608,6 @@ main.publications-page {
            [Journal] IJISAE
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3296,7 +3615,6 @@ main.publications-page {
            [Journal] Information
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3304,7 +3622,6 @@ main.publications-page {
            [Journal] Journal of Software
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3312,7 +3629,6 @@ main.publications-page {
            [Journal] Journal of Systems and Software
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3320,7 +3636,6 @@ main.publications-page {
            [Journal] Arabian Journal for Science and Engineering
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3328,7 +3643,6 @@ main.publications-page {
            [Journal] Security and Communication Networks
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3336,7 +3650,6 @@ main.publications-page {
            [Conference] ACM CODASPY
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3344,7 +3657,6 @@ main.publications-page {
            [Conference] ASEE Annual Conference
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3352,7 +3664,6 @@ main.publications-page {
            [Conference] FLAIRS
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3360,7 +3671,6 @@ main.publications-page {
            [Conference] IEEE ACDSA
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3368,7 +3678,6 @@ main.publications-page {
            [Conference] IEEE APSEC
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3376,7 +3685,6 @@ main.publications-page {
            [Conference] IEEE Big Data
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3384,7 +3692,6 @@ main.publications-page {
            [Conference] IEEE CSMR
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3392,7 +3699,6 @@ main.publications-page {
            [Conference] IEEE ICCC
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3400,7 +3706,6 @@ main.publications-page {
            [Conference] IEEE ICCIA
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3408,7 +3713,6 @@ main.publications-page {
            [Conference] IEEE ICMLA
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3416,7 +3720,6 @@ main.publications-page {
            [Conference] IEEE ICSA
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3424,7 +3727,6 @@ main.publications-page {
            [Conference] IEEE ICST
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3432,7 +3734,6 @@ main.publications-page {
            [Conference] IEEE/ACIS SERA
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3440,7 +3741,6 @@ main.publications-page {
            [Conference] IEEE/ACM FORGE
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3448,7 +3748,6 @@ main.publications-page {
            [Conference] IEEE/ACM ICSE
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3456,7 +3755,6 @@ main.publications-page {
            [Conference] IEEE/ACM MSR
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3464,7 +3762,6 @@ main.publications-page {
            [Conference] ISC
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3472,7 +3769,6 @@ main.publications-page {
            [Conference] IUPT / Procedia Computer Science
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3480,7 +3776,6 @@ main.publications-page {
            [Workshop] ACM IWSPA / CODASPY
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3488,7 +3783,6 @@ main.publications-page {
            [Workshop] IEEE SPW / MoST
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3496,7 +3790,6 @@ main.publications-page {
            [Poster] IEOM
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3504,7 +3797,6 @@ main.publications-page {
            [Poster] S2ERC
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3512,7 +3804,6 @@ main.publications-page {
            [Poster] USENIX Security Symposium
           </button>
 </td>
-
 </tr>
 <tr>
 <td>
@@ -3520,7 +3811,6 @@ main.publications-page {
            [Poster] Virginia Tech Graduate  Showcase
           </button>
 </td>
-
 </tr>
 </tbody>
 </table>
