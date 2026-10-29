@@ -2283,23 +2283,74 @@ main.publications-page {
 
 
 
-/* Venue card: names only, no count column */
+/* =========================================================
+   VENUE CARD — NAMES ONLY, FULL-WIDTH ROWS
+   ========================================================= */
+.publication-venue-card .publication-filter-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
 .publication-venue-card table {
-  width: max-content !important;
-  min-width: 0 !important;
+  width: 100% !important;
   max-width: 100% !important;
+  table-layout: auto !important;
+  border-collapse: collapse;
+  margin: 0 !important;
+}
+
+.publication-venue-card tr {
+  width: 100%;
 }
 
 .publication-venue-card td,
-.publication-venue-card td:first-child {
-  width: auto !important;
+.publication-venue-card td:first-child,
+.publication-venue-card td:last-child {
+  width: 100% !important;
   min-width: 0 !important;
-  padding-right: 0.34rem !important;
+  box-sizing: border-box;
+  padding: 0.31rem 0.4rem !important;
   text-align: left !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
 }
 
 .publication-venue-card .publication-filter-row {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 0;
   text-align: left !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+.publication-venue-card tr:hover {
+  background: #f8fafc;
+}
+
+@media (max-width: 820px) {
+  .publication-venue-card .publication-filter-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .publication-venue-card table {
+    width: 100% !important;
+  }
+
+  .publication-venue-card td,
+  .publication-venue-card td:first-child,
+  .publication-venue-card td:last-child,
+  .publication-venue-card .publication-filter-row {
+    width: 100% !important;
+    white-space: nowrap !important;
+  }
 }
 </style>
 </head>
