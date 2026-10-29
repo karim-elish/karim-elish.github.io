@@ -19,11 +19,16 @@
    Scoped to .publications-page so the rest of the site keeps its existing theme. */
 
 .publications-page .article-meta {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .publications-page .article-meta h2 {
   margin-bottom: 0.25rem;
+}
+
+.publications-page .article-meta h2 .title {
+  color: #1a365d;
 }
 
 .publications-page .publication-intro {
@@ -2359,7 +2364,8 @@ main.publications-page {
    Keeps existing filters and section organization intact.
    ========================================================= */
 body.publications-layout {
-  background: #fff;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Arial, sans-serif;
 }
 
 main.publications-page {
@@ -2367,11 +2373,6 @@ main.publications-page {
   max-width: 1260px !important;
 }
 
-.publications-page .article-meta h2 {
-  color: #183153;
-  line-height: 1.2;
-  letter-spacing: -0.015em;
-}
 
 
 /* Research impact becomes a quiet utility strip, not a competing card. */
