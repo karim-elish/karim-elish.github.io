@@ -5,186 +5,2652 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Honors &amp; Awards | Karim Elish</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="../css/style.css" rel="stylesheet"/>
+<title>
+   Publications | Karim Elish
+  </title>
+<meta content="Publications by Karim Elish in software security, mobile and Android malware detection, inter-app communication analysis, software analytics, AI/ML for security, and software engineering, published in IEEE, ACM, and leading journals and conferences." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
 <link href="../css/fonts.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-<style id="award-card-theme">
-body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Arial, sans-serif;
-}
+<style id="publication-card-theme">
+   /* Publication page card styling
+   Scoped to .publications-page so the rest of the site keeps its existing theme. */
 
-
-/* Honors & Awards page
-   Clean academic timeline/list styling, scoped to .awards-page. */
-
-.awards-page .article-meta {
+.publications-page .article-meta {
   margin-bottom: 1rem;
   text-align: center;
 }
 
-.awards-page .article-meta h2 {
+.publications-page .article-meta h2 {
   margin-bottom: 0.25rem;
 }
 
-.awards-page .article-meta h2 .title {
+.publications-page .article-meta h2 .title {
   color: #1a365d;
 }
 
-/* One restrained container instead of a separate card for every award. */
-.awards-timeline {
-  margin: 0 0 2rem;
-  background: #ffffff;
-  border: 1px solid #d9e2ec;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.035);
+.publications-page .publication-intro {
+  margin: 0 0 1.5rem 0;
+  padding: 0.85rem 1rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #2b6cb0;
+  border-radius: 8px;
 }
 
-.award-entry {
-  display: grid;
-  grid-template-columns: 145px minmax(0, 1fr);
-  column-gap: 1.15rem;
-  align-items: start;
-  position: relative;
-  margin: 0;
-  padding: 1rem 1.15rem;
-  border-bottom: 1px solid #e8edf3;
-}
-
-.award-entry:last-child {
-  border-bottom: none;
-}
-
-.award-entry:hover {
-  background: #fbfdff;
-}
-
-.award-date {
-  position: relative;
-  padding-top: 0.08rem;
-  color: #2b6cb0;
-  font-size: 0.82rem;
-  font-weight: 700;
-  line-height: 1.35;
+.publications-page h3 {
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid #e2e8f0;
+  color: #1a365d;
+  font-size: 1.22rem;
   letter-spacing: 0.01em;
 }
 
-/* Subtle timeline cue between the date and content columns. */
-.award-date::after {
-  content: "";
-  position: absolute;
-  top: 0.15rem;
-  right: -0.63rem;
-  width: 2px;
-  height: calc(100% + 1.7rem);
-  background: #dce7f1;
+.publication-list {
+  list-style: none;
+  margin: 0 0 2rem 0;
+  padding: 0;
 }
 
-.award-entry:last-child .award-date::after {
-  height: calc(100% + 0.6rem);
-}
-
-.award-content {
-  min-width: 0;
-}
-
-.award-title {
-  margin: 0;
-  color: #1a365d;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-.award-context {
-  margin: 0.2rem 0 0;
-  color: #5c6b7a;
-  font-size: 0.86rem;
-  font-weight: 550;
-  line-height: 1.4;
-}
-
-.award-description {
-  margin: 0.35rem 0 0;
-  color: #2d3748;
-  font-size: 0.95rem;
+.publication-list li {
+  position: relative;
+  margin: 0 0 1rem 0;
+  padding: 1rem 1.15rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+ /* border-left: 5px solid #2b6cb0; */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
   line-height: 1.55;
 }
 
-.award-context + .award-description {
-  margin-top: 0.35rem;
+.publication-list li:hover {
+ /* border-left-color: #1a365d; */
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.10);
+  transform: translateY(-1px);
+  transition: box-shadow 0.18s ease, transform 0.18s ease, border-left-color 0.18s ease;
 }
 
-/* Keep the page width consistent with the normal personal-site content width. */
-.awards-page {
+.publication-list li strong {
+  color: #1a365d;
+  font-size: 1.02rem;
+}
+
+.publication-list .my-name {
+  font-weight: 600;
+  color: #1a365d;
+}
+
+.publication-list li em {
+  color: #2d3748;
+}
+
+.publication-list .note {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 0.15rem 0.45rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  color: #4a5568;
+  font-size: 0.90rem !important;
+}
+
+.publication-list .note strong {
+  font-size: inherit;
+}
+   
+   
+@media (max-width: 640px) {
+  .publication-list li {
+    padding: 0.9rem 0.95rem 0.9rem 1.05rem;
+  }
+
+  .publications-page h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Compact research impact */
+.research-impact-card {
+  margin: 0 0 1rem 0;
+  padding: 0.7rem 0.8rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  box-shadow: 0 2px 7px rgba(15, 23, 42, 0.04);
+}
+
+.impact-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.impact-header h3 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #1a365d;
+  font-size: 0.94rem;
+  line-height: 1.2;
+}
+
+.impact-header p {
+  margin: 0.1rem 0 0 0;
+  color: #64748b;
+  font-size: 0.76rem;
+}
+
+.impact-profile-link {
+  display: inline-flex;
+  white-space: nowrap;
+  padding: 0.24rem 0.5rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  color: #2b6cb0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.impact-profile-link:hover {
+  background: #f8fafc;
+  border-color: #2b6cb0;
+  color: #1a365d;
+}
+
+
+.impact-metrics {
+  display: flex;
+  gap: 0.55rem;
+  margin-top: 0.55rem;
+}
+
+.impact-metric {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.32rem;
+  padding: 0.28rem 0.42rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+.impact-metric-value {
+  color: #1a365d;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.impact-metric-label {
+  color: #64748b;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* Main publications + right statistics sidebar */
+.publication-content-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 315px);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.publications-main {
+  min-width: 0;
+}
+
+.publication-stats-sidebar {
+  min-width: 0;
+  position: sticky;
+  top: 1rem;
+}
+
+/* Stacked statistics/filter cards */
+.publication-overview-grid.with-year {
+  display: flex;
+  flex-direction: column;
+  gap: 0.72rem;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.publication-topic-chart.compact,
+.publication-venue-card,
+.publication-year-chart {
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.publication-topic-chart.compact h3,
+.publication-venue-card h3,
+.publication-year-chart h3 {
+  margin: 0;
+  padding: 0.42rem 0.48rem;
+  background: #f7f9fc;
+  border: none;
+  border-bottom: 1px solid #d9e2ec;
+  color: #1a365d;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* Scrollable rows inside each statistics card */
+.topic-bar-chart,
+.year-bar-chart,
+.publication-filter-scroll {
+  max-height: 190px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+.topic-bar-chart,
+.year-bar-chart {
+  display: block;
+  padding: 0;
+}
+
+.topic-bar-row,
+.year-bar-row {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  gap: 0.34rem;
+  padding: 0.31rem 0.4rem;
+  background: #ffffff;
+  border: none;
+  border-bottom: 1px solid #edf1f5;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.topic-bar-row {
+  grid-template-columns: minmax(0, 1.25fr) minmax(48px, 0.72fr) 1.45rem;
+}
+
+.year-bar-row {
+  grid-template-columns: 2.5rem minmax(48px, 1fr) 1.45rem;
+}
+
+.topic-bar-row:last-child,
+.year-bar-row:last-child {
+  border-bottom: none;
+}
+
+.topic-bar-row:hover,
+.year-bar-row:hover,
+.topic-bar-row.active,
+.year-bar-row.active {
+  background: #f8fafc;
+}
+
+.topic-bar-row:hover .topic-bar-label,
+.topic-bar-row.active .topic-bar-label,
+.year-bar-row:hover .year-bar-label,
+.year-bar-row.active .year-bar-label {
+  color: #1a365d;
+  text-decoration: none;
+}
+
+.topic-bar-label,
+.year-bar-label {
+  min-width: 0;
+  color: #2b6cb0;
+  font-size: 0.69rem;
+  font-weight: 650;
+  line-height: 1.16;
+}
+
+.topic-bar-label {
+  white-space: normal;
+}
+
+/* Square-ended, conventional horizontal bars */
+.topic-bar-track,
+.year-bar-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 0.58rem;
+  background: transparent;
+  border-left: 1px dashed #cbd5e0;
+  border-radius: 0;
+  overflow: visible;
+  padding-left: 0.12rem;
+}
+
+.topic-bar-fill,
+.year-bar-fill {
+  display: block;
+  height: 0.42rem;
+  min-width: 2px;
+  background: #2b6cb0;
+  border-radius: 0;
+}
+
+.topic-bar-count,
+.year-bar-count {
+  color: #1a365d;
+  font-size: 0.68rem;
+  font-weight: 750;
+  text-align: right;
+}
+
+/* Venue rows */
+.publication-venue-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.69rem;
+  line-height: 1.18;
+}
+
+.publication-venue-card td {
+  padding: 0.31rem 0.4rem;
+  border-bottom: 1px solid #edf1f5;
+  vertical-align: middle;
+}
+
+.publication-venue-card tr:last-child td {
+  border-bottom: none;
+}
+
+.publication-venue-card tr:hover {
+  background: #f8fafc;
+}
+
+.publication-venue-card td:last-child {
+  width: 1.55rem;
+  text-align: right;
+  color: #1a365d;
+  font-weight: 750;
+}
+
+.publication-filter-row {
+  white-space: normal;
+  display: inline;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #2b6cb0;
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.publication-filter-row:hover,
+.publication-filter-row.active {
+  color: #1a365d;
+  text-decoration: none;
+}
+
+/* Filter summary under the stacked cards */
+.publication-filter-summary {
+  order: -1;
+  display: block;
+  margin: 0 0 0.05rem 0;
+  padding: 0.05rem 0.02rem 0.12rem;
+  color: #64748b;
+  font-size: 0.71rem;
+  line-height: 1.35;
+  border: none;
+  background: transparent;
+}
+
+.publication-active-filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+
+.publication-filter-tag {
+  padding: 0.2rem 0.38rem;
+  background: #f7f9fc;
+  border: 1px solid #cbd5e0;
+  border-radius: 3px;
+  color: #1a365d;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.68rem;
+}
+
+.publication-filter-tag span {
+  margin-left: 0.2rem;
+  font-weight: 900;
+}
+
+.publication-filter-tag:hover {
+  background: #eef4fa;
+  border-color: #2b6cb0;
+}
+
+#publication-clear-filters {
+  padding: 0.2rem 0.4rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e0;
+  border-radius: 3px;
+  color: #2b6cb0;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.68rem;
+}
+
+#publication-clear-filters:hover {
+  background: #f8fafc;
+  border-color: #2b6cb0;
+  color: #1a365d;
+}
+
+.filter-unavailable {
+  opacity: 0.30;
+}
+
+.filter-unavailable button,
+button.filter-unavailable {
+  cursor: not-allowed;
+}
+
+.publication-no-results {
+  margin: 0 0 1.1rem 0;
+  padding: 0.7rem 0.85rem;
+  background: #fffaf0;
+  border: 1px solid #fbd38d;
+  border-radius: 6px;
+  color: #744210;
+  font-size: 0.84rem;
+}
+
+/* Preserve section hierarchy within the left publication column */
+.publications-main > h3:first-of-type {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .publication-content-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .publication-stats-sidebar {
+    grid-column: 1;
+    grid-row: 1;
+    position: static;
+  }
+
+  .publications-main {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .publication-overview-grid.with-year {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+
+  .publication-filter-summary {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .impact-header {
+    align-items: flex-start;
+  }
+
+  .publication-overview-grid.with-year {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-filter-summary {
+    grid-column: auto;
+  }
+
+  .topic-bar-chart,
+  .year-bar-chart,
+  .publication-filter-scroll {
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 520px) {
+  .impact-header {
+    display: block;
+  }
+
+  .impact-profile-link {
+    margin-top: 0.45rem;
+  }
+}
+
+
+/* Compact dropdown filters for Venue and Year */
+.publication-select-wrap {
+  padding: 0.52rem;
+  background: #ffffff;
+}
+
+.publication-select {
+  width: 100%;
+  min-width: 0;
+  padding: 0.42rem 1.8rem 0.42rem 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #1a365d;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.publication-select:focus {
+  outline: 2px solid rgba(43, 108, 176, 0.16);
+  outline-offset: 1px;
+  border-color: #2b6cb0;
+}
+
+.publication-select option {
+  color: #1a365d;
+  background: #ffffff;
+}
+
+.filter-source-controls {
+  display: none !important;
+}
+
+/* Topic is a visible statistical list, not a scroll box. */
+.topic-bar-chart {
+  max-height: none;
+  overflow: visible;
+}
+
+/* Topic card: show about eight rows, scroll for the remainder */
+.topic-bar-chart {
+  max-height: 16.45rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+}
+
+.topic-bar-chart::-webkit-scrollbar {
+  width: 6px;
+}
+
+.topic-bar-chart::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 6px;
+}
+
+.topic-bar-row {
+  min-height: 2.05rem;
+}
+
+/* Hide native select UI; custom dropdowns below provide the visible control */
+.native-filter-select {
+  display: none !important;
+}
+
+.publication-select-wrap {
+  position: relative;
+  padding: 0.5rem;
+  background: #ffffff;
+}
+
+.publication-venue-card,
+.publication-year-chart {
+  overflow: visible;
+}
+
+.custom-filter-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.custom-filter-trigger {
+  width: 100%;
+  min-height: 2.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.42rem 0.55rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  color: #1a365d;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 650;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.custom-filter-trigger:hover,
+.custom-filter-trigger[aria-expanded="true"] {
+  border-color: #8fb5d8;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.08);
+}
+
+.custom-filter-trigger:focus-visible {
+  outline: none;
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.12);
+}
+
+.custom-filter-trigger-label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.custom-filter-chevron {
+  display: inline-flex;
+  flex: 0 0 auto;
+  color: #64748b;
+  transition: transform 0.16s ease;
+}
+
+.custom-filter-trigger[aria-expanded="true"] .custom-filter-chevron {
+  transform: rotate(180deg);
+}
+
+.custom-filter-menu {
+  position: absolute;
+  z-index: 50;
+  top: calc(100% + 0.32rem);
+  left: 0;
+  right: 0;
+  max-height: 16.5rem;
+  overflow-y: auto;
+  padding: 0.3rem;
+  background: #ffffff;
+  border: 1px solid #d6e0ea;
+  border-radius: 7px;
+  box-shadow:
+    0 10px 28px rgba(15, 23, 42, 0.14),
+    0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+.custom-filter-menu[hidden] {
+  display: none;
+}
+
+.custom-filter-option {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1rem;
+  gap: 0.45rem;
+  align-items: center;
+  padding: 0.42rem 0.46rem;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: #334155;
+  font: inherit;
+  font-size: 0.69rem;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+}
+
+.custom-filter-option:hover,
+.custom-filter-option:focus-visible {
+  outline: none;
+  background: #edf6ff;
+  color: #1a365d;
+}
+
+.custom-filter-option[aria-selected="true"] {
+  background: #f2f7fc;
+  color: #1a365d;
+  font-weight: 700;
+}
+
+.custom-filter-option:disabled {
+  opacity: 0.36;
+  cursor: not-allowed;
+}
+
+.custom-filter-option-text {
+  min-width: 0;
+}
+
+.custom-filter-check {
+  color: #2b6cb0;
+  font-weight: 800;
+  text-align: right;
+}
+
+
+/* Wider layout only for the Publications page */
+main.publications-page {
+  width: min(1320px, calc(100% - 3rem));
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 700px) {
+  main.publications-page {
+    width: calc(100% - 1.5rem);
+  }
+}
+
+/* Balanced width refinements for statistics cards */
+.publication-stats-sidebar {
+  min-width: 300px;
+}
+
+/* Topic labels stay compact; Venue names must remain fully visible. */
+.topic-bar-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.publication-filter-row {
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.publication-venue-card table {
+  table-layout: auto;
+}
+
+.publication-venue-card td:first-child {
+  white-space: nowrap;
+  width: auto;
+}
+
+.publication-venue-card td:last-child {
+  width: 1.8rem;
+  min-width: 1.8rem;
+}
+
+@media (max-width: 900px) {
+  .publication-stats-sidebar {
+    min-width: 0;
+  }
+
+  .topic-bar-label,
+  .publication-filter-row,
+  .publication-venue-card td:first-child {
+    white-space: normal;
+  }
+}
+
+
+/* Tight statistics-card sizing */
+.publication-venue-card td {
+  padding: 0.28rem 0.34rem;
+}
+
+.publication-venue-card table {
+  font-size: 0.66rem;
+  line-height: 1.12;
+}
+
+.publication-filter-row {
+  font-size: 0.66rem;
+  letter-spacing: -0.005em;
+}
+
+.publication-venue-card td:last-child {
+  width: 1.45rem;
+  min-width: 1.45rem;
+  padding-left: 0.2rem;
+}
+
+.publication-topic-chart.compact h3,
+.publication-venue-card h3,
+.publication-year-chart h3 {
+  padding-left: 0.42rem;
+  padding-right: 0.42rem;
+}
+
+.topic-bar-row {
+  padding-left: 0.34rem;
+  padding-right: 0.34rem;
+}
+
+
+/* Reduce empty space inside statistics rows */
+.topic-bar-row {
+  grid-template-columns: minmax(0, auto) minmax(38px, 70px) 1.25rem;
+  column-gap: 0.22rem;
+}
+
+.topic-bar-label {
+  width: max-content;
+  max-width: 13.5rem;
+}
+
+.publication-venue-card td:first-child {
+  width: 1%;
+  white-space: nowrap;
+  padding-right: 0.28rem;
+}
+
+.publication-venue-card td:last-child {
+  width: auto;
+  min-width: 1.3rem;
+  padding-left: 0.12rem;
+  padding-right: 0.28rem;
+  text-align: left;
+}
+
+
+/* Keep labels close to their bars/counts */
+.topic-bar-row {
+  grid-template-columns: max-content 68px max-content;
+  justify-content: start;
+  column-gap: 0.28rem;
+}
+
+.topic-bar-label {
+  width: auto;
+  max-width: none;
+}
+
+.publication-venue-card table {
+  width: auto;
+  max-width: 100%;
+}
+
+.publication-venue-card td:first-child {
+  width: auto;
+  white-space: nowrap;
+  padding-right: 0.32rem;
+}
+
+.publication-venue-card td:last-child {
+  width: auto;
+  min-width: 0;
+  padding-left: 0;
+  padding-right: 0.2rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+
+/* Final compact alignment: tight rows, right-aligned counts */
+.publication-content-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(285px, 300px);
+}
+
+.publication-stats-sidebar {
+  min-width: 285px;
+}
+
+.topic-bar-row {
+  grid-template-columns: max-content 62px 1.35rem;
+  justify-content: start;
+  column-gap: 0.24rem;
+}
+
+.topic-bar-count {
+  text-align: right;
+  justify-self: end;
+  width: 1.35rem;
+}
+
+.publication-venue-card table {
+  width: auto;
+  max-width: 100%;
+}
+
+.publication-venue-card td:first-child {
+  width: auto;
+  white-space: nowrap;
+  padding-right: 0.28rem;
+}
+
+.publication-venue-card td:last-child {
+  width: 1.35rem;
+  min-width: 1.35rem;
+  padding-left: 0.08rem;
+  padding-right: 0.08rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .publication-stats-sidebar {
+    min-width: 0;
+  }
+}
+
+
+/* Match Topic card spacing/alignment to Venue card */
+.publication-topic-chart.compact .topic-bar-chart {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.publication-topic-chart.compact .topic-bar-row {
+  grid-template-columns: max-content 54px 1.3rem;
+  justify-content: start;
+  column-gap: 0.2rem;
+  padding-left: 0.12rem;
+  padding-right: 0.12rem;
+}
+
+.publication-topic-chart.compact .topic-bar-label {
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  width: 54px;
+  min-width: 54px;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  width: 1.3rem;
+  min-width: 1.3rem;
+  justify-self: end;
+  text-align: right;
+  padding: 0;
+}
+
+
+/* Restore previous Topic-card layout while keeping Venue unchanged */
+.publication-topic-chart.compact .topic-bar-chart {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.publication-topic-chart.compact .topic-bar-row {
+  grid-template-columns: max-content 62px 1.35rem;
+  justify-content: start;
+  column-gap: 0.24rem;
+  padding-left: 0.34rem;
+  padding-right: 0.34rem;
+}
+
+.publication-topic-chart.compact .topic-bar-label {
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  width: 62px;
+  min-width: 62px;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  width: 1.35rem;
+  min-width: 1.35rem;
+  justify-self: end;
+  text-align: right;
+  padding: 0;
+}
+
+
+/* Restore Topic card proportions from the earlier preferred version.
+   Keep the current sidebar width, corrected counts, and ~8 visible rows. */
+.publication-topic-chart.compact .topic-bar-chart {
+  max-height: 16.45rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+}
+
+.publication-topic-chart.compact .topic-bar-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 30px 1.2rem;
+  align-items: center;
+  justify-content: stretch;
+  gap: 0.28rem;
+  column-gap: 0.28rem;
+  min-height: 2.05rem;
+  padding: 0.31rem 0.4rem;
+}
+
+.publication-topic-chart.compact .topic-bar-label {
+  min-width: 0;
+  width: auto;
+  max-width: none;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: clip;
+  font-size: 0.65rem;
+  line-height: 1.16;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  width: 30px;
+  min-width: 30px;
+  height: 0.58rem;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  width: auto;
+  min-width: 0;
+  justify-self: stretch;
+  text-align: right;
+  padding: 0;
+  font-size: 0.68rem;
+}
+
+
+/* Topic card: bar fills the middle space; scrollbar stays clear of counts */
+.publication-topic-chart.compact .topic-bar-chart {
+  max-height: 16.45rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  padding-right: 0.18rem;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+  scrollbar-gutter: stable;
+}
+
+.publication-topic-chart.compact .topic-bar-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content minmax(56px, 1fr) 1.35rem;
+  align-items: center;
+  gap: 0.28rem;
+  column-gap: 0.28rem;
+  min-height: 2.05rem;
+  padding: 0.31rem 0.34rem;
+}
+
+.publication-topic-chart.compact .topic-bar-label {
+  width: auto;
+  max-width: 13.5rem;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  width: 100%;
+  min-width: 56px;
+  height: 0.58rem;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  width: 1.35rem;
+  min-width: 1.35rem;
+  justify-self: end;
+  text-align: right;
+  padding: 0;
+}
+
+/* Match the Venue card's scrollbar clearance */
+.publication-topic-chart.compact .topic-bar-chart::-webkit-scrollbar {
+  width: 6px;
+}
+
+.publication-topic-chart.compact .topic-bar-chart::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 6px;
+}
+
+
+/* Align all Topic bars to the same starting position, SAIL-style */
+.publication-topic-chart.compact .topic-bar-row {
+  grid-template-columns: 142px minmax(58px, 1fr) 1.35rem;
+  align-items: center;
+  column-gap: 0.28rem;
+}
+
+.publication-topic-chart.compact .topic-bar-label {
+  width: 142px;
+  max-width: 142px;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  width: 100%;
+  min-width: 58px;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  width: 1.35rem;
+  min-width: 1.35rem;
+  text-align: right;
+  justify-self: end;
+}
+
+
+/* Match Topic scrollbar spacing/clearance to Venue card */
+.publication-topic-chart.compact .topic-bar-chart {
+  max-height: 190px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+  scrollbar-gutter: stable;
+  box-sizing: border-box;
+  padding-right: 8px;
+}
+
+.publication-topic-chart.compact .topic-bar-row {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 0.18rem;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  justify-self: end;
+  text-align: right;
+  margin-right: 0;
+}
+
+.publication-topic-chart.compact .topic-bar-chart::-webkit-scrollbar {
+  width: 6px;
+}
+
+.publication-topic-chart.compact .topic-bar-chart::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.publication-topic-chart.compact .topic-bar-chart::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 6px;
+}
+
+
+
+/* SAIL-inspired Topic chart: label, count, shared scale, aligned bars */
+.publication-topic-chart.compact {
+  overflow: hidden;
+}
+
+.publication-topic-chart.compact .topic-axis,
+.publication-topic-chart.compact .topic-bar-row {
+  display: grid;
+  grid-template-columns: 142px 1.45rem minmax(72px, 1fr);
+  column-gap: 0.28rem;
+  align-items: center;
+}
+
+.publication-topic-chart.compact .topic-axis {
+  padding: 0.16rem 0.48rem 0.18rem 0.34rem;
+  border-bottom: 1px dotted #cbd5e0;
+  color: #7b8794;
+  font-size: 0.64rem;
+  line-height: 1;
+  background: #ffffff;
+}
+
+.publication-topic-chart.compact .topic-axis-scale {
+  position: relative;
+  display: block;
+  height: 0.9rem;
+}
+
+.publication-topic-chart.compact .topic-axis-tick {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.publication-topic-chart.compact .topic-bar-chart {
+  max-height: 16.45rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+  scrollbar-gutter: stable;
   box-sizing: border-box;
 }
 
-/* Tablet / narrow laptop */
-@media (max-width: 820px) {
-  .award-entry {
-    grid-template-columns: 120px minmax(0, 1fr);
-    column-gap: 0.95rem;
-    padding: 0.9rem 0.95rem;
+.publication-topic-chart.compact .topic-bar-row {
+  width: 100%;
+  min-height: 2.05rem;
+  padding: 0.31rem 0.34rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.publication-topic-chart.compact .topic-bar-label {
+  width: 142px;
+  max-width: 142px;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  width: 1.45rem;
+  min-width: 1.45rem;
+  justify-self: end;
+  text-align: right;
+  color: #8a949e;
+  font-size: 0.68rem;
+  font-weight: 750;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  position: relative;
+  width: 100%;
+  min-width: 72px;
+  height: 0.72rem;
+  padding: 0;
+  background: transparent;
+  border-left: 0;
+  overflow: visible;
+}
+
+.publication-topic-chart.compact .topic-gridlines {
+  position: absolute;
+  inset: -0.42rem 0 -0.42rem 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.publication-topic-chart.compact .topic-gridline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 1px dotted #b9c3cc;
+  transform: translateX(-0.5px);
+}
+
+.publication-topic-chart.compact .topic-bar-fill {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 0.72rem;
+  min-width: 2px;
+  background: #9fb5c4;
+  border-radius: 0;
+}
+
+.publication-topic-chart.compact .topic-bar-chart::-webkit-scrollbar {
+  width: 6px;
+}
+
+.publication-topic-chart.compact .topic-bar-chart::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.publication-topic-chart.compact .topic-bar-chart::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 6px;
+}
+
+/* SAIL-style count placement: count sits immediately left of bar start */
+.publication-topic-chart.compact .topic-axis,
+.publication-topic-chart.compact .topic-bar-row {
+  grid-template-columns: 142px 1.55rem minmax(72px, 1fr);
+  column-gap: 0.08rem;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  width: 1.55rem;
+  min-width: 1.55rem;
+  justify-self: end;
+  text-align: right;
+  padding-right: 0.02rem;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  margin-left: 0;
+}
+
+.publication-topic-chart.compact .topic-axis-count-space {
+  width: 1.55rem;
+}
+
+
+
+/* Final SAIL-style Topic layout: count is physically attached to bar start */
+.publication-topic-chart.compact .topic-axis {
+  display: grid;
+  grid-template-columns: 142px 1.4rem minmax(72px, 1fr);
+  column-gap: 0.10rem;
+  align-items: center;
+  padding: 0.14rem 0.48rem 0.14rem 0.34rem;
+}
+
+.publication-topic-chart.compact .topic-bar-chart {
+  max-height: 9.7rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+  scrollbar-gutter: stable;
+  box-sizing: border-box;
+}
+
+.publication-topic-chart.compact .topic-bar-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 142px minmax(0, 1fr);
+  column-gap: 0.24rem;
+  align-items: center;
+  min-height: 1.55rem;
+  padding: 0.12rem 0.34rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.publication-topic-chart.compact .topic-bar-label {
+  width: 142px;
+  max-width: 142px;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: clip;
+  line-height: 1.08;
+}
+
+.publication-topic-chart.compact .topic-value-bar {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.10rem;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  flex: 0 0 1.4rem;
+  width: 1.4rem;
+  min-width: 1.4rem;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  color: #8a949e;
+  font-size: 0.68rem;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.publication-topic-chart.compact .topic-bar-track {
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 72px;
+  height: 0.66rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: transparent;
+  border-left: 0;
+  overflow: visible;
+}
+
+.publication-topic-chart.compact .topic-bar-fill {
+  height: 0.66rem;
+}
+
+.publication-topic-chart.compact .topic-gridlines {
+  inset: -0.28rem 0 -0.28rem 0;
+}
+
+
+/* Match footer separator width to the Publications page */
+.publications-layout footer {
+  width: min(1320px, calc(100% - 3rem));
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.publications-layout footer hr {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+/* Topic chart colors aligned with the site's Venue-card theme */
+.publication-topic-chart.compact .topic-bar-label {
+  color: #2b6cb0;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  color: #1a365d;
+}
+
+.publication-topic-chart.compact .topic-bar-fill {
+  background: #2b6cb0;
+}
+
+.publication-topic-chart.compact .topic-axis {
+  color: #4a5568;
+}
+
+.publication-topic-chart.compact .topic-axis-tick {
+  color: #4a5568;
+}
+
+.publication-topic-chart.compact .topic-gridline {
+  border-left-color: #cbd5e0;
+}
+
+.publication-topic-chart.compact .topic-axis {
+  border-bottom-color: #cbd5e0;
+}
+
+
+/* =========================================================
+   FINAL MOBILE OVERRIDES
+   Keep desktop unchanged; prevent accumulated desktop rules
+   from forcing fixed widths / no-wrap behavior on phones.
+   ========================================================= */
+@media (max-width: 700px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
-  .award-date::after {
-    right: -0.5rem;
+  main.publications-page {
+    width: calc(100% - 1rem) !important;
+    max-width: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
   }
 
-  .award-title {
-    font-size: 0.98rem;
+  .publication-content-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0.9rem;
+    width: 100%;
   }
 
-  .award-description {
-    font-size: 0.95rem;
+  .publication-stats-sidebar,
+  .publications-main {
+    min-width: 0 !important;
+    width: 100%;
+  }
+
+  .publication-stats-sidebar {
+    position: static;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .publications-main {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .publication-overview-grid.with-year {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .publication-topic-chart.compact,
+  .publication-venue-card,
+  .publication-year-chart {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* Research impact */
+  .impact-header {
+    gap: 0.5rem;
+  }
+
+  .impact-metrics {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .impact-metric {
+    min-width: 0;
+  }
+
+  /* Topic chart: responsive label/count/bar geometry */
+  .publication-topic-chart.compact .topic-axis {
+    display: grid;
+    grid-template-columns: minmax(108px, 42%) 1.35rem minmax(0, 1fr) !important;
+    column-gap: 0.08rem;
+    padding: 0.14rem 0.38rem 0.14rem 0.3rem;
+    box-sizing: border-box;
+  }
+
+  .publication-topic-chart.compact .topic-bar-chart {
+    width: 100%;
+    max-width: 100%;
+    max-height: 9.7rem;
+    padding-right: 7px;
+    box-sizing: border-box;
+    scrollbar-gutter: stable;
+  }
+
+  .publication-topic-chart.compact .topic-bar-row {
+    width: 100%;
+    grid-template-columns: minmax(108px, 42%) minmax(0, 1fr) !important;
+    column-gap: 0.18rem;
+    min-height: 1.55rem;
+    padding: 0.12rem 0.3rem;
+    box-sizing: border-box;
+  }
+
+  .publication-topic-chart.compact .topic-bar-label {
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.64rem;
+  }
+
+  .publication-topic-chart.compact .topic-value-bar {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.08rem;
+  }
+
+  .publication-topic-chart.compact .topic-bar-count {
+    flex: 0 0 1.35rem;
+    width: 1.35rem;
+    min-width: 1.35rem;
+    text-align: right;
+  }
+
+  .publication-topic-chart.compact .topic-bar-track {
+    flex: 1 1 auto;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+
+  .publication-topic-chart.compact .topic-axis-scale {
+    min-width: 0;
+  }
+
+  .publication-topic-chart.compact .topic-axis-tick {
+    font-size: 0.58rem;
+  }
+
+  /* Venue: allow full names to wrap on phones instead of overflowing */
+  .publication-venue-card .publication-filter-scroll {
+    width: 100%;
+    max-width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .publication-venue-card table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
+  }
+
+  .publication-venue-card td {
+    box-sizing: border-box;
+  }
+
+  .publication-venue-card td:first-child {
+    width: auto !important;
+    min-width: 0;
+    white-space: normal !important;
+    padding-right: 0.3rem;
+  }
+
+  .publication-filter-row {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: anywhere;
+    line-height: 1.25;
+  }
+
+  .publication-venue-card td:last-child {
+    width: 1.45rem !important;
+    min-width: 1.45rem !important;
+    padding-left: 0.1rem;
+    padding-right: 0.15rem;
+    text-align: right !important;
+    white-space: nowrap;
+  }
+
+  /* Year custom dropdown */
+  .publication-year-chart {
+    overflow: visible;
+  }
+
+  .publication-select-wrap,
+  .custom-filter-dropdown,
+  .custom-filter-trigger {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .custom-filter-menu {
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .custom-filter-option-text {
+    overflow-wrap: anywhere;
+  }
+
+  /* Publication cards */
+  .publication-list li {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0.85rem 0.85rem;
+    overflow-wrap: break-word;
+  }
+
+  .publication-list li strong,
+  .publication-list li em,
+  .publication-list li span {
+    max-width: 100%;
+  }
+
+  .publication-list .note {
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+
+  /* Footer follows the mobile page width */
+  .publications-layout footer {
+    width: calc(100% - 1rem) !important;
+    max-width: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .publications-layout footer hr {
+    width: 100%;
   }
 }
 
-/* Phone */
-@media (max-width: 620px) {
-  .awards-page .article-meta {
-    text-align: left;
-  }
-
-  .awards-timeline {
-    border-radius: 8px;
-  }
-
-  .award-entry {
+@media (max-width: 420px) {
+  .impact-header {
     display: block;
-    padding: 0.9rem 0.92rem;
   }
 
-  .award-date {
+  .impact-profile-link {
+    margin-top: 0.45rem;
+  }
+
+  .publication-topic-chart.compact .topic-axis {
+    grid-template-columns: minmax(96px, 40%) 1.3rem minmax(0, 1fr) !important;
+  }
+
+  .publication-topic-chart.compact .topic-bar-row {
+    grid-template-columns: minmax(96px, 40%) minmax(0, 1fr) !important;
+  }
+
+  .publication-topic-chart.compact .topic-bar-label {
+    font-size: 0.62rem;
+  }
+
+  .publication-topic-chart.compact .topic-axis-tick {
+    font-size: 0.54rem;
+  }
+
+  .publication-list li {
+    padding: 0.78rem;
+  }
+}
+
+
+/* =========================================================
+   FINAL RESPONSIVE BREAKPOINTS
+   Desktop > 1100px
+   Tablet / narrow laptop: 821px–1100px
+   Phone / landscape phone: <= 820px
+   ========================================================= */
+
+/* Narrow laptops and tablets: stop squeezing the publication column.
+   Put statistics above publications, but keep Topic + Venue side by side. */
+@media (max-width: 1100px) and (min-width: 821px) {
+  main.publications-page {
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .publication-content-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .publication-stats-sidebar,
+  .publications-main {
+    width: 100%;
+    min-width: 0 !important;
+  }
+
+  .publication-stats-sidebar {
+    grid-column: 1;
+    grid-row: 1;
+    position: static;
+  }
+
+  .publications-main {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .publication-overview-grid.with-year {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.7rem;
+    align-items: start;
+  }
+
+  .publication-filter-summary {
+    grid-column: 1 / -1 !important;
+  }
+
+  .publication-topic-chart.compact,
+  .publication-venue-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .publication-year-chart {
+    grid-column: 1 / -1;
+    width: min(100%, 360px);
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* Topic chart remains SAIL-like but becomes fluid. */
+  .publication-topic-chart.compact .topic-axis {
+    grid-template-columns: minmax(118px, 42%) 1.4rem minmax(0, 1fr) !important;
+    column-gap: 0.08rem;
+    box-sizing: border-box;
+  }
+
+  .publication-topic-chart.compact .topic-bar-row {
+    grid-template-columns: minmax(118px, 42%) minmax(0, 1fr) !important;
+    column-gap: 0.2rem;
+    box-sizing: border-box;
+  }
+
+  .publication-topic-chart.compact .topic-bar-label {
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .publication-topic-chart.compact .topic-value-bar {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .publication-topic-chart.compact .topic-bar-track {
+    width: auto !important;
+    min-width: 0 !important;
+    flex: 1 1 auto;
+  }
+
+  /* Venue must fit its half of the row cleanly. */
+  .publication-venue-card .publication-filter-scroll {
+    width: 100%;
+    max-width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .publication-venue-card table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
+  }
+
+  .publication-venue-card td:first-child {
+    width: auto !important;
+    min-width: 0;
+    white-space: normal !important;
+  }
+
+  .publication-filter-row {
     display: block;
-    margin-bottom: 0.3rem;
+    width: 100%;
+    min-width: 0;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: anywhere;
+  }
+
+  .publication-venue-card td:last-child {
+    width: 1.45rem !important;
+    min-width: 1.45rem !important;
+    text-align: right !important;
+    white-space: nowrap;
+  }
+
+  .publications-layout footer {
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Landscape phones and smaller tablets: use one statistics column.
+   This replaces the old awkward 3-column state between 701px and 900px. */
+@media (max-width: 820px) {
+  main.publications-page {
+    width: calc(100% - 1rem) !important;
+    max-width: none !important;
+    box-sizing: border-box;
+  }
+
+  .publication-content-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0.9rem;
+  }
+
+  .publication-stats-sidebar,
+  .publications-main {
+    width: 100%;
+    min-width: 0 !important;
+  }
+
+  .publication-stats-sidebar {
+    grid-column: 1;
+    grid-row: 1;
+    position: static;
+  }
+
+  .publications-main {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .publication-overview-grid.with-year {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .publication-filter-summary {
+    width: 100%;
+  }
+
+  .publication-topic-chart.compact,
+  .publication-venue-card,
+  .publication-year-chart {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .publication-year-chart {
+    grid-column: auto !important;
+  }
+
+  /* Fluid SAIL chart geometry. */
+  .publication-topic-chart.compact .topic-axis {
+    grid-template-columns: minmax(110px, 40%) 1.35rem minmax(0, 1fr) !important;
+    column-gap: 0.08rem;
+    box-sizing: border-box;
+  }
+
+  .publication-topic-chart.compact .topic-bar-row {
+    grid-template-columns: minmax(110px, 40%) minmax(0, 1fr) !important;
+    column-gap: 0.18rem;
+    box-sizing: border-box;
+  }
+
+  .publication-topic-chart.compact .topic-bar-label {
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .publication-topic-chart.compact .topic-value-bar {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .publication-topic-chart.compact .topic-bar-track {
+    width: auto !important;
+    min-width: 0 !important;
+  }
+
+  /* Venue wraps only when necessary; count stays aligned. */
+  .publication-venue-card table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
+  }
+
+  .publication-venue-card td:first-child {
+    width: auto !important;
+    min-width: 0;
+    white-space: normal !important;
+  }
+
+  .publication-filter-row {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  .publication-venue-card td:last-child {
+    width: 1.45rem !important;
+    min-width: 1.45rem !important;
+    text-align: right !important;
+    white-space: nowrap;
+  }
+
+  .publications-layout footer {
+    width: calc(100% - 1rem) !important;
+    max-width: none !important;
+  }
+}
+
+/* Very narrow phones: give labels slightly less width so bars remain useful. */
+@media (max-width: 460px) {
+  .publication-topic-chart.compact .topic-axis {
+    grid-template-columns: minmax(96px, 38%) 1.3rem minmax(0, 1fr) !important;
+  }
+
+  .publication-topic-chart.compact .topic-bar-row {
+    grid-template-columns: minmax(96px, 38%) minmax(0, 1fr) !important;
+  }
+}
+
+
+/* =========================================================
+   POLISHED INTERMEDIATE LAYOUT
+   Narrow laptops / tablets:
+   status + compact Year filter on top, Topic | Venue below.
+   ========================================================= */
+@media (max-width: 1100px) and (min-width: 821px) {
+
+  .publication-overview-grid.with-year {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 270px) !important;
+    grid-template-areas:
+      "summary year"
+      "topic   venue";
+    gap: 0.62rem 0.72rem;
+    align-items: start;
+  }
+
+  /* Status line */
+  .publication-filter-summary {
+    grid-area: summary !important;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.55rem;
+    min-width: 0;
+    min-height: 2.1rem;
+    margin: 0;
+    padding: 0.08rem 0.02rem;
+  }
+
+  .publication-active-filter-tags {
+    margin-top: 0;
+  }
+
+  /* Turn the Year card into a compact inline filter */
+  .publication-year-chart {
+    grid-area: year !important;
+    justify-self: end;
+    align-self: center;
+    display: grid;
+    grid-template-columns: auto minmax(150px, 210px);
+    align-items: center;
+    gap: 0.42rem;
+    width: auto !important;
+    max-width: 270px;
+    min-width: 0;
     padding: 0;
-    font-size: 0.8rem;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
   }
 
-  .award-date::after {
-    display: none;
+  .publication-year-chart h3 {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: #1a365d;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
   }
 
-  .award-title {
-    font-size: 0.98rem;
+  .publication-year-chart .publication-select-wrap {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    background: transparent;
   }
 
-  .award-context {
-    font-size: 0.85rem;
+  .publication-year-chart .custom-filter-dropdown,
+  .publication-year-chart .custom-filter-trigger {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
-  .award-description {
-    margin-top: 0.32rem;
-    font-size: 0.95rem;
+  .publication-year-chart .custom-filter-trigger {
+    min-height: 2.05rem;
+    padding: 0.36rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+  }
+
+  .publication-year-chart .custom-filter-menu {
+    left: auto;
+    right: 0;
+    width: 210px;
+    max-width: min(210px, 80vw);
+  }
+
+  /* Matched statistics row */
+  .publication-topic-chart.compact {
+    grid-area: topic;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .publication-venue-card {
+    grid-area: venue;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Keep both cards visually balanced without changing Topic's compact 6-row feel. */
+  .publication-venue-card .publication-filter-scroll {
+    max-height: 176px;
+  }
+
+  .publication-topic-chart.compact,
+  .publication-venue-card {
+    align-self: start;
+  }
+
+  /* Slightly tighten the transition into the publication list. */
+  .publication-content-layout {
+    row-gap: 0.78rem;
+  }
+
+  .publications-main > h3:first-of-type {
+    margin-top: 0.18rem;
+  }
+}
+
+/* At the upper edge of the intermediate layout, give the two charts
+   a little more room while keeping the compact Year filter. */
+@media (max-width: 1100px) and (min-width: 980px) {
+  .publication-overview-grid.with-year {
+    grid-template-columns: minmax(0, 1fr) minmax(235px, 285px) !important;
+  }
+
+  .publication-year-chart {
+    max-width: 285px;
+    grid-template-columns: auto minmax(165px, 220px);
+  }
+
+  .publication-year-chart .custom-filter-menu {
+    width: 220px;
+    max-width: min(220px, 80vw);
+  }
+}
+
+/* =========================================================
+   TYPOGRAPHY CONSISTENCY PASS
+   Keep the compact publications analytics UI visually secondary,
+   but align it more closely with the Home and Awards page scale.
+   Layout, filtering behavior, chart geometry, and publication cards
+   are intentionally unchanged.
+   ========================================================= */
+
+/* Research impact */
+.impact-header p {
+  font-size: 0.80rem;
+}
+
+.impact-profile-link {
+  font-size: 0.76rem;
+}
+
+.impact-metric-value {
+  font-size: 0.95rem;
+}
+
+.impact-metric-label {
+  font-size: 0.76rem;
+}
+
+/* Statistics card headings */
+.publication-topic-chart.compact h3,
+.publication-venue-card h3,
+.publication-year-chart h3 {
+  font-size: 0.85rem;
+}
+
+/* Topic chart */
+.publication-topic-chart.compact .topic-bar-label {
+  font-size: 0.74rem;
+}
+
+.publication-topic-chart.compact .topic-bar-count {
+  font-size: 0.72rem;
+}
+
+.publication-topic-chart.compact .topic-axis {
+  font-size: 0.69rem;
+}
+
+/* Venue list */
+.publication-venue-card table,
+.publication-filter-row {
+  font-size: 0.74rem;
+}
+
+/* Filter status and controls */
+.publication-filter-summary {
+  font-size: 0.78rem;
+}
+
+.publication-filter-tag,
+#publication-clear-filters {
+  font-size: 0.72rem;
+}
+
+.publication-select,
+.custom-filter-trigger {
+  font-size: 0.76rem;
+}
+
+.custom-filter-option {
+  font-size: 0.76rem;
+}
+
+/* The intermediate layout uses an inline Year label; keep it compact,
+   but no longer noticeably smaller than the surrounding controls. */
+@media (max-width: 1100px) and (min-width: 821px) {
+  .publication-year-chart h3 {
+    font-size: 0.80rem;
+  }
+
+  .publication-year-chart .custom-filter-trigger {
+    font-size: 0.76rem;
+  }
+}
+
+/* Keep compact UI readable on phones without changing its geometry. */
+@media (max-width: 700px) {
+  .publication-topic-chart.compact .topic-bar-label {
+    font-size: 0.72rem;
+  }
+
+  .publication-topic-chart.compact .topic-bar-count {
+    font-size: 0.70rem;
+  }
+
+  .publication-topic-chart.compact .topic-axis,
+  .publication-topic-chart.compact .topic-axis-tick {
+    font-size: 0.64rem;
+  }
+
+  .publication-venue-card table,
+  .publication-filter-row {
+    font-size: 0.72rem;
+  }
+
+  .publication-filter-summary {
+    font-size: 0.76rem;
+  }
+
+  .custom-filter-trigger,
+  .custom-filter-option {
+    font-size: 0.74rem;
+  }
+}
+
+
+
+/* =========================================================
+   VENUE CARD — NAMES ONLY, FULL-WIDTH ROWS
+   ========================================================= */
+.publication-venue-card .publication-filter-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.publication-venue-card table {
+  width: 100% !important;
+  max-width: 100% !important;
+  table-layout: auto !important;
+  border-collapse: collapse;
+  margin: 0 !important;
+}
+
+.publication-venue-card tr {
+  width: 100%;
+}
+
+.publication-venue-card td,
+.publication-venue-card td:first-child,
+.publication-venue-card td:last-child {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box;
+  padding: 0.31rem 0.4rem !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+.publication-venue-card .publication-filter-row {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 0;
+  text-align: left !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+.publication-venue-card tr:hover {
+  background: #f8fafc;
+}
+
+@media (max-width: 820px) {
+  .publication-venue-card .publication-filter-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .publication-venue-card table {
+    width: 100% !important;
+  }
+
+  .publication-venue-card td,
+  .publication-venue-card td:first-child,
+  .publication-venue-card td:last-child,
+  .publication-venue-card .publication-filter-row {
+    width: 100% !important;
+    white-space: nowrap !important;
   }
 }
 </style>
-</head>
-<body>
+<style id="publication-scanability-pass">
+/* =========================================================
+   Final scanability pass — Kevin Moran-inspired hierarchy
+   Keeps existing filters and section organization intact.
+   ========================================================= */
+body.publications-layout {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Arial, sans-serif;
+}
+
+main.publications-page {
+  width: min(1260px, calc(100% - 3rem)) !important;
+  max-width: 1260px !important;
+}
+
+
+
+/* Research impact becomes a quiet utility strip, not a competing card. */
+.research-impact-card {
+  margin: 0 0 1.25rem;
+  padding: 0.58rem 0.72rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: none;
+  background: #fbfcfe;
+}
+
+.impact-header h3 {
+}
+
+.impact-header p {
+}
+
+.impact-profile-link {
+  padding: 0.2rem 0.42rem;
+}
+
+.impact-metrics {
+  gap: 0.42rem;
+  margin-top: 0.42rem;
+}
+
+.impact-metric {
+  padding: 0.2rem 0.36rem;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.impact-metric-value {
+}
+
+.impact-metric-label {
+}
+
+/* Section headings remain visible anchors without oversized vertical gaps. */
+.publications-main > h3 {
+  margin: 1.75rem 0 0.72rem !important;
+  padding: 0 0 0.38rem !important;
+  border-bottom: 1px solid #cbd5e1 !important;
+  color: #183153 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+.publications-main > h3:first-of-type {
+  margin-top: 0 !important;
+}
+
+.publication-list {
+  margin: 0 0 1.45rem !important;
+}
+
+/* Flat rows: fewer visual containers, stronger reading hierarchy. */
+.publication-list > li {
+  margin: 0 !important;
+  padding: 0.82rem 0.1rem 0.88rem !important;
+  border: 0 !important;
+  border-bottom: 1px solid #e5eaf0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #475569;
+  font-size: 0.89rem;
+  line-height: 1.42;
+  transform: none !important;
+}
+
+.publication-list > li:first-child {
+  padding-top: 0.18rem !important;
+}
+
+.publication-list > li:hover {
+  background: #fbfdff !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.pub-title-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.pub-title {
+  min-width: 0;
+  color: #16395f;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.32;
+}
+
+.pub-title strong {
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+}
+
+.pub-year {
+  min-width: 2.9rem;
+  margin-top: 0.05rem;
+  padding: 0.12rem 0.34rem;
+  border: 1px solid #d8e2ec;
+  border-radius: 4px;
+  background: #f8fafc;
+  color: #607087;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pub-authors {
+  margin-top: 0.28rem;
+  color: #46566b;
+  font-size: 0.87rem;
+  line-height: 1.38;
+}
+
+.publication-list .my-name {
+  color: #183153 !important;
+  font-weight: 650 !important;
+}
+
+.pub-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 0.24rem;
+  color: #6b7788;
+  line-height: 1.38;
+}
+
+.pub-meta-part {
+  display: inline;
+}
+
+.pub-meta-part + .pub-meta-part::before {
+  content: " · ";
+  color: #a0aaba;
+  padding: 0 0.18rem;
+}
+
+.pub-meta em {
+  color: #556579 !important;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.pub-note-row {
+  margin-top: 0.38rem;
+}
+
+.publication-list .note {
+  margin: 0 !important;
+  padding: 0.14rem 0.38rem !important;
+  border: 1px solid #d8e2ec !important;
+  border-radius: 4px !important;
+  background: #f8fafc !important;
+  color: #536174 !important;
+  font-size: 0.88rem !important;
+  line-height: 1.3;
+}
+
+/* Tablet: keep filters above the list, but avoid three cramped columns. */
+@media (max-width: 1100px) {
+  main.publications-page {
+    width: calc(100% - 2rem) !important;
+  }
+
+}
+
+@media (max-width: 700px) {
+  main.publications-page {
+    width: calc(100% - 1.25rem) !important;
+  }
+
+  .publications-page .article-meta h2 {
+  }
+
+  .publication-list > li {
+    padding: 0.76rem 0 0.82rem !important;
+  }
+
+  .pub-title-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.55rem;
+  }
+
+  .pub-title {
+    font-size: 0.96rem;
+  }
+
+  .pub-authors {
+    font-size: 0.92rem;
+  }
+
+  .pub-meta {
+    font-size: 0.88rem;
+  }
+
+}
+
+/* =========================================================
+   Final Publications page framing
+   One restrained white panel, consistent with Home/Awards.
+   Footer rule aligns exactly to the page content width.
+   ========================================================= */
+.publications-shell {
+  margin: 0 0 2rem;
+  padding: 1rem 1.15rem 1.15rem;
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.035);
+  box-sizing: border-box;
+}
+
+/* Keep the utility strip distinct, but visually subordinate inside the panel. */
+.publications-shell .research-impact-card {
+  margin-bottom: 1.25rem;
+}
+
+/* Footer width must track the Publications page width exactly. */
+.publications-layout footer {
+  width: min(1260px, calc(100% - 3rem)) !important;
+  max-width: 1260px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+.publications-layout footer hr {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 1100px) {
+  .publications-shell {
+    padding: 0.95rem 1rem 1.05rem;
+  }
+
+  .publications-layout footer {
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .publications-shell {
+    padding: 0.8rem 0.82rem 0.9rem;
+    border-radius: 10px;
+  }
+
+  .publications-layout footer {
+    width: calc(100% - 1.25rem) !important;
+    max-width: none !important;
+  }
+}
+
+
+
+/* Venue accent: strong blue; typography intentionally unchanged. */
+.pub-meta em {
+  color: #2D5F9A !important;
+}
+
+</style></head>
+<body class="publications-layout">
 <nav>
 <button aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
 <span aria-hidden="true" class="menu-toggle-icon">☰</span>
@@ -192,13 +2658,1124 @@ body {
 <ul class="menu" id="site-menu"><li><a href="/">Home</a></li><li><a href="/publications/">Publications</a></li><li><a href="/teaching/">Teaching</a></li><li><a href="/service/">Service</a></li><li><a href="/awards/">Honors &amp; Awards</a></li><li><a href="https://nexus-software-lab.github.io" rel="noopener" target="_blank">NEXUS Research Lab</a></li></ul>
 <hr/>
 </nav>
-<main class="awards-page"><div class="article-meta">
+<main class="publications-page">
+<div class="article-meta">
 <h2>
 <span class="title">
-      Honors &amp; Awards
+      Publications
      </span>
 </h2>
-</div><section aria-label="Honors and awards timeline" class="awards-timeline"><article class="award-entry"><div class="award-date">April 2026</div><div class="award-content"><h3 class="award-title">Faculty Advisor, Best Capstone Project Award</h3><p class="award-context">Florida Polytechnic University</p><p class="award-description">Supervised a senior capstone team in developing Running Mate Scout, an autonomous drone system for runner safety.</p></div></article><article class="award-entry"><div class="award-date">Dec. 2025 - Dec. 2028</div><div class="award-content"><h3 class="award-title">Fulbright Specialist Roster</h3><p class="award-context">ECA, U.S. Department of State</p><p class="award-description">Selected to the Fulbright Specialist Roster for a tenure of three years.</p></div></article><article class="award-entry"><div class="award-date">April 2025</div><div class="award-content"><h3 class="award-title">Faculty Advisor, Best Capstone Project Award</h3><p class="award-context">Florida Polytechnic University</p><p class="award-description">Supervised a senior capstone team in developing LLM-based generative pre-trained transformer application. Sponsored by the Polk County Sheriff’s Office, addressing law enforcement needs through AI innovation.</p></div></article><article class="award-entry"><div class="award-date">April 2021</div><div class="award-content"><h3 class="award-title">Nominee for ABLAZE Award for Excellence in Research</h3><p class="award-context">Florida Polytechnic University</p></div></article><article class="award-entry"><div class="award-date">April 2018</div><div class="award-content"><h3 class="award-title">ABLAZE Award for Excellence in Teaching</h3><p class="award-context">Florida Polytechnic University</p></div></article><article class="award-entry"><div class="award-date">April 2014</div><div class="award-content"><h3 class="award-title">Phi Beta Delta Honor Society for International Scholars</h3><p class="award-description">Awarded for scholarly achievement, received a bronze Phi Beta Delta Medallion.</p></div></article><article class="award-entry"><div class="award-date">April 2014</div><div class="award-content"><h3 class="award-title">Best Poster Award</h3><p class="award-context">Annual Graduate Student Poster Showcase, Department of Computer Science, Virginia Tech</p></div></article><article class="award-entry"><div class="award-date">March 2014</div><div class="award-content"><h3 class="award-title">Top 5 Finalist, Paul E. Torgersen Research Excellence Award</h3><p class="award-context">College of Engineering, Virginia Tech</p></div></article><article class="award-entry"><div class="award-date">March 2012</div><div class="award-content"><h3 class="award-title">1st Place Poster Award</h3><p class="award-context">28th Annual Graduate Research Symposium, Virginia Tech</p></div></article><article class="award-entry"><div class="award-date">April 2011</div><div class="award-content"><h3 class="award-title">Upsilon Pi Epsilon Honor Society for the Computing and Information Disciplines</h3><p class="award-context">Virginia Tech</p><p class="award-description">Outstanding academic achievement.</p></div></article><article class="award-entry"><div class="award-date">June 2008</div><div class="award-content"><h3 class="award-title">Outstanding Graduate Academic Performance Award</h3><p class="award-context">College of Computer Science and Engineering, KFUPM</p></div></article><article class="award-entry"><div class="award-date">March 2007</div><div class="award-content"><h3 class="award-title">Saudi ARAMCO Certificate of Recognition - Capstone Project</h3><p class="award-description">Awarded for creativity in designing and developing Project Quality Index System.</p></div></article><article class="award-entry"><div class="award-date">June 2006</div><div class="award-content"><h3 class="award-title">IEEE Outstanding Project Accomplishment - Capstone Project</h3><p class="award-description">Awarded for successful implementation in the field with cooperation between industry and academia.</p></div></article><article class="award-entry"><div class="award-date">June 2006</div><div class="award-content"><h3 class="award-title">KFUPM Distinguished Senior Capstone Project</h3><p class="award-description">Awarded for successful design and development of PQI system for Saudi ARAMCO.</p></div></article></section></main>
+</div><div class="publications-shell"><section aria-label="Research impact summary" class="research-impact-card"><div class="impact-header"><div><h3>Research Impact</h3><p>Citation summary from Google Scholar</p></div><a class="impact-profile-link" href="https://scholar.google.com/citations?hl=en&amp;user=DW96hOsAAAAJ" rel="noopener" target="_blank">Google Scholar</a></div><div class="impact-metrics"><div class="impact-metric"><span class="impact-metric-value">1,790</span><span class="impact-metric-label">Total citations</span></div><div class="impact-metric"><span class="impact-metric-value">690</span><span class="impact-metric-label">Since 2021</span></div></div></section>
+<div class="publication-content-layout"><div class="publications-main"><p class="publication-no-results" hidden="" id="publication-no-results">
+    No publications match the selected topic, venue, and year.
+   </p><h3>
+    Refereed Journal Publications
+   </h3><ul class="publication-list">
+<li data-topic-labels="Mobile Security; Software Security; Empirical Study" data-topics="mobile-security software-security empirical-study" data-venue="ieee-internet-computing" data-venue-label="[Journal] IEEE Internet Computing" data-year="2026"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Security Risks in Wearable Mobile Applications
+     </strong>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
+     Sebastian Siedler, Mohamed Sylla, and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+     IEEE Internet Computing</em>, accepted, September 2026. To appear.
+    </span></div></li>
+<li data-topic-labels="LLMs / AI for Security &amp; SE; Android Malware; Empirical Study" data-topics="llms-ai android-malware empirical-study" data-venue="ieee-access" data-venue-label="[Journal] IEEE Access" data-year="2026"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Large Language Models for Malware Detection: A Systematic Review, Taxonomy, and Open Challenges
+     </strong>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
+     Joyce Champie and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+     IEEE Access</em>, vol. 14, pp. 52734-52752, April 2026.
+    </span></div></li>
+<li data-topic-labels="Mobile Security; Datasets / Benchmarks" data-topics="mobile-security android-malware software-security" data-venue="information" data-venue-label="[Journal] Information" data-year="2025"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      RepackDroid: An Efficient Detection Model for Repackaged Android Applications
+     </strong>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
+     Tito Leadon and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+     Information</em>, vol. 16, no. 12, Article 1075, December 2025.
+    </span></div></li>
+<li data-topic-labels="Android Malware; Empirical Study" data-topics="android-malware empirical-study" data-venue="ieee-tc" data-venue-label="[Journal] IEEE Transactions on Computers" data-year="2022"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Lightweight, Effective Detection and Characterization of Mobile Malware Families
+     </strong>
+</div><span aria-label="Publication year 2022" class="pub-year">2022</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span>, Mahmoud Elish, and Hussain Almohri
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+     IEEE Transactions on Computers (TC)</em>, vol. 71, no. 11, November 2022.
+    </span></div></li>
+<li data-topic-labels="Defect Prediction; Empirical Study; Systems Security" data-topics="defect-prediction empirical-study systems-security" data-venue="ijisae" data-venue-label="[Journal] IJISAE" data-year="2021"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      An Empirical Comparison of Resampling Ensemble Methods of Deep Learning Neural Networks for Cross-Project Software Defect Prediction
+     </strong>
+</div><span aria-label="Publication year 2021" class="pub-year">2021</span></div><div class="pub-authors">
+     Mahmoud Elish and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+     International Journal of Intelligent Engineering and Systems (IJISAE)</em>, vol. 14, no. 3, 2021.
+    </span></div></li>
+<li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="scn" data-venue-label="[Journal] Security and Communication Networks" data-year="2020"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      A Client Bootstrapping Protocol for DoS Attack Mitigation on Entry Point Services in the Cloud
+     </strong>
+</div><span aria-label="Publication year 2020" class="pub-year">2020</span></div><div class="pub-authors">
+     Hussain Almohri, M. Almutawa, M. Alawadh, and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Security and Communication Networks (SCN)</em>, 2020.
+    </span></div></li>
+<li data-topic-labels="Mobile Security; Empirical Study" data-topics="mobile-security empirical-study" data-venue="ieee-tmc" data-venue-label="[Journal] IEEE Transactions on Mobile Computing" data-year="2020"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Identifying Mobile Inter-App Communication Risks
+     </strong>
+</div><span aria-label="Publication year 2020" class="pub-year">2020</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span>, Haipeng Cai, Daniel Barton, Danfeng Yao, and Barbara Ryder
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      IEEE Transactions on Mobile Computing (TMC)</em>, vol. 19, no. 1, January 2020.
+    </span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="computers-security" data-venue-label="[Journal] Computers &amp; Security" data-year="2015"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Profiling User-Trigger Dependence for Android Malware Detection
+     </strong>
+</div><span aria-label="Publication year 2015" class="pub-year">2015</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span>, Xiaokui Shu, Danfeng Yao, Barbara Ryder, and Xuxian Jiang
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Computers &amp; Security</em>, vol. 49, pp. 255–273, March 2015.
+    </span></div></li>
+<li data-topic-labels="Software Metrics / Quality; Software Maintainability; Software Refactoring" data-topics="software-metrics maintainability refactoring" data-venue="journal-software" data-venue-label="[Journal] Journal of Software" data-year="2012"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Using Software Quality Attributes to Classify Refactoring to Patterns
+     </strong>
+</div><span aria-label="Publication year 2012" class="pub-year">2012</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span> and Mohammed Alshayeb
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Journal of Software (JSW)</em>, vol. 7, no. 2, February 2012.
+    </span></div></li>
+<li data-topic-labels="Software Metrics / Quality; Software Maintainability; Software Refactoring; Empirical Study" data-topics="software-metrics maintainability refactoring empirical-study" data-venue="ajse" data-venue-label="[Journal] Arabian Journal for Science and Engineering" data-year="2011"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      A Classification of Refactoring Methods Based on Software Quality Attributes
+     </strong>
+</div><span aria-label="Publication year 2011" class="pub-year">2011</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span> and Mohammed Alshayeb
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Arabian Journal for Science and Engineering (AJSE)</em>, vol. 36, no. 7, November 2011.
+    </span></div></li>
+<li data-topic-labels="Defect Prediction" data-topics="defect-prediction" data-venue="jss" data-venue-label="[Journal] Journal of Systems and Software" data-year="2008"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Predicting Defect-Prone Software Modules Using Support Vector Machines
+     </strong>
+</div><span aria-label="Publication year 2008" class="pub-year">2008</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span> and Mahmoud Elish
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Journal of Systems and Software (JSS)</em>, vol. 81, no. 5, May 2008.
+     </span></div><div class="pub-note-row">
+<span class="note">
+<strong>
+       Among Top 10 Most Cited Papers Published by JSS
+      </strong>
+</span>
+</div></li>
+</ul><h3>
+    Refereed Conference and Workshop Publications
+   </h3><ul class="publication-list">
+<li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Security" data-topics="llms-ai mobile-security software-security" data-venue="ieee-acm-icse" data-venue-label="[Conference] IEEE/ACM ICSE" data-year="2027"><div class="pub-title-row"><div class="pub-title">
+<strong>
+    When LLMs Say Secure: An Empirical Study of False Assurance in Android Vulnerability Detection
+  </strong>
+</div><span aria-label="Publication year 2027" class="pub-year">2027</span></div><div class="pub-authors">
+  Joyce Champie and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+    Proceedings of the 49th IEEE/ACM International Conference on Software Engineering (ICSE)
+  </em>
+</span><span class="pub-meta-part">Dublin, Ireland · April 2027.</span></div><div class="pub-note-row">
+<span class="note">
+<strong>
+       Direct Acceptance Rate: 5.0% (119/2,375)
+      </strong>
+</span>
+</div></li>
+<li data-topic-labels="LLMs / AI for Security &amp; SE; Privacy / Data Security; Software Security" data-topics="llms-ai privacy software-security" data-venue="acm-iwspa-codaspy" data-venue-label="[Workshop] ACM IWSPA / CODASPY" data-year="2026"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      STALKER: Composed Quasi-Identifiers and LLM-Amplified Behavioral Leakage in Anonymized Marketplace Data
+     </strong>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
+     A. Dmytryk, S. El-Yaagoubi, L. Batista, P. Kouterguine, S. Gerken, A. Alhamadani, and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the 12th ACM International Workshop on Security and Privacy Analytics (IWSPA)</em>, co-located with the
+     <em>16th ACM Conference on Data and Application Security and Privacy (CODASPY)</em>
+</span><span class="pub-meta-part">Frankfurt am Main, Germany · June 2026.</span></div></li>
+<li data-topic-labels="Mobile Security; Software Metrics / Quality; Software Maintainability; Software Security" data-topics="mobile-security software-metrics maintainability software-security" data-venue="ieee-icsa" data-venue-label="[Conference] IEEE ICSA" data-year="2026"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications
+     </strong>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
+     Mohamed Sylla and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the 23rd IEEE International Conference on Software Architecture (ICSA-Companion)</em>
+</span><span class="pub-meta-part">Amsterdam, Netherlands · June 2026.</span></div><div class="pub-note-row">
+<span class="note">
+<strong>
+       Distinguished Paper Award Candidate
+      </strong>
+</span>
+</div></li>
+<li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Bugs / Testing" data-topics="llms-ai mobile-security software-bugs" data-venue="ieee-icst" data-venue-label="[Conference] IEEE ICST" data-year="2026"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Automated Reproduction of Android Application Bugs with LLMs: Are We There Yet?
+     </strong>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
+     Dennis Carey, <span class="my-name">Karim Elish</span>, and Paniz Abedin
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the 19th IEEE International Conference on Software Testing, Verification and Validation (ICST)</em>
+</span><span class="pub-meta-part">Daejeon, South Korea · May 2026.</span></div></li>
+<li data-topic-labels="Mobile Security; Software Metrics / Quality; Datasets / Benchmarks" data-topics="mobile-security software-metrics datasets" data-venue="ieee-acm-msr" data-venue-label="[Conference] IEEE/ACM MSR" data-year="2026"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      AndroMetric: Bridging Multi-Dimensional Software Metrics and Mobile Application Security
+     </strong>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
+     Sebastian Siedler and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track
+     </em>
+</span><span class="pub-meta-part">Rio de Janeiro, Brazil · April 2026.</span></div></li>
+<li data-topic-labels="Mobile Security; Software Metrics / Quality; Software Maintainability; Datasets / Benchmarks" data-topics="mobile-security software-metrics maintainability datasets" data-venue="ieee-acm-msr" data-venue-label="[Conference] IEEE/ACM MSR" data-year="2026"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      SMELLDroid: A Dataset for Code Smells in Android Apps
+     </strong>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
+     Joyce Champie, <span class="my-name">Karim Elish</span>, and Mahmoud Elish
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track
+     </em>
+</span><span class="pub-meta-part">Rio de Janeiro, Brazil · April 2026.</span></div></li>
+<li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Metrics / Quality; Datasets / Benchmarks" data-topics="llms-ai mobile-security software-metrics datasets" data-venue="ieee-acm-forge" data-venue-label="[Conference] IEEE/ACM FORGE" data-year="2026"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      MIRROR: A Dataset of Structural Metrics for Repackaged Android Apps
+     </strong>
+</div><span aria-label="Publication year 2026" class="pub-year">2026</span></div><div class="pub-authors">
+     Sebastian Siedler and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the 3rd IEEE/ACM International Conference on AI Foundation Models and Software Engineering (FORGE)</em>
+</span><span class="pub-meta-part">Rio de Janeiro, Brazil · April 2026.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="ieee-acdsa" data-venue-label="[Conference] IEEE ACDSA" data-year="2025"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      High-Accuracy Android Ransomware Detection Using SMALI Code-Based Analysis
+     </strong>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
+     Vinicius Seixas and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the IEEE International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA)
+     </em>
+</span><span class="pub-meta-part">Antalya, Turkey · August 2025.</span></div></li>
+<li data-topic-labels="Android Malware; Computing Education" data-topics="android-malware education" data-venue="asee" data-venue-label="[Conference] ASEE Annual Conference" data-year="2025"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      A New Collaborative Approach to Multidisciplinary Capstone Design at Florida Polytechnic University
+     </strong>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
+     M. Bohm, J. Dewey, <span class="my-name">Karim Elish</span>, E. Kames, A. Murphy, O. Toker, and D. Ulybyshev
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the ASEE Annual Conference and Exposition, American Society for Engineering Education
+     </em>
+</span><span class="pub-meta-part">Montreal, Canada · June 2025.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieee-acis-sera" data-venue-label="[Conference] IEEE/ACIS SERA" data-year="2025"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Stealthy No More: An Effective Ensemble Learning Approach for Detecting Android RATs
+     </strong>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
+     Nesreen Dalhy and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the IEEE/ACIS 23rd International Conference on Software Engineering Research, Management and Applications (SERA)
+     </em>
+</span><span class="pub-meta-part">Las Vegas, NV · May 2025.</span></div></li>
+<li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="flairs" data-venue-label="[Conference] FLAIRS" data-year="2025"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      FSProtoTransfer: Synergizing Few-Shot, Prototypical Networks, and Transfer Learning for Intrusion Detection in VANETs
+     </strong>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
+     Ayesha Dina, Colby Edell, <span class="my-name">Karim Elish</span>, and Arijet Sarker
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the 38th International FLAIRS Conference, Florida Artificial Intelligence Research Society (FLAIRS)
+     </em>
+</span><span class="pub-meta-part">Daytona Beach, FL · May 2025.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Software Metrics / Quality; Empirical Study" data-topics="android-malware mobile-security software-metrics empirical-study" data-venue="ieee-bigdata" data-venue-label="[Conference] IEEE Big Data" data-year="2019"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Identifying Android Malware Families Using Android-Oriented Metrics
+     </strong>
+</div><span aria-label="Publication year 2019" class="pub-year">2019</span></div><div class="pub-authors">
+     William Blanc, Lina Hashem, <span class="my-name">Karim Elish</span>, and Hussain Almohri
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the IEEE International Conference on Big Data (Big Data)
+     </em>
+</span><span class="pub-meta-part">Los Angeles, CA · December 2019.</span></div></li>
+<li data-topic-labels="Applied AI / Data Science" data-topics="applied-ai" data-venue="ieee-icmla" data-venue-label="[Conference] IEEE ICMLA" data-year="2018"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Machine Learning-based Prediction of Prolonged Length of Stay in Newborns
+     </strong>
+</div><span aria-label="Publication year 2018" class="pub-year">2018</span></div><div class="pub-authors">
+     Brandon Thompson, <span class="my-name">Karim Elish</span>, and Robert Steele
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the 17th IEEE International Conference on Machine Learning and Applications (ICMLA)
+     </em>
+</span><span class="pub-meta-part">Orlando, FL · December 2018.</span></div></li>
+<li data-topic-labels="Mobile Security; Systems Security" data-topics="mobile-security systems-security" data-venue="ieee-iccc" data-venue-label="[Conference] IEEE ICCC" data-year="2018"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Enabling Smart Cities Through V2X Communication
+     </strong>
+</div><span aria-label="Publication year 2018" class="pub-year">2018</span></div><div class="pub-authors">
+     Mert Aydin, Mohammad Samarah, and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the IEEE International Conference on Computer and Communications (ICCC)
+     </em>
+</span><span class="pub-meta-part">Chengdu, China · December 2018.</span></div></li>
+<li data-topic-labels="Mobile Security; Applied AI / Data Science" data-topics="mobile-security applied-ai" data-venue="ieee-iccia" data-venue-label="[Conference] IEEE ICCIA" data-year="2017"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      BetterChoice: A Migraine Drug Recommendation System Based on Neo4J
+     </strong>
+</div><span aria-label="Publication year 2017" class="pub-year">2017</span></div><div class="pub-authors">
+     Benjamin Stark, Constanze Knahl, Mert Aydin, Mohammad Samarah, and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the IEEE International Conference on Computational Intelligence and Applications (ICCIA)
+     </em>
+</span><span class="pub-meta-part">Beijing, China · September 2017.</span></div></li>
+<li data-topic-labels="Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="mobile-security empirical-study privacy software-security" data-venue="acm-codaspy" data-venue-label="[Conference] ACM CODASPY" data-year="2017"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Prioritized Analysis of Inter-App Communication Risks
+     </strong>
+</div><span aria-label="Publication year 2017" class="pub-year">2017</span></div><div class="pub-authors">
+     Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, <span class="my-name">Karim Elish</span>, and Barbara Ryder
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the ACM Conference on Data and Application Security and Privacy (CODASPY)
+     </em>
+</span><span class="pub-meta-part">
+     Scottsdale, AZ, March 2017 (poster paper).
+    </span></div></li>
+<li data-topic-labels="Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2017"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      MR-Droid: A Scalable and Prioritized Analysis of Inter-App Communication Risks
+     </strong>
+</div><span aria-label="Publication year 2017" class="pub-year">2017</span></div><div class="pub-authors">
+     Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, <span class="my-name">Karim Elish</span>, and Barbara Ryder
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)</em>, in conjunction with the
+     <em>
+      IEEE Symposium on Security and Privacy (IEEE S&amp;P)
+     </em>
+</span><span class="pub-meta-part">San Jose, CA · May 2017.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2015"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      On the Need of Precise Inter-App ICC Classification for Detecting Android Malware Collusions
+     </strong>
+</div><span aria-label="Publication year 2015" class="pub-year">2015</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span>, Danfeng Yao, and Barbara Ryder
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)</em>, in conjunction with the
+     <em>
+      IEEE Symposium on Security and Privacy (IEEE S&amp;P)
+     </em>
+</span><span class="pub-meta-part">San Jose, CA · May 2015.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieee-icmla" data-venue-label="[Conference] IEEE ICMLA" data-year="2014"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      High Precision Screening for Android Malware using Dimensionality Reduction
+     </strong>
+</div><span aria-label="Publication year 2014" class="pub-year">2014</span></div><div class="pub-authors">
+     Britton Wolfe, <span class="my-name">Karim Elish</span>, and Danfeng Yao
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the 13th IEEE International Conference on Machine Learning and Applications (ICMLA)
+     </em>
+</span><span class="pub-meta-part">Detroit, MI · December 2014.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="isc" data-venue-label="[Conference] ISC" data-year="2014"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Comprehensive Behavior Profiling for Proactive Android Malware Detection
+     </strong>
+</div><span aria-label="Publication year 2014" class="pub-year">2014</span></div><div class="pub-authors">
+     Britton Wolfe, <span class="my-name">Karim Elish</span>, and Danfeng Yao
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the 17th International Information Security Conference (ISC)
+     </em>
+</span><span class="pub-meta-part">
+     Hong Kong, October 2014.
+    </span></div></li>
+<li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="iupt-procedia" data-venue-label="[Conference] IUPT / Procedia Computer Science" data-year="2013"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Device-Based Isolation for Securing Cryptographic Keys
+     </strong>
+</div><span aria-label="Publication year 2013" class="pub-year">2013</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span>, Yipan Deng, Danfeng Yao, and Dennis Kafura
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>Proceedings of the 3rd International Symposium on Internet of Ubiquitous and Pervasive Things (IUPT)</em>,
+     <em>
+      Procedia Computer Science (Elsevier)
+     </em>
+</span><span class="pub-meta-part">Halifax, Canada · June 2013.</span></div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2012"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      User-Centric Dependence Analysis for Identifying Malicious Mobile Apps
+     </strong>
+</div><span aria-label="Publication year 2012" class="pub-year">2012</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span>, Danfeng Yao, and Barbara Ryder
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST)</em>, in conjunction with the
+     <em>
+      IEEE Symposium on Security and Privacy (IEEE S&amp;P)
+     </em>
+</span><span class="pub-meta-part">San Jose, CA · May 2012.</span></div></li>
+<li data-topic-labels="Software Refactoring; Software Bugs / Testing; Empirical Study" data-topics="refactoring software-bugs empirical-study" data-venue="apsec" data-venue-label="[Conference] APSEC" data-year="2009"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Investigating the Effect of Refactoring on Software Testing Effort
+     </strong>
+</div><span aria-label="Publication year 2009" class="pub-year">2009</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span> and Mohammad Alshayeb
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the 16th IEEE Asia-Pacific Software Engineering Conference (APSEC)
+     </em>
+</span><span class="pub-meta-part">Penang, Malaysia · December 2009.</span></div></li>
+<li data-topic-labels="Android Malware; Software Maintainability; Empirical Study" data-topics="android-malware maintainability empirical-study" data-venue="ieee-csmr" data-venue-label="[Conference] IEEE CSMR" data-year="2009"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Application of TreeNet in Predicting Object-Oriented Software Maintainability: A Comparative Study
+     </strong>
+</div><span aria-label="Publication year 2009" class="pub-year">2009</span></div><div class="pub-authors">
+     Mahmoud Elish and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      Proceedings of the 13th IEEE European Conference on Software Maintenance and Reengineering (CSMR)
+     </em>
+</span><span class="pub-meta-part">Kaiserslautern, Germany · March 2009.</span></div></li>
+</ul><h3>
+    Refereed Posters and Abstracts
+   </h3><ul class="publication-list">
+<li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieom" data-venue-label="[Conference] IEOM" data-year="2025"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Towards Intelligent Detection of Android Remote Access Trojans (RATs)
+     </strong>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
+     Nesreen Dalhy and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      10th North American IEOM Conference on Industrial Engineering and Operations Management</em>, Computer Science Track
+     </span><span class="pub-meta-part">Orlando, FL · June 2025.</span></div><div class="pub-note-row">
+<span class="note">
+<strong>
+       Nesreen Dalhy: 2nd Place in Master’s Thesis Competition
+      </strong>
+</span>
+</div></li>
+<li data-topic-labels="LLMs / AI for Security &amp; SE; Android Malware; Mobile Security; Empirical Study; Software Security" data-topics="llms-ai android-malware mobile-security empirical-study software-security" data-venue="ieom" data-venue-label="[Conference] IEOM" data-year="2025"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Evaluating the Capabilities of LLMs in Security Analysis for Mobile Applications
+     </strong>
+</div><span aria-label="Publication year 2025" class="pub-year">2025</span></div><div class="pub-authors">
+     Joyce Champie and <span class="my-name">Karim Elish</span>
+</div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      10th North American IEOM Conference on Industrial Engineering and Operations Management</em>, Computer Science Track
+     </span><span class="pub-meta-part">Orlando, FL · June 2025.</span></div><div class="pub-note-row">
+<span class="note">
+<strong>
+       Joyce Champie: 1st Place in Poster Competition
+      </strong>
+</span>
+</div></li>
+<li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="s2erc" data-venue-label="[Conference] S2ERC" data-year="2014"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      Inter-Component and Inter-App Communication Analysis in Android for Malware Detection
+     </strong>
+</div><span aria-label="Publication year 2014" class="pub-year">2014</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span>, Danfeng Yao, and Barbara Ryder
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      9th Showcase of the Security and Software Engineering Research Center (S2ERC)
+     </em>
+</span><span class="pub-meta-part">Washington, DC · May 2014.</span></div></li>
+<li data-topic-labels="Mobile Security; Empirical Study" data-topics="mobile-security empirical-study" data-venue="vt-poster-showcase" data-venue-label="[Poster] Virginia Tech Graduate Showcase" data-year="2014"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      User-Intention Based Program Analysis for Android Security
+     </strong>
+</div><span aria-label="Publication year 2014" class="pub-year">2014</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span>, Danfeng Yao, and Barbara Ryder
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      2nd Annual Graduate Student Poster Showcase</em>, Computer Science Department, Virginia Tech
+     </span><span class="pub-meta-part">
+     April 2014.
+     </span></div><div class="pub-note-row">
+<span class="note">
+<strong>
+       Best Poster Award
+      </strong>
+</span>
+</div></li>
+<li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="usenix-security" data-venue-label="[Poster] USENIX Security Symposium" data-year="2013"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      User-Intention Based Android Malware Detection
+     </strong>
+</div><span aria-label="Publication year 2013" class="pub-year">2013</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span>, Danfeng Yao, Barbara Ryder, and Xuxian Jiang
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      22nd USENIX Security Symposium
+     </em>
+</span><span class="pub-meta-part">Washington, DC · August 2013.</span></div></li>
+<li data-topic-labels="Privacy / Data Security" data-topics="privacy" data-venue="vt-poster-showcase" data-venue-label="[Poster] Virginia Tech Graduate Showcase" data-year="2012"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      DataGuard: A Mobile System for Securing Ultra-Sensitive Information
+     </strong>
+</div><span aria-label="Publication year 2012" class="pub-year">2012</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span>, Yipan Deng, Danfeng Yao, and Dennis Kafura
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      28th Annual Graduate Research Symposium</em>, Virginia Tech
+     </span><span class="pub-meta-part">
+     March 2012.
+     </span></div><div class="pub-note-row">
+<span class="note">
+<strong>
+       1st Place Poster Award
+      </strong>
+</span>
+</div></li>
+<li data-topic-labels="Android Malware; Empirical Study" data-topics="android-malware empirical-study" data-venue="s2erc" data-venue-label="[Conference] S2ERC" data-year="2011"><div class="pub-title-row"><div class="pub-title">
+<strong>
+      User-Centric Dependence Analysis in Programs for Identifying Malware
+     </strong>
+</div><span aria-label="Publication year 2011" class="pub-year">2011</span></div><div class="pub-authors">
+<span class="my-name">Karim Elish</span>, Danfeng Yao, and Barbara Ryder
+     </div><div class="pub-meta"><span class="pub-meta-part">
+<em>
+      4th Showcase of the Security and Software Engineering Research Center (S2ERC)
+     </em>
+</span><span class="pub-meta-part">
+     Iowa, November 2011.
+    </span></div></li>
+</ul></div><aside aria-label="Publication statistics and filters" class="publication-stats-sidebar"><section aria-label="Publication topic, venue, and year filters" class="publication-overview-grid with-year">
+<div class="publication-filter-summary">
+<span id="publication-active-filter">
+      Showing all selected publications.
+     </span>
+<div aria-label="Active filters" class="publication-active-filter-tags">
+<button class="publication-filter-tag" hidden="" id="publication-clear-topic" type="button">
+       Topic
+       <span aria-hidden="true">
+        ×
+       </span>
+</button>
+<button class="publication-filter-tag" hidden="" id="publication-clear-venue" type="button">
+       Venue
+       <span aria-hidden="true">
+        ×
+       </span>
+</button>
+<button class="publication-filter-tag" hidden="" id="publication-clear-year" type="button">
+       Year
+       <span aria-hidden="true">
+        ×
+       </span>
+</button>
+<button id="publication-clear-filters" type="button">
+       Clear all
+      </button>
+</div>
+</div><div class="publication-year-chart">
+<h3>
+      Year
+     </h3>
+<div class="publication-select-wrap"><select aria-label="Filter publications by year" class="publication-select native-filter-select" id="publication-year-select"><option value="all">All years</option><option value="2027">2027</option><option value="2026">2026</option><option value="2025">2025</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2009">2009</option><option value="2008">2008</option></select><div class="custom-filter-dropdown" id="publication-year-dropdown"><button aria-controls="publication-year-menu" aria-expanded="false" aria-haspopup="listbox" class="custom-filter-trigger" id="publication-year-trigger" type="button"><span class="custom-filter-trigger-label">All years</span><span aria-hidden="true" class="custom-filter-chevron"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 20 20" width="14"><path d="m6 8 4 4 4-4"></path></svg></span></button><div class="custom-filter-menu" hidden="" id="publication-year-menu" role="listbox"><button aria-selected="true" class="custom-filter-option" data-value="all" role="option" type="button"><span class="custom-filter-option-text">All years</span><span aria-hidden="true" class="custom-filter-check">✓</span></button><button aria-selected="false" class="custom-filter-option" data-value="2027" role="option" type="button"><span class="custom-filter-option-text">2027</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2026" role="option" type="button"><span class="custom-filter-option-text">2026</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2025" role="option" type="button"><span class="custom-filter-option-text">2025</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2022" role="option" type="button"><span class="custom-filter-option-text">2022</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2021" role="option" type="button"><span class="custom-filter-option-text">2021</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2020" role="option" type="button"><span class="custom-filter-option-text">2020</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2019" role="option" type="button"><span class="custom-filter-option-text">2019</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2018" role="option" type="button"><span class="custom-filter-option-text">2018</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2017" role="option" type="button"><span class="custom-filter-option-text">2017</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2015" role="option" type="button"><span class="custom-filter-option-text">2015</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2014" role="option" type="button"><span class="custom-filter-option-text">2014</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2013" role="option" type="button"><span class="custom-filter-option-text">2013</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2012" role="option" type="button"><span class="custom-filter-option-text">2012</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2011" role="option" type="button"><span class="custom-filter-option-text">2011</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2009" role="option" type="button"><span class="custom-filter-option-text">2009</span><span aria-hidden="true" class="custom-filter-check"></span></button><button aria-selected="false" class="custom-filter-option" data-value="2008" role="option" type="button"><span class="custom-filter-option-text">2008</span><span aria-hidden="true" class="custom-filter-check"></span></button></div></div></div><div class="year-bar-chart filter-source-controls">
+<button aria-label="Filter by 2027" class="year-bar-row" data-filter-year="2027" type="button">
+<span class="year-bar-label">
+        2027
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 100.0%;">
+</span>
+</span>
+<span class="year-bar-count">
+        1
+       </span>
+</button>
+<button aria-label="Filter by 2026" class="year-bar-row" data-filter-year="2026" type="button">
+<span class="year-bar-label">
+        2026
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 100.0%;">
+</span>
+</span>
+<span class="year-bar-count">
+        7
+       </span>
+</button>
+<button aria-label="Filter by 2025" class="year-bar-row" data-filter-year="2025" type="button">
+<span class="year-bar-label">
+        2025
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 100.0%;">
+</span>
+</span>
+<span class="year-bar-count">
+        7
+       </span>
+</button>
+<button aria-label="Filter by 2022" class="year-bar-row" data-filter-year="2022" type="button">
+<span class="year-bar-label">
+        2022
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 14.29%;">
+</span>
+</span>
+<span class="year-bar-count">
+        1
+       </span>
+</button>
+<button aria-label="Filter by 2021" class="year-bar-row" data-filter-year="2021" type="button">
+<span class="year-bar-label">
+        2021
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 14.29%;">
+</span>
+</span>
+<span class="year-bar-count">
+        1
+       </span>
+</button>
+<button aria-label="Filter by 2020" class="year-bar-row" data-filter-year="2020" type="button">
+<span class="year-bar-label">
+        2020
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 28.57%;">
+</span>
+</span>
+<span class="year-bar-count">
+        2
+       </span>
+</button>
+<button aria-label="Filter by 2019" class="year-bar-row" data-filter-year="2019" type="button">
+<span class="year-bar-label">
+        2019
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 14.29%;">
+</span>
+</span>
+<span class="year-bar-count">
+        1
+       </span>
+</button>
+<button aria-label="Filter by 2018" class="year-bar-row" data-filter-year="2018" type="button">
+<span class="year-bar-label">
+        2018
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 28.57%;">
+</span>
+</span>
+<span class="year-bar-count">
+        2
+       </span>
+</button>
+<button aria-label="Filter by 2017" class="year-bar-row" data-filter-year="2017" type="button">
+<span class="year-bar-label">
+        2017
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 42.86%;">
+</span>
+</span>
+<span class="year-bar-count">
+        3
+       </span>
+</button>
+<button aria-label="Filter by 2015" class="year-bar-row" data-filter-year="2015" type="button">
+<span class="year-bar-label">
+        2015
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 28.57%;">
+</span>
+</span>
+<span class="year-bar-count">
+        2
+       </span>
+</button>
+<button aria-label="Filter by 2014" class="year-bar-row" data-filter-year="2014" type="button">
+<span class="year-bar-label">
+        2014
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 57.14%;">
+</span>
+</span>
+<span class="year-bar-count">
+        4
+       </span>
+</button>
+<button aria-label="Filter by 2013" class="year-bar-row" data-filter-year="2013" type="button">
+<span class="year-bar-label">
+        2013
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 28.57%;">
+</span>
+</span>
+<span class="year-bar-count">
+        2
+       </span>
+</button>
+<button aria-label="Filter by 2012" class="year-bar-row" data-filter-year="2012" type="button">
+<span class="year-bar-label">
+        2012
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 42.86%;">
+</span>
+</span>
+<span class="year-bar-count">
+        3
+       </span>
+</button>
+<button aria-label="Filter by 2011" class="year-bar-row" data-filter-year="2011" type="button">
+<span class="year-bar-label">
+        2011
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 28.57%;">
+</span>
+</span>
+<span class="year-bar-count">
+        2
+       </span>
+</button>
+<button aria-label="Filter by 2009" class="year-bar-row" data-filter-year="2009" type="button">
+<span class="year-bar-label">
+        2009
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 28.57%;">
+</span>
+</span>
+<span class="year-bar-count">
+        2
+       </span>
+</button>
+<button aria-label="Filter by 2008" class="year-bar-row" data-filter-year="2008" type="button">
+<span class="year-bar-label">
+        2008
+       </span>
+<span class="year-bar-track">
+<span class="year-bar-fill" style="width: 14.29%;">
+</span>
+</span>
+<span class="year-bar-count">
+        1
+       </span>
+</button>
+</div>
+</div><div class="publication-topic-chart compact">
+<h3>
+      Topic
+     </h3>
+<div aria-hidden="true" class="topic-axis"><span class="topic-axis-label-space"></span><span class="topic-axis-count-space"></span><span class="topic-axis-scale"><span class="topic-axis-tick" style="left:16.6667%;">5</span><span class="topic-axis-tick" style="left:33.3333%;">10</span><span class="topic-axis-tick" style="left:50.0000%;">15</span><span class="topic-axis-tick" style="left:66.6667%;">20</span><span class="topic-axis-tick" style="left:83.3333%;">25</span><span class="topic-axis-tick" style="left:100.0000%;">30</span></span></div><div class="topic-bar-chart">
+<button aria-label="Filter by Mobile Security" class="topic-bar-row" data-filter-topic="mobile-security" type="button">
+<span class="topic-bar-label">
+        Mobile Security
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">26</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:86.67%;">
+</span>
+</span></span></button><button aria-label="Filter by Empirical Study" class="topic-bar-row" data-filter-topic="empirical-study" type="button">
+<span class="topic-bar-label">
+        Empirical Study
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">20</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:66.67%;">
+</span>
+</span></span></button><button aria-label="Filter by Android Malware" class="topic-bar-row" data-filter-topic="android-malware" type="button">
+<span class="topic-bar-label">
+        Android Malware
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">18</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:60.00%;">
+</span>
+</span></span></button><button aria-label="Filter by Software Security" class="topic-bar-row" data-filter-topic="software-security" type="button">
+<span class="topic-bar-label">
+        Software Security
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">10</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:33.33%;">
+</span>
+</span></span></button><button aria-label="Filter by Software Metrics / Quality" class="topic-bar-row" data-filter-topic="software-metrics" type="button">
+<span class="topic-bar-label">
+        Software Metrics / Quality
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">7</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:23.33%;">
+</span>
+</span></span></button><button aria-label="Filter by LLMs / AI for Security &amp; SE" class="topic-bar-row" data-filter-topic="llms-ai" type="button">
+<span class="topic-bar-label">
+        LLMs / AI for Security &amp; SE
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">6</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:20.00%;">
+</span>
+</span></span></button><button aria-label="Filter by Privacy / Data Security" class="topic-bar-row" data-filter-topic="privacy" type="button">
+<span class="topic-bar-label">
+        Privacy / Data Security
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">6</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:20.00%;">
+</span>
+</span></span></button><button aria-label="Filter by Software Maintainability" class="topic-bar-row" data-filter-topic="maintainability" type="button">
+<span class="topic-bar-label">
+        Software Maintainability
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">5</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:16.67%;">
+</span>
+</span></span></button><button aria-label="Filter by Systems Security" class="topic-bar-row" data-filter-topic="systems-security" type="button">
+<span class="topic-bar-label">
+        Systems Security
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">5</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:16.67%;">
+</span>
+</span></span></button><button aria-label="Filter by Datasets / Benchmarks" class="topic-bar-row" data-filter-topic="datasets" type="button">
+<span class="topic-bar-label">
+        Datasets / Benchmarks
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">3</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:10.00%;">
+</span>
+</span></span></button><button aria-label="Filter by Software Refactoring" class="topic-bar-row" data-filter-topic="refactoring" type="button">
+<span class="topic-bar-label">
+        Software Refactoring
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">3</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:10.00%;">
+</span>
+</span></span></button><button aria-label="Filter by Applied AI / Data Science" class="topic-bar-row" data-filter-topic="applied-ai" type="button">
+<span class="topic-bar-label">
+        Applied AI / Data Science
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">2</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:6.67%;">
+</span>
+</span></span></button><button aria-label="Filter by Defect Prediction" class="topic-bar-row" data-filter-topic="defect-prediction" type="button">
+<span class="topic-bar-label">
+        Defect Prediction
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">2</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:6.67%;">
+</span>
+</span></span></button><button aria-label="Filter by Software Bugs / Testing" class="topic-bar-row" data-filter-topic="software-bugs" type="button">
+<span class="topic-bar-label">
+        Software Bugs / Testing
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">2</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:6.67%;">
+</span>
+</span></span></button><button aria-label="Filter by Computing Education" class="topic-bar-row" data-filter-topic="education" type="button">
+<span class="topic-bar-label">
+        Computing Education
+       </span>
+<span class="topic-value-bar"><span class="topic-bar-count">1</span><span class="topic-bar-track" data-axis-max="30"><span aria-hidden="true" class="topic-gridlines"><span class="topic-gridline" style="left:16.6667%;"></span><span class="topic-gridline" style="left:33.3333%;"></span><span class="topic-gridline" style="left:50.0000%;"></span><span class="topic-gridline" style="left:66.6667%;"></span><span class="topic-gridline" style="left:83.3333%;"></span><span class="topic-gridline" style="left:100.0000%;"></span></span>
+<span class="topic-bar-fill" style="width:3.33%;">
+</span>
+</span></span></button></div>
+</div><div class="publication-venue-card">
+<h3>
+      Venue
+     </h3>
+<div class="publication-filter-scroll">
+<table>
+<tbody>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="computers-security" type="button">
+           [Journal] Computers &amp; Security
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-access" type="button">
+           [Journal] IEEE Access
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-internet-computing" type="button">
+           [Journal] IEEE Internet Computing
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-tc" type="button">
+           [Journal] IEEE Transactions on Computers
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-tmc" type="button">
+           [Journal] IEEE Transactions on Mobile Computing
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ijisae" type="button">
+           [Journal] IJISAE
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="information" type="button">
+           [Journal] Information
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="journal-software" type="button">
+           [Journal] Journal of Software
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="jss" type="button">
+           [Journal] Journal of Systems and Software
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ajse" type="button">
+           [Journal] Arabian Journal for Science and Engineering
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="scn" type="button">
+           [Journal] Security and Communication Networks
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="acm-codaspy" type="button">
+           [Conference] ACM CODASPY
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="asee" type="button">
+           [Conference] ASEE Annual Conference
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="flairs" type="button">
+           [Conference] FLAIRS
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-acdsa" type="button">
+           [Conference] IEEE ACDSA
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="apsec" type="button">
+           [Conference] IEEE APSEC
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-bigdata" type="button">
+           [Conference] IEEE Big Data
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-csmr" type="button">
+           [Conference] IEEE CSMR
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-iccc" type="button">
+           [Conference] IEEE ICCC
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-iccia" type="button">
+           [Conference] IEEE ICCIA
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-icmla" type="button">
+           [Conference] IEEE ICMLA
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-icsa" type="button">
+           [Conference] IEEE ICSA
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-icst" type="button">
+           [Conference] IEEE ICST
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-acis-sera" type="button">
+           [Conference] IEEE/ACIS SERA
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-acm-forge" type="button">
+           [Conference] IEEE/ACM FORGE
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-acm-icse" type="button">
+           [Conference] IEEE/ACM ICSE
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-acm-msr" type="button">
+           [Conference] IEEE/ACM MSR
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="isc" type="button">
+           [Conference] ISC
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="iupt-procedia" type="button">
+           [Conference] IUPT / Procedia Computer Science
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="acm-iwspa-codaspy" type="button">
+           [Workshop] ACM IWSPA / CODASPY
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieee-spw-most" type="button">
+           [Workshop] IEEE SPW / MoST
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="ieom" type="button">
+           [Poster] IEOM
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="s2erc" type="button">
+           [Poster] S2ERC
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="usenix-security" type="button">
+           [Poster] USENIX Security Symposium
+          </button>
+</td>
+</tr>
+<tr>
+<td>
+<button class="publication-filter-row" data-filter-venue="vt-poster-showcase" type="button">
+           [Poster] Virginia Tech Graduate  Showcase
+          </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section></aside></div>
+</div>
+</main>
 <footer>
 <hr/>
    ©
@@ -211,5 +3788,366 @@ body {
    <a href="https://nexus-software-lab.github.io" rel="noopener" target="_blank">
     NEXUS Research Lab</a>
 </footer>
-<script src="/js/navigation.js"></script></body>
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+  const items = Array.from(document.querySelectorAll('.publication-list li[data-topics][data-venue][data-year]'));
+  const topicButtons = Array.from(document.querySelectorAll('.topic-bar-row[data-filter-topic]'));
+  const venueButtons = Array.from(document.querySelectorAll('.publication-filter-row[data-filter-venue]'));
+  const yearButtons = Array.from(document.querySelectorAll('.year-bar-row[data-filter-year]'));
+
+  const originalTopicCounts = new Map(
+    topicButtons.map(button => [
+      button.dataset.filterTopic,
+      Number(button.querySelector('.topic-bar-count')?.textContent || 0)
+    ])
+  );
+  const yearSelect = document.getElementById('publication-year-select');
+  const yearDropdown = document.getElementById('publication-year-dropdown');
+  const yearTrigger = document.getElementById('publication-year-trigger');
+  const yearMenu = document.getElementById('publication-year-menu');
+  const clearAllButton = document.getElementById('publication-clear-filters');
+  const clearTopicButton = document.getElementById('publication-clear-topic');
+  const clearVenueButton = document.getElementById('publication-clear-venue');
+  const clearYearButton = document.getElementById('publication-clear-year');
+  const activeFilterText = document.getElementById('publication-active-filter');
+  const noResults = document.getElementById('publication-no-results');
+
+  let selectedTopic = 'all';
+  let selectedVenue = 'all';
+  let selectedYear = 'all';
+
+  function labelFor(buttons, attr, value) {
+    if (value === 'all') return 'All';
+
+    const button = buttons.find(btn => btn.dataset[attr] === value);
+    if (!button) return value;
+
+    const topicLabel = button.querySelector('.topic-bar-label');
+    if (topicLabel) return topicLabel.textContent.trim();
+
+    const yearLabel = button.querySelector('.year-bar-label');
+    if (yearLabel) return yearLabel.textContent.trim();
+
+    return button.textContent.replace(/\s+\d+\s*$/, '').trim();
+  }
+
+  function itemMatches(item, options) {
+    const topic = options.topic ?? selectedTopic;
+    const venue = options.venue ?? selectedVenue;
+    const year = options.year ?? selectedYear;
+
+    const topicMatch = topic === 'all' || item.dataset.topics.split(' ').includes(topic);
+    const venueMatch = venue === 'all' || item.dataset.venue === venue;
+    const yearMatch = year === 'all' || item.dataset.year === year;
+
+    return topicMatch && venueMatch && yearMatch;
+  }
+
+  function countForTopic(topicValue) {
+    return items.filter(item => itemMatches(item, { topic: topicValue })).length;
+  }
+
+  function countForVenue(venueValue) {
+    return items.filter(item => itemMatches(item, { venue: venueValue })).length;
+  }
+
+  function countForYear(yearValue) {
+    return items.filter(item => itemMatches(item, { year: yearValue })).length;
+  }
+
+  function maxCount(values) {
+    return Math.max(1, ...values);
+  }
+
+  function setAvailability(button, count, isSelected) {
+    const row = button.closest('tr') || button;
+    const disabled = count === 0 && !isSelected;
+
+    row.classList.toggle('filter-unavailable', disabled);
+    button.disabled = disabled;
+    button.setAttribute('aria-disabled', disabled ? 'true' : 'false');
+  }
+
+
+
+  function setCustomDropdownState(dropdown, trigger, menu, selectedValue, sourceButtons, sourceAttr) {
+    if (!dropdown || !trigger || !menu) return;
+
+    const options = Array.from(menu.querySelectorAll('.custom-filter-option'));
+    options.forEach(option => {
+      const value = option.dataset.value;
+      const selected = value === selectedValue;
+      option.setAttribute('aria-selected', selected ? 'true' : 'false');
+      const check = option.querySelector('.custom-filter-check');
+      if (check) check.textContent = selected ? '✓' : '';
+
+      if (value === 'all') {
+        option.disabled = false;
+      } else {
+        const source = sourceButtons.find(btn => btn.dataset[sourceAttr] === value);
+        option.disabled = !!source?.disabled;
+      }
+    });
+
+    const selectedOption = options.find(option => option.dataset.value === selectedValue)
+      || options.find(option => option.dataset.value === 'all');
+    const selectedText = selectedOption?.querySelector('.custom-filter-option-text')?.textContent.trim() || '';
+    const label = trigger.querySelector('.custom-filter-trigger-label');
+    if (label) label.textContent = selectedText;
+  }
+
+  function closeCustomDropdown(dropdown, trigger, menu) {
+    if (!dropdown || !trigger || !menu) return;
+    trigger.setAttribute('aria-expanded', 'false');
+    menu.hidden = true;
+  }
+
+  function toggleCustomDropdown(dropdown, trigger, menu) {
+    if (!dropdown || !trigger || !menu) return;
+    const willOpen = menu.hidden;
+    trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    menu.hidden = !willOpen;
+  }
+
+  function syncDropdownOptions() {
+    if (yearSelect) {
+      yearSelect.value = selectedYear;
+      Array.from(yearSelect.options).forEach(option => {
+        if (option.value === 'all') {
+          option.disabled = false;
+          return;
+        }
+        const button = yearButtons.find(btn => btn.dataset.filterYear === option.value);
+        option.disabled = !!button?.disabled;
+      });
+    }
+
+    setCustomDropdownState(
+      yearDropdown, yearTrigger, yearMenu,
+      selectedYear, yearButtons, 'filterYear'
+    );
+  }
+
+  function sortTopicsByOriginalCount() {
+    const chart = document.querySelector('.topic-bar-chart');
+    if (!chart) return;
+
+    const sorted = topicButtons.slice().sort((a, b) => {
+      const aCount = originalTopicCounts.get(a.dataset.filterTopic) || 0;
+      const bCount = originalTopicCounts.get(b.dataset.filterTopic) || 0;
+
+      if (bCount !== aCount) return bCount - aCount;
+
+      const aLabel = a.querySelector('.topic-bar-label')?.textContent.trim() || '';
+      const bLabel = b.querySelector('.topic-bar-label')?.textContent.trim() || '';
+      return aLabel.localeCompare(bLabel);
+    });
+
+    sorted.forEach(button => chart.appendChild(button));
+  }
+
+  function updateDynamicFilterCounts() {
+    const topicCounts = topicButtons.map(button => countForTopic(button.dataset.filterTopic));
+    const yearCounts = yearButtons.map(button => countForYear(button.dataset.filterYear));
+
+    const maxTopic = maxCount(topicCounts);
+    const maxYear = maxCount(yearCounts);
+
+    const originalTopicValues = topicButtons.map(
+      button => originalTopicCounts.get(button.dataset.filterTopic) || 0
+    );
+    const maxOriginalTopic = maxCount(originalTopicValues);
+    const topicAxisMax = Math.max(5, Math.ceil(maxOriginalTopic / 5) * 5);
+
+    topicButtons.forEach((button, index) => {
+      const value = button.dataset.filterTopic;
+      const contextualCount = topicCounts[index];
+      const totalCount = originalTopicCounts.get(value) || 0;
+      const isSelected = selectedTopic === value;
+      const fill = button.querySelector('.topic-bar-fill');
+      const countEl = button.querySelector('.topic-bar-count');
+
+      if (fill) fill.style.width = `${Math.round((totalCount / topicAxisMax) * 10000) / 100}%`;
+      if (countEl) countEl.textContent = totalCount;
+
+      setAvailability(button, contextualCount, isSelected);
+    });
+
+    venueButtons.forEach(button => {
+      const value = button.dataset.filterVenue;
+      const count = countForVenue(value);
+      const isSelected = selectedVenue === value;
+setAvailability(button, count, isSelected);
+    });
+
+    yearButtons.forEach((button, index) => {
+      const value = button.dataset.filterYear;
+      const count = yearCounts[index];
+      const isSelected = selectedYear === value;
+      const fill = button.querySelector('.year-bar-fill');
+      const countEl = button.querySelector('.year-bar-count');
+
+      if (fill) fill.style.width = `${Math.round((count / maxYear) * 10000) / 100}%`;
+      if (countEl) countEl.textContent = count;
+
+      setAvailability(button, count, isSelected);
+    });
+
+    sortTopicsByOriginalCount();
+    syncDropdownOptions();
+  }
+
+  function updateSectionVisibility() {
+    document.querySelectorAll('.publications-main > h3').forEach(heading => {
+      const list = heading.nextElementSibling;
+      if (!list || !list.classList.contains('publication-list')) return;
+      const hasVisible = Array.from(list.querySelectorAll('li')).some(item => item.style.display !== 'none');
+      heading.style.display = hasVisible ? '' : 'none';
+      list.style.display = hasVisible ? '' : 'none';
+    });
+  }
+
+  function updateClearButtons() {
+    const topicLabel = labelFor(topicButtons, 'filterTopic', selectedTopic);
+    const venueLabel = labelFor(venueButtons, 'filterVenue', selectedVenue);
+    const yearLabel = labelFor(yearButtons, 'filterYear', selectedYear);
+
+    clearTopicButton.hidden = selectedTopic === 'all';
+    clearVenueButton.hidden = selectedVenue === 'all';
+    clearYearButton.hidden = selectedYear === 'all';
+
+    if (selectedTopic !== 'all') {
+      clearTopicButton.innerHTML = 'Topic: ' + topicLabel + ' <span aria-hidden="true">×</span>';
+      clearTopicButton.setAttribute('aria-label', 'Clear topic filter: ' + topicLabel);
+    }
+
+    if (selectedVenue !== 'all') {
+      clearVenueButton.innerHTML = 'Venue: ' + venueLabel + ' <span aria-hidden="true">×</span>';
+      clearVenueButton.setAttribute('aria-label', 'Clear venue filter: ' + venueLabel);
+    }
+
+    if (selectedYear !== 'all') {
+      clearYearButton.innerHTML = 'Year: ' + yearLabel + ' <span aria-hidden="true">×</span>';
+      clearYearButton.setAttribute('aria-label', 'Clear year filter: ' + yearLabel);
+    }
+
+    clearAllButton.hidden = selectedTopic === 'all' && selectedVenue === 'all' && selectedYear === 'all';
+  }
+
+  function applyFilters() {
+    let visible = 0;
+
+    items.forEach(item => {
+      const show = itemMatches(item, {});
+      item.style.display = show ? '' : 'none';
+      if (show) visible += 1;
+    });
+
+    topicButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.filterTopic === selectedTopic));
+    venueButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.filterVenue === selectedVenue));
+    yearButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.filterYear === selectedYear));
+
+    updateDynamicFilterCounts();
+    updateSectionVisibility();
+    updateClearButtons();
+
+    if (selectedTopic === 'all' && selectedVenue === 'all' && selectedYear === 'all') {
+      activeFilterText.textContent = 'Showing all selected publications.';
+    } else {
+      activeFilterText.textContent = 'Showing ' + visible + ' publication(s).';
+    }
+
+    noResults.hidden = visible !== 0;
+  }
+
+  topicButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      if (button.disabled) return;
+      const value = button.dataset.filterTopic;
+      selectedTopic = selectedTopic === value ? 'all' : value;
+      applyFilters();
+    });
+  });
+
+  venueButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      if (button.disabled) return;
+      const value = button.dataset.filterVenue;
+      selectedVenue = selectedVenue === value ? 'all' : value;
+      applyFilters();
+    });
+  });
+
+  yearButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      if (button.disabled) return;
+      const value = button.dataset.filterYear;
+      selectedYear = selectedYear === value ? 'all' : value;
+      applyFilters();
+    });
+  });
+
+
+
+  if (yearTrigger && yearMenu) {
+    yearTrigger.addEventListener('click', function () {
+      toggleCustomDropdown(yearDropdown, yearTrigger, yearMenu);
+    });
+
+    yearMenu.querySelectorAll('.custom-filter-option').forEach(option => {
+      option.addEventListener('click', function () {
+        if (option.disabled) return;
+        selectedYear = option.dataset.value;
+        closeCustomDropdown(yearDropdown, yearTrigger, yearMenu);
+        applyFilters();
+      });
+    });
+  }
+
+  document.addEventListener('click', function (event) {
+    if (yearDropdown && !yearDropdown.contains(event.target)) {
+      closeCustomDropdown(yearDropdown, yearTrigger, yearMenu);
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeCustomDropdown(yearDropdown, yearTrigger, yearMenu);
+    }
+  });
+
+  if (yearSelect) {
+    yearSelect.addEventListener('change', function () {
+      selectedYear = yearSelect.value;
+      applyFilters();
+    });
+  }
+
+  clearTopicButton.addEventListener('click', function () {
+    selectedTopic = 'all';
+    applyFilters();
+  });
+
+  clearVenueButton.addEventListener('click', function () {
+    selectedVenue = 'all';
+    applyFilters();
+  });
+
+  clearYearButton.addEventListener('click', function () {
+    selectedYear = 'all';
+    applyFilters();
+  });
+
+  clearAllButton.addEventListener('click', function () {
+    selectedTopic = 'all';
+    selectedVenue = 'all';
+    selectedYear = 'all';
+    applyFilters();
+  });
+
+  applyFilters();
+});
+  </script>
+<script src="/js/navigation.js"></script>
+</body>
 </html>
