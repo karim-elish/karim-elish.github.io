@@ -656,6 +656,36 @@ body {
   .teaching-page .teaching-group h4 { font-size: 0.88rem; }
 }
 </style>
+
+<style id="teaching-course-list-preserve">
+/* Preserve the original Teaching page course-list styling inside the new one-card layout. */
+.teaching-panel .teaching-course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.teaching-panel .teaching-course-list li {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.34rem 0;
+  border-bottom: 1px solid #edf1f5;
+  line-height: 1.45;
+}
+
+.teaching-panel .teaching-course-list li:last-child {
+  border-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .teaching-panel .teaching-course-list li {
+    grid-template-columns: 86px minmax(0, 1fr);
+  }
+}
+</style>
+
 </head>
 <body>
 <nav>
