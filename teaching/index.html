@@ -17,7 +17,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Teaching | Karim Elish</title>
-<meta content="Teaching experience of Karim Elish across Florida Polytechnic University, Purdue University Fort Wayne, Virginia Tech, and King Fahd University of Petroleum and Minerals." name="description"/>
+<meta content="Teaching experience of Karim Elish at Florida Polytechnic University and Purdue University Fort Wayne." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -610,6 +610,52 @@ body {
 }
 </style>
 
+<style id="teaching-one-card-layout">
+.teaching-panel {
+  margin: 0 0 2rem;
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.035);
+}
+.teaching-intro {
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid #e8edf3;
+}
+.teaching-intro p { margin: 0; }
+.teaching-institution {
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid #e8edf3;
+}
+.teaching-institution:last-child { border-bottom: 0; }
+
+.teaching-page .teaching-institution > h3 {
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid #dbe4ed;
+  color: #1a365d;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+.teaching-page .teaching-group h4 {
+  margin: 0 0 0.38rem;
+  padding-bottom: 0;
+  border-bottom: 0;
+  color: #2b6cb0;
+  font-size: 0.9rem;
+  font-weight: 750;
+  letter-spacing: 0.015em;
+  line-height: 1.3;
+}
+@media (max-width: 760px) {
+  .teaching-intro,
+  .teaching-institution { padding: 0.9rem 0.92rem; }
+  .teaching-page .teaching-group h4 { font-size: 0.88rem; }
+}
+</style>
 </head>
 <body>
 <nav>
@@ -619,13 +665,13 @@ body {
 <ul class="menu" id="site-menu"><li><a href="/">Home</a></li><li><a href="/publications/">Publications</a></li><li><a href="/teaching/">Teaching</a></li><li><a href="/service/">Service</a></li><li><a href="/awards/">Honors &amp; Awards</a></li><li><a href="https://nexus-software-lab.github.io" rel="noopener" target="_blank">NEXUS Research Lab</a></li></ul>
 <hr/>
 </nav>
-<main class="home-page teaching-page"><div class="article-meta"><h2><span class="title">Teaching</span></h2></div><section class="home-card">
-<p>
+<main class="home-page teaching-page"><div class="article-meta"><h2><span class="title">Teaching</span></h2></div><section aria-label="Teaching experience" class="teaching-panel">
+<div class="teaching-intro"><p>
     My teaching experience spans undergraduate and graduate courses in software engineering,
     cybersecurity, mobile computing, programming, and related areas. I have also
     developed and designed new courses, with an emphasis on hands-on learning and practical applications.
-  </p>
-</section><section class="home-card">
+  </p></div>
+<section class="teaching-institution">
 <h3>Florida Polytechnic University</h3>
 <div class="teaching-grid">
 <section aria-labelledby="flpoly-undergraduate" class="teaching-group">
@@ -655,7 +701,8 @@ body {
 </ul>
 </section>
 </div>
-</section><section class="home-card">
+</section>
+<section class="teaching-institution">
 <h3>Purdue University Fort Wayne</h3>
 <section aria-labelledby="pfw-courses" class="teaching-group">
 <h4 id="pfw-courses">Courses</h4>
@@ -665,8 +712,7 @@ body {
 <li><span class="course-code">CS 492</span><span class="course-name">Mobile Application Development</span></li>
 </ul>
 </section>
-
-
+</section>
 </section></main>
 <footer>
 <hr/>
