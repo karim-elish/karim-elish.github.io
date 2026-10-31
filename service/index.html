@@ -577,7 +577,58 @@ body {
 .service-page .article-meta { margin-bottom: 1rem; text-align: center; }
 .service-page .article-meta h2 { margin-bottom: 0.25rem; }
 .service-page .article-meta h2 .title { color: #1a365d; }
-</style></head>
+</style>
+<style id="service-scanability-improvement">
+/* Make dense professional-service categories easier to scan without changing page typography. */
+.service-scan-entry {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+  padding: 0.36rem 0;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.service-scan-entry:last-child {
+  border-bottom: 0;
+}
+
+.service-scan-label {
+  color: #1a365d;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.service-scan-text {
+  min-width: 0;
+  color: #2d3748;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.service-scan-text strong {
+  color: #1a365d;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .service-scan-entry {
+    grid-template-columns: 1fr;
+    gap: 0.08rem;
+    padding: 0.42rem 0;
+  }
+
+  .service-scan-label {
+    font-size: 0.8rem;
+  }
+
+  .service-scan-text {
+    font-size: 0.95rem;
+  }
+}
+</style>
+</head>
 <body>
 <nav>
 <button aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
@@ -620,45 +671,39 @@ body {
       </div>
 </div>
 </div>
-<div class="service-group">
-<h4>Conference Service</h4>
-<div class="service-entry service-entry-no-date">
-<div class="service-text">
-<strong>Program Committee Member:</strong>
-        IEEE/ACM ICPC'27,
-        AI-SSS'26 Workshop,
-        ACM KDD'26 AgenticSE Workshop,
-        ACM SecDev'26,
-        SecureComm'19–'20,
-        IEEE ICPADS'19 Security &amp; Dependable Computing Track,
-        MIST'19,
-        ICCIA'17–'18,
-        ICBCI'18,
-        ICCC'18,
-        and MCS'15–'17.
-      </div>
-</div>
-<div class="service-entry service-entry-no-date">
-<div class="service-text">
-<strong>Conference Reviewer:</strong> NeurIPS'26.
-      </div>
-</div>
-<div class="service-entry service-entry-no-date">
-<div class="service-text">
-<strong>External Conference Reviewer:</strong>
-        CCS'14–'15,
-        ASIACCS'13–'15,
-        CODASPY'13 and '15,
-        ACSAC'14–'15,
-        Inscrypt'14,
-        ISC'13,
-        CNS'13,
-        SecureComm'12,
-        ACNS'12,
-        and GLOBECOM'11.
-      </div>
-</div>
-</div>
+<div class="service-group"><h4>Conference Service</h4><div class="service-scan-entry">
+<div class="service-scan-label">Program Committee</div>
+<div class="service-scan-text">
+    IEEE/ACM ICPC'27,
+    AI-SSS'26 Workshop,
+    ACM KDD'26 AgenticSE Workshop,
+    ACM SecDev'26,
+    SecureComm'19–'20,
+    IEEE ICPADS'19 Security &amp; Dependable Computing Track,
+    MIST'19,
+    ICCIA'17–'18,
+    ICBCI'18,
+    ICCC'18,
+    and MCS'15–'17.
+  </div>
+</div><div class="service-scan-entry">
+<div class="service-scan-label">Conference Reviewer</div>
+<div class="service-scan-text">NeurIPS'26.</div>
+</div><div class="service-scan-entry">
+<div class="service-scan-label">External Reviewer</div>
+<div class="service-scan-text">
+    CCS'14–'15,
+    ASIACCS'13–'15,
+    CODASPY'13 and '15,
+    ACSAC'14–'15,
+    Inscrypt'14,
+    ISC'13,
+    CNS'13,
+    SecureComm'12,
+    ACNS'12,
+    and GLOBECOM'11.
+  </div>
+</div></div>
 <div class="service-group"><h4>Journal Reviewing</h4>
 <!-- <div class="service-entry service-entry-no-date journal-review-entry"><div class="service-text"><strong>Journal Reviewer</strong> -->
 <ul class="journal-review-list">
@@ -673,14 +718,12 @@ body {
 <li><i>IEEE Transactions on Intelligent Transportation Systems</i></li>
 <li><i>Computers &amp; Security</i></li>
 </ul></div></div>
-<div class="service-group">
-<h4>Research Proposal Reviewer &amp; Panelist</h4>
-<div class="service-entry service-entry-no-date">
-<div class="service-text">
-<strong>National Science Foundation (NSF)</strong>, Cybersecurity Education Program, Panel Reviewer, 2016.
-    </div>
-</div>
-</div>
+<div class="service-group"><h4>Research Proposal Reviewer &amp; Panelist</h4><div class="service-scan-entry">
+<div class="service-scan-label">NSF Panel Reviewer</div>
+<div class="service-scan-text">
+<strong>National Science Foundation (NSF)</strong>, Cybersecurity Education Program, 2016.
+  </div>
+</div></div>
 <div class="service-block university-service-block">
 <div class="service-section-title">
 <span>Academic Service — Florida Polytechnic University</span>
