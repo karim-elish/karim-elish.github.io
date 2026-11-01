@@ -2649,6 +2649,93 @@ main.publications-page {
   color: #2D5F9A !important;
 }
 
+</style><style id="publication-resource-actions">
+.publication-resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.32rem;
+  align-items: flex-start;
+  margin-top: 0.48rem;
+}
+
+.publication-resource-links > a,
+.publication-resource-links summary {
+  display: inline-block;
+  padding: 0.18rem 0.48rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  color: #2b6cb0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.publication-resource-links > a:hover,
+.publication-resource-links summary:hover {
+  background: #f7fafc;
+  border-color: #2b6cb0;
+  color: #1a365d;
+}
+
+.publication-resource-links details {
+  display: contents;
+  margin: 0;
+}
+
+.publication-resource-links summary {
+  list-style: none;
+}
+
+.publication-resource-links summary::-webkit-details-marker {
+  display: none;
+}
+
+.publication-citation {
+  flex: 1 0 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 0.18rem;
+  box-sizing: border-box;
+}
+
+.publication-citation pre {
+  overflow-x: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.62rem 0.7rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  color: #2d3748;
+  font-size: 0.72rem;
+  line-height: 1.42;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+@media (max-width: 700px) {
+  .publication-resource-links {
+    gap: 0.28rem;
+    margin-top: 0.45rem;
+  }
+
+  .publication-resource-links > a,
+  .publication-resource-links summary {
+    padding: 0.17rem 0.44rem;
+    font-size: 0.74rem;
+  }
+
+  .publication-citation pre {
+    font-size: 0.70rem;
+  }
+}
 </style></head>
 <body class="publications-layout">
 <nav>
@@ -2680,7 +2767,7 @@ main.publications-page {
 </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
      IEEE Internet Computing</em>, accepted, September 2026. To appear.
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/MIC.2026.3732938" rel="noopener" target="_blank">Paper</a><a href="https://ieee-dataport.org/documents/wearappsec-wearable-mobile-app-security-dataset" rel="noopener" target="_blank">Data</a><details><summary>Citation</summary><div class="publication-citation"><pre>Sebastian Siedler, Mohamed Sylla, and Karim Elish. "Security Risks in Wearable Mobile Applications." IEEE Internet Computing , accepted, September 2026. To appear.</pre></div></details></div></li>
 <li data-topic-labels="LLMs / AI for Security &amp; SE; Android Malware; Empirical Study" data-topics="llms-ai android-malware empirical-study" data-venue="ieee-access" data-venue-label="[Journal] IEEE Access" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Large Language Models for Malware Detection: A Systematic Review, Taxonomy, and Open Challenges
@@ -2690,7 +2777,7 @@ main.publications-page {
 </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
      IEEE Access</em>, vol. 14, pp. 52734-52752, April 2026.
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/ACCESS.2026.3680058" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Joyce Champie and Karim Elish. "Large Language Models for Malware Detection: A Systematic Review, Taxonomy, and Open Challenges." IEEE Access , vol. 14, pp. 52734-52752, April 2026.</pre></div></details></div></li>
 <li data-topic-labels="Mobile Security; Datasets / Benchmarks" data-topics="mobile-security android-malware software-security" data-venue="information" data-venue-label="[Journal] Information" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       RepackDroid: An Efficient Detection Model for Repackaged Android Applications
@@ -2700,7 +2787,7 @@ main.publications-page {
 </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
      Information</em>, vol. 16, no. 12, Article 1075, December 2025.
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><a href="https://doi.org/10.3390/info16121075" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Tito Leadon and Karim Elish. "RepackDroid: An Efficient Detection Model for Repackaged Android Applications." Information , vol. 16, no. 12, Article 1075, December 2025.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Empirical Study" data-topics="android-malware empirical-study" data-venue="ieee-tc" data-venue-label="[Journal] IEEE Transactions on Computers" data-year="2022"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Lightweight, Effective Detection and Characterization of Mobile Malware Families
@@ -2710,7 +2797,7 @@ main.publications-page {
      </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
      IEEE Transactions on Computers (TC)</em>, vol. 71, no. 11, November 2022.
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><a href="https://ieeexplore.ieee.org/document/9682574" rel="noopener" target="_blank">Paper</a><a href="https://zenodo.org/records/18315281" rel="noopener" target="_blank">Data</a><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish , Mahmoud Elish, and Hussain Almohri. "Lightweight, Effective Detection and Characterization of Mobile Malware Families." IEEE Transactions on Computers (TC) , vol. 71, no. 11, November 2022.</pre></div></details></div></li>
 <li data-topic-labels="Defect Prediction; Empirical Study; Systems Security" data-topics="defect-prediction empirical-study systems-security" data-venue="ijisae" data-venue-label="[Journal] IJISAE" data-year="2021"><div class="pub-title-row"><div class="pub-title">
 <strong>
       An Empirical Comparison of Resampling Ensemble Methods of Deep Learning Neural Networks for Cross-Project Software Defect Prediction
@@ -2720,7 +2807,7 @@ main.publications-page {
 </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
      International Journal of Intelligent Engineering and Systems (IJISAE)</em>, vol. 14, no. 3, 2021.
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><a href="https://doi.org/10.22266/ijies2021.0630.18" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Mahmoud Elish and Karim Elish. "An Empirical Comparison of Resampling Ensemble Methods of Deep Learning Neural Networks for Cross-Project Software Defect Prediction." International Journal of Intelligent Engineering and Systems (IJISAE) , vol. 14, no. 3, 2021.</pre></div></details></div></li>
 <li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="scn" data-venue-label="[Journal] Security and Communication Networks" data-year="2020"><div class="pub-title-row"><div class="pub-title">
 <strong>
       A Client Bootstrapping Protocol for DoS Attack Mitigation on Entry Point Services in the Cloud
@@ -2730,7 +2817,7 @@ main.publications-page {
 </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Security and Communication Networks (SCN)</em>, 2020.
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><a href="https://doi.org/10.1155/2020/8873258" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Hussain Almohri, M. Almutawa, M. Alawadh, and Karim Elish. "A Client Bootstrapping Protocol for DoS Attack Mitigation on Entry Point Services in the Cloud." Security and Communication Networks (SCN) , 2020.</pre></div></details></div></li>
 <li data-topic-labels="Mobile Security; Empirical Study" data-topics="mobile-security empirical-study" data-venue="ieee-tmc" data-venue-label="[Journal] IEEE Transactions on Mobile Computing" data-year="2020"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Identifying Mobile Inter-App Communication Risks
@@ -2740,7 +2827,7 @@ main.publications-page {
      </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       IEEE Transactions on Mobile Computing (TMC)</em>, vol. 19, no. 1, January 2020.
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/TMC.2018.2889495" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish , Haipeng Cai, Daniel Barton, Danfeng Yao, and Barbara Ryder. "Identifying Mobile Inter-App Communication Risks." IEEE Transactions on Mobile Computing (TMC) , vol. 19, no. 1, January 2020.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="computers-security" data-venue-label="[Journal] Computers &amp; Security" data-year="2015"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Profiling User-Trigger Dependence for Android Malware Detection
@@ -2750,7 +2837,7 @@ main.publications-page {
      </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Computers &amp; Security</em>, vol. 49, pp. 255–273, March 2015.
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><a href="https://doi.org/10.1016/j.cose.2014.11.001" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish , Xiaokui Shu, Danfeng Yao, Barbara Ryder, and Xuxian Jiang. "Profiling User-Trigger Dependence for Android Malware Detection." Computers &amp; Security , vol. 49, pp. 255–273, March 2015.</pre></div></details></div></li>
 <li data-topic-labels="Software Metrics / Quality; Software Maintainability; Software Refactoring" data-topics="software-metrics maintainability refactoring" data-venue="journal-software" data-venue-label="[Journal] Journal of Software" data-year="2012"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Using Software Quality Attributes to Classify Refactoring to Patterns
@@ -2760,7 +2847,7 @@ main.publications-page {
      </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Journal of Software (JSW)</em>, vol. 7, no. 2, February 2012.
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><a href="https://doi.org/10.4304/jsw.7.2.408-419" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish and Mohammed Alshayeb. "Using Software Quality Attributes to Classify Refactoring to Patterns." Journal of Software (JSW) , vol. 7, no. 2, February 2012.</pre></div></details></div></li>
 <li data-topic-labels="Software Metrics / Quality; Software Maintainability; Software Refactoring; Empirical Study" data-topics="software-metrics maintainability refactoring empirical-study" data-venue="ajse" data-venue-label="[Journal] Arabian Journal for Science and Engineering" data-year="2011"><div class="pub-title-row"><div class="pub-title">
 <strong>
       A Classification of Refactoring Methods Based on Software Quality Attributes
@@ -2770,7 +2857,7 @@ main.publications-page {
      </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Arabian Journal for Science and Engineering (AJSE)</em>, vol. 36, no. 7, November 2011.
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><a href="https://doi.org/10.1007/s13369-011-0117-x" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish and Mohammed Alshayeb. "A Classification of Refactoring Methods Based on Software Quality Attributes." Arabian Journal for Science and Engineering (AJSE) , vol. 36, no. 7, November 2011.</pre></div></details></div></li>
 <li data-topic-labels="Defect Prediction" data-topics="defect-prediction" data-venue="jss" data-venue-label="[Journal] Journal of Systems and Software" data-year="2008"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Predicting Defect-Prone Software Modules Using Support Vector Machines
@@ -2786,7 +2873,7 @@ main.publications-page {
        Among Top 10 Most Cited Papers Published by JSS
       </strong>
 </span>
-</div></li>
+</div><div class="publication-resource-links"><a href="https://doi.org/10.1016/j.jss.2007.07.040" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish and Mahmoud Elish. "Predicting Defect-Prone Software Modules Using Support Vector Machines." Journal of Systems and Software (JSS) , vol. 81, no. 5, May 2008.</pre></div></details></div></li>
 </ul><h3>
     Conferences &amp; Workshops Publications
    </h3><ul class="publication-list">
@@ -2806,7 +2893,7 @@ main.publications-page {
        Direct Acceptance Rate: 5.0% (119/2,375)
       </strong>
 </span>
-</div></li>
+</div><div class="publication-resource-links"><details><summary>Citation</summary><div class="publication-citation"><pre>Joyce Champie and Karim Elish. "When LLMs Say Secure: An Empirical Study of False Assurance in Android Vulnerability Detection." Proceedings of the 49th IEEE/ACM International Conference on Software Engineering (ICSE) Dublin, Ireland · April 2027.</pre></div></details></div></li>
 <li data-topic-labels="LLMs / AI for Security &amp; SE; Privacy / Data Security; Software Security" data-topics="llms-ai privacy software-security" data-venue="acm-iwspa-codaspy" data-venue-label="[Workshop] ACM IWSPA / CODASPY" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       STALKER: Composed Quasi-Identifiers and LLM-Amplified Behavioral Leakage in Anonymized Marketplace Data
@@ -2817,7 +2904,7 @@ main.publications-page {
 <em>
       Proceedings of the 12th ACM International Workshop on Security and Privacy Analytics (IWSPA)</em>, co-located with the
      <em>16th ACM Conference on Data and Application Security and Privacy (CODASPY)</em>
-</span><span class="pub-meta-part">Frankfurt am Main, Germany · June 2026.</span></div></li>
+</span><span class="pub-meta-part">Frankfurt am Main, Germany · June 2026.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1145/3806007.3810967" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>A. Dmytryk, S. El-Yaagoubi, L. Batista, P. Kouterguine, S. Gerken, A. Alhamadani, and Karim Elish. "STALKER: Composed Quasi-Identifiers and LLM-Amplified Behavioral Leakage in Anonymized Marketplace Data." Proceedings of the 12th ACM International Workshop on Security and Privacy Analytics (IWSPA) , co-located with the 16th ACM Conference on Data and Application Security and Privacy (CODASPY) Frankfurt am Main, Germany · June 2026.</pre></div></details></div></li>
 <li data-topic-labels="Mobile Security; Software Metrics / Quality; Software Maintainability; Software Security" data-topics="mobile-security software-metrics maintainability software-security" data-venue="ieee-icsa" data-venue-label="[Conference] IEEE ICSA" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications
@@ -2833,7 +2920,7 @@ main.publications-page {
        Distinguished Paper Award Candidate
       </strong>
 </span>
-</div></li>
+</div><div class="publication-resource-links"><a href="https://ieeexplore.ieee.org/document/11641174" rel="noopener" target="_blank">Paper</a><a href="https://zenodo.org/records/18633276" rel="noopener" target="_blank">Data</a><details><summary>Citation</summary><div class="publication-citation"><pre>Mohamed Sylla and Karim Elish. "Rethinking MVC Violations as Security-Aware Architectural Smells in Android Applications." Proceedings of the 23rd IEEE International Conference on Software Architecture (ICSA-Companion) Amsterdam, Netherlands · June 2026.</pre></div></details></div></li>
 <li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Bugs / Testing" data-topics="llms-ai mobile-security software-bugs" data-venue="ieee-icst" data-venue-label="[Conference] IEEE ICST" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Automated Reproduction of Android Application Bugs with LLMs: Are We There Yet?
@@ -2843,7 +2930,7 @@ main.publications-page {
      </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 19th IEEE International Conference on Software Testing, Verification and Validation (ICST)</em>
-</span><span class="pub-meta-part">Daejeon, South Korea · May 2026.</span></div></li>
+</span><span class="pub-meta-part">Daejeon, South Korea · May 2026.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/ICST69053.2026.00057" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Dennis Carey, Karim Elish , and Paniz Abedin. "Automated Reproduction of Android Application Bugs with LLMs: Are We There Yet?." Proceedings of the 19th IEEE International Conference on Software Testing, Verification and Validation (ICST) Daejeon, South Korea · May 2026.</pre></div></details></div></li>
 <li data-topic-labels="Mobile Security; Software Metrics / Quality; Datasets / Benchmarks" data-topics="mobile-security software-metrics datasets" data-venue="ieee-acm-msr" data-venue-label="[Conference] IEEE/ACM MSR" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       AndroMetric: Bridging Multi-Dimensional Software Metrics and Mobile Application Security
@@ -2854,7 +2941,7 @@ main.publications-page {
 <em>
       Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track
      </em>
-</span><span class="pub-meta-part">Rio de Janeiro, Brazil · April 2026.</span></div></li>
+</span><span class="pub-meta-part">Rio de Janeiro, Brazil · April 2026.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1145/3793302.3793329" rel="noopener" target="_blank">Paper</a><a href="https://zenodo.org/records/17559667" rel="noopener" target="_blank">Data</a><details><summary>Citation</summary><div class="publication-citation"><pre>Sebastian Siedler and Karim Elish. "AndroMetric: Bridging Multi-Dimensional Software Metrics and Mobile Application Security." Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track Rio de Janeiro, Brazil · April 2026.</pre></div></details></div></li>
 <li data-topic-labels="Mobile Security; Software Metrics / Quality; Software Maintainability; Datasets / Benchmarks" data-topics="mobile-security software-metrics maintainability datasets" data-venue="ieee-acm-msr" data-venue-label="[Conference] IEEE/ACM MSR" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       SMELLDroid: A Dataset for Code Smells in Android Apps
@@ -2865,7 +2952,7 @@ main.publications-page {
 <em>
       Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track
      </em>
-</span><span class="pub-meta-part">Rio de Janeiro, Brazil · April 2026.</span></div></li>
+</span><span class="pub-meta-part">Rio de Janeiro, Brazil · April 2026.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1145/3793302.3793330" rel="noopener" target="_blank">Paper</a><a href="https://zenodo.org/records/17559693" rel="noopener" target="_blank">Data</a><details><summary>Citation</summary><div class="publication-citation"><pre>Joyce Champie, Karim Elish , and Mahmoud Elish. "SMELLDroid: A Dataset for Code Smells in Android Apps." Proceedings of the 23rd IEEE/ACM International Conference on Mining Software Repositories (MSR), Data and Tool Showcase Track Rio de Janeiro, Brazil · April 2026.</pre></div></details></div></li>
 <li data-topic-labels="LLMs / AI for Security &amp; SE; Mobile Security; Software Metrics / Quality; Datasets / Benchmarks" data-topics="llms-ai mobile-security software-metrics datasets" data-venue="ieee-acm-forge" data-venue-label="[Conference] IEEE/ACM FORGE" data-year="2026"><div class="pub-title-row"><div class="pub-title">
 <strong>
       MIRROR: A Dataset of Structural Metrics for Repackaged Android Apps
@@ -2875,7 +2962,7 @@ main.publications-page {
 </div><div class="pub-meta"><span class="pub-meta-part">
 <em>
       Proceedings of the 3rd IEEE/ACM International Conference on AI Foundation Models and Software Engineering (FORGE)</em>
-</span><span class="pub-meta-part">Rio de Janeiro, Brazil · April 2026.</span></div></li>
+</span><span class="pub-meta-part">Rio de Janeiro, Brazil · April 2026.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1145/3793655.3793713" rel="noopener" target="_blank">Paper</a><a href="https://zenodo.org/records/17666395" rel="noopener" target="_blank">Data</a><details><summary>Citation</summary><div class="publication-citation"><pre>Sebastian Siedler and Karim Elish. "MIRROR: A Dataset of Structural Metrics for Repackaged Android Apps." Proceedings of the 3rd IEEE/ACM International Conference on AI Foundation Models and Software Engineering (FORGE) Rio de Janeiro, Brazil · April 2026.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="ieee-acdsa" data-venue-label="[Conference] IEEE ACDSA" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       High-Accuracy Android Ransomware Detection Using SMALI Code-Based Analysis
@@ -2886,7 +2973,7 @@ main.publications-page {
 <em>
       Proceedings of the IEEE International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA)
      </em>
-</span><span class="pub-meta-part">Antalya, Turkey · August 2025.</span></div></li>
+</span><span class="pub-meta-part">Antalya, Turkey · August 2025.</span></div><div class="publication-resource-links"><details><summary>Citation</summary><div class="publication-citation"><pre>Vinicius Seixas and Karim Elish. "High-Accuracy Android Ransomware Detection Using SMALI Code-Based Analysis." Proceedings of the IEEE International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA) Antalya, Turkey · August 2025.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Computing Education" data-topics="android-malware education" data-venue="asee" data-venue-label="[Conference] ASEE Annual Conference" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       A New Collaborative Approach to Multidisciplinary Capstone Design at Florida Polytechnic University
@@ -2897,7 +2984,7 @@ main.publications-page {
 <em>
       Proceedings of the ASEE Annual Conference and Exposition, American Society for Engineering Education
      </em>
-</span><span class="pub-meta-part">Montreal, Canada · June 2025.</span></div></li>
+</span><span class="pub-meta-part">Montreal, Canada · June 2025.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.18260/1-2--55373" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>M. Bohm, J. Dewey, Karim Elish , E. Kames, A. Murphy, O. Toker, and D. Ulybyshev. "A New Collaborative Approach to Multidisciplinary Capstone Design at Florida Polytechnic University." Proceedings of the ASEE Annual Conference and Exposition, American Society for Engineering Education Montreal, Canada · June 2025.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieee-acis-sera" data-venue-label="[Conference] IEEE/ACIS SERA" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Stealthy No More: An Effective Ensemble Learning Approach for Detecting Android RATs
@@ -2908,7 +2995,7 @@ main.publications-page {
 <em>
       Proceedings of the IEEE/ACIS 23rd International Conference on Software Engineering Research, Management and Applications (SERA)
      </em>
-</span><span class="pub-meta-part">Las Vegas, NV · May 2025.</span></div></li>
+</span><span class="pub-meta-part">Las Vegas, NV · May 2025.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/SERA65747.2025.11154598" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Nesreen Dalhy and Karim Elish. "Stealthy No More: An Effective Ensemble Learning Approach for Detecting Android RATs." Proceedings of the IEEE/ACIS 23rd International Conference on Software Engineering Research, Management and Applications (SERA) Las Vegas, NV · May 2025.</pre></div></details></div></li>
 <li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="flairs" data-venue-label="[Conference] FLAIRS" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       FSProtoTransfer: Synergizing Few-Shot, Prototypical Networks, and Transfer Learning for Intrusion Detection in VANETs
@@ -2919,7 +3006,7 @@ main.publications-page {
 <em>
       Proceedings of the 38th International FLAIRS Conference, Florida Artificial Intelligence Research Society (FLAIRS)
      </em>
-</span><span class="pub-meta-part">Daytona Beach, FL · May 2025.</span></div></li>
+</span><span class="pub-meta-part">Daytona Beach, FL · May 2025.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.32473/flairs.38.1.138952" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Ayesha Dina, Colby Edell, Karim Elish , and Arijet Sarker. "FSProtoTransfer: Synergizing Few-Shot, Prototypical Networks, and Transfer Learning for Intrusion Detection in VANETs." Proceedings of the 38th International FLAIRS Conference, Florida Artificial Intelligence Research Society (FLAIRS) Daytona Beach, FL · May 2025.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Mobile Security; Software Metrics / Quality; Empirical Study" data-topics="android-malware mobile-security software-metrics empirical-study" data-venue="ieee-bigdata" data-venue-label="[Conference] IEEE Big Data" data-year="2019"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Identifying Android Malware Families Using Android-Oriented Metrics
@@ -2930,7 +3017,7 @@ main.publications-page {
 <em>
       Proceedings of the IEEE International Conference on Big Data (Big Data)
      </em>
-</span><span class="pub-meta-part">Los Angeles, CA · December 2019.</span></div></li>
+</span><span class="pub-meta-part">Los Angeles, CA · December 2019.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/BigData47090.2019.9005669" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>William Blanc, Lina Hashem, Karim Elish , and Hussain Almohri. "Identifying Android Malware Families Using Android-Oriented Metrics." Proceedings of the IEEE International Conference on Big Data (Big Data) Los Angeles, CA · December 2019.</pre></div></details></div></li>
 <li data-topic-labels="Applied AI / Data Science" data-topics="applied-ai" data-venue="ieee-icmla" data-venue-label="[Conference] IEEE ICMLA" data-year="2018"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Machine Learning-based Prediction of Prolonged Length of Stay in Newborns
@@ -2941,7 +3028,7 @@ main.publications-page {
 <em>
       Proceedings of the 17th IEEE International Conference on Machine Learning and Applications (ICMLA)
      </em>
-</span><span class="pub-meta-part">Orlando, FL · December 2018.</span></div></li>
+</span><span class="pub-meta-part">Orlando, FL · December 2018.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/ICMLA.2018.00236" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Brandon Thompson, Karim Elish , and Robert Steele. "Machine Learning-based Prediction of Prolonged Length of Stay in Newborns." Proceedings of the 17th IEEE International Conference on Machine Learning and Applications (ICMLA) Orlando, FL · December 2018.</pre></div></details></div></li>
 <li data-topic-labels="Mobile Security; Systems Security" data-topics="mobile-security systems-security" data-venue="ieee-iccc" data-venue-label="[Conference] IEEE ICCC" data-year="2018"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Enabling Smart Cities Through V2X Communication
@@ -2952,7 +3039,7 @@ main.publications-page {
 <em>
       Proceedings of the IEEE International Conference on Computer and Communications (ICCC)
      </em>
-</span><span class="pub-meta-part">Chengdu, China · December 2018.</span></div></li>
+</span><span class="pub-meta-part">Chengdu, China · December 2018.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/CompComm.2018.8780839" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Mert Aydin, Mohammad Samarah, and Karim Elish. "Enabling Smart Cities Through V2X Communication." Proceedings of the IEEE International Conference on Computer and Communications (ICCC) Chengdu, China · December 2018.</pre></div></details></div></li>
 <li data-topic-labels="Mobile Security; Applied AI / Data Science" data-topics="mobile-security applied-ai" data-venue="ieee-iccia" data-venue-label="[Conference] IEEE ICCIA" data-year="2017"><div class="pub-title-row"><div class="pub-title">
 <strong>
       BetterChoice: A Migraine Drug Recommendation System Based on Neo4J
@@ -2963,7 +3050,7 @@ main.publications-page {
 <em>
       Proceedings of the IEEE International Conference on Computational Intelligence and Applications (ICCIA)
      </em>
-</span><span class="pub-meta-part">Beijing, China · September 2017.</span></div></li>
+</span><span class="pub-meta-part">Beijing, China · September 2017.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/CIAPP.2017.8167244" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Benjamin Stark, Constanze Knahl, Mert Aydin, Mohammad Samarah, and Karim Elish. "BetterChoice: A Migraine Drug Recommendation System Based on Neo4J." Proceedings of the IEEE International Conference on Computational Intelligence and Applications (ICCIA) Beijing, China · September 2017.</pre></div></details></div></li>
 <li data-topic-labels="Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="mobile-security empirical-study privacy software-security" data-venue="acm-codaspy" data-venue-label="[Conference] ACM CODASPY" data-year="2017"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Prioritized Analysis of Inter-App Communication Risks
@@ -2976,7 +3063,7 @@ main.publications-page {
      </em>
 </span><span class="pub-meta-part">
      Scottsdale, AZ, March 2017 (poster paper).
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><a href="https://doi.org/10.1145/3029806.3029843" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, Karim Elish , and Barbara Ryder. "Prioritized Analysis of Inter-App Communication Risks." Proceedings of the ACM Conference on Data and Application Security and Privacy (CODASPY) Scottsdale, AZ, March 2017 (poster paper).</pre></div></details></div></li>
 <li data-topic-labels="Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2017"><div class="pub-title-row"><div class="pub-title">
 <strong>
       MR-Droid: A Scalable and Prioritized Analysis of Inter-App Communication Risks
@@ -2989,7 +3076,7 @@ main.publications-page {
      <em>
       IEEE Symposium on Security and Privacy (IEEE S&amp;P)
      </em>
-</span><span class="pub-meta-part">San Jose, CA · May 2017.</span></div></li>
+</span><span class="pub-meta-part">San Jose, CA · May 2017.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/SPW.2017.12" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Fang Liu, Haipeng Cai, Gang Wang, Danfeng Yao, Karim Elish , and Barbara Ryder. "MR-Droid: A Scalable and Prioritized Analysis of Inter-App Communication Risks." Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST) , in conjunction with the IEEE Symposium on Security and Privacy (IEEE S&amp;P) San Jose, CA · May 2017.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2015"><div class="pub-title-row"><div class="pub-title">
 <strong>
       On the Need of Precise Inter-App ICC Classification for Detecting Android Malware Collusions
@@ -3002,7 +3089,7 @@ main.publications-page {
      <em>
       IEEE Symposium on Security and Privacy (IEEE S&amp;P)
      </em>
-</span><span class="pub-meta-part">San Jose, CA · May 2015.</span></div></li>
+</span><span class="pub-meta-part">San Jose, CA · May 2015.</span></div><div class="publication-resource-links"><a href="https://yaogroup.cs.vt.edu/papers/Android-Malware-Collusion-Position-Paper-DARPA-Yao.pdf" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish , Danfeng Yao, and Barbara Ryder. "On the Need of Precise Inter-App ICC Classification for Detecting Android Malware Collusions." Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST) , in conjunction with the IEEE Symposium on Security and Privacy (IEEE S&amp;P) San Jose, CA · May 2015.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="ieee-icmla" data-venue-label="[Conference] IEEE ICMLA" data-year="2014"><div class="pub-title-row"><div class="pub-title">
 <strong>
       High Precision Screening for Android Malware using Dimensionality Reduction
@@ -3013,7 +3100,7 @@ main.publications-page {
 <em>
       Proceedings of the 13th IEEE International Conference on Machine Learning and Applications (ICMLA)
      </em>
-</span><span class="pub-meta-part">Detroit, MI · December 2014.</span></div></li>
+</span><span class="pub-meta-part">Detroit, MI · December 2014.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/ICMLA.2014.10" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Britton Wolfe, Karim Elish , and Danfeng Yao. "High Precision Screening for Android Malware using Dimensionality Reduction." Proceedings of the 13th IEEE International Conference on Machine Learning and Applications (ICMLA) Detroit, MI · December 2014.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="isc" data-venue-label="[Conference] ISC" data-year="2014"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Comprehensive Behavior Profiling for Proactive Android Malware Detection
@@ -3026,7 +3113,7 @@ main.publications-page {
      </em>
 </span><span class="pub-meta-part">
      Hong Kong, October 2014.
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><a href="https://doi.org/10.1007/978-3-319-13257-0_19" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Britton Wolfe, Karim Elish , and Danfeng Yao. "Comprehensive Behavior Profiling for Proactive Android Malware Detection." Proceedings of the 17th International Information Security Conference (ISC) Hong Kong, October 2014.</pre></div></details></div></li>
 <li data-topic-labels="Systems Security" data-topics="systems-security" data-venue="iupt-procedia" data-venue-label="[Conference] IUPT / Procedia Computer Science" data-year="2013"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Device-Based Isolation for Securing Cryptographic Keys
@@ -3038,7 +3125,7 @@ main.publications-page {
      <em>
       Procedia Computer Science (Elsevier)
      </em>
-</span><span class="pub-meta-part">Halifax, Canada · June 2013.</span></div></li>
+</span><span class="pub-meta-part">Halifax, Canada · June 2013.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1016/j.procs.2013.06.160" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish , Yipan Deng, Danfeng Yao, and Dennis Kafura. "Device-Based Isolation for Securing Cryptographic Keys." Proceedings of the 3rd International Symposium on Internet of Ubiquitous and Pervasive Things (IUPT) , Procedia Computer Science (Elsevier) Halifax, Canada · June 2013.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Mobile Security; Empirical Study; Privacy / Data Security; Software Security" data-topics="android-malware mobile-security empirical-study privacy software-security" data-venue="ieee-spw-most" data-venue-label="[Workshop] IEEE SPW / MoST" data-year="2012"><div class="pub-title-row"><div class="pub-title">
 <strong>
       User-Centric Dependence Analysis for Identifying Malicious Mobile Apps
@@ -3051,7 +3138,7 @@ main.publications-page {
      <em>
       IEEE Symposium on Security and Privacy (IEEE S&amp;P)
      </em>
-</span><span class="pub-meta-part">San Jose, CA · May 2012.</span></div></li>
+</span><span class="pub-meta-part">San Jose, CA · May 2012.</span></div><div class="publication-resource-links"><a href="https://yaogroup.cs.vt.edu/papers/most-12.pdf" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish , Danfeng Yao, and Barbara Ryder. "User-Centric Dependence Analysis for Identifying Malicious Mobile Apps." Proceedings of the IEEE Security and Privacy Workshops (SPW), Mobile Security Technologies (MoST) , in conjunction with the IEEE Symposium on Security and Privacy (IEEE S&amp;P) San Jose, CA · May 2012.</pre></div></details></div></li>
 <li data-topic-labels="Software Refactoring; Software Bugs / Testing; Empirical Study" data-topics="refactoring software-bugs empirical-study" data-venue="apsec" data-venue-label="[Conference] APSEC" data-year="2009"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Investigating the Effect of Refactoring on Software Testing Effort
@@ -3062,7 +3149,7 @@ main.publications-page {
 <em>
       Proceedings of the 16th IEEE Asia-Pacific Software Engineering Conference (APSEC)
      </em>
-</span><span class="pub-meta-part">Penang, Malaysia · December 2009.</span></div></li>
+</span><span class="pub-meta-part">Penang, Malaysia · December 2009.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/APSEC.2009.14" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish and Mohammad Alshayeb. "Investigating the Effect of Refactoring on Software Testing Effort." Proceedings of the 16th IEEE Asia-Pacific Software Engineering Conference (APSEC) Penang, Malaysia · December 2009.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Software Maintainability; Empirical Study" data-topics="android-malware maintainability empirical-study" data-venue="ieee-csmr" data-venue-label="[Conference] IEEE CSMR" data-year="2009"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Application of TreeNet in Predicting Object-Oriented Software Maintainability: A Comparative Study
@@ -3073,7 +3160,7 @@ main.publications-page {
 <em>
       Proceedings of the 13th IEEE European Conference on Software Maintenance and Reengineering (CSMR)
      </em>
-</span><span class="pub-meta-part">Kaiserslautern, Germany · March 2009.</span></div></li>
+</span><span class="pub-meta-part">Kaiserslautern, Germany · March 2009.</span></div><div class="publication-resource-links"><a href="https://doi.org/10.1109/CSMR.2009.57" rel="noopener" target="_blank">Paper</a><details><summary>Citation</summary><div class="publication-citation"><pre>Mahmoud Elish and Karim Elish. "Application of TreeNet in Predicting Object-Oriented Software Maintainability: A Comparative Study." Proceedings of the 13th IEEE European Conference on Software Maintenance and Reengineering (CSMR) Kaiserslautern, Germany · March 2009.</pre></div></details></div></li>
 </ul><h3>
     Refereed Posters and Abstracts
    </h3><ul class="publication-list">
@@ -3092,7 +3179,7 @@ main.publications-page {
        Nesreen Dalhy: 2nd Place in Master’s Thesis Competition
       </strong>
 </span>
-</div></li>
+</div><div class="publication-resource-links"><details><summary>Citation</summary><div class="publication-citation"><pre>Nesreen Dalhy and Karim Elish. "Towards Intelligent Detection of Android Remote Access Trojans (RATs)." 10th North American IEOM Conference on Industrial Engineering and Operations Management , Computer Science Track Orlando, FL · June 2025.</pre></div></details></div></li>
 <li data-topic-labels="LLMs / AI for Security &amp; SE; Android Malware; Mobile Security; Empirical Study; Software Security" data-topics="llms-ai android-malware mobile-security empirical-study software-security" data-venue="ieom" data-venue-label="[Conference] IEOM" data-year="2025"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Evaluating the Capabilities of LLMs in Security Analysis for Mobile Applications
@@ -3108,7 +3195,7 @@ main.publications-page {
        Joyce Champie: 1st Place in Poster Competition
       </strong>
 </span>
-</div></li>
+</div><div class="publication-resource-links"><details><summary>Citation</summary><div class="publication-citation"><pre>Joyce Champie and Karim Elish. "Evaluating the Capabilities of LLMs in Security Analysis for Mobile Applications." 10th North American IEOM Conference on Industrial Engineering and Operations Management , Computer Science Track Orlando, FL · June 2025.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Mobile Security; Empirical Study" data-topics="android-malware mobile-security empirical-study" data-venue="s2erc" data-venue-label="[Conference] S2ERC" data-year="2014"><div class="pub-title-row"><div class="pub-title">
 <strong>
       Inter-Component and Inter-App Communication Analysis in Android for Malware Detection
@@ -3119,7 +3206,7 @@ main.publications-page {
 <em>
       9th Showcase of the Security and Software Engineering Research Center (S2ERC)
      </em>
-</span><span class="pub-meta-part">Washington, DC · May 2014.</span></div></li>
+</span><span class="pub-meta-part">Washington, DC · May 2014.</span></div><div class="publication-resource-links"><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish , Danfeng Yao, and Barbara Ryder. "Inter-Component and Inter-App Communication Analysis in Android for Malware Detection." 9th Showcase of the Security and Software Engineering Research Center (S2ERC) Washington, DC · May 2014.</pre></div></details></div></li>
 <li data-topic-labels="Mobile Security; Empirical Study" data-topics="mobile-security empirical-study" data-venue="vt-poster-showcase" data-venue-label="[Poster] Virginia Tech Graduate Showcase" data-year="2014"><div class="pub-title-row"><div class="pub-title">
 <strong>
       User-Intention Based Program Analysis for Android Security
@@ -3137,7 +3224,7 @@ main.publications-page {
        Best Poster Award
       </strong>
 </span>
-</div></li>
+</div><div class="publication-resource-links"><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish , Danfeng Yao, and Barbara Ryder. "User-Intention Based Program Analysis for Android Security." 2nd Annual Graduate Student Poster Showcase , Computer Science Department, Virginia Tech April 2014.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Mobile Security" data-topics="android-malware mobile-security" data-venue="usenix-security" data-venue-label="[Poster] USENIX Security Symposium" data-year="2013"><div class="pub-title-row"><div class="pub-title">
 <strong>
       User-Intention Based Android Malware Detection
@@ -3148,7 +3235,7 @@ main.publications-page {
 <em>
       22nd USENIX Security Symposium
      </em>
-</span><span class="pub-meta-part">Washington, DC · August 2013.</span></div></li>
+</span><span class="pub-meta-part">Washington, DC · August 2013.</span></div><div class="publication-resource-links"><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish , Danfeng Yao, Barbara Ryder, and Xuxian Jiang. "User-Intention Based Android Malware Detection." 22nd USENIX Security Symposium Washington, DC · August 2013.</pre></div></details></div></li>
 <li data-topic-labels="Privacy / Data Security" data-topics="privacy" data-venue="vt-poster-showcase" data-venue-label="[Poster] Virginia Tech Graduate Showcase" data-year="2012"><div class="pub-title-row"><div class="pub-title">
 <strong>
       DataGuard: A Mobile System for Securing Ultra-Sensitive Information
@@ -3166,7 +3253,7 @@ main.publications-page {
        1st Place Poster Award
       </strong>
 </span>
-</div></li>
+</div><div class="publication-resource-links"><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish , Yipan Deng, Danfeng Yao, and Dennis Kafura. "DataGuard: A Mobile System for Securing Ultra-Sensitive Information." 28th Annual Graduate Research Symposium , Virginia Tech March 2012.</pre></div></details></div></li>
 <li data-topic-labels="Android Malware; Empirical Study" data-topics="android-malware empirical-study" data-venue="s2erc" data-venue-label="[Conference] S2ERC" data-year="2011"><div class="pub-title-row"><div class="pub-title">
 <strong>
       User-Centric Dependence Analysis in Programs for Identifying Malware
@@ -3179,7 +3266,7 @@ main.publications-page {
      </em>
 </span><span class="pub-meta-part">
      Iowa, November 2011.
-    </span></div></li>
+    </span></div><div class="publication-resource-links"><details><summary>Citation</summary><div class="publication-citation"><pre>Karim Elish , Danfeng Yao, and Barbara Ryder. "User-Centric Dependence Analysis in Programs for Identifying Malware." 4th Showcase of the Security and Software Engineering Research Center (S2ERC) Iowa, November 2011.</pre></div></details></div></li>
 </ul></div><aside aria-label="Publication statistics and filters" class="publication-stats-sidebar"><section aria-label="Publication topic, venue, and year filters" class="publication-overview-grid with-year">
 <div class="publication-filter-summary">
 <span id="publication-active-filter">
