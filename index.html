@@ -275,14 +275,14 @@ body {
 
 .school-logo-badge img {
   display: block;
-  max-width: 3.7rem;
-  max-height: 1.62rem;
+  max-width: 3.35rem;
+  max-height: 1.5rem;
   object-fit: contain;
 }
 
 .school-logo-badge.kfupm img {
-  max-width: 3.78rem;
-  max-height: 1.62rem;
+  max-width: 3.45rem;
+  max-height: 1.5rem;
 }
 
 .school-logo-fallback {
@@ -551,12 +551,12 @@ body {
   }
 
   .school-logo-badge img {
-    max-width: 3.22rem;
-    max-height: 1.46rem;
+    max-width: 2.95rem;
+    max-height: 1.35rem;
   }
 
   .school-logo-badge.kfupm img {
-    max-width: 3.32rem;
+    max-width: 3.05rem;
   }
 
   .profile-contact {
@@ -578,6 +578,65 @@ body {
   .home-card .teaching-course-list li { grid-template-columns: 86px minmax(0, 1fr); }
   .course-name { font-size: 0.93rem; }
 }
+
+/* Final education logo enlargement */
+.school-logo-badge img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  transform: scale(1.16);
+  transform-origin: center;
+}
+
+.school-logo-badge.kfupm img {
+  transform: scale(1.20);
+}
+
+@media (max-width: 520px) {
+  .school-logo-badge img {
+    transform: scale(1.14);
+  }
+
+  .school-logo-badge.kfupm img {
+    transform: scale(1.18);
+  }
+}
+
+
+/* Larger education logo pills */
+.school-logo-badge {
+  flex: 0 0 4.65rem !important;
+  width: 4.65rem !important;
+  height: 2.05rem !important;
+  padding: 0 0.12rem !important;
+}
+
+.school-logo-badge img {
+  transform: scale(1.22) !important;
+}
+
+.school-logo-badge.kfupm img {
+  transform: scale(1.27) !important;
+}
+
+@media (max-width: 520px) {
+  .school-logo-badge {
+    flex-basis: 4.1rem !important;
+    width: 4.1rem !important;
+    height: 1.88rem !important;
+  }
+
+  .school-logo-badge img {
+    transform: scale(1.18) !important;
+  }
+
+  .school-logo-badge.kfupm img {
+    transform: scale(1.23) !important;
+  }
+}
+
 </style>
 </head>
 <body>
