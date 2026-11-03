@@ -651,6 +651,43 @@ body {
   }
 }
 
+
+/* Final education logo fit — full logo visible inside pill */
+.school-logo-badge {
+  flex: 0 0 5.35rem !important;
+  width: 5.35rem !important;
+  height: 2.10rem !important;
+  padding: 0.12rem 0.28rem !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.school-logo-badge img,
+.school-logo-badge.kfupm img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  transform: none !important;
+  transform-origin: center !important;
+}
+
+@media (max-width: 520px) {
+  .school-logo-badge {
+    flex-basis: 4.75rem !important;
+    width: 4.75rem !important;
+    height: 1.92rem !important;
+    padding: 0.10rem 0.24rem !important;
+  }
+
+  .school-logo-badge img,
+  .school-logo-badge.kfupm img {
+    transform: none !important;
+  }
+}
+
 </style>
 </head>
 <body>
